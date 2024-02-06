@@ -5,7 +5,7 @@
 #include <glm/vec2.hpp>
 #include <string_view>
 
-namespace frost
+namespace frost::core
 {
 	class FROST_ENGINE_API Window
 	{

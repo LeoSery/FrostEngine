@@ -11,10 +11,17 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\Core\Transform.h" />
+    <ClInclude Include="include\ECS\GameObject.h" />
     <ClInclude Include="include\Core\Export.h" />
     <ClInclude Include="include\Core\Window.h" />
+    <ClInclude Include="include\Core\Scene.h" />
+    <ClInclude Include="include\ECS\Tree.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Core\Transform.cpp" />
+    <ClCompile Include="src\ECS\GameObject.cpp" />
+    <ClCompile Include="src\Core\Scene.cpp" />
     <ClCompile Include="src\Core\Window.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
