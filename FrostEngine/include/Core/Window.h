@@ -1,15 +1,31 @@
 #pragma once
 
 #include "Core/Export.h"
+#include <memory>
 
-#include <glm/vec2.hpp>
-#include <string_view>
+#include <glm/glm.hpp>
 
 namespace frost::core
 {
 	class FROST_ENGINE_API Window
-	{
-		explicit Window(std::string_view name, const glm::vec2& size);
-		~Window() = default;
+	{	
+	public:
+
+		struct WindowProperties
+		{
+			const char* Title;
+			glm::ivec2 Size;
+		};
+
+		explicit Window(WindowProperties Properties);
+		~Window();
+	
+		//this Function need to be called in the main loop of the application
+		bool PollEvents();
+
+	private: 
+		//pimple idiom ?
+		struct Impl;
+		std::unique_ptr<Impl> m_impl;
 	};
 }
