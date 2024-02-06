@@ -15,12 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Toto.h">
+    <ClInclude Include="Export.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Toto.cpp">
+    <ClCompile Include="Window.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>

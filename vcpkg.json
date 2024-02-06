@@ -1,0 +1,17 @@
+{
+  "name": "frost",
+  "description": "",
+  "version-string": "0.1.0",
+  "maintainers": [
+    "Leo SERY <74504632+LeoSery@users.noreply.github.com>",
+    "Matthieu OUTIN <79274607+HideNknow@users.noreply.github.com>",
+    "Idryss JUDEAUX <55395114+idryssj31@users.noreply.github.com>"
+  ],
+  "license": "MIT",
+  "supports": "windows",
+  "dependencies": [
+    "glfw3",
+    "glm",
+    "opengl"
+  ]
+}
