@@ -12,6 +12,8 @@
   "dependencies": [
     "glfw3",
     "glm",
-    "opengl"
+    "opengl",
+    "imgui",
+    "glew"
   ]
 }
