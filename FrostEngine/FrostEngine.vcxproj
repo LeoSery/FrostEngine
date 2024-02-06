@@ -11,11 +11,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Export.h" />
-    <ClInclude Include="Window.h" />
+    <ClInclude Include="include\Core\Export.h" />
+    <ClInclude Include="include\Core\Window.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Window.cpp" />
+    <ClCompile Include="src\Core\Window.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
@@ -65,6 +65,7 @@
       <DisableSpecificWarnings>4251;4275</DisableSpecificWarnings>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
