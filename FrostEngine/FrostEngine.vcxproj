@@ -17,8 +17,10 @@
     <ClInclude Include="include\Core\Window.h" />
     <ClInclude Include="include\Core\Scene.h" />
     <ClInclude Include="include\ECS\Tree.h" />
+    <ClInclude Include="include\Core\SceneManager.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Core\SceneManager.cpp" />
     <ClCompile Include="src\Core\Transform.cpp" />
     <ClCompile Include="src\ECS\GameObject.cpp" />
     <ClCompile Include="src\Core\Scene.cpp" />

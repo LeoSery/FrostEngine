@@ -12,21 +12,21 @@ namespace frost::ECS
 		virtual ~Tree();
 
 		std::vector<T*> GetChildren();
+		void SetParent(T* _TargetParent);
 		T* GetParent();
+        const T* GetParent() const;
 		T* GetRoot();
 
 		void RemoveChild(T* _TargetChild);
 		void AddChild(T* _TargetChild);
 
-		size_t const m_UUID;
 	private:
-		void SetParent(T* _TargetParent);
 		T* m_CurrentParent = nullptr;
 		std::vector<T*> m_Children;
 	};
 
     template<typename T>
-    Tree<T>::Tree(T* _Parent) : m_UUID(m_Children.size() + 1)
+    Tree<T>::Tree(T* _Parent)
     {
         SetParent(_Parent);
     }
@@ -51,6 +51,12 @@ namespace frost::ECS
 
     template<typename T>
     T* Tree<T>::GetParent()
+    {
+        return m_CurrentParent;
+    }
+
+    template<typename T>
+    const T* Tree<T>::GetParent() const
     {
         return m_CurrentParent;
     }

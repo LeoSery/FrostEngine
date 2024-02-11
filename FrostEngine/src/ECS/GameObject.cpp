@@ -1,3 +1,4 @@
+#include "Core/SceneManager.h"
 #include "ECS/GameObject.h"
 
 #include <iostream>
@@ -5,9 +6,15 @@
 namespace frost::ECS
 {
     GameObject::GameObject(std::string _Name, GameObject* _Parent, frost::core::Transform _Transform)
-        : Tree<GameObject>(_Parent), m_Name(_Name), m_Transform(_Transform) 
+        : Tree<GameObject>(_Parent), m_Name(std::move(_Name)), m_Transform(std::move(_Transform)), m_UUID(uuids::uuid_system_generator{}())
     {
         SetActive(true);
+    }
+
+    GameObject::GameObject(std::string _Name, frost::core::Transform _Transform)
+        : GameObject(std::move(_Name), core::SceneManager::GetInstance().GetActiveScene().GetRoot(), std::move(_Transform))
+    {
+
     }
 
     const std::string& GameObject::GetName() const
@@ -58,6 +65,8 @@ namespace frost::ECS
     void GameObject::GetData(std::ostream& _Stream) const
     {
         _Stream << "GameObject Infos:" << std::endl;
+        _Stream << "Parent :" << GetParent()->GetName() << std::endl;
+        _Stream << "  - UUID: " << m_UUID << std::endl;
         _Stream << "  - Name: " << m_Name << std::endl;
         _Stream << "  - Transform: ";
         m_Transform.GetData(_Stream);
