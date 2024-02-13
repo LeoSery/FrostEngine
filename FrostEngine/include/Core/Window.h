@@ -23,9 +23,9 @@ namespace frost::core
 		//this Function need to be called in the main loop of the application
 		bool PollEvents();
 
-	private: 
+	private:
 		//pimple idiom ?
-		struct Impl;
-		std::unique_ptr<Impl> m_impl;
+		struct Internal;
+		std::unique_ptr<Internal> m_impl;
 	};
 }
