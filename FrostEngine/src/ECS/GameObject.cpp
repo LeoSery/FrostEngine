@@ -1,5 +1,5 @@
+#include "ECS/Entity/GameObject.h"
 #include "Core/SceneManager.h"
-#include "ECS/GameObject.h"
 
 #include <iostream>
 

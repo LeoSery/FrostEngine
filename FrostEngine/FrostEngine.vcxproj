@@ -13,11 +13,11 @@
   <ItemGroup>
     <ClInclude Include="include\Core\AuthorizationBadge.h" />
     <ClInclude Include="include\Core\Transform.h" />
-    <ClInclude Include="include\ECS\GameObject.h" />
+    <ClInclude Include="include\ECS\Entity\GameObject.h" />
     <ClInclude Include="include\Core\Export.h" />
     <ClInclude Include="include\Core\Window.h" />
     <ClInclude Include="include\Core\Scene.h" />
-    <ClInclude Include="include\ECS\Tree.h" />
+    <ClInclude Include="include\ECS\System\Tree.h" />
     <ClInclude Include="include\Core\SceneManager.h" />
   </ItemGroup>
   <ItemGroup>

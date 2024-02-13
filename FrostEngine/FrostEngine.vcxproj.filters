@@ -24,10 +24,10 @@
     <ClInclude Include="include\Core\Scene.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="include\ECS\Tree.h">
+    <ClInclude Include="include\ECS\System\Tree.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="include\ECS\GameObject.h">
+    <ClInclude Include="include\ECS\Entity\GameObject.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="include\Core\Transform.h">
