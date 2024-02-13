@@ -5,13 +5,13 @@
 
 namespace frost::core
 {
-	struct Window::Impl
+	struct Window::Internal
 	{
 		GLFWwindow* window = nullptr;
 	};
 
 	Window::Window(WindowProperties Properties)
-		: m_impl(std::make_unique<Impl>())
+		: m_impl(std::make_unique<Internal>())
 	{
 
 		if (!glfwInit())

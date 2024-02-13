@@ -2,8 +2,7 @@
 #include "Core/SceneManagement/Scene.h"
 #include "Core/SignalSlot/Signal.h"
 #include "ECS/Entity/GameObject.h"
-#include "Core/SceneManager.h"
-#include "Core/Scene.h"
+#include "Utils/Logger.h"
 #include "Core/Window.h"
 
 #include <iostream>
@@ -17,7 +16,7 @@ int main()
 {
 	Logger::LogInfo("Start engine, creating Scene...");
 
-	frost::core::Window window("Name", glm::ivec2(960, 540));
+	frost::core::Window window({ "Name", glm::ivec2(960, 540) });
 
 	std::string MainSceneName = "GameScene";
 	SceneManager::GetInstance().CreateScene(MainSceneName);
@@ -29,7 +28,7 @@ int main()
 	TransformC->position = glm::vec2(1, 2);
 
 	GameObjectTest.AddTag("Tag1");
-	GameObjectTest.GetData(std::cout);
+	GameObjectTest.GetData(true);
 
 	while(window.PollEvents())
 	{ 
