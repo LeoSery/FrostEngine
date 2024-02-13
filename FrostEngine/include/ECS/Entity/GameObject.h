@@ -1,9 +1,8 @@
 #pragma once
 
+#include "ECS/System/Tree.h"
 #include "Core/Transform.h"
 #include "Core/Export.h"
-
-#include "ECS/Tree.h"
 
 #define UUID_SYSTEM_GENERATOR
 #include "stduuid/uuid.h"
