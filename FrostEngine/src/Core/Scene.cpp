@@ -2,7 +2,7 @@
 
 namespace frost::core
 {
-    Scene::Scene(std::string _Name)
+    Scene::Scene(const AuthorizationBadge<SceneManager>& , std::string _Name)
         : m_UUID(uuids::uuid_system_generator{}()), m_name(std::move(_Name))
     {
         m_root = new ECS::GameObject("SceneRoot", nullptr);
@@ -10,7 +10,7 @@ namespace frost::core
 
     Scene::~Scene()
     {
-        delete m_root.operator->();
+        delete m_root;
     }
 
     Scene::Scene(Scene&& other) noexcept

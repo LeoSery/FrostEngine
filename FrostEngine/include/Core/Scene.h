@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Core/AuthorizationBadge.h"
 #include "ECS/GameObject.h"
 
 #define UUID_SYSTEM_GENERATOR
@@ -7,10 +8,12 @@
 
 namespace frost::core
 {
-	class FROST_ENGINE_API Scene
+	class SceneManager;
+
+	class Scene
 	{
     public:
-        explicit Scene(std::string _Name);
+        explicit Scene(const AuthorizationBadge<SceneManager>&, std::string _Name);
 		~Scene();
 
 		Scene(const Scene&) = delete;

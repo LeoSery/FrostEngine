@@ -6,16 +6,20 @@
 
 using namespace frost;
 
+using GameObject = frost::ECS::GameObject;
+using Transform = frost::core::Transform;
+
 int main() 
 {
 	std::cout << "Start engine, creating Scene..." << std::endl;
 
-	core::SceneManager::GetInstance().AddScene(core::Scene("GameScene"));
-	core::SceneManager::GetInstance().LoadScene("GameScene");
+	std::string MainSceneName = "GameScene";
+	core::SceneManager::GetInstance().CreateScene(MainSceneName);
+	core::SceneManager::GetInstance().LoadScene(MainSceneName);
 
 	std::cout << "Creating GameObjectTest with position (1, 2, 3)..." << std::endl;
-	ECS::GameObject GameObjectTest = ECS::GameObject("GameObjectTest");
-	GameObjectTest.SetTransform(core::Transform({1,1,1}, {}, {1,1,1}));
+	GameObject GameObjectTest = GameObject("GameObjectTest");
+	GameObjectTest.SetTransform(Transform({1,1}, {}, {1,1}));
 
 	GameObjectTest.AddTag("Tag1");
 

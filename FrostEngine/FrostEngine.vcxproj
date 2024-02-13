@@ -11,6 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\Core\AuthorizationBadge.h" />
     <ClInclude Include="include\Core\Transform.h" />
     <ClInclude Include="include\ECS\GameObject.h" />
     <ClInclude Include="include\Core\Export.h" />
@@ -20,6 +21,7 @@
     <ClInclude Include="include\Core\SceneManager.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Core\AuthorizationBadge.cpp" />
     <ClCompile Include="src\Core\SceneManager.cpp" />
     <ClCompile Include="src\Core\Transform.cpp" />
     <ClCompile Include="src\ECS\GameObject.cpp" />

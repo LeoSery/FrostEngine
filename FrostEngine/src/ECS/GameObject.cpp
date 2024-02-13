@@ -64,7 +64,7 @@ namespace frost::ECS
 
     void GameObject::GetData(std::ostream& _Stream) const
     {
-        _Stream << "GameObject Infos:" << std::endl;
+        _Stream << m_Name << " Infos:" << std::endl;
         _Stream << "Parent :" << GetParent()->GetName() << std::endl;
         _Stream << "  - UUID: " << m_UUID << std::endl;
         _Stream << "  - Name: " << m_Name << std::endl;

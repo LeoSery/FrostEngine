@@ -15,7 +15,8 @@ namespace frost::core
 
 		[[nodiscard]] static SceneManager& GetInstance();
 
-		void AddScene(Scene&& _TargetScene);
+		Scene& CreateScene(const std::string& _Name);
+
 		void RemoveScene(const std::string& _SceneName);
 
 		void LoadScene(const std::string& _SceneName);
@@ -23,6 +24,8 @@ namespace frost::core
 		[[nodiscard]] Scene& GetActiveScene();
 
 	private:
+		void AddScene(Scene&& _TargetScene);
+
 		SceneManager() = default;
 		std::vector<Scene> m_Scenes;
 		Scene* m_ActiveScene = nullptr;

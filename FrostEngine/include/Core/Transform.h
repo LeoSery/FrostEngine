@@ -11,12 +11,12 @@ namespace frost::core
     {
     public:
         Transform() = default;
-        [[nodiscard]] Transform(const glm::vec3& _Position, const glm::vec3& _Rotation, const glm::vec3& _Scale);
+        [[nodiscard]] Transform(const glm::vec2& _Position, const float& _Rotation, const glm::vec2& _Scale);
 
         void GetData(std::ostream& _Stream) const;
 
-        glm::vec3 position;
-        glm::vec3 rotation;
-        glm::vec3 scale;
+        glm::vec2 position;
+        float rotation;
+        glm::vec2 scale;
     };
 }

@@ -10,6 +10,15 @@ namespace frost::core
 		return instance;
 	}
 
+	Scene& SceneManager::CreateScene(const std::string& _Name)
+	{
+		AddScene(Scene({}, _Name));
+		auto it = std::ranges::find_if(m_Scenes, [&](const Scene& _scene) { return _scene.GetName() == _Name; });
+		if (it == m_Scenes.cend())
+			throw std::exception("No scene found");
+		return *it;
+	}
+
 	void SceneManager::AddScene(Scene&& _TargetScene)
 	{
 		if (std::ranges::find_if(m_Scenes, [&](const Scene& _scene) { return _scene.GetName() == _TargetScene.GetName(); }) != m_Scenes.end())

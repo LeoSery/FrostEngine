@@ -4,7 +4,7 @@
 
 namespace frost::core
 {
-	Transform::Transform(const glm::vec3& _Position, const glm::vec3& _Rotation, const glm::vec3& _Scale)
+	Transform::Transform(const glm::vec2& _Position, const float& _Rotation, const glm::vec2& _Scale)
 	{
 		position = _Position;
 		rotation = _Rotation;
@@ -13,8 +13,8 @@ namespace frost::core
 
 	void Transform::GetData(std::ostream& _Stream) const
 	{
-		_Stream << "Position: " << position.x << " " << position.y << " " << position.z << std::endl;
-		_Stream << "Rotation: " << rotation.x << " " << rotation.y << " " << rotation.z << std::endl;
-		_Stream << "Scale: " << scale.x << " " << scale.y << " " << scale.z << std::endl;
+		_Stream << "Position: " << position.x << " " << position.y << " " << std::endl;
+		_Stream << "Rotation: " << rotation << " " << rotation << " " << rotation << std::endl;
+		_Stream << "Scale: " << scale.x << " " << scale.y << " " << std::endl;
 	}
 }
