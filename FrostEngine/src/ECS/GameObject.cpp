@@ -62,6 +62,11 @@ namespace frost::ECS
         m_isActive = _IsActive;
     }
 
+    uuids::uuid GameObject::GetUUID() const
+    {
+        return m_UUID;
+    }
+
     void GameObject::GetData(std::ostream& _Stream) const
     {
         _Stream << m_Name << " Infos:" << std::endl;
