@@ -31,6 +31,8 @@ namespace frost::ECS
         [[nodiscard]] bool IsActive() const;
         void SetActive(bool _IsActive);
 
+        [[nodiscard]] uuids::uuid GetUUID() const;
+
         void GetData(std::ostream& _Stream) const;
 
     private:
