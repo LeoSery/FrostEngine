@@ -1,3 +1,5 @@
+#include "ECS/Component/Components/Transform.h"
+#include "ECS/Component/IComponent.h"
 #include "ECS/Entity/GameObject.h"
 #include "Core/SceneManager.h"
 
@@ -5,16 +7,53 @@
 
 namespace frost::ECS
 {
-    GameObject::GameObject(std::string _Name, GameObject* _Parent, frost::core::Transform _Transform)
-        : Tree<GameObject>(_Parent), m_Name(std::move(_Name)), m_Transform(std::move(_Transform)), m_UUID(uuids::uuid_system_generator{}())
+    GameObject::GameObject(std::string _Name, GameObject* _Parent)
+        : Tree<GameObject>(_Parent), m_Name(std::move(_Name)), m_UUID(uuids::uuid_system_generator{}())
     {
+        AddComponent<Transform>();
         SetActive(true);
+        Start();
     }
 
-    GameObject::GameObject(std::string _Name, frost::core::Transform _Transform)
-        : GameObject(std::move(_Name), core::SceneManager::GetInstance().GetActiveScene().GetRoot(), std::move(_Transform))
+    GameObject::GameObject(std::string _Name)
+        : GameObject(std::move(_Name), core::SceneManager::GetInstance().GetActiveScene().GetRoot())
     {
 
+    }
+
+    GameObject::~GameObject()
+    {
+        //Destroy();
+        for (const IComponent* component : m_Components)
+        {
+            delete component;
+        }
+
+        m_Components.clear();
+    }
+
+    void GameObject::Start()
+    {
+        for (IComponent* component : m_Components)
+        {
+            component->Start();
+        }
+    }
+
+    void GameObject::Update(float fDeltaTime)
+    {
+        for (IComponent* component : m_Components)
+        {
+            component->Update(fDeltaTime);
+        }
+    }
+
+    void GameObject::Destroy()
+    {
+        for (IComponent* component : m_Components)
+        {
+            component->Destroy();
+        }
     }
 
     const std::string& GameObject::GetName() const
@@ -27,14 +66,18 @@ namespace frost::ECS
         m_Name = _Name;
     }
 
-    const frost::core::Transform& GameObject::GetTransform() const
+    const Transform& GameObject::GetTransform() const
     { 
-        return m_Transform;
+        return *GetComponent<Transform>();
     }
 
-    void GameObject::SetTransform(const frost::core::Transform& _Transform)
+    void GameObject::SetTransform(const Transform& _Transform)
     {
-        m_Transform = _Transform;
+        Transform& transformComponent = *GetComponent<Transform>();
+
+        transformComponent.position = _Transform.position;
+        transformComponent.rotation = _Transform.rotation;
+        transformComponent.scale = _Transform.scale;
     }
 
     void GameObject::AddTag(const std::string& _Tag)
@@ -74,7 +117,7 @@ namespace frost::ECS
         _Stream << "  - UUID: " << m_UUID << std::endl;
         _Stream << "  - Name: " << m_Name << std::endl;
         _Stream << "  - Transform: ";
-        m_Transform.GetData(_Stream);
+        GetTransform().GetData(_Stream);
         _Stream << "  - Tags:";
         if (m_Tags.empty())
         {

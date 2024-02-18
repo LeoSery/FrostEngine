@@ -1,10 +1,11 @@
 #include "ECS/Component/IComponent.h"
+#include "ECS/Entity/GameObject.h"
 
 namespace frost::ECS
 {
-	IComponent::IComponent(GameObject& _GameObject)
+	IComponent::IComponent(GameObject& _GameObject) : ParentObject(_GameObject)
 	{
-		ParentObject = _GameObject;
+		
 	}
 
 	IComponent::~IComponent()
