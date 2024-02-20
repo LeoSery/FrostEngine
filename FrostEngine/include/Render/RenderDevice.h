@@ -1,26 +1,37 @@
 #pragma once
 
+#include "Core/Export.h"
 #include <memory>
 
-#include "Core/Window.h"
-
-namespace frost::core {
+namespace frost::core 
+{
+	class Window;
 	
-	class RenderDevice
+	class FROST_ENGINE_API RenderDevice
 	{
 
-		//forward Declaraction for pimple idiom
-	private:
-		struct Internal;
-		std::unique_ptr<Internal> m_internal;
-	
 	public:
-	
-		explicit RenderDevice(const Window& _window);
+		RenderDevice(const RenderDevice&) = delete;
+		
+		explicit RenderDevice(Window& _window);
 		~RenderDevice();
 
 
+		void test();
+
+		void Update();
 	
+
+	private:
+		unsigned int vao;
+		unsigned int vs;
+		unsigned int fs;
+		unsigned int sp;
+
+	//forward Declaraction for pimple idiom
+	private:
+		struct Internal;
+		std::unique_ptr<Internal> m_internal;
 	};
 
 }

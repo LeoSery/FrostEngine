@@ -10,7 +10,7 @@ namespace frost::core
 		GLFWwindow* window = nullptr;
 	};
 
-	Window::Window(WindowProperties Properties)
+	Window::Window(WindowProperties Properties) 
 		: m_impl(std::make_unique<Internal>())
 	{
 
@@ -39,7 +39,8 @@ namespace frost::core
 			Properties.Size.x,
 			Properties.Size.y,
 			Properties.Title,
-			NULL, NULL);
+			Properties.FullScreen ? glfwGetPrimaryMonitor() : nullptr //FullScreen ?
+			, nullptr);
 
 		if (m_impl->window == nullptr)
 		{
@@ -60,19 +61,17 @@ namespace frost::core
 
 	bool Window::PollEvents()
 	{
-		//TODO: Move this to a renderer class
-
-		// Clear the screen
-		glClear(GL_COLOR_BUFFER_BIT);
-
-		// Draw nothing, see you in tutorial 2 !
-
 		// Swap buffers
 		glfwSwapBuffers(m_impl->window);
 		glfwPollEvents();
 
 		return glfwGetKey(m_impl->window, GLFW_KEY_ESCAPE) != GLFW_PRESS &&
 			glfwWindowShouldClose(m_impl->window) == 0;
+	}
+
+	void* Window::GetInternal()
+	{
+		return m_impl->window;
 	}
 
 }
