@@ -60,6 +60,9 @@
     <ClInclude Include="include\Core\SignalSlot\Slot.hxx">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="include\Utils\Logger.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\Window.cpp">
@@ -78,6 +81,9 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="src\ECS\Component\Components\Transform.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Utils\Logger.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>

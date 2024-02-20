@@ -29,9 +29,9 @@ namespace frost::ECS
 
 	void Transform::GetData(std::ostream& _Stream) const
 	{
-		_Stream << "Position: " << position.x << " " << position.y << " " << std::endl;
-		_Stream << "Rotation: " << rotation << std::endl;
-		_Stream << "Scale: " << scale.x << " " << scale.y << " " << std::endl;
+		_Stream << "{ Position: [x: " << position.x << " y: " << position.y << "];";
+		_Stream << " Rotation: [" << rotation << "];";
+		_Stream << " Scale: [x:" << scale.x << " y: " << scale.y << "]; }" << std::endl;
 	}
 
 	void Transform::Translate(const glm::vec2& _Translation)

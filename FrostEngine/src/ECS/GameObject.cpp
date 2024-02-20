@@ -112,13 +112,13 @@ namespace frost::ECS
 
     void GameObject::GetData(std::ostream& _Stream) const
     {
-        _Stream << m_Name << " Infos:" << std::endl;
-        _Stream << "Parent :" << GetParent()->GetName() << std::endl;
+        _Stream << m_Name << " Infos: " << std::endl;
+        _Stream << "  - Parent: " << GetParent()->GetName() << std::endl;
         _Stream << "  - UUID: " << m_UUID << std::endl;
         _Stream << "  - Name: " << m_Name << std::endl;
         _Stream << "  - Transform: ";
         GetTransform().GetData(_Stream);
-        _Stream << "  - Tags:";
+        _Stream << "  - Tags: {";
         if (m_Tags.empty())
         {
             _Stream << " None" << std::endl;
@@ -129,8 +129,8 @@ namespace frost::ECS
             {
                 _Stream << " " << tag << ",";
             }
-            _Stream << std::endl;
+            _Stream << "}" << std::endl;
         }
-        _Stream << "  - Active: " << m_isActive << std::endl;
+        _Stream << "  - Active: " << (m_isActive ? "True" : "False") << std::endl;
     }
 }
