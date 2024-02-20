@@ -21,6 +21,13 @@ namespace frost::core
 
 	RenderDevice::~RenderDevice()
 	{
+		//Delete
+		glDeleteProgram(sp);
+		glDeleteShader(fs);
+		glDeleteShader(vs);
+		glDeleteVertexArrays(1, &vao);
+
+		glfwTerminate();
 
 	}
 
@@ -28,24 +35,35 @@ namespace frost::core
 	{
 		//TEST
 		float vertices[] = { 
-					-0.5f,  0.5f, /*Color*/1.0f, 0.0f, 0.0f,
-					-0.5f, -0.5f, /*Color*/0.0f, 0.0f, 1.0f,
-					 0.5f, -0.5f, /*Color*/0.0f, 1.0f, 0.0f,
-					 0.5f,  0.5f, /*Color*/1.0f, 1.0f, 1.0f
+					-0.5f,  0.5f, /*Color*/0.5f, 0.0f, 0.0f,
+					-0.5f, -0.5f, /*Color*/0.0f, 1.0f, 1.0f,
+					 0.5f, -0.5f, /*Color*/0.5f, 1.0f, 0.0f,
+					 0.5f,  0.5f, /*Color*/1.0f, 0.8f, 1.0f
 		};
 
 		unsigned int indices[] = { 0, 1, 2, 0, 2, 3 };
 
 		//Shaders sources
 		const char* vsSrc = R"(#version 460 core
+
 								layout(location = 0) in vec2 aPos;
 								layout(location = 1) in vec3 aColor;
 								out vec3 vColor;
+
+								uniform vec2  uPosition;
+								uniform float uRotation;
+								uniform vec2  uScale;
+								uniform float uAspectRatio;
+								
 								void main()
 								{
-									gl_Position = vec4(aPos, 0.0, 1.0);
+									mat2 rotMatrix = mat2(cos(uRotation), -sin(uRotation), sin(uRotation), cos(uRotation));
+									vec2 finalPos = ((rotMatrix * aPos) * uScale + uPosition) / vec2(uAspectRatio, 1.0);
+
+									gl_Position = vec4(finalPos, 0.0, 1.0);
 									vColor = aColor;
 								})";
+
 
 		const char* fsSrc = R"(#version 460 core
 								in vec3 vColor;
@@ -54,6 +72,7 @@ namespace frost::core
 								{
 									oFragColor = vec4(vColor, 1.0);
 								})";
+
 
 		//memory allocation in VRAM + adding data
 		unsigned int buffers[2];
@@ -79,11 +98,15 @@ namespace frost::core
 		glVertexArrayAttribBinding(vao, 1, 0); //On Bind l'attribut 1 au buffer 0 qu'on lui a passer au dessus
 		glVertexArrayAttribFormat(vao, 1, 3 /*L'attribut a une taille de deux GL_FLOAT*/ , GL_FLOAT, GL_FALSE, 2 * sizeof(float)); // et un offset de 2
 
+//Vertex Shader
 		glVertexArrayElementBuffer(vao, buffers[1]);// This is to link vertices buffer[1] is the buffer that have order to draw triangle
 
 		//Create Vertex shader from src and compile it
 		vs = glCreateShader(GL_VERTEX_SHADER);
 		glShaderSource(vs, 1, &vsSrc, nullptr);
+		
+
+
 		glCompileShader(vs);
 
 		//Create Fragment shader from src and compile it
@@ -96,6 +119,13 @@ namespace frost::core
 		glAttachShader(sp, vs);
 		glAttachShader(sp, fs);
 		glLinkProgram(sp);
+
+
+		//PickUp Position of the shader in memory
+		positionLocation    = glGetUniformLocation(sp, "uPosition");
+		rotationLocation    = glGetUniformLocation(sp, "uRotation");
+		scaleLocation       = glGetUniformLocation(sp, "uScale");
+		aspectRatioLocation = glGetUniformLocation(sp, "uAspectRatio");
 	}
 	void RenderDevice::Update()
 	{
@@ -108,15 +138,29 @@ namespace frost::core
 		glBindVertexArray(vao);
 		//Use program (with vao)
 		glUseProgram(sp);
+
+		int w, h;
+		glfwGetWindowSize(m_internal->window, &w, &h);
+
+
+		glProgramUniform1f(sp, aspectRatioLocation, float(w) / float(h));
+
 		//Draw call
-		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
+		int numObjects = 1;
+		for (int i = 0; i < numObjects; i++)
+		{
+			glProgramUniform2f(sp, positionLocation, 0.2f, 0.0f);
+			glProgramUniform1f(sp, rotationLocation, 0.f);
+			glProgramUniform2f(sp, scaleLocation, 1.0f, 1.0f);
+			
+
+			glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
+		}
+		
 		//Remove the Program from using
 		glUseProgram(0);
 		//Unbind the vao
 		glBindVertexArray(0);
-
-		//swap frame buffers
-		//glfwSwapBuffers(m_internal->window);
 	}
 }
 
