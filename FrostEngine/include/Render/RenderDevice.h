@@ -28,6 +28,11 @@ namespace frost::core
 		unsigned int fs;
 		unsigned int sp;
 
+		int          positionLocation;
+		int          rotationLocation;
+		int          scaleLocation;
+		int          aspectRatioLocation;
+
 	//forward Declaraction for pimple idiom
 	private:
 		struct Internal;

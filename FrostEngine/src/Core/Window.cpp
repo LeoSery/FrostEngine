@@ -57,6 +57,7 @@ namespace frost::core
 	Window::~Window()
 	{
 		glfwDestroyWindow(m_impl->window);
+		m_impl.reset();
 	}
 
 	bool Window::PollEvents()

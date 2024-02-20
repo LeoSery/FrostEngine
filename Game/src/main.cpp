@@ -39,6 +39,8 @@ int main()
 	do
 	{
 		_renderDevice.Update();
+
 	} while (window.PollEvents());
+
 	return 0;
 }
