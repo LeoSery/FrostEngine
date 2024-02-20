@@ -15,13 +15,15 @@ namespace frost::core
 		{
 			const char* Title;
 			glm::ivec2 Size;
+			bool FullScreen = false;
 		};
-
 		explicit Window(WindowProperties Properties);
 		~Window();
 	
 		//this Function need to be called in the main loop of the application
 		bool PollEvents();
+
+		void* GetInternal();
 
 	private:
 		//pimple idiom ?

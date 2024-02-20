@@ -4,6 +4,7 @@
 #include "ECS/Entity/GameObject.h"
 #include "Utils/Logger.h"
 #include "Core/Window.h"
+#include "Render/RenderDevice.h"
 
 #include <iostream>
 
@@ -15,8 +16,6 @@ using Logger = frost::utils::Logger;
 int main()
 {
 	Logger::LogInfo("Start engine, creating Scene...");
-
-	frost::core::Window window({ "Name", glm::ivec2(960, 540) });
 
 	std::string MainSceneName = "GameScene";
 	SceneManager::GetInstance().CreateScene(MainSceneName);
@@ -30,9 +29,16 @@ int main()
 	GameObjectTest.AddTag("Tag1");
 	GameObjectTest.GetData(true);
 
-	while(window.PollEvents())
-	{ 
-	}
 
+	//Graphics And Window
+	frost::core::Window window({ "Name", glm::ivec2(960, 540) });
+	frost::core::RenderDevice _renderDevice(window);
+
+	_renderDevice.test();
+
+	do
+	{
+		_renderDevice.Update();
+	} while (window.PollEvents());
 	return 0;
 }
