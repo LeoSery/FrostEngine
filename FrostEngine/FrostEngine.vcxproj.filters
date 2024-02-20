@@ -21,7 +21,7 @@
     <ClInclude Include="include\Core\Window.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="include\Core\Scene.h">
+    <ClInclude Include="include\Core\SceneManagement\Scene.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="include\ECS\System\Tree.h">
@@ -30,10 +30,10 @@
     <ClInclude Include="include\ECS\Entity\GameObject.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="include\Core\SceneManager.h">
+    <ClInclude Include="include\Core\SceneManagement\SceneManager.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="include\Core\AuthorizationBadge.h">
+    <ClInclude Include="include\Core\Internal\AuthorizationBadge.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="include\ECS\Component\IComponent.h">
@@ -45,7 +45,19 @@
     <ClInclude Include="include\ECS\Entity\GameObject.hxx">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="include\Core\RTTI.h">
+    <ClInclude Include="include\Core\Internal\RTTI.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Core\SignalSlot\Signal.hxx">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Core\SignalSlot\Signal.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Core\SignalSlot\Slot.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Core\SignalSlot\Slot.hxx">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
@@ -60,9 +72,6 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="src\Core\SceneManager.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Core\AuthorizationBadge.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="src\ECS\Component\IComponent.cpp">

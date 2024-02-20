@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Core/RTTI.h"
+#include "Core/Internal/RTTI.h"
 
 #define UUID_SYSTEM_GENERATOR
 #include "stduuid/uuid.h"

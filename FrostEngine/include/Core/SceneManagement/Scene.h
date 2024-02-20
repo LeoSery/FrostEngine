@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Core/AuthorizationBadge.h"
+#include "Core/Internal/AuthorizationBadge.h"
 #include "ECS/Entity/GameObject.h"
 
 #define UUID_SYSTEM_GENERATOR
