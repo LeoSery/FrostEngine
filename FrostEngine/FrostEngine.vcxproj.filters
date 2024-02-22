@@ -66,7 +66,7 @@
     <ClInclude Include="include\Render\Shader.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="include\Utils\Logger.h">
+    <ClInclude Include="include\Render\VertexArrayObject.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
@@ -99,6 +99,9 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="src\Render\Shader.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Render\VertexArrayObject.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
