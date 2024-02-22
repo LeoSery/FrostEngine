@@ -21,7 +21,7 @@ namespace frost::core
 		void InitShader(const char* _vertexFile, const char* _fragmentFile);
 
 		// Reference ID of the ShaderClass Program
-		GLuint ID;
+		GLuint m_gl_ID;
 
 		void Enable();
 		void Delete();

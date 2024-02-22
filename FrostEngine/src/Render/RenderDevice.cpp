@@ -55,10 +55,10 @@ namespace frost::core
 		shaderProgram.InitShader("default.vert", "default.frag");
 
 		//PickUp Position of the shader in memory
-		positionLocation    = glGetUniformLocation(shaderProgram.ID, "uPosition");
-		rotationLocation    = glGetUniformLocation(shaderProgram.ID, "uRotation");
-		scaleLocation       = glGetUniformLocation(shaderProgram.ID, "uScale");
-		aspectRatioLocation = glGetUniformLocation(shaderProgram.ID, "uAspectRatio");
+		positionLocation    = glGetUniformLocation(shaderProgram.m_gl_ID, "uPosition");
+		rotationLocation    = glGetUniformLocation(shaderProgram.m_gl_ID, "uRotation");
+		scaleLocation       = glGetUniformLocation(shaderProgram.m_gl_ID, "uScale");
+		aspectRatioLocation = glGetUniformLocation(shaderProgram.m_gl_ID, "uAspectRatio");
 		
 
 		VertexArrayObject Hehe(buffers);
@@ -79,15 +79,15 @@ namespace frost::core
 		glfwGetWindowSize(m_internal->window, &w, &h);
 
 
-		glProgramUniform1f(shaderProgram.ID, aspectRatioLocation, float(w) / float(h));
+		glProgramUniform1f(shaderProgram.gl_ID, aspectRatioLocation, float(w) / float(h));
 
 		//Draw call
 		int numObjects = 1;
 		for (int i = 0; i < numObjects; i++)
 		{
-			glProgramUniform2f(shaderProgram.ID, positionLocation, 0.2f, 0.0f);
-			glProgramUniform1f(shaderProgram.ID, rotationLocation, 0.f);
-			glProgramUniform2f(shaderProgram.ID, scaleLocation, 1.0f, 1.0f);
+			glProgramUniform2f(shaderProgram.gl_ID, positionLocation, 0.2f, 0.0f);
+			glProgramUniform1f(shaderProgram.gl_ID, rotationLocation, 0.f);
+			glProgramUniform2f(shaderProgram.gl_ID, scaleLocation, 1.0f, 1.0f);
 			
 
 			glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);

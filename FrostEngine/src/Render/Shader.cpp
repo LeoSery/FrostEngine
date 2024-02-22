@@ -27,10 +27,10 @@ namespace frost::core
 		glCompileShader(fs);
 
 		//Create program, attach it shaders and link it
-		ID = glCreateProgram();
-		glAttachShader(ID, vs);
-		glAttachShader(ID, fs);
-		glLinkProgram(ID);
+		m_gl_ID = glCreateProgram();
+		glAttachShader(m_gl_ID, vs);
+		glAttachShader(m_gl_ID, fs);
+		glLinkProgram(m_gl_ID);
 
 		glDeleteShader(vs);
 		glDeleteShader(fs);
@@ -39,12 +39,12 @@ namespace frost::core
 
 	void Shader::Enable()
 	{
-		glUseProgram(ID);
+		glUseProgram(m_gl_ID);
 	}
 
 	void Shader::Delete()
 	{
-		glDeleteProgram(ID);
+		glDeleteProgram(m_gl_ID);
 	}
 	
 	std::string Shader::ReadShaderFile(const char* _filename)
