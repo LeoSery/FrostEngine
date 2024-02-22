@@ -3,7 +3,7 @@
 #include "GL/glew.h"
 #include "GLFW/glfw3.h"
 #include "Core/Window.h"
-
+#include "Render/VertexArrayObject.h"
 
 namespace frost::core 
 {
@@ -43,6 +43,7 @@ namespace frost::core
 		unsigned int indices[] = { 0, 1, 2, 0, 2, 3 };
 
 
+
 		unsigned int buffers[2];
 		/*buffer[0] = vertices data	== VBO <- I WAS LOOKING FOR IT , IM SO DUMB SMH
 		  buffer[1] = indices data	== IBO		*/
@@ -50,30 +51,7 @@ namespace frost::core
 		glCreateBuffers(2, buffers); //Hey open gl i need 2 IDS to store things
 		glNamedBufferStorage(buffers[0], sizeof(vertices), vertices, 0); //Buffer 0 = VBO
 		glNamedBufferStorage(buffers[1], sizeof(indices), indices, 0);
-
-
-
-		//Geometry
-		
-		glCreateVertexArrays(1, &vao);
-
-		glVertexArrayVertexBuffer(vao, 0, buffers[0], 0 /*Offset par rapport au debut du buffer*/, 5 * sizeof(float) /*Data par vertice*/);
-
-
-
-		//On active l'attribut 0 du VAO
-		glEnableVertexArrayAttrib(vao, 0);
-		glVertexArrayAttribBinding(vao, 0, 0);
-		glVertexArrayAttribFormat(vao, 0, 2 /*L'attribut a une taille de deux GL_FLOAT*/, GL_FLOAT, GL_FALSE, 0);
-
-		//On active l'attribut 1 du VAO
-		glEnableVertexArrayAttrib(vao, 1);
-		glVertexArrayAttribBinding(vao, 1, 0); //On Bind l'attribut 1 au buffer 0 qu'on lui a passer au dessus
-
-		glVertexArrayAttribFormat(vao, 1, 3 /*L'attribut a une taille de deux GL_FLOAT*/ , GL_FLOAT, GL_FALSE, 2 * sizeof(float)); // et un offset de 2
-//Vertex Shader
-		glVertexArrayElementBuffer(vao, buffers[1]);// This is to link vertices buffer[1] is the buffer that have order to draw triangle
-		
+ 
 		shaderProgram.InitShader("default.vert", "default.frag");
 
 		//PickUp Position of the shader in memory
@@ -81,17 +59,19 @@ namespace frost::core
 		rotationLocation    = glGetUniformLocation(shaderProgram.ID, "uRotation");
 		scaleLocation       = glGetUniformLocation(shaderProgram.ID, "uScale");
 		aspectRatioLocation = glGetUniformLocation(shaderProgram.ID, "uAspectRatio");
+		
 
+		VertexArrayObject Hehe(buffers);
+		Hehe.Bind();
 	}
 	void RenderDevice::Update()
 	{
 
-
 		glClearColor(0.1f, 0.2f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
+		//glBindVertexArray(vao);
 		//Bind vao
-		glBindVertexArray(vao);
 
 		shaderProgram.Enable();
 
@@ -116,7 +96,7 @@ namespace frost::core
 		//Remove the Program from using
 		glUseProgram(0);
 		//Unbind the vao
-		glBindVertexArray(0);
+		//glBindVertexArray(0);
 	}
 }
 
