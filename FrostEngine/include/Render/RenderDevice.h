@@ -2,6 +2,7 @@
 
 #include "Core/Export.h"
 #include <memory>
+#include "Render\Shader.h"
 
 namespace frost::core 
 {
@@ -20,18 +21,21 @@ namespace frost::core
 		void test();
 
 		void Update();
-	
+
 
 	private:
 		unsigned int vao;
 		unsigned int vs;
 		unsigned int fs;
-		unsigned int sp;
+	
 
 		int          positionLocation;
 		int          rotationLocation;
 		int          scaleLocation;
 		int          aspectRatioLocation;
+
+		Shader shaderProgram;
+
 
 	//forward Declaraction for pimple idiom
 	private:
