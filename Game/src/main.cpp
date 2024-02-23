@@ -36,9 +36,36 @@ int main()
 
 	_renderDevice.test();
 
+	//TEST
+	float vertices[] = {
+				-0.5f,  0.5f, /*Color*/0.5f, 0.0f, 0.0f,
+				-0.5f, -0.5f, /*Color*/0.0f, 1.0f, 1.0f,
+				 0.5f, -0.5f, /*Color*/0.5f, 1.0f, 0.0f,
+				 0.5f,  0.5f, /*Color*/1.0f, 0.8f, 1.0f
+	};
+
+	unsigned int indices[] = { 0, 1, 2, 0, 2, 3 };
+
+	unsigned int buffers[2];
+	/*buffer[0] = vertices data	== VBO <- I WAS LOOKING FOR IT , IM SO DUMB SMH
+	  buffer[1] = indices data	== IBO		*/
+
+	glCreateBuffers(2, buffers); //Hey open gl i need 2 IDS to store things
+	glNamedBufferStorage(buffers[0], sizeof(vertices), vertices, 0); //Buffer 0 = VBO
+	glNamedBufferStorage(buffers[1], sizeof(indices), indices, 0);
+
+
+	frost::core::VertexArrayObject ALED(buffers);
+	frost::core::VertexArrayObject BALED(buffers);
+	_renderDevice.AddVao(ALED); 
+
 	do
 	{
+		_renderDevice.AddVao(ALED);
+
 		_renderDevice.Update();
+		ALED.SetLocation({ ALED.GetLocation().x + 1.f/60,0.2});
+
 
 	} while (window.PollEvents());
 
