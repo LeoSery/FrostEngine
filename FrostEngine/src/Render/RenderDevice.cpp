@@ -3,7 +3,7 @@
 #include "GL/glew.h"
 #include "GLFW/glfw3.h"
 #include "Core/Window.h"
-#include "Render/VertexArrayObject.h"
+
 
 namespace frost::core 
 {
@@ -11,6 +11,7 @@ namespace frost::core
 	struct RenderDevice::Internal
 	{
 		GLFWwindow* window = nullptr;
+		std::vector<VertexArrayObject> VaoToRender;
 	};
 
 	RenderDevice::RenderDevice(Window& _window)
@@ -25,7 +26,6 @@ namespace frost::core
 	{
 
 		glDeleteVertexArrays(1, &vao);
-
 		glfwTerminate();
 
 	}
@@ -59,10 +59,7 @@ namespace frost::core
 		rotationLocation    = glGetUniformLocation(shaderProgram.m_gl_ID, "uRotation");
 		scaleLocation       = glGetUniformLocation(shaderProgram.m_gl_ID, "uScale");
 		aspectRatioLocation = glGetUniformLocation(shaderProgram.m_gl_ID, "uAspectRatio");
-		
 
-		VertexArrayObject Hehe(buffers);
-		Hehe.Bind();
 	}
 	void RenderDevice::Update()
 	{
@@ -70,33 +67,37 @@ namespace frost::core
 		glClearColor(0.1f, 0.2f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
-		//glBindVertexArray(vao);
-		//Bind vao
-
 		shaderProgram.Enable();
 
 		int w, h;
 		glfwGetWindowSize(m_internal->window, &w, &h);
+		glProgramUniform1f(shaderProgram.m_gl_ID, aspectRatioLocation, float(w) / float(h));
 
-
-		glProgramUniform1f(shaderProgram.gl_ID, aspectRatioLocation, float(w) / float(h));
-
-		//Draw call
-		int numObjects = 1;
-		for (int i = 0; i < numObjects; i++)
+		for (int i = 0; i < GetVaoToRender().size(); i++)
 		{
-			glProgramUniform2f(shaderProgram.gl_ID, positionLocation, 0.2f, 0.0f);
-			glProgramUniform1f(shaderProgram.gl_ID, rotationLocation, 0.f);
-			glProgramUniform2f(shaderProgram.gl_ID, scaleLocation, 1.0f, 1.0f);
-			
+			GetVaoToRender()[i].Bind();
 
+			//On Dit au shader les uniform du VAO
+			glProgramUniform2f(shaderProgram.m_gl_ID, positionLocation, GetVaoToRender()[i].GetLocation().x , GetVaoToRender()[i].GetLocation().y);
+			glProgramUniform1f(shaderProgram.m_gl_ID, rotationLocation, GetVaoToRender()[i].GetRotation());
+			glProgramUniform2f(shaderProgram.m_gl_ID, scaleLocation, GetVaoToRender()[i].GetScale().x, GetVaoToRender()[i].GetScale().y);
+			
 			glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
 		}
+		ClearVaosToRender();
 		
-		//Remove the Program from using
-		glUseProgram(0);
-		//Unbind the vao
-		//glBindVertexArray(0);
+	}
+	void RenderDevice::AddVao(VertexArrayObject _newVao)
+	{
+		m_internal->VaoToRender.push_back(_newVao);
+	}
+	void RenderDevice::ClearVaosToRender()
+	{
+		m_internal->VaoToRender.clear();
+	}
+	std::vector<VertexArrayObject> RenderDevice::GetVaoToRender()
+	{
+		return m_internal->VaoToRender;
 	}
 }
 
