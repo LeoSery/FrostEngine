@@ -44,7 +44,7 @@ namespace frost::ECS
         void SetActive(bool _IsActive);
 
         [[nodiscard]] uuids::uuid GetUUID() const;
-        void GetData(std::ostream& _Stream) const;
+        void GetData(bool _ShowImmediately) const;
 
         // ECS methods
         template <typename Component>

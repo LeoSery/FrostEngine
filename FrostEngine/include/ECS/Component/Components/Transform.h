@@ -23,7 +23,7 @@ namespace frost::ECS
 		virtual void Destroy() override;
 
 		// Getters and Setters
-		void GetData(std::ostream& _Stream) const;
+		void GetData(bool _ShowImmediately) const;
 
 		// Component methods
 		void Translate(const glm::vec2& _Translation);

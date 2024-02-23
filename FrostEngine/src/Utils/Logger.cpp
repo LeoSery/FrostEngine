@@ -27,6 +27,7 @@ namespace frost::utils
 		{
 			std::cout << log.LogContent << std::endl;
 		}
+		m_LogStack.clear();
 	}
 
 	void Logger::LogInfo(const std::string& _Content)

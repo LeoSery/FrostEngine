@@ -2,6 +2,7 @@
 #include "Core/SceneManagement/SceneManager.h"
 #include "ECS/Component/IComponent.h"
 #include "ECS/Entity/GameObject.h"
+#include "Utils/Logger.h"
 
 #include <iostream>
 
@@ -110,27 +111,38 @@ namespace frost::ECS
         return m_UUID;
     }
 
-    void GameObject::GetData(std::ostream& _Stream) const
+    void GameObject::GetData(bool _ShowImmediately) const
     {
-        _Stream << m_Name << " Infos: " << std::endl;
-        _Stream << "  - Parent: " << GetParent()->GetName() << std::endl;
-        _Stream << "  - UUID: " << m_UUID << std::endl;
-        _Stream << "  - Name: " << m_Name << std::endl;
-        _Stream << "  - Transform: ";
-        GetTransform().GetData(_Stream);
-        _Stream << "  - Tags: {";
+        frost::utils::Logger* Logger = frost::utils::Logger::GetInstance();
+
+        Logger->LogInfo(m_Name + " Infos: ");
+        Logger->LogInfo("- Parent: " + GetParent()->GetName());
+        //frost::utils::Logger::LogInfo("  - UUID: " + m_UUID);
+
+        Logger->LogInfo("- Name: " + m_Name);
+
+        GetTransform().GetData(false);
+
+        std::string tags;
+        tags += "- Tags: {";
         if (m_Tags.empty())
         {
-            _Stream << " None" << std::endl;
+            tags += " None";
         }
         else
         {
             for (const auto& tag : m_Tags)
             {
-                _Stream << " " << tag << ",";
+                tags += " " + tag + ",";
             }
-            _Stream << "}" << std::endl;
+            tags += " }";
         }
-        _Stream << "  - Active: " << (m_isActive ? "True" : "False") << std::endl;
+        Logger->LogInfo(tags);
+
+        std::string status = m_isActive ? "True" : "False";
+        Logger->LogInfo("- Active: " + status);
+
+        if (_ShowImmediately)
+            Logger->Show();
     }
 }

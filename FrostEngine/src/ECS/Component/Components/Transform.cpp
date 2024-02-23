@@ -1,4 +1,5 @@
 #include "ECS/Component/Components/Transform.h"
+#include "Utils/Logger.h"
 
 namespace frost::ECS
 {
@@ -27,11 +28,18 @@ namespace frost::ECS
 
 	}
 
-	void Transform::GetData(std::ostream& _Stream) const
+	void Transform::GetData(bool _ShowImmediately) const
 	{
-		_Stream << "{ Position: [x: " << position.x << " y: " << position.y << "];";
-		_Stream << " Rotation: [" << rotation << "];";
-		_Stream << " Scale: [x:" << scale.x << " y: " << scale.y << "]; }" << std::endl;
+		frost::utils::Logger* Logger = frost::utils::Logger::GetInstance();
+
+		std::string PosString = "{ Position: [x: " + std::to_string(position.x) + " y: " + std::to_string(position.y) + "];";
+		std::string RotString = " Rotation: " + std::to_string(rotation) + ";";
+		std::string ScaleString = " Scale: [x: " + std::to_string(scale.x) + " y: " + std::to_string(scale.y) + "]; }";
+
+		Logger->LogInfo("- Transform: " + PosString + RotString + ScaleString);
+
+		if (_ShowImmediately)
+			Logger->Show();
 	}
 
 	void Transform::Translate(const glm::vec2& _Translation)

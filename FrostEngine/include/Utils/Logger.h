@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Core/Export.h"
+
 #include <vector>
 #include <string>
 
@@ -12,7 +14,7 @@ namespace frost::utils
 		Error
 	};
 
-	class Logger
+	class FROST_ENGINE_API Logger
 	{
 	public:
 
