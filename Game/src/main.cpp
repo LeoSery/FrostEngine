@@ -5,6 +5,7 @@
 #include "Utils/Logger.h"
 #include "Core/Window.h"
 #include "Render/RenderDevice.h"
+#include "Render/Buffer.h"
 
 #include <iostream>
 
@@ -35,7 +36,6 @@ int main()
 	frost::core::RenderDevice _renderDevice(window);
 
 	_renderDevice.test();
-
 	//TEST
 	float vertices[] = {
 				-0.5f,  0.5f, /*Color*/0.5f, 0.0f, 0.0f,
@@ -46,25 +46,29 @@ int main()
 
 	unsigned int indices[] = { 0, 1, 2, 0, 2, 3 };
 
-	unsigned int buffers[2];
-	/*buffer[0] = vertices data	== VBO <- I WAS LOOKING FOR IT , IM SO DUMB SMH
-	  buffer[1] = indices data	== IBO		*/
+	frost::core::Buffer VBO(vertices, sizeof(vertices));
+	frost::core::Buffer IBO(indices, sizeof(indices));
+	frost::core::VertexArrayObject ALED;
+	frost::core::VertexArrayObject BALED;
 
-	glCreateBuffers(2, buffers); //Hey open gl i need 2 IDS to store things
-	glNamedBufferStorage(buffers[0], sizeof(vertices), vertices, 0); //Buffer 0 = VBO
-	glNamedBufferStorage(buffers[1], sizeof(indices), indices, 0);
+	ALED.BindBuffer(frost::core::VertexArrayObject::eTypeBuffer::VBO, VBO);
+	ALED.BindBuffer(frost::core::VertexArrayObject::eTypeBuffer::IBO, IBO);
+	_renderDevice.AddVao(ALED);
 
 
-	frost::core::VertexArrayObject ALED(buffers);
-	frost::core::VertexArrayObject BALED(buffers);
-	_renderDevice.AddVao(ALED); 
+	BALED.BindBuffer(frost::core::VertexArrayObject::eTypeBuffer::VBO, VBO);
+	BALED.BindBuffer(frost::core::VertexArrayObject::eTypeBuffer::IBO, IBO);
+	_renderDevice.AddVao(BALED);
+	BALED.SetLocation({ BALED.GetLocation().x + 1.f / 120,0.2 });
 
 	do
 	{
 		_renderDevice.AddVao(ALED);
+		_renderDevice.AddVao(BALED);
+		ALED.SetLocation({ ALED.GetLocation().x + 1.f / 120,0.2 });
 
 		_renderDevice.Update();
-		ALED.SetLocation({ ALED.GetLocation().x + 1.f/60,0.2});
+		ALED.SetLocation({ ALED.GetLocation().x + 1.f / 60,0.2 });
 
 
 	} while (window.PollEvents());

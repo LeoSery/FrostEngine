@@ -4,6 +4,7 @@
 namespace frost::core 
 {
 
+	class Buffer;
 
 	class FROST_ENGINE_API VertexArrayObject
 	{
@@ -13,24 +14,28 @@ namespace frost::core
 		glm::vec2 positionLocation;
 		float rotationLocation;
 		glm::vec2 scaleLocation;
+
 	
 	public:
 	
-		enum eShape
+		enum eTypeBuffer
 		{
-			Square
+			VBO,
+			IBO
 		};
-	
+
 		
-		
-		VertexArrayObject(unsigned int buffers[2]);
-		VertexArrayObject(const void* vertices, unsigned int indices[]);
+		VertexArrayObject();
+
 		~VertexArrayObject();
 	
 	
 		void Bind();
 		void Unbind();
-	
+
+		void BindBuffer(eTypeBuffer _bufferType,Buffer& _buffer);
+		
+
 		void SetLocation(glm::vec2 _newLocation);
 		void SetRotation(float _newRotation);
 		void SetScale(glm::vec2 _newScale);
