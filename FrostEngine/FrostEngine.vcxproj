@@ -26,13 +26,13 @@
     <ClInclude Include="include\ECS\System\Tree.h" />
     <ClInclude Include="include\Core\SceneManagement\SceneManager.h" />
     <ClInclude Include="include\ECS\Component\Components\Transform.h" />
+    <ClInclude Include="include\Render\Buffer.h" />
     <ClInclude Include="include\Render\RenderDevice.h" />
     <ClInclude Include="include\Render\Shader.h" />
     <ClInclude Include="include\Render\VertexArrayObject.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\ECS\Component\Components\SpriteRenderer.cpp" />
-    <ClCompile Include="src\Utils\Logger.cpp" />
+    <ClCompile Include="src\Render\Buffer.cpp" />
     <ClCompile Include="src\Core\SceneManager.cpp" />
     <ClCompile Include="src\ECS\Component\IComponent.cpp" />
     <ClCompile Include="src\ECS\GameObject.cpp" />
@@ -42,6 +42,7 @@
     <ClCompile Include="src\Render\RenderDevice.cpp" />
     <ClCompile Include="src\Render\Shader.cpp" />
     <ClCompile Include="src\Render\VertexArrayObject.cpp" />
+    <ClCompile Include="src\Utils\Logger.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="src\Render\Shaders\DefaultVertexShader.glsl" />
