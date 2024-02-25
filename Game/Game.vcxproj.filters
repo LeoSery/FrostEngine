@@ -20,7 +20,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ressources\shaders\default.frag" />
-    <None Include="ressources\shaders\default.vert" />
+    <None Include="ressources\Shaders\default.frag" />
+    <None Include="ressources\Shaders\default.vert" />
   </ItemGroup>
 </Project>
