@@ -53,6 +53,10 @@ namespace frost::ECS
         template <typename Component>
         [[nodiscard]] Component* GetComponent() const;
 
+        template <typename Component>
+        void RemoveComponent();
+
+
     private:
         uuids::uuid m_UUID;
         std::string m_Name;

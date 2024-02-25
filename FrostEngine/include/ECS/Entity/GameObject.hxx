@@ -1,3 +1,4 @@
+#include "GameObject.h"
 #pragma once
 
 namespace frost::ECS
@@ -16,6 +17,23 @@ namespace frost::ECS
         }
 
         return nullptr;
+    }
+
+    template<typename Component>
+    inline void GameObject::RemoveComponent()
+    {
+        static_assert(std::is_base_of<IComponent, Component>());
+        static_assert(!std::is_same_v<frost::ECS::Transform, Component>, "'Transform' component cannot be removed from a GameObject");
+
+        for (auto& component : m_Components)
+        {
+            if (component->GetTypeName() == Component::GetStaticTypeName())
+            {
+				m_Components.erase(std::remove(m_Components.begin(), m_Components.end(), component), m_Components.end());
+				delete component;
+				break;
+			}
+		}
     }
 
     template<typename Component>
