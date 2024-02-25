@@ -20,10 +20,10 @@ namespace frost::core
 		glVertexArrayAttribBinding(m_gl_ID, 0, 0);
 		glVertexArrayAttribFormat(m_gl_ID, 0, 2 /*L'attribut a une taille de 2 GL_FLOAT*/, GL_FLOAT, GL_FALSE, 0);
 	
-		//On active l'attribut 1 du VAO
+		//On active l'attribut 1 du VAO <-- TexCoord
 		glEnableVertexArrayAttrib(m_gl_ID, 1);
 		glVertexArrayAttribBinding(m_gl_ID, 1, 0); //On Bind l'attribut 1 qui est la couleur des vertices
-		glVertexArrayAttribFormat(m_gl_ID, 1, 3 /*L'attribut a une taille de 3 GL_FLOAT*/, GL_FLOAT, GL_FALSE, 2 * sizeof(float)); // et un offset de 2
+		glVertexArrayAttribFormat(m_gl_ID, 1, 2 /*L'attribut a une taille de 3 GL_FLOAT*/, GL_FLOAT, GL_FALSE, 2 * sizeof(float)); // et un offset de 2 * la taille d'un float
 
 	}
 
@@ -47,7 +47,7 @@ namespace frost::core
 		{
 		case frost::core::VertexArrayObject::VBO:
 			//la on bind ? 
-			glVertexArrayVertexBuffer(m_gl_ID, 0, _buffer.GetBufferID(), 0 /*Offset par rapport au debut du buffer*/, 5 * sizeof(float) /*Data par vertice*/);
+			glVertexArrayVertexBuffer(m_gl_ID, 0, _buffer.GetBufferID(), 0 /*Offset par rapport au debut du buffer*/, 4 * sizeof(float) /*Data par vertice*/);
 
 			break;
 		case frost::core::VertexArrayObject::IBO:
