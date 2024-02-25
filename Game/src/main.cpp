@@ -5,7 +5,11 @@
 #include "Utils/Logger.h"
 #include "Core/Window.h"
 #include "Render/RenderDevice.h"
+#include "Core/Window.h"
+
+#include "Render/RenderDevice.h"
 #include "Render/Buffer.h"
+#include "Render/Texture.h"
 
 #include <iostream>
 
@@ -38,10 +42,10 @@ int main()
 	_renderDevice.test();
 	//TEST
 	float vertices[] = {
-				-0.5f,  0.5f, /*Color*/0.5f, 0.0f, 0.0f,
-				-0.5f, -0.5f, /*Color*/0.0f, 1.0f, 1.0f,
-				 0.5f, -0.5f, /*Color*/0.5f, 1.0f, 0.0f,
-				 0.5f,  0.5f, /*Color*/1.0f, 0.8f, 1.0f
+				-0.5f,  0.5f, /*Color*/0.0f, 1.0f,
+				-0.5f, -0.5f, /*Color*/0.0f, 0.0f,
+				 0.5f, -0.5f, /*Color*/1.0f, 0.0f,
+				 0.5f,  0.5f, /*Color*/1.0f, 1.0f,
 	};
 
 	unsigned int indices[] = { 0, 1, 2, 0, 2, 3 };
@@ -51,6 +55,8 @@ int main()
 	frost::core::VertexArrayObject ALED;
 	frost::core::VertexArrayObject BALED;
 
+
+
 	ALED.BindBuffer(frost::core::VertexArrayObject::eTypeBuffer::VBO, VBO);
 	ALED.BindBuffer(frost::core::VertexArrayObject::eTypeBuffer::IBO, IBO);
 	_renderDevice.AddVao(ALED);
@@ -58,14 +64,14 @@ int main()
 
 	BALED.BindBuffer(frost::core::VertexArrayObject::eTypeBuffer::VBO, VBO);
 	BALED.BindBuffer(frost::core::VertexArrayObject::eTypeBuffer::IBO, IBO);
+	BALED.SetLocation({ 0.5 ,0.2 });
 	_renderDevice.AddVao(BALED);
-	BALED.SetLocation({ BALED.GetLocation().x + 1.f / 120,0.2 });
 
 	do
 	{
 		_renderDevice.AddVao(ALED);
 		_renderDevice.AddVao(BALED);
-		ALED.SetLocation({ ALED.GetLocation().x + 1.f / 120,0.2 });
+		ALED.SetLocation({ ALED.GetLocation().x + 1.f / 120, 0 });
 
 		_renderDevice.Update();
 		ALED.SetLocation({ ALED.GetLocation().x + 1.f / 60,0.2 });
