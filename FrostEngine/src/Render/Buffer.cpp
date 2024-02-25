@@ -16,10 +16,8 @@ namespace frost::core
 	Buffer::Buffer( void* data , unsigned int size)
 		:m_internal(new Internal)
 	{
-		std::cout << m_internal->m_gl_ID << std::endl;
 		glCreateBuffers(1, &m_internal->m_gl_ID);
 		glNamedBufferStorage(m_internal->m_gl_ID, size , data, 0);
-		std::cout << m_internal->m_gl_ID << std::endl;
 
 	}
 
