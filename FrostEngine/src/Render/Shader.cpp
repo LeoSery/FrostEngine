@@ -50,10 +50,10 @@ namespace frost::core
 	std::string Shader::ReadShaderFile(const char* _filename)
 	{
 		// Get the current working directory 
-		std::filesystem::path cwd = std::filesystem::current_path();
+		std::filesystem::path currentPath = std::filesystem::current_path();
 
 		// Construct a file path relative to the current working directory 
-		std::filesystem::path file_path = cwd / "ressources" / "shaders" / _filename;
+		std::filesystem::path file_path = currentPath / "ressources" / "Shaders" / _filename;
 
 		std::cout << file_path << std::endl;
 		std::ifstream in(file_path, std::ios::binary);
