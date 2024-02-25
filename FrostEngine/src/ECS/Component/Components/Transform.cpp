@@ -32,11 +32,11 @@ namespace frost::ECS
 	{
 		frost::utils::Logger* Logger = frost::utils::Logger::GetInstance();
 
-		std::string PosString = "{ Position: [x: " + std::to_string(position.x) + " y: " + std::to_string(position.y) + "];";
-		std::string RotString = " Rotation: " + std::to_string(rotation) + ";";
-		std::string ScaleString = " Scale: [x: " + std::to_string(scale.x) + " y: " + std::to_string(scale.y) + "]; }";
+		std::string PosString = std::format("{{ Position: [x: {:.2f} y: {:.2f}];", position.x, position.y);
+		std::string RotString = std::format(" Rotation: {:.2f};", rotation);
+		std::string ScaleString = std::format(" Scale: [x: {:.2f} y: {:.2f}]; }}", scale.x, scale.y);
 
-		Logger->LogInfo("- Transform: " + PosString + RotString + ScaleString);
+		Logger->LogInfo(std::format("- Transform: {} {} {}", PosString, RotString, ScaleString));
 
 		if (_ShowImmediately)
 			Logger->Show();

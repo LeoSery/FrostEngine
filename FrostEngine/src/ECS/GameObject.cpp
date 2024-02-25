@@ -117,7 +117,7 @@ namespace frost::ECS
 
         Logger->LogInfo(m_Name + " Infos: ");
         Logger->LogInfo("- Parent: " + GetParent()->GetName());
-        //frost::utils::Logger::LogInfo("  - UUID: " + m_UUID);
+        Logger->LogInfo(std::format("- UUID: {}", uuids::to_string(m_UUID)));
 
         Logger->LogInfo("- Name: " + m_Name);
 
