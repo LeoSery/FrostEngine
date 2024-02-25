@@ -1,7 +1,7 @@
 #version 460 core
 layout(location = 0) in vec2 aPos;
-layout(location = 1) in vec3 aColor;
-out vec3 vColor;
+layout(location = 1) in vec2 aColor;
+out vec2 vColor;
 
 uniform vec2  uPosition;
 uniform float uRotation;
