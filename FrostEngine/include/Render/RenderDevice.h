@@ -6,6 +6,7 @@
 
 #include "Render\Shader.h"
 #include "Render/VertexArrayObject.h"
+#include "Render/Texture.h"
 
 namespace frost::core 
 {
@@ -36,10 +37,11 @@ namespace frost::core
 		int          rotationLocation;
 		int          scaleLocation;
 		int          aspectRatioLocation;
+		int          texture;
 
 		float a = 0.0f;
 		Shader shaderProgram;
-
+		Texture TestTex;
 	
 		void ClearVaosToRender();
 		std::vector<VertexArrayObject> GetVaoToRender();
