@@ -5,6 +5,7 @@
 #include "Core/Window.h"
 
 
+
 namespace frost::core 
 {
 
@@ -15,7 +16,7 @@ namespace frost::core
 	};
 
 	RenderDevice::RenderDevice(Window& _window)
-		:m_internal(new Internal)
+		:m_internal(new Internal), TestTex("T_PlaceHolder.png")
 	{
 		m_internal->window = static_cast<GLFWwindow*>(_window.GetInternal());
 		glewInit();
@@ -32,33 +33,17 @@ namespace frost::core
 
 	void RenderDevice::test()
 	{
-		//TEST
-		float vertices[] = { 
-					-0.5f,  0.5f, /*Color*/0.5f, 0.0f, 0.0f,
-					-0.5f, -0.5f, /*Color*/0.0f, 1.0f, 1.0f,
-					 0.5f, -0.5f, /*Color*/0.5f, 1.0f, 0.0f,
-					 0.5f,  0.5f, /*Color*/1.0f, 0.8f, 1.0f
-		};
-
-		unsigned int indices[] = { 0, 1, 2, 0, 2, 3 };
-
-
-
-		unsigned int buffers[2];
-		/*buffer[0] = vertices data	== VBO <- I WAS LOOKING FOR IT , IM SO DUMB SMH
-		  buffer[1] = indices data	== IBO		*/
-
-		glCreateBuffers(2, buffers); //Hey open gl i need 2 IDS to store things
-		glNamedBufferStorage(buffers[0], sizeof(vertices), vertices, 0); //Buffer 0 = VBO
-		glNamedBufferStorage(buffers[1], sizeof(indices), indices, 0);
  
 		shaderProgram.InitShader("default.vert", "default.frag");
+
+		TestTex.Bind();
 
 		//PickUp Position of the shader in memory
 		positionLocation    = glGetUniformLocation(shaderProgram.m_gl_ID, "uPosition");
 		rotationLocation    = glGetUniformLocation(shaderProgram.m_gl_ID, "uRotation");
 		scaleLocation       = glGetUniformLocation(shaderProgram.m_gl_ID, "uScale");
 		aspectRatioLocation = glGetUniformLocation(shaderProgram.m_gl_ID, "uAspectRatio");
+		texture				= glGetUniformLocation(shaderProgram.m_gl_ID, "uTexture");
 
 	}
 	void RenderDevice::Update()
@@ -76,12 +61,12 @@ namespace frost::core
 		for (int i = 0; i < GetVaoToRender().size(); i++)
 		{
 			GetVaoToRender()[i].Bind();
-
 			//On Dit au shader les uniform du VAO
 			glProgramUniform2f(shaderProgram.m_gl_ID, positionLocation, GetVaoToRender()[i].GetLocation().x , GetVaoToRender()[i].GetLocation().y);
 			glProgramUniform1f(shaderProgram.m_gl_ID, rotationLocation, GetVaoToRender()[i].GetRotation());
 			glProgramUniform2f(shaderProgram.m_gl_ID, scaleLocation, GetVaoToRender()[i].GetScale().x, GetVaoToRender()[i].GetScale().y);
-			
+			glProgramUniform1i(shaderProgram.m_gl_ID, texture, 0);
+
 			glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
 		}
 		ClearVaosToRender();
