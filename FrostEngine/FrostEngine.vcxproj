@@ -30,9 +30,12 @@
     <ClInclude Include="include\Render\RenderDevice.h" />
     <ClInclude Include="include\Render\Shader.h" />
     <ClInclude Include="include\Render\VertexArrayObject.h" />
+    <ClInclude Include="include\Utils\stb_image.h" />
+    <ClInclude Include="include\Render\Texture.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Render\Buffer.cpp" />
+    <ClCompile Include="src\Utils\stb_image\stb_image.cpp" />
     <ClCompile Include="src\Core\SceneManager.cpp" />
     <ClCompile Include="src\ECS\Component\IComponent.cpp" />
     <ClCompile Include="src\ECS\GameObject.cpp" />
@@ -42,6 +45,7 @@
     <ClCompile Include="src\Render\RenderDevice.cpp" />
     <ClCompile Include="src\Render\Shader.cpp" />
     <ClCompile Include="src\Render\VertexArrayObject.cpp" />
+    <ClCompile Include="src\Render\Texture.cpp" />
     <ClCompile Include="src\Utils\Logger.cpp" />
   </ItemGroup>
   <ItemGroup>
