@@ -27,8 +27,10 @@
     <ClInclude Include="include\Core\SceneManagement\SceneManager.h" />
     <ClInclude Include="include\ECS\Component\Components\Transform.h" />
     <ClInclude Include="include\Utils\Logger.h" />
+    <ClInclude Include="include\ECS\Component\Components\SpriteRenderer.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\ECS\Component\Components\SpriteRenderer.cpp" />
     <ClCompile Include="src\Utils\Logger.cpp" />
     <ClCompile Include="src\Core\SceneManager.cpp" />
     <ClCompile Include="src\ECS\Component\IComponent.cpp" />
