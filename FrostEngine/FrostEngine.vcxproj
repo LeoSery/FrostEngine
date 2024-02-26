@@ -13,6 +13,9 @@
   <ItemGroup>
     <ClInclude Include="include\Core\Internal\AuthorizationBadge.h" />
     <ClInclude Include="include\Core\Internal\RTTI.h" />
+    <ClInclude Include="include\Core\Serial\Save.h" />
+    <ClInclude Include="include\Core\Serial\TextureMgr.h" />
+    <ClInclude Include="include\Core\Serial\XmlParser.h" />
     <ClInclude Include="include\Core\SignalSlot\Signal.h" />
     <ClInclude Include="include\Core\SignalSlot\Signal.hxx" />
     <ClInclude Include="include\Core\SignalSlot\Slot.h" />
@@ -34,7 +37,10 @@
     <ClInclude Include="include\Render\Texture.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Core\Serial\Save.cpp" />
+    <ClCompile Include="src\Core\Serial\XmlParser.cpp" />
     <ClCompile Include="src\Render\Buffer.cpp" />
+    <ClCompile Include="src\Render\TextureMgr.cpp" />
     <ClCompile Include="src\Utils\stb_image\stb_image.cpp" />
     <ClCompile Include="src\Core\SceneManager.cpp" />
     <ClCompile Include="src\ECS\Component\IComponent.cpp" />
@@ -50,6 +56,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="src\Render\Shaders\DefaultVertexShader.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Ressources\Save.xml" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
