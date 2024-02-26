@@ -15,6 +15,7 @@
     "opengl",
     "imgui",
     "glew",
-    "stduuid"
+    "stduuid",
+    "rapidxml"
   ]
 }

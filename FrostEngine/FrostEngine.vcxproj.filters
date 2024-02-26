@@ -2,6 +2,7 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="src\Render\Buffer.cpp" />
+    <ClCompile Include="src\Utils\stb_image\stb_image.cpp" />
     <ClCompile Include="src\Core\SceneManager.cpp" />
     <ClCompile Include="src\ECS\Component\IComponent.cpp" />
     <ClCompile Include="src\ECS\GameObject.cpp" />
@@ -11,98 +12,42 @@
     <ClCompile Include="src\Render\RenderDevice.cpp" />
     <ClCompile Include="src\Render\Shader.cpp" />
     <ClCompile Include="src\Render\VertexArrayObject.cpp" />
-    <ClCompile Include="src\Render\Buffer.cpp" />
     <ClCompile Include="src\Render\Texture.cpp" />
-    <ClCompile Include="src\Utils\stb_image\stb_image.cpp" />
+    <ClCompile Include="src\Utils\Logger.cpp" />
+    <ClCompile Include="src\Core\Serial\Save.cpp" />
+    <ClCompile Include="src\Core\Serial\XmlParser.cpp" />
+    <ClCompile Include="src\Render\TextureMgr.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\Core\Export.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Core\Window.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Core\SceneManagement\Scene.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="include\ECS\System\Tree.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="include\ECS\Entity\GameObject.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Core\SceneManagement\SceneManager.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Core\Internal\AuthorizationBadge.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="include\ECS\Component\IComponent.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="include\ECS\Component\Components\Transform.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="include\ECS\Entity\GameObject.hxx">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Core\Internal\RTTI.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Core\SignalSlot\Signal.hxx">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Core\SignalSlot\Signal.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Core\SignalSlot\Slot.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Core\SignalSlot\Slot.hxx">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Render\RenderDevice.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Render\Shader.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Render\VertexArrayObject.h">
-    <ClInclude Include="include\Utils\Logger.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="src\Core\Window.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Core\Scene.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ECS\GameObject.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Core\SceneManager.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ECS\Component\IComponent.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ECS\Component\Components\Transform.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-<<<<<<< HEAD
-    <ClCompile Include="src\Render\RenderDevice.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Render\Shader.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Render\VertexArrayObject.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
+    <ClInclude Include="include\Core\Internal\AuthorizationBadge.h" />
+    <ClInclude Include="include\Core\Internal\RTTI.h" />
+    <ClInclude Include="include\Core\SignalSlot\Signal.h" />
+    <ClInclude Include="include\Core\SignalSlot\Signal.hxx" />
+    <ClInclude Include="include\Core\SignalSlot\Slot.h" />
+    <ClInclude Include="include\Core\SignalSlot\Slot.hxx" />
+    <ClInclude Include="include\ECS\Component\IComponent.h" />
+    <ClInclude Include="include\ECS\Entity\GameObject.h" />
+    <ClInclude Include="include\Core\Export.h" />
+    <ClInclude Include="include\Core\Window.h" />
+    <ClInclude Include="include\Core\SceneManagement\Scene.h" />
+    <ClInclude Include="include\ECS\Entity\GameObject.hxx" />
+    <ClInclude Include="include\ECS\System\Tree.h" />
+    <ClInclude Include="include\Core\SceneManagement\SceneManager.h" />
+    <ClInclude Include="include\ECS\Component\Components\Transform.h" />
+    <ClInclude Include="include\Render\Buffer.h" />
+    <ClInclude Include="include\Render\RenderDevice.h" />
+    <ClInclude Include="include\Render\Shader.h" />
+    <ClInclude Include="include\Render\VertexArrayObject.h" />
+    <ClInclude Include="include\Utils\stb_image.h" />
+    <ClInclude Include="include\Render\Texture.h" />
+    <ClInclude Include="include\Core\Serial\Save.h" />
+    <ClInclude Include="include\Core\Serial\XmlParser.h" />
+    <ClInclude Include="include\Core\Serial\TextureMgr.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="src\Render\Shaders\DefaultVertexShader.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Ressources\Save.xml" />
   </ItemGroup>
 </Project>

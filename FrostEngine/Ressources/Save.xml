@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<Entity>
+		<Player>
+			
+			<Position>
+				<XValue>3</XValue>
+				<YValue>10</YValue>
+			</Position>
+			
+			<Rotation>
+				<Value>3</Value>
+			</Rotation>
+			
+			<TexturePath>
+				<Value>"Ressources/Img/Player.png"</Value>
+			</TexturePath>
+			
+			<LifePoint>
+				<Value>10</Value>
+			</LifePoint>
+			
+		</Player>
+	</Entity>
+</root>
