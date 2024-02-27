@@ -1,6 +1,5 @@
 #include "Render/VertexArrayObject.h"
 #include "Render/Buffer.h"
-
 #include "GL/glew.h"
 #include "GLFW/glfw3.h"
 
@@ -9,9 +8,9 @@ namespace frost::core
 	
 	VertexArrayObject::VertexArrayObject()
 	{
-		positionLocation = { 0,0 };
-		rotationLocation = 0.f;
-		scaleLocation = {1,1};
+		m_positionLocation = { 0,0 };
+		m_rotationLocation = 0.f;
+		m_scaleLocation = {1,1};
 		
 		glCreateVertexArrays(1, &m_gl_ID);
 	
@@ -41,7 +40,7 @@ namespace frost::core
 		glBindVertexArray(0);
 	}
 
-	void VertexArrayObject::BindBuffer( eTypeBuffer _bufferType, Buffer& _buffer)
+	void VertexArrayObject::BindBuffer( E_TypeBuffer _bufferType, Buffer& _buffer)
 	{
 		switch (_bufferType)
 		{
@@ -64,32 +63,32 @@ namespace frost::core
 	
 	void VertexArrayObject::SetLocation(glm::vec2 _newLocation)
 	{
-		positionLocation = _newLocation;
+		m_positionLocation = _newLocation;
 	}
 	
 	void VertexArrayObject::SetRotation(float _newRotation)
 	{
-		rotationLocation = _newRotation;
+		m_rotationLocation = _newRotation;
 	}
 	
 	void VertexArrayObject::SetScale(glm::vec2 _newScale)
 	{
-		scaleLocation = _newScale;
+		m_scaleLocation = _newScale;
 	}
 	
 	glm::vec2 VertexArrayObject::GetLocation()
 	{
-		return positionLocation;
+		return m_positionLocation;
 	}
 	
 	glm::vec2 VertexArrayObject::GetScale()
 	{
-		return scaleLocation;
+		return m_scaleLocation;
 	}
 	
 	float VertexArrayObject::GetRotation()
 	{
-		return rotationLocation;
+		return m_rotationLocation;
 	}
 	
 	

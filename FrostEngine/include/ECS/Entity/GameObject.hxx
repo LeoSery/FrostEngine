@@ -8,7 +8,7 @@ namespace frost::ECS
     {
         static_assert(std::is_base_of<IComponent, Component>());
 
-        for (auto& component : m_Components)
+        for (auto& component : m_components)
         {
             if (component->GetTypeName() == Component::GetStaticTypeName())
             {
@@ -25,11 +25,11 @@ namespace frost::ECS
         static_assert(std::is_base_of<IComponent, Component>());
         static_assert(!std::is_same_v<frost::ECS::Transform, Component>, "'Transform' component cannot be removed from a GameObject");
 
-        for (auto& component : m_Components)
+        for (auto& component : m_components)
         {
             if (component->GetTypeName() == Component::GetStaticTypeName())
             {
-				m_Components.erase(std::remove(m_Components.begin(), m_Components.end(), component), m_Components.end());
+				m_components.erase(std::remove(m_components.begin(), m_components.end(), component), m_components.end());
 				delete component;
 				break;
 			}
@@ -47,7 +47,7 @@ namespace frost::ECS
         }
 
         Component* component = new Component(*this);
-        m_Components.push_back(component);
+        m_components.push_back(component);
         return component;
     }
 }

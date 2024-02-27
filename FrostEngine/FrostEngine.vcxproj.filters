@@ -14,9 +14,9 @@
     <ClCompile Include="src\Render\VertexArrayObject.cpp" />
     <ClCompile Include="src\Render\Texture.cpp" />
     <ClCompile Include="src\Utils\Logger.cpp" />
-    <ClCompile Include="src\Core\Serial\Save.cpp" />
     <ClCompile Include="src\Core\Serial\XmlParser.cpp" />
     <ClCompile Include="src\Render\TextureMgr.cpp" />
+    <ClCompile Include="src\ECS\Component\Components\SpriteRenderer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Core\Internal\AuthorizationBadge.h" />
@@ -42,7 +42,9 @@
     <ClInclude Include="include\Render\Texture.h" />
     <ClInclude Include="include\Core\Serial\Save.h" />
     <ClInclude Include="include\Core\Serial\XmlParser.h" />
-    <ClInclude Include="include\Core\Serial\TextureMgr.h" />
+    <ClInclude Include="include\Core\Serial\TextureManager.h" />
+    <ClInclude Include="include\ECS\Component\Components\SpriteRenderer.h" />
+    <ClInclude Include="include\Utils\Logger.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="src\Render\Shaders\DefaultVertexShader.glsl" />

@@ -14,12 +14,13 @@
     <ClInclude Include="include\Core\Internal\AuthorizationBadge.h" />
     <ClInclude Include="include\Core\Internal\RTTI.h" />
     <ClInclude Include="include\Core\Serial\Save.h" />
-    <ClInclude Include="include\Core\Serial\TextureMgr.h" />
+    <ClInclude Include="include\Core\Serial\TextureManager.h" />
     <ClInclude Include="include\Core\Serial\XmlParser.h" />
     <ClInclude Include="include\Core\SignalSlot\Signal.h" />
     <ClInclude Include="include\Core\SignalSlot\Signal.hxx" />
     <ClInclude Include="include\Core\SignalSlot\Slot.h" />
     <ClInclude Include="include\Core\SignalSlot\Slot.hxx" />
+    <ClInclude Include="include\ECS\Component\Components\SpriteRenderer.h" />
     <ClInclude Include="include\ECS\Component\IComponent.h" />
     <ClInclude Include="include\ECS\Entity\GameObject.h" />
     <ClInclude Include="include\Core\Export.h" />
@@ -33,12 +34,13 @@
     <ClInclude Include="include\Render\RenderDevice.h" />
     <ClInclude Include="include\Render\Shader.h" />
     <ClInclude Include="include\Render\VertexArrayObject.h" />
+    <ClInclude Include="include\Utils\Logger.h" />
     <ClInclude Include="include\Utils\stb_image.h" />
     <ClInclude Include="include\Render\Texture.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Core\Serial\Save.cpp" />
     <ClCompile Include="src\Core\Serial\XmlParser.cpp" />
+    <ClCompile Include="src\ECS\Component\Components\SpriteRenderer.cpp" />
     <ClCompile Include="src\Render\Buffer.cpp" />
     <ClCompile Include="src\Render\TextureMgr.cpp" />
     <ClCompile Include="src\Utils\stb_image\stb_image.cpp" />

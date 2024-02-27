@@ -7,7 +7,7 @@
 
 namespace frost::utils
 {
-	enum class LogType
+	enum class E_LogType
 	{
 		Info,
 		Warning,
@@ -23,7 +23,7 @@ namespace frost::utils
 		~Logger();
 
 		//Methods
-		void Log(LogType _Type, const std::string& _Content);
+		void Log(E_LogType _Type, const std::string& _Content);
 		void Show();
 
 		//Static Methods
@@ -32,20 +32,20 @@ namespace frost::utils
 		static void LogError(const std::string& _Content);
 
 		// Singleton
-		static Logger* GetInstance();
+		[[nodiscard]] static Logger* GetInstance();
 		static void DeleteInstance();
 
 	private:
-		struct LogData
+		struct S_LogData
 		{
-			LogType LogType;
-			std::string LogContent;
+			E_LogType logType;
+			std::string logContent;
 		};
 
-		static Logger* m_Instance;
-		std::vector<LogData> m_LogStack;
-		bool m_ShowLogError = true;
-		bool m_ShowLogWarning = true;
-		bool m_ShowLogInfo = true;
+		static Logger* m_instance;
+		std::vector<S_LogData> m_logStack;
+		bool m_showLogError = true;
+		bool m_showLogWarning = true;
+		bool m_showLogInfo = true;
 	};
 }

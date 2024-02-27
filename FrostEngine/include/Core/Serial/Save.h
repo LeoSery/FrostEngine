@@ -1,27 +1,24 @@
 #pragma once
 
 #include "Core/Export.h"
+
 #include <string>
 
 namespace frost::core
 {
 	class FROST_ENGINE_API Save 
 	{
-	friend class XmlParser;
-	public:
+		friend class XmlParser;
 
 	protected:
+		int m_protected_rotation = 0;
+		int m_protected_lifePoint = 0;
+		std::string m_protected_imagePath = "";
 
-
-		int Rotation = 0;
-		int LifePoint = 0;
-		std::string ImagePath = "";
 		struct Position
 		{
 			int x, y;
 		};
-		Position Pos{};
+		Position m_protected_pos{};
 	};
-
 }
-

@@ -3,7 +3,7 @@
 
 namespace frost::ECS
 {
-	IComponent::IComponent(GameObject& _GameObject) : ParentObject(_GameObject)
+	IComponent::IComponent(GameObject& _GameObject) : m_parentObject(_GameObject)
 	{
 		
 	}
@@ -25,11 +25,11 @@ namespace frost::ECS
 
 	uuids::uuid IComponent::GetUUID() const
 	{
-		return m_UUID;
+		return m_uuid;
 	}
 
 	GameObject& IComponent::GetParentObject() const
 	{
-		return ParentObject;
+		return m_parentObject;
 	}
 }

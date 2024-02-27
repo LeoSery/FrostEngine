@@ -1,56 +1,57 @@
 #pragma once
 
+#include "Render/VertexArrayObject.h"
+#include "Render/Texture.h"
+#include "Render/Shader.h"
 #include "Core/Export.h"
+
 #include <memory>
 #include <vector>
 
-#include "Render\Shader.h"
-#include "Render/VertexArrayObject.h"
-#include "Render/Texture.h"
-
 namespace frost::core 
 {
-
 	class Window;
 	
 	class FROST_ENGINE_API RenderDevice
 	{
-
 	public:
+
+		// Constructors and Destructors
 		RenderDevice(const RenderDevice&) = delete;
-		
-		explicit RenderDevice(Window& _window);
+		explicit RenderDevice(Window& _Window);
 		~RenderDevice();
 
-		void test();
+		// Methods
+		void RenderTest();
+		void AddVAO(VertexArrayObject _NewVAO);
 
+		// Frost engine life cycle methods
 		void Update();
-		void AddVao(VertexArrayObject _newVao);
 
 	private:
-		unsigned int vao;
-		unsigned int vs;
-		unsigned int fs;
-	
 
-		int          positionLocation;
-		int          rotationLocation;
-		int          scaleLocation;
-		int          aspectRatioLocation;
-		int          texture;
-
-		float a = 0.0f;
-		Shader shaderProgram;
-		Texture TestTex;
+		// Fields
+		unsigned int m_vao;
+		unsigned int m_vs;
+		unsigned int m_fs;
 	
+		int m_positionLocation;
+		int m_rotationLocation;
+		int m_scaleLocation;
+		int m_aspectRatioLocation;
+		int m_texture;
+
+		float m_a = 0.0f;
+		Shader m_shaderProgram;
+		Texture m_testTex;
+		[[nodiscard]] std::vector<VertexArrayObject> GetVaoToRender();
+
+		// Methods
 		void ClearVaosToRender();
-		std::vector<VertexArrayObject> GetVaoToRender();
 
 	//forward Declaraction for pimple idiom
 	private:
 		struct Internal;
 		std::unique_ptr<Internal> m_internal;
 	};
-
 }
-

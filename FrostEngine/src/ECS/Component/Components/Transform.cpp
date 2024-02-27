@@ -18,7 +18,7 @@ namespace frost::ECS
 
 	}
 
-	void Transform::Update(float /*fDeltaTime*/)
+	void Transform::Update(float /*_DeltaTime*/)
 	{
 		
 	}
@@ -28,7 +28,7 @@ namespace frost::ECS
 
 	}
 
-	void Transform::GetData(bool _ShowImmediately) const
+	void Transform::GetData(bool _ForceLoggerDraw) const
 	{
 		frost::utils::Logger* Logger = frost::utils::Logger::GetInstance();
 
@@ -38,7 +38,7 @@ namespace frost::ECS
 
 		Logger->LogInfo(std::format("- Transform: {} {} {}", PosString, RotString, ScaleString));
 
-		if (_ShowImmediately)
+		if (_ForceLoggerDraw)
 			Logger->Show();
 	}
 

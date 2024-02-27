@@ -1,4 +1,5 @@
 #include "Render/Shader.h"
+
 #include <filesystem>
 
 namespace frost::core

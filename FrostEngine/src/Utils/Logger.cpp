@@ -4,7 +4,7 @@
 
 namespace frost::utils
 {
-	Logger* Logger::m_Instance = nullptr;
+	Logger* Logger::m_instance = nullptr;
 
 	Logger::Logger()
 	{
@@ -16,51 +16,51 @@ namespace frost::utils
 
 	}
 
-	void Logger::Log(LogType _Type, const std::string& _Content)
+	void Logger::Log(E_LogType _Type, const std::string& _Content)
 	{
-		m_LogStack.push_back({ _Type, _Content });
+		m_logStack.push_back({ _Type, _Content });
 	}
 
 	void Logger::Show()
 	{
-		for (const LogData& log : m_LogStack)
+		for (const S_LogData& log : m_logStack)
 		{
-			std::cout << log.LogContent << std::endl;
+			std::cout << log.logContent << std::endl;
 		}
-		m_LogStack.clear();
+		m_logStack.clear();
 	}
 
 	void Logger::LogInfo(const std::string& _Content)
 	{
-		GetInstance()->Log(LogType::Info, _Content);
+		GetInstance()->Log(E_LogType::Info, _Content);
 	}
 
 	void Logger::LogWarning(const std::string& _Content)
 	{
-		GetInstance()->Log(LogType::Warning, _Content);
+		GetInstance()->Log(E_LogType::Warning, _Content);
 	}
 
 	void Logger::LogError(const std::string& _Content)
 	{
-		GetInstance()->Log(LogType::Error, _Content);
+		GetInstance()->Log(E_LogType::Error, _Content);
 	}
 
 	Logger* Logger::GetInstance()
 	{
-		if (!m_Instance)
+		if (!m_instance)
 		{
-			m_Instance = new Logger();
+			m_instance = new Logger();
 		}
 
-		return m_Instance;
+		return m_instance;
 	}
 
 	void Logger::DeleteInstance()
 	{
-		if (m_Instance)
+		if (m_instance)
 		{
-			delete m_Instance;
-			m_Instance = nullptr;
+			delete m_instance;
+			m_instance = nullptr;
 		}
 	}
 }

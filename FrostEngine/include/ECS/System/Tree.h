@@ -21,8 +21,8 @@ namespace frost::ECS
 		void AddChild(T* _TargetChild);
 
 	private:
-		T* m_CurrentParent = nullptr;
-		std::vector<T*> m_Children;
+		T* m_currentParent = nullptr;
+		std::vector<T*> m_childrens;
 	};
 
     template<typename T>
@@ -34,10 +34,10 @@ namespace frost::ECS
     template<typename T>
     Tree<T>::~Tree()
     {
-        if (m_CurrentParent)
-            m_CurrentParent->RemoveChild(static_cast<T*>(this));
+        if (m_currentParent)
+            m_currentParent->RemoveChild(static_cast<T*>(this));
 
-        for (auto* child : m_Children)
+        for (auto* child : m_childrens)
         {
             delete child;
         }
@@ -46,19 +46,19 @@ namespace frost::ECS
     template<typename T>
     std::vector<T*> Tree<T>::GetChildren()
     {
-        return m_Children;
+        return m_childrens;
     }
 
     template<typename T>
     T* Tree<T>::GetParent()
     {
-        return m_CurrentParent;
+        return m_currentParent;
     }
 
     template<typename T>
     const T* Tree<T>::GetParent() const
     {
-        return m_CurrentParent;
+        return m_currentParent;
     }
 
     template<typename T>
@@ -76,38 +76,38 @@ namespace frost::ECS
     template<typename T>
     void Tree<T>::RemoveChild(T* _TargetChild)
     {
-        auto iterator = std::find(m_Children.begin(), m_Children.end(), _TargetChild);
+        auto iterator = std::find(m_childrens.begin(), m_childrens.end(), _TargetChild);
 
-        if (iterator != m_Children.end())
+        if (iterator != m_childrens.end())
         {
-            m_Children.erase(iterator);
+            m_childrens.erase(iterator);
         }
     }
 
     template<typename T>
     void Tree<T>::AddChild(T* _TargetChild)
     {
-        auto iterator = std::find(m_Children.begin(), m_Children.end(), _TargetChild);
+        auto iterator = std::find(m_childrens.begin(), m_childrens.end(), _TargetChild);
 
-        if (iterator == m_Children.end())
+        if (iterator == m_childrens.end())
         {
-            m_Children.push_back(_TargetChild);
+            m_childrens.push_back(_TargetChild);
         }
     }
 
     template<typename T>
     void Tree<T>::SetParent(T* _TargetParent)
     {
-        if (m_CurrentParent != nullptr)
+        if (m_currentParent != nullptr)
         {
-            m_CurrentParent->RemoveChild(static_cast<T*>(this));
+            m_currentParent->RemoveChild(static_cast<T*>(this));
         }
 
-        m_CurrentParent = _TargetParent;
+        m_currentParent = _TargetParent;
 
-        if (m_CurrentParent != nullptr)
+        if (m_currentParent != nullptr)
         {
-            m_CurrentParent->AddChild(static_cast<T*>(this));
+            m_currentParent->AddChild(static_cast<T*>(this));
         }
     }
 }

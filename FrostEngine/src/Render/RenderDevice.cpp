@@ -1,10 +1,7 @@
 #include "Render/RenderDevice.h"
-
+#include "Core/Window.h"
 #include "GL/glew.h"
 #include "GLFW/glfw3.h"
-#include "Core/Window.h"
-
-
 
 namespace frost::core 
 {
@@ -16,7 +13,7 @@ namespace frost::core
 	};
 
 	RenderDevice::RenderDevice(Window& _window)
-		:m_internal(new Internal), TestTex("T_PlaceHolder.png")
+		:m_internal(new Internal), m_testTex("T_PlaceHolder.png")
 	{
 		m_internal->window = static_cast<GLFWwindow*>(_window.GetInternal());
 		glewInit();
@@ -26,24 +23,24 @@ namespace frost::core
 	RenderDevice::~RenderDevice()
 	{
 
-		glDeleteVertexArrays(1, &vao);
+		glDeleteVertexArrays(1, &m_vao);
 		glfwTerminate();
 
 	}
 
-	void RenderDevice::test()
+	void RenderDevice::RenderTest()
 	{
  
-		shaderProgram.InitShader("default.vert", "default.frag");
+		m_shaderProgram.InitShader("default.vert", "default.frag");
 
-		TestTex.Bind();
+		m_testTex.Bind();
 
 		//PickUp Position of the shader in memory
-		positionLocation    = glGetUniformLocation(shaderProgram.m_gl_ID, "uPosition");
-		rotationLocation    = glGetUniformLocation(shaderProgram.m_gl_ID, "uRotation");
-		scaleLocation       = glGetUniformLocation(shaderProgram.m_gl_ID, "uScale");
-		aspectRatioLocation = glGetUniformLocation(shaderProgram.m_gl_ID, "uAspectRatio");
-		texture				= glGetUniformLocation(shaderProgram.m_gl_ID, "uTexture");
+		m_positionLocation    = glGetUniformLocation(m_shaderProgram.m_gl_ID, "uPosition");
+		m_rotationLocation    = glGetUniformLocation(m_shaderProgram.m_gl_ID, "uRotation");
+		m_scaleLocation       = glGetUniformLocation(m_shaderProgram.m_gl_ID, "uScale");
+		m_aspectRatioLocation = glGetUniformLocation(m_shaderProgram.m_gl_ID, "uAspectRatio");
+		m_texture				= glGetUniformLocation(m_shaderProgram.m_gl_ID, "uTexture");
 
 	}
 	void RenderDevice::Update()
@@ -52,27 +49,27 @@ namespace frost::core
 		glClearColor(0.1f, 0.2f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
-		shaderProgram.Enable();
+		m_shaderProgram.Enable();
 
 		int w, h;
 		glfwGetWindowSize(m_internal->window, &w, &h);
-		glProgramUniform1f(shaderProgram.m_gl_ID, aspectRatioLocation, float(w) / float(h));
+		glProgramUniform1f(m_shaderProgram.m_gl_ID, m_aspectRatioLocation, float(w) / float(h));
 
 		for (int i = 0; i < GetVaoToRender().size(); i++)
 		{
 			GetVaoToRender()[i].Bind();
 			//On Dit au shader les uniform du VAO
-			glProgramUniform2f(shaderProgram.m_gl_ID, positionLocation, GetVaoToRender()[i].GetLocation().x , GetVaoToRender()[i].GetLocation().y);
-			glProgramUniform1f(shaderProgram.m_gl_ID, rotationLocation, GetVaoToRender()[i].GetRotation());
-			glProgramUniform2f(shaderProgram.m_gl_ID, scaleLocation, GetVaoToRender()[i].GetScale().x, GetVaoToRender()[i].GetScale().y);
-			glProgramUniform1i(shaderProgram.m_gl_ID, texture, 0);
+			glProgramUniform2f(m_shaderProgram.m_gl_ID, m_positionLocation, GetVaoToRender()[i].GetLocation().x , GetVaoToRender()[i].GetLocation().y);
+			glProgramUniform1f(m_shaderProgram.m_gl_ID, m_rotationLocation, GetVaoToRender()[i].GetRotation());
+			glProgramUniform2f(m_shaderProgram.m_gl_ID, m_scaleLocation, GetVaoToRender()[i].GetScale().x, GetVaoToRender()[i].GetScale().y);
+			glProgramUniform1i(m_shaderProgram.m_gl_ID, m_texture, 0);
 
 			glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
 		}
 		ClearVaosToRender();
 		
 	}
-	void RenderDevice::AddVao(VertexArrayObject _newVao)
+	void RenderDevice::AddVAO(VertexArrayObject _newVao)
 	{
 		m_internal->VaoToRender.push_back(_newVao);
 	}

@@ -1,9 +1,9 @@
 #pragma once
 
 #include "Core/Export.h"
-#include <memory>
 
 #include <glm/glm.hpp>
+#include <memory>
 
 namespace frost::core
 {
@@ -11,18 +11,21 @@ namespace frost::core
 	{	
 	public:
 
-		struct WindowProperties
+		struct S_WindowProperties
 		{
-			const char* Title;
-			glm::ivec2 Size;
-			bool FullScreen = false;
+			const char* title;
+			glm::ivec2 size;
+			bool fullScreen = false;
 		};
-		explicit Window(WindowProperties Properties);
+
+		// Constructor and Destructor
+		explicit Window(S_WindowProperties _Properties);
 		~Window();
 	
-		//this Function need to be called in the main loop of the application
-		bool PollEvents();
+		// Methods
+		bool PollEvents(); //this Function need to be called in the main loop of the application
 
+		// Getters
 		void* GetInternal();
 
 	private:

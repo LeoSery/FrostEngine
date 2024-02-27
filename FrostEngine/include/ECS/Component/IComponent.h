@@ -33,11 +33,11 @@ namespace frost::ECS
 		[[nodiscard]] uuids::uuid GetUUID() const;
 
 	protected:
-		GameObject& GetParentObject() const;
+		[[nodiscard]] GameObject& GetParentObject() const;
 
 	private:
-		uuids::uuid m_UUID;
-		GameObject& ParentObject;
+		uuids::uuid m_uuid;
+		GameObject& m_parentObject;
 		bool m_isActive = true;
 	};
 }

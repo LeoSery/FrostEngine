@@ -1,18 +1,19 @@
-#include "Core/Serial/TextureMgr.h"
-#include <Utils/Logger.h>
+#include "Core/Serial/TextureManager.h"
+
 #include <rapidxml/rapidxml_utils.hpp>
+#include <Utils/Logger.h>
 
 
-frost::core::TextureMgr::TextureMgr()
+frost::core::TextureManager::TextureManager()
 {
 }
 
-frost::core::TextureMgr::~TextureMgr()
+frost::core::TextureManager::~TextureManager()
 {
-	Textures.clear();
+	m_textures.clear();
 }
 
-bool frost::core::TextureMgr::LoadTexture(const std::filesystem::path& path)
+bool frost::core::TextureManager::LoadTexture(const std::filesystem::path& path)
 {
 	if (!std::filesystem::exists(path.native()))
 	{
@@ -35,7 +36,7 @@ bool frost::core::TextureMgr::LoadTexture(const std::filesystem::path& path)
 	}
 
 
-	auto p = Textures.emplace(path.string(), TextureData());
+	auto p = m_textures.emplace(path.string(), S_TextureData());
 	if (!p.second)
 	{
 		std::string message = "LoadTexture: Internal error. Cannot emplace in map";
@@ -43,7 +44,7 @@ bool frost::core::TextureMgr::LoadTexture(const std::filesystem::path& path)
 		return false;
 	}
 
-	TextureData& textureData = p.first->second;
+	S_TextureData& textureData = p.first->second;
 	if (!LoadTextureMetadata(metadataPath, textureData))
 	{
 		std::string message = "Something went wrong while parsing metadata file ";
@@ -63,7 +64,7 @@ bool frost::core::TextureMgr::LoadTexture(const std::filesystem::path& path)
 	return true;
 }
 
-bool frost::core::TextureMgr::LoadTextureMetadata(std::filesystem::path& path, TextureData& textureData)
+bool frost::core::TextureManager::LoadTextureMetadata(std::filesystem::path& path, S_TextureData& textureData)
 {
 	rapidxml::file<> metadataFile(path.string().c_str());
 	if (metadataFile.size() == 0)
@@ -100,7 +101,7 @@ bool frost::core::TextureMgr::LoadTextureMetadata(std::filesystem::path& path, T
 	return true;
 }
 
-bool frost::core::TextureMgr::LoadAnimationMetadata(rapidxml::xml_node<>* node, TextureData& textureData)
+bool frost::core::TextureManager::LoadAnimationMetadata(rapidxml::xml_node<>* node, S_TextureData& textureData)
 {
 	if (!node)
 	{
@@ -113,68 +114,68 @@ bool frost::core::TextureMgr::LoadAnimationMetadata(rapidxml::xml_node<>* node, 
 		rapidxml::xml_attribute<>* nameAttribute = animationNode->first_attribute("Name");
 		if (nameAttribute)
 		{
-			auto p = textureData.AnimationsData.emplace(std::string(nameAttribute->value(), nameAttribute->value_size()), AnimationData());
+			auto p = textureData.animationsData.emplace(std::string(nameAttribute->value(), nameAttribute->value_size()), S_AnimationData());
 			if (p.second)
 			{
-				AnimationData& data = p.first->second;
+				S_AnimationData& data = p.first->second;
 				if (rapidxml::xml_node<>* innerNode = animationNode->first_node("X"))
 				{
 					std::string value(innerNode->value(), innerNode->value_size());
-					data.StartX = atoi(value.c_str());
+					data.startX = atoi(value.c_str());
 				}
 
 				if (rapidxml::xml_node<>* innerNode = animationNode->first_node("Y"))
 				{
 					std::string value(innerNode->value(), innerNode->value_size());
-					data.StartY = atoi(value.c_str());
+					data.startY = atoi(value.c_str());
 				}
 
 				if (rapidxml::xml_node<>* innerNode = animationNode->first_node("SizeX"))
 				{
 					std::string value(innerNode->value(), innerNode->value_size());
-					data.SizeX = atoi(value.c_str());
+					data.sizeX = atoi(value.c_str());
 				}
 
 				if (rapidxml::xml_node<>* innerNode = animationNode->first_node("SizeY"))
 				{
 					std::string value(innerNode->value(), innerNode->value_size());
-					data.SizeY = atoi(value.c_str());
+					data.sizeY = atoi(value.c_str());
 				}
 
 				if (rapidxml::xml_node<>* innerNode = animationNode->first_node("OffsetX"))
 				{
 					std::string value(innerNode->value(), innerNode->value_size());
-					data.OffsetX = atoi(value.c_str());
+					data.offsetX = atoi(value.c_str());
 				}
 
 				if (rapidxml::xml_node<>* innerNode = animationNode->first_node("OffsetY"))
 				{
 					std::string value(innerNode->value(), innerNode->value_size());
-					data.OffsetY = atoi(value.c_str());
+					data.offsetY = atoi(value.c_str());
 				}
 
 				if (rapidxml::xml_node<>* innerNode = animationNode->first_node("SpriteNum"))
 				{
 					std::string value(innerNode->value(), innerNode->value_size());
-					data.AnimationSpriteCount = atoi(value.c_str());
+					data.animationSpriteCount = atoi(value.c_str());
 				}
 
 				if (rapidxml::xml_node<>* innerNode = animationNode->first_node("SpritesOnLine"))
 				{
 					std::string value(innerNode->value(), innerNode->value_size());
-					data.SpriteOnLine = atoi(value.c_str());
+					data.spriteOnLine = atoi(value.c_str());
 				}
 
 				if (rapidxml::xml_node<>* innerNode = animationNode->first_node("Reverted"))
 				{
 					std::string value(innerNode->value(), innerNode->value_size());
-					data.IsReverted = atoi(value.c_str());
+					data.isReverted = atoi(value.c_str());
 				}
 
 				if (rapidxml::xml_node<>* innerNode = animationNode->first_node("TimeBetweenAnimation"))
 				{
 					std::string value(innerNode->value(), innerNode->value_size());
-					data.TimeBetweenAnimationInS = std::stof(value.c_str());
+					data.timeBetweenAnimationInS = std::stof(value.c_str());
 				}
 			}
 			else
@@ -201,14 +202,14 @@ bool frost::core::TextureMgr::LoadAnimationMetadata(rapidxml::xml_node<>* node, 
 	return false;
 }*/
 
-frost::core::AnimationData::AnimationData()
+frost::core::S_AnimationData::S_AnimationData()
 {
 }
 
-frost::core::TextureData::TextureData()
+frost::core::S_TextureData::S_TextureData()
 {
 }
 
-frost::core::TextureData::~TextureData()
+frost::core::S_TextureData::~S_TextureData()
 {
 }

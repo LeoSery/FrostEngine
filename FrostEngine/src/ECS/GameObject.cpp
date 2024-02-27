@@ -9,7 +9,7 @@
 namespace frost::ECS
 {
     GameObject::GameObject(std::string _Name, GameObject* _Parent)
-        : Tree<GameObject>(_Parent), m_Name(std::move(_Name)), m_UUID(uuids::uuid_system_generator{}())
+        : Tree<GameObject>(_Parent), m_name(std::move(_Name)), m_uuid(uuids::uuid_system_generator{}())
     {
         AddComponent<Transform>();
         SetActive(true);
@@ -25,33 +25,33 @@ namespace frost::ECS
     GameObject::~GameObject()
     {
         //Destroy();
-        for (const IComponent* component : m_Components)
+        for (const IComponent* component : m_components)
         {
             delete component;
         }
 
-        m_Components.clear();
+        m_components.clear();
     }
 
     void GameObject::Start()
     {
-        for (IComponent* component : m_Components)
+        for (IComponent* component : m_components)
         {
             component->Start();
         }
     }
 
-    void GameObject::Update(float fDeltaTime)
+    void GameObject::Update(float _DeltaTime)
     {
-        for (IComponent* component : m_Components)
+        for (IComponent* component : m_components)
         {
-            component->Update(fDeltaTime);
+            component->Update(_DeltaTime);
         }
     }
 
     void GameObject::Destroy()
     {
-        for (IComponent* component : m_Components)
+        for (IComponent* component : m_components)
         {
             component->Destroy();
         }
@@ -59,12 +59,12 @@ namespace frost::ECS
 
     const std::string& GameObject::GetName() const
     {
-        return m_Name;
+        return m_name;
     }
 
     void GameObject::SetName(const std::string& _Name)
     {
-        m_Name = _Name;
+        m_name = _Name;
     }
 
     const Transform& GameObject::GetTransform() const
@@ -83,17 +83,17 @@ namespace frost::ECS
 
     void GameObject::AddTag(const std::string& _Tag)
     {
-        m_Tags.insert(_Tag);
+        m_tags.insert(_Tag);
     }
 
     bool GameObject::HasTag(const std::string& _Tag) const
     { 
-        return m_Tags.find(_Tag) != m_Tags.end();
+        return m_tags.find(_Tag) != m_tags.end();
     }
 
     void GameObject::RemoveTag(const std::string& _Tag)
     {
-        m_Tags.erase(_Tag);
+        m_tags.erase(_Tag);
     }
 
     bool GameObject::IsActive() const 
@@ -108,30 +108,30 @@ namespace frost::ECS
 
     uuids::uuid GameObject::GetUUID() const
     {
-        return m_UUID;
+        return m_uuid;
     }
 
-    void GameObject::GetData(bool _ShowImmediately) const
+    void GameObject::GetData(bool _ForceLoggerDraw) const
     {
         frost::utils::Logger* Logger = frost::utils::Logger::GetInstance();
 
-        Logger->LogInfo(m_Name + " Infos: ");
+        Logger->LogInfo(m_name + " Infos: ");
         Logger->LogInfo("- Parent: " + GetParent()->GetName());
-        Logger->LogInfo(std::format("- UUID: {}", uuids::to_string(m_UUID)));
+        Logger->LogInfo(std::format("- UUID: {}", uuids::to_string(m_uuid)));
 
-        Logger->LogInfo("- Name: " + m_Name);
+        Logger->LogInfo("- Name: " + m_name);
 
         GetTransform().GetData(false);
 
         std::string tags;
         tags += "- Tags: {";
-        if (m_Tags.empty())
+        if (m_tags.empty())
         {
             tags += " None";
         }
         else
         {
-            for (const auto& tag : m_Tags)
+            for (const auto& tag : m_tags)
             {
                 tags += " " + tag + ",";
             }
@@ -142,7 +142,7 @@ namespace frost::ECS
         std::string status = m_isActive ? "True" : "False";
         Logger->LogInfo("- Active: " + status);
 
-        if (_ShowImmediately)
+        if (_ForceLoggerDraw)
             Logger->Show();
     }
 }

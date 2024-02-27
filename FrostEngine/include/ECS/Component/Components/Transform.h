@@ -19,11 +19,11 @@ namespace frost::ECS
 
 		// Frost engine life cycle methods
 		virtual void Start() override;
-		virtual void Update(float fDeltaTime) override;
+		virtual void Update(float _DeltaTime) override;
 		virtual void Destroy() override;
 
 		// Getters and Setters
-		void GetData(bool _ShowImmediately) const;
+		void GetData(bool _ForceLoggerDraw) const;
 
 		// Component methods
 		void Translate(const glm::vec2& _Translation);

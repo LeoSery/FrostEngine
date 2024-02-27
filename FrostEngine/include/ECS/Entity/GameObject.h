@@ -26,7 +26,7 @@ namespace frost::ECS
 
         // Frost engine life cycle methods
         virtual void Start();
-        virtual void Update(float fDeltaTime);
+        virtual void Update(float _DeltaTime);
         virtual void Destroy();
 
         // Getters and Setters
@@ -44,7 +44,7 @@ namespace frost::ECS
         void SetActive(bool _IsActive);
 
         [[nodiscard]] uuids::uuid GetUUID() const;
-        void GetData(bool _ShowImmediately) const;
+        void GetData(bool _ForceLoggerDraw) const;
 
         // ECS methods
         template <typename Component>
@@ -56,12 +56,11 @@ namespace frost::ECS
         template <typename Component>
         void RemoveComponent();
 
-
     private:
-        uuids::uuid m_UUID;
-        std::string m_Name;
-        std::vector<IComponent*> m_Components;
-        std::unordered_set<std::string> m_Tags;
+        uuids::uuid m_uuid;
+        std::string m_name;
+        std::vector<IComponent*> m_components;
+        std::unordered_set<std::string> m_tags;
         bool m_isActive = true;
     };   
 }

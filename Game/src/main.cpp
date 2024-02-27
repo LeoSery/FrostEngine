@@ -2,14 +2,11 @@
 #include "Core/SceneManagement/Scene.h"
 #include "Core/SignalSlot/Signal.h"
 #include "ECS/Entity/GameObject.h"
+#include "Render/RenderDevice.h"
+#include "Render/Texture.h"
+#include "Render/Buffer.h"
 #include "Utils/Logger.h"
 #include "Core/Window.h"
-#include "Render/RenderDevice.h"
-#include "Core/Window.h"
-
-#include "Render/RenderDevice.h"
-#include "Render/Buffer.h"
-#include "Render/Texture.h"
 
 #include <iostream>
 
@@ -34,12 +31,12 @@ int main()
 	GameObjectTest.AddTag("Tag1");
 	GameObjectTest.GetData(true);
 
-
 	//Graphics And Window
 	frost::core::Window window({ "Name", glm::ivec2(960, 540) });
 	frost::core::RenderDevice _renderDevice(window);
 
-	_renderDevice.test();
+	_renderDevice.RenderTest();
+
 	//TEST
 	float vertices[] = {
 				-0.5f,  0.5f, /*Color*/0.0f, 1.0f,
@@ -55,27 +52,23 @@ int main()
 	frost::core::VertexArrayObject ALED;
 	frost::core::VertexArrayObject BALED;
 
+	ALED.BindBuffer(frost::core::VertexArrayObject::E_TypeBuffer::VBO, VBO);
+	ALED.BindBuffer(frost::core::VertexArrayObject::E_TypeBuffer::IBO, IBO);
+	_renderDevice.AddVAO(ALED);
 
-
-	ALED.BindBuffer(frost::core::VertexArrayObject::eTypeBuffer::VBO, VBO);
-	ALED.BindBuffer(frost::core::VertexArrayObject::eTypeBuffer::IBO, IBO);
-	_renderDevice.AddVao(ALED);
-
-
-	BALED.BindBuffer(frost::core::VertexArrayObject::eTypeBuffer::VBO, VBO);
-	BALED.BindBuffer(frost::core::VertexArrayObject::eTypeBuffer::IBO, IBO);
+	BALED.BindBuffer(frost::core::VertexArrayObject::E_TypeBuffer::VBO, VBO);
+	BALED.BindBuffer(frost::core::VertexArrayObject::E_TypeBuffer::IBO, IBO);
 	BALED.SetLocation({ 0.5 ,0.2 });
-	_renderDevice.AddVao(BALED);
+	_renderDevice.AddVAO(BALED);
 
 	do
 	{
-		_renderDevice.AddVao(ALED);
-		_renderDevice.AddVao(BALED);
+		_renderDevice.AddVAO(ALED);
+		_renderDevice.AddVAO(BALED);
 		ALED.SetLocation({ ALED.GetLocation().x + 1.f / 120, 0 });
 
 		_renderDevice.Update();
 		ALED.SetLocation({ ALED.GetLocation().x + 1.f / 60,0.2 });
-
 
 	} while (window.PollEvents());
 

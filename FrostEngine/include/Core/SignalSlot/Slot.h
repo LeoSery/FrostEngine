@@ -16,19 +16,19 @@ namespace frost::core
 
         //Constructors and Destructors
         Slot();
-        Slot(const std::function<void(Args...)>& callback);
+        Slot(const std::function<void(Args...)>& _Callback);
         ~Slot() = default;
 
         //Operators
-        void operator()(Args&&... parameters);
+        void operator()(Args&&... _Parameters);
 
         //Methods
-        void call(Args&&... parameters);
-        void setSlotFunction(std::function<void(Args...)> callback);
+        void call(Args&&... _Parameters);
+        void setSlotFunction(std::function<void(Args...)> _Callback);
 
     private:
-        bool m_Init;
-        std::function<void(Args...)> m_Callback;
+        bool m_init;
+        std::function<void(Args...)> m_callback;
     };
 }
 

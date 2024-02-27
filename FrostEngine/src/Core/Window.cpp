@@ -10,7 +10,7 @@ namespace frost::core
 		GLFWwindow* window = nullptr;
 	};
 
-	Window::Window(WindowProperties Properties) 
+	Window::Window(S_WindowProperties Properties) 
 		: m_impl(std::make_unique<Internal>())
 	{
 
@@ -36,10 +36,10 @@ namespace frost::core
 		glfwWindowHint(GLFW_DOUBLEBUFFER, GL_TRUE); //Double Buffering
 
 		m_impl->window = glfwCreateWindow(
-			Properties.Size.x,
-			Properties.Size.y,
-			Properties.Title,
-			Properties.FullScreen ? glfwGetPrimaryMonitor() : nullptr //FullScreen ?
+			Properties.size.x,
+			Properties.size.y,
+			Properties.title,
+			Properties.fullScreen ? glfwGetPrimaryMonitor() : nullptr //FullScreen ?
 			, nullptr);
 
 		if (m_impl->window == nullptr)

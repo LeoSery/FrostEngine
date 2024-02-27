@@ -4,24 +4,24 @@
 
 namespace frost::ECS
 {
-	SpriteRenderer::SpriteRenderer(GameObject& _GameObject, SpriteType& _SpriteType) : IComponent(_GameObject)
+	SpriteRenderer::SpriteRenderer(GameObject& _GameObject, S_SpriteType& _SpriteType) : IComponent(_GameObject)
 	{
 		SetSpriteType(_SpriteType);
 	}
 
-	SpriteRenderer::SpriteRenderer(GameObject& _GameObject, SpriteType& _SpriteType, const glm::vec4& _NewColor) : IComponent(_GameObject)
+	SpriteRenderer::SpriteRenderer(GameObject& _GameObject, S_SpriteType& _SpriteType, const glm::vec4& _NewColor) : IComponent(_GameObject)
 	{
 		SetSpriteType(_SpriteType);
 		SetColor(_NewColor);
 	}
 
-	SpriteRenderer::SpriteRenderer(GameObject& _GameObject, SpriteType& _SpriteType, const std::string& _SpriteTexturePath) : IComponent(_GameObject)
+	SpriteRenderer::SpriteRenderer(GameObject& _GameObject, S_SpriteType& _SpriteType, const std::string& _SpriteTexturePath) : IComponent(_GameObject)
 	{
 		SetSpriteType(_SpriteType);
 		SetTexture(_SpriteTexturePath);
 	}
 
-	SpriteRenderer::SpriteRenderer(GameObject& _GameObject, SpriteType& _SpriteType, const std::string& _SpriteTexturePath, const glm::vec4& _Color) : IComponent(_GameObject)
+	SpriteRenderer::SpriteRenderer(GameObject& _GameObject, S_SpriteType& _SpriteType, const std::string& _SpriteTexturePath, const glm::vec4& _Color) : IComponent(_GameObject)
 	{
 		SetSpriteType(_SpriteType);
 		SetTexture(_SpriteTexturePath);
@@ -38,7 +38,7 @@ namespace frost::ECS
 
 	}
 
-	void SpriteRenderer::Update(float /*fDeltaTime*/)
+	void SpriteRenderer::Update(float /*_DeltaTime*/)
 	{
 		Transform* TransformC = GetParentObject().GetComponent<Transform>();
 		TransformC;
@@ -52,28 +52,28 @@ namespace frost::ECS
 
 	}
 
-	void SpriteRenderer::GetData(bool _ShowImmediately) const
+	void SpriteRenderer::GetData(bool _ForceLoggerDraw) const
 	{
 		frost::utils::Logger* Logger = frost::utils::Logger::GetInstance();
 
-		std::string TypeString = "{ Type: " + std::to_string(static_cast<int>(m_SpriteType)) + ";";
+		std::string TypeString = "{ Type: " + std::to_string(static_cast<int>(m_spriteType)) + ";";
 		std::string PathString = "{ Path: " + m_spriteTexturePath + ";";
 		std::string ColorString = " Color: [r: " + std::to_string(m_color.r) + " g: " + std::to_string(m_color.g) + " b: " + std::to_string(m_color.b) + " a: " + std::to_string(m_color.a) + "]; }";
 
 		Logger->LogInfo("- SpriteRenderer: " + TypeString + PathString + ColorString);
 
-		if (_ShowImmediately)
+		if (_ForceLoggerDraw)
 			Logger->Show();
 	}
 
-	SpriteType SpriteRenderer::GetSpriteType() const
+	S_SpriteType SpriteRenderer::GetSpriteType() const
 	{
-		return m_SpriteType;
+		return m_spriteType;
 	}
 
-	void SpriteRenderer::SetSpriteType(SpriteType _NewSpriteType)
+	void SpriteRenderer::SetSpriteType(S_SpriteType _NewSpriteType)
 	{
-		m_SpriteType = _NewSpriteType;
+		m_spriteType = _NewSpriteType;
 	}
 
 	std::string SpriteRenderer::GetTexture() const

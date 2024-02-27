@@ -1,50 +1,45 @@
 #pragma once
+
 #include "Core/Export.h"
+
 #include <glm/vec2.hpp>
+
 namespace frost::core 
 {
-
 	class Buffer;
 
 	class FROST_ENGINE_API VertexArrayObject
 	{
-	private: 
-		unsigned int m_gl_ID;
-	
-		glm::vec2 positionLocation;
-		float rotationLocation;
-		glm::vec2 scaleLocation;
-
-	
 	public:
 	
-		enum eTypeBuffer
+		enum E_TypeBuffer
 		{
 			VBO,
 			IBO
 		};
-
 		
+		// Constructor and Destructor
 		VertexArrayObject();
-
 		~VertexArrayObject();
 	
-	
+		// Methods
 		void Bind();
 		void Unbind();
+		void BindBuffer(E_TypeBuffer _BufferType,Buffer& _Buffer);
 
-		void BindBuffer(eTypeBuffer _bufferType,Buffer& _buffer);
-		
+		// Getters and Setters
+		[[nodiscard]] glm::vec2 GetLocation();
+		[[nodiscard]] glm::vec2 GetScale();
+		[[nodiscard]] float GetRotation();
 
-		void SetLocation(glm::vec2 _newLocation);
-		void SetRotation(float _newRotation);
-		void SetScale(glm::vec2 _newScale);
-		
-		glm::vec2 GetLocation();
-		glm::vec2 GetScale();
-		float GetRotation();
-		
+		void SetLocation(glm::vec2 _NewLocation);
+		void SetRotation(float _NewRotation);
+		void SetScale(glm::vec2 _NewScale);
 	
+	private: 
+		unsigned int m_gl_ID;
+		glm::vec2 m_positionLocation;
+		float m_rotationLocation;
+		glm::vec2 m_scaleLocation;
 	};
-
 }
