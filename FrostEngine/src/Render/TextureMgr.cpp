@@ -100,7 +100,7 @@ bool frost::core::TextureMgr::LoadTextureMetadata(std::filesystem::path& path, T
 	return true;
 }
 
-/*bool frost::core::TextureMgr::LoadAnimationMetadata(rapidxml::xml_node<>* node, TextureData& textureData)
+bool frost::core::TextureMgr::LoadAnimationMetadata(rapidxml::xml_node<>* node, TextureData& textureData)
 {
 	if (!node)
 	{
@@ -194,13 +194,21 @@ bool frost::core::TextureMgr::LoadTextureMetadata(std::filesystem::path& path, T
 	}
 
 	return true;
-}*/
+}
 
 /*bool frost::core::TextureMgr::LoadStaticTileMetadata(rapidxml::xml_node<>* node, TextureData& textureData)
 {
 	return false;
 }*/
 
+frost::core::AnimationData::AnimationData()
+{
+}
 
+frost::core::TextureData::TextureData()
+{
+}
 
-
+frost::core::TextureData::~TextureData()
+{
+}
