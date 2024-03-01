@@ -23,10 +23,12 @@ namespace frost::utils
 
 	void Logger::Show()
 	{
+#ifndef _RELEASE
 		for (const S_LogData& log : m_logStack)
 		{
 			std::cout << log.logContent << std::endl;
 		}
+#endif
 		m_logStack.clear();
 	}
 

@@ -1,4 +1,5 @@
 #include "Render/Shader.h"
+#include "Utils/Logger.h"
 
 #include <filesystem>
 
@@ -47,7 +48,7 @@ namespace frost::core
 	{
 		glDeleteProgram(m_gl_ID);
 	}
-	
+
 	std::string Shader::ReadShaderFile(const char* _filename)
 	{
 		// Get the current working directory 
@@ -56,7 +57,9 @@ namespace frost::core
 		// Construct a file path relative to the current working directory 
 		std::filesystem::path file_path = currentPath / "ressources" / "Shaders" / _filename;
 
-		std::cout << file_path << std::endl;
+		frost::utils::Logger::LogInfo(file_path.string());
+		utils::Logger::GetInstance()->Show();
+
 		std::ifstream in(file_path, std::ios::binary);
 
 		if (in)

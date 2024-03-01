@@ -32,7 +32,7 @@ int main()
 	GameObjectTest.GetData(true);
 
 	//Graphics And Window
-	frost::core::Window window({ "Name", glm::ivec2(960, 540) });
+	frost::core::Window window({ "Game", glm::ivec2(960, 540) });
 	frost::core::RenderDevice _renderDevice(window);
 
 	_renderDevice.RenderTest();
