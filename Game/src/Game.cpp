@@ -1,7 +1,5 @@
 #include "FrostEngine.h"
 
-#include <windows.h>
-
 #pragma region "Alias"
 using SceneManager = frost::core::SceneManager;
 using GameObject = frost::ECS::GameObject;

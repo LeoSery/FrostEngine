@@ -131,12 +131,17 @@ namespace frost::ECS
         }
         else
         {
-            for (const auto& tag : m_tags)
+            for (auto it = m_tags.begin(); it != m_tags.end(); ++it)
             {
-                tags += " " + tag + ",";
+                tags += " " + *it;
+
+                if (std::next(it) != m_tags.end())
+                {
+                    tags += ",";
+                }
             }
-            tags += " }";
         }
+        tags += " }";
         Logger->LogInfo(tags);
 
         std::string status = m_isActive ? "True" : "False";
