@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Core/Internal/RTTI.h"
+#include "Core/export.h"
 
 #define UUID_SYSTEM_GENERATOR
 #include "stduuid/uuid.h"
@@ -9,7 +10,7 @@ namespace frost::ECS
 {
 	class GameObject;
 
-	class IComponent : public core::RTTI
+	class FROST_ENGINE_API IComponent : public core::RTTI
 	{
 		FROST_DEFINE_RTTI(IComponent);
 
@@ -32,10 +33,9 @@ namespace frost::ECS
 
 		[[nodiscard]] uuids::uuid GetUUID() const;
 
-	protected:
 		[[nodiscard]] GameObject& GetParentObject() const;
 
-	private:
+	protected:
 		uuids::uuid m_uuid;
 		GameObject& m_parentObject;
 		bool m_isActive = true;
