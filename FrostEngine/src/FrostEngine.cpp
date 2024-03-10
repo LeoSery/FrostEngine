@@ -24,7 +24,15 @@ namespace FrostEngine
 
 			Update(deltaTime);
 
-			// Main Engine Loop Here
+			if (m_CurrentScene != nullptr)
+			{
+				UpdateObjectComponents(m_CurrentScene->GetRoot(), deltaTime);
+
+				for (auto* child : m_CurrentScene->GetRoot()->GetChildren())
+				{
+					BrowseAllChilds(child, deltaTime);
+				}
+			}
 
 			// temporary render update (replace with SpriteRenderer Update function)
 			/////////////////////////////////////////////////////////////
@@ -40,5 +48,28 @@ namespace FrostEngine
 		delete m_RenderDevice;
 		delete m_Window;
 		delete m_SceneManager;
+	}
+
+	void Application::BrowseAllChilds(frost::ECS::GameObject* _GameObject, float _DeltaTime)
+	{
+		if (!_GameObject)
+			return;
+
+		UpdateObjectComponents(_GameObject, _DeltaTime);
+
+		for (auto* child : _GameObject->GetChildren())
+		{
+			if (child->IsActive())
+				BrowseAllChilds(child, _DeltaTime);
+		}
+	}
+
+	void Application::UpdateObjectComponents(frost::ECS::GameObject* _GameObject, float _DeltaTime)
+	{
+		for (auto* component : _GameObject->GetAllComponents())
+		{
+			if (component->IsActive())
+				component->Update(_DeltaTime);
+		}
 	}
 }

@@ -37,6 +37,10 @@ namespace FrostEngine
 		virtual void Update(float deltaTime) = 0;
 		virtual void Shutdown();
 		void Run();
+
+	private:
+		void BrowseAllChilds(frost::ECS::GameObject* _GameObject, float _DeltaTime);
+		void UpdateObjectComponents(frost::ECS::GameObject* _GameObject, float _DeltaTime);
 	};
 
 	// Engine life cycle
