@@ -124,9 +124,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\FrostEngine\FrostEngine.vcxproj">
       <Project>{d5081241-b6b0-4bef-8ad8-e477cbe6e7a2}</Project>
     </ProjectReference>
@@ -134,6 +131,9 @@
   <ItemGroup>
     <None Include="ressources\Shaders\default.frag" />
     <None Include="ressources\Shaders\default.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Game.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
