@@ -17,6 +17,7 @@
     <ClCompile Include="src\Core\Serial\XmlParser.cpp" />
     <ClCompile Include="src\Render\TextureMgr.cpp" />
     <ClCompile Include="src\ECS\Component\Components\SpriteRenderer.cpp" />
+    <ClCompile Include="src\FrostEngine.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Core\Internal\AuthorizationBadge.h" />
@@ -45,6 +46,7 @@
     <ClInclude Include="include\Core\Serial\TextureManager.h" />
     <ClInclude Include="include\ECS\Component\Components\SpriteRenderer.h" />
     <ClInclude Include="include\Utils\Logger.h" />
+    <ClInclude Include="include\FrostEngine.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="src\Render\Shaders\DefaultVertexShader.glsl" />
