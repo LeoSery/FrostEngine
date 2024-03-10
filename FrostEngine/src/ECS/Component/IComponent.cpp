@@ -3,9 +3,9 @@
 
 namespace frost::ECS
 {
-	IComponent::IComponent(GameObject& _GameObject) : m_parentObject(_GameObject)
+	IComponent::IComponent(GameObject& _GameObject) : m_parentObject(_GameObject), m_uuid(uuids::uuid_system_generator{}())
 	{
-		
+
 	}
 
 	IComponent::~IComponent()

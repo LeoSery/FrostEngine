@@ -37,7 +37,7 @@ namespace frost::ECS
         void SetTransform(const Transform& _Transform);
 
         void AddTag(const std::string& _Tag);
-        [[nodiscard]]  bool HasTag(const std::string& _Tag) const;
+        [[nodiscard]] bool HasTag(const std::string& _Tag) const;
         void RemoveTag(const std::string& _Tag);
 
         [[nodiscard]] bool IsActive() const;
@@ -45,6 +45,8 @@ namespace frost::ECS
 
         [[nodiscard]] uuids::uuid GetUUID() const;
         void GetData(bool _ForceLoggerDraw) const;
+
+        [[nodiscard]] std::vector<IComponent*> GetAllComponents() const;
 
         // ECS methods
         template <typename Component>
@@ -62,7 +64,7 @@ namespace frost::ECS
         std::vector<IComponent*> m_components;
         std::unordered_set<std::string> m_tags;
         bool m_isActive = true;
-    };   
+    };
 }
 
 #include "GameObject.hxx"

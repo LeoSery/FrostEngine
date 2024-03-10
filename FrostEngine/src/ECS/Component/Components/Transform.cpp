@@ -1,11 +1,12 @@
 #include "ECS/Component/Components/Transform.h"
 #include "Utils/Logger.h"
+#include <iostream>
 
 namespace frost::ECS
 {
 	Transform::Transform(GameObject& _GameObject) : IComponent(_GameObject)
 	{
-		
+
 	}
 
 	Transform::~Transform()
@@ -18,9 +19,10 @@ namespace frost::ECS
 
 	}
 
-	void Transform::Update(float /*_DeltaTime*/)
+	void Transform::Update(float/* _DeltaTime*/)
 	{
-		
+		//if (m_isActive)
+		//	std::cout << "Transform pos x : " << position.x << " > deltaTime : " << _DeltaTime << std::endl;
 	}
 
 	void Transform::Destroy()

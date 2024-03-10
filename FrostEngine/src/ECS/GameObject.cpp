@@ -68,7 +68,7 @@ namespace frost::ECS
     }
 
     const Transform& GameObject::GetTransform() const
-    { 
+    {
         return *GetComponent<Transform>();
     }
 
@@ -87,7 +87,7 @@ namespace frost::ECS
     }
 
     bool GameObject::HasTag(const std::string& _Tag) const
-    { 
+    {
         return m_tags.find(_Tag) != m_tags.end();
     }
 
@@ -96,7 +96,7 @@ namespace frost::ECS
         m_tags.erase(_Tag);
     }
 
-    bool GameObject::IsActive() const 
+    bool GameObject::IsActive() const
     {
         return m_isActive;
     }
@@ -144,5 +144,10 @@ namespace frost::ECS
 
         if (_ForceLoggerDraw)
             Logger->Show();
+    }
+
+    std::vector<IComponent*> GameObject::GetAllComponents() const
+    {
+        return m_components;
     }
 }

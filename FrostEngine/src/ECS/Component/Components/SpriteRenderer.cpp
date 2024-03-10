@@ -1,6 +1,7 @@
 #include "ECS/Component/Components/SpriteRenderer.h"
 #include "ECS/Entity/GameObject.h"
 #include "Utils/Logger.h"
+#include <iostream>
 
 namespace frost::ECS
 {
@@ -40,8 +41,8 @@ namespace frost::ECS
 
 	void SpriteRenderer::Update(float /*_DeltaTime*/)
 	{
-		Transform* TransformC = GetParentObject().GetComponent<Transform>();
-		TransformC;
+		/*Transform* TransformC = GetParentObject().GetComponent<Transform>();
+		TransformC;*/
 
 		// Get instance of the renderer
 		// Call the render method with the sprite type, texture, color and the transform
