@@ -30,8 +30,8 @@ namespace frost::ECS
 		void Rotate(float _Rotation);
 		void Scale(const glm::vec2& _Scale);
 
-		//fields
-		glm::vec2 position = {0, 0};
+		// Fields
+		glm::vec2 position = { 0, 0 };
 		float rotation = 0;
 		glm::vec2 scale = { 1, 1 };
 	};
