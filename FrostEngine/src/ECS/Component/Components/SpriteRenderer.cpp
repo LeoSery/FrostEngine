@@ -41,11 +41,10 @@ namespace frost::ECS
 
 	void SpriteRenderer::Update(float /*_DeltaTime*/)
 	{
-		/*Transform* TransformC = GetParentObject().GetComponent<Transform>();
-		TransformC;*/
+		if (m_isActive)
+		{
 
-		// Get instance of the renderer
-		// Call the render method with the sprite type, texture, color and the transform
+		}
 	}
 
 	void SpriteRenderer::Destroy()

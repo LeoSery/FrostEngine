@@ -47,7 +47,6 @@ namespace FrostEngine
 	{
 		delete m_RenderDevice;
 		delete m_Window;
-		delete m_SceneManager;
 	}
 
 	void Application::BrowseAllChilds(frost::ECS::GameObject* _GameObject, float _DeltaTime)

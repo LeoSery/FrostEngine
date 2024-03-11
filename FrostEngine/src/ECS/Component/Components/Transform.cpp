@@ -19,10 +19,12 @@ namespace frost::ECS
 
 	}
 
-	void Transform::Update(float/* _DeltaTime*/)
+	void Transform::Update(float /*_DeltaTime*/)
 	{
-		//if (m_isActive)
-		//	std::cout << "Transform pos x : " << position.x << " > deltaTime : " << _DeltaTime << std::endl;
+		if (m_isActive)
+		{
+
+		}
 	}
 
 	void Transform::Destroy()
