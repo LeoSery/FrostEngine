@@ -3,8 +3,9 @@
 #include "GL/glew.h"
 #include "GLFW/glfw3.h"
 
-namespace frost::core 
+namespace frost::core
 {
+	RenderDevice* RenderDevice::m_instance = nullptr;
 
 	struct RenderDevice::Internal
 	{
@@ -12,13 +13,9 @@ namespace frost::core
 		std::vector<VertexArrayObject> VaoToRender;
 	};
 
-	RenderDevice::RenderDevice(Window& _window)
-		:m_internal(new Internal), m_testTex("T_PlaceHolder.png")
-	{
-		m_internal->window = static_cast<GLFWwindow*>(_window.GetInternal());
-		glewInit();
-
-	}
+	RenderDevice::RenderDevice()
+		:m_internal(new Internal)
+	{}
 
 	RenderDevice::~RenderDevice()
 	{
@@ -28,21 +25,33 @@ namespace frost::core
 
 	}
 
-	void RenderDevice::RenderTest()
+	RenderDevice* RenderDevice::Init(const Window* _window)
 	{
- 
-		m_shaderProgram.InitShader("default.vert", "default.frag");
+		m_internal->window = reinterpret_cast<GLFWwindow*>(_window->GetInternal());
+		glewInit();
 
-		m_testTex.Bind();
+		m_shaderProgram.InitShader("default.vert", "default.frag");// set shaderProgram of used shader
 
 		//PickUp Position of the shader in memory
-		m_positionLocation    = glGetUniformLocation(m_shaderProgram.m_gl_ID, "uPosition");
-		m_rotationLocation    = glGetUniformLocation(m_shaderProgram.m_gl_ID, "uRotation");
-		m_scaleLocation       = glGetUniformLocation(m_shaderProgram.m_gl_ID, "uScale");
+		m_positionLocation = glGetUniformLocation(m_shaderProgram.m_gl_ID, "uPosition");
+		m_rotationLocation = glGetUniformLocation(m_shaderProgram.m_gl_ID, "uRotation");
+		m_scaleLocation = glGetUniformLocation(m_shaderProgram.m_gl_ID, "uScale");
 		m_aspectRatioLocation = glGetUniformLocation(m_shaderProgram.m_gl_ID, "uAspectRatio");
-		m_texture				= glGetUniformLocation(m_shaderProgram.m_gl_ID, "uTexture");
+		m_texture = glGetUniformLocation(m_shaderProgram.m_gl_ID, "uTexture");
 
+		return m_instance;
 	}
+
+	RenderDevice* RenderDevice::GetInstance()
+	{
+		if (!m_instance)
+		{
+			m_instance = new RenderDevice();
+		}
+
+		return m_instance;
+	}
+
 	void RenderDevice::Update()
 	{
 
@@ -59,15 +68,14 @@ namespace frost::core
 		{
 			GetVaoToRender()[i].Bind();
 			//On Dit au shader les uniform du VAO
-			glProgramUniform2f(m_shaderProgram.m_gl_ID, m_positionLocation, GetVaoToRender()[i].GetLocation().x , GetVaoToRender()[i].GetLocation().y);
+			glProgramUniform2f(m_shaderProgram.m_gl_ID, m_positionLocation, GetVaoToRender()[i].GetLocation().x, GetVaoToRender()[i].GetLocation().y);
 			glProgramUniform1f(m_shaderProgram.m_gl_ID, m_rotationLocation, GetVaoToRender()[i].GetRotation());
 			glProgramUniform2f(m_shaderProgram.m_gl_ID, m_scaleLocation, GetVaoToRender()[i].GetScale().x, GetVaoToRender()[i].GetScale().y);
 			glProgramUniform1i(m_shaderProgram.m_gl_ID, m_texture, 0);
-
 			glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
 		}
 		ClearVaosToRender();
-		
+
 	}
 	void RenderDevice::AddVAO(VertexArrayObject _newVao)
 	{

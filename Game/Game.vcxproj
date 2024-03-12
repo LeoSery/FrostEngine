@@ -135,6 +135,11 @@
   <ItemGroup>
     <ClCompile Include="src\Game.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="ressources\Textures\T_Debug.png" />
+    <Image Include="ressources\Textures\T_Debug_Quad.png" />
+    <Image Include="ressources\Textures\T_PlaceHolder.png" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

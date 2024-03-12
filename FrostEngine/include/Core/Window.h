@@ -8,7 +8,7 @@
 namespace frost::core
 {
 	class FROST_ENGINE_API Window
-	{	
+	{
 	public:
 
 		struct S_WindowProperties
@@ -21,12 +21,12 @@ namespace frost::core
 		// Constructor and Destructor
 		explicit Window(S_WindowProperties _Properties);
 		~Window();
-	
+
 		// Methods
 		bool PollEvents(); //this Function need to be called in the main loop of the application
 
 		// Getters
-		void* GetInternal();
+		void* GetInternal() const;
 
 	private:
 		//pimple idiom ?

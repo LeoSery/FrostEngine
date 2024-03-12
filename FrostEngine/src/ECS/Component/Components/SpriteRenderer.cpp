@@ -1,50 +1,64 @@
 #include "ECS/Component/Components/SpriteRenderer.h"
 #include "ECS/Entity/GameObject.h"
+#include <Render/RenderDevice.h>
+#include "Render/Texture.h"
 #include "Utils/Logger.h"
-#include <iostream>
+#include<array> 
+
 
 namespace frost::ECS
 {
-	SpriteRenderer::SpriteRenderer(GameObject& _GameObject, S_SpriteType& _SpriteType) : IComponent(_GameObject)
-	{
-		SetSpriteType(_SpriteType);
-	}
+	float squareVertices[16] = {
+	-0.5f,  0.5f, /*UV*/0.0f, 1.0f,
+	-0.5f, -0.5f, /*UV*/0.0f, 0.0f,
+	 0.5f, -0.5f, /*UV*/1.0f, 0.0f,
+	 0.5f,  0.5f, /*UV*/1.0f, 1.0f,
+	};
 
-	SpriteRenderer::SpriteRenderer(GameObject& _GameObject, S_SpriteType& _SpriteType, const glm::vec4& _NewColor) : IComponent(_GameObject)
-	{
-		SetSpriteType(_SpriteType);
-		SetColor(_NewColor);
-	}
+	unsigned int squareIndices[6] = { 0, 1, 2, 0, 2, 3 };
 
-	SpriteRenderer::SpriteRenderer(GameObject& _GameObject, S_SpriteType& _SpriteType, const std::string& _SpriteTexturePath) : IComponent(_GameObject)
+	SpriteRenderer::SpriteRenderer(GameObject& _GameObject)
+		: IComponent(_GameObject)
 	{
-		SetSpriteType(_SpriteType);
-		SetTexture(_SpriteTexturePath);
-	}
 
-	SpriteRenderer::SpriteRenderer(GameObject& _GameObject, S_SpriteType& _SpriteType, const std::string& _SpriteTexturePath, const glm::vec4& _Color) : IComponent(_GameObject)
-	{
-		SetSpriteType(_SpriteType);
-		SetTexture(_SpriteTexturePath);
-		SetColor(_Color);
+		vertices = new float[16];
+		std::copy(squareVertices, squareVertices + 16, vertices);
+
+		indices = new unsigned int[6];
+		std::copy(squareIndices, squareIndices + 6, indices);
+
+		VBO.CreateData(vertices, sizeof(float) * 16);
+
+		IBO.CreateData(indices, sizeof(unsigned int) * 6);
+
+		VAO.BindBuffer(frost::core::VertexArrayObject::E_TypeBuffer::VBO, VBO);
+		VAO.BindBuffer(frost::core::VertexArrayObject::E_TypeBuffer::IBO, IBO);
+
+		m_spriteTexture = new frost::core::Texture();
+
+		VAO.SetTexture(m_spriteTexture);
 	}
 
 	SpriteRenderer::~SpriteRenderer()
 	{
-
+		delete[] vertices;
+		delete[] indices;
+		delete m_spriteTexture;
 	}
 
 	void SpriteRenderer::Start()
 	{
+		frost::core::RenderDevice::GetInstance()->AddVAO(VAO);
 
 	}
 
 	void SpriteRenderer::Update(float /*_DeltaTime*/)
 	{
-		if (m_isActive)
-		{
 
-		}
+		VAO.SetLocation({ this->GetParentObject().GetComponent<Transform>()->position });
+		VAO.SetScale({ this->GetParentObject().GetComponent<Transform>()->scale });
+		VAO.SetRotation({ this->GetParentObject().GetComponent<Transform>()->rotation });
+		frost::core::RenderDevice::GetInstance()->AddVAO(VAO);
 	}
 
 	void SpriteRenderer::Destroy()
@@ -56,24 +70,13 @@ namespace frost::ECS
 	{
 		frost::utils::Logger* Logger = frost::utils::Logger::GetInstance();
 
-		std::string TypeString = "{ Type: " + std::to_string(static_cast<int>(m_spriteType)) + ";";
 		std::string PathString = "{ Path: " + m_spriteTexturePath + ";";
 		std::string ColorString = " Color: [r: " + std::to_string(m_color.r) + " g: " + std::to_string(m_color.g) + " b: " + std::to_string(m_color.b) + " a: " + std::to_string(m_color.a) + "]; }";
 
-		Logger->LogInfo("- SpriteRenderer: " + TypeString + PathString + ColorString);
+		Logger->LogInfo("- SpriteRenderer: " + PathString + ColorString);
 
 		if (_ForceLoggerDraw)
 			Logger->Show();
-	}
-
-	S_SpriteType SpriteRenderer::GetSpriteType() const
-	{
-		return m_spriteType;
-	}
-
-	void SpriteRenderer::SetSpriteType(S_SpriteType _NewSpriteType)
-	{
-		m_spriteType = _NewSpriteType;
 	}
 
 	std::string SpriteRenderer::GetTexture() const
@@ -81,9 +84,10 @@ namespace frost::ECS
 		return m_spriteTexturePath;
 	}
 
-	void SpriteRenderer::SetTexture(const std::string& _SpriteTexute)
+	void SpriteRenderer::SetTexture(const std::string& _NewTexturePath)
 	{
-		m_spriteTexturePath = _SpriteTexute;
+		m_spriteTexturePath = _NewTexturePath;
+		m_spriteTexture->SetTexture(m_spriteTexturePath);
 	}
 
 	glm::vec4 SpriteRenderer::GetColor() const

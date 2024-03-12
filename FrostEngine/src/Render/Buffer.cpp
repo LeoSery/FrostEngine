@@ -12,16 +12,18 @@ namespace frost::core
 		GLuint m_gl_ID;
 	};
 
-	Buffer::Buffer( void* data , unsigned int size)
+	Buffer::Buffer()
 		:m_internal(new Internal)
-	{
-		glCreateBuffers(1, &m_internal->m_gl_ID);
-		glNamedBufferStorage(m_internal->m_gl_ID, size , data, 0);
-
-	}
+	{}
 
 	Buffer::~Buffer()
+	{}
+
+	unsigned int Buffer::CreateData(void* data, unsigned int size)
 	{
+		glCreateBuffers(1, &m_internal->m_gl_ID);
+		glNamedBufferStorage(m_internal->m_gl_ID, size, data, 0);
+		return this->GetBufferID();
 	}
 
 	unsigned int Buffer::GetBufferID()

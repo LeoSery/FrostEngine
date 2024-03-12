@@ -12,8 +12,10 @@ namespace frost::core
 	public:
 
 		// Constructor and Destructor
-		explicit Buffer( void* data, unsigned int size);
+		explicit Buffer();
 		~Buffer();
+
+		unsigned int CreateData(void* data, unsigned int size);
 
 		// Getters
 		[[nodiscard]] unsigned int GetBufferID();

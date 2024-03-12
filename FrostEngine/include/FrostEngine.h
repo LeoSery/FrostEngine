@@ -1,5 +1,7 @@
 #pragma once
 
+#include "ECS/Component/Components/SpriteRenderer.h"
+
 #include "Core/SceneManagement/SceneManager.h"
 #include "Core/Window.h"
 #include "Core/Export.h"

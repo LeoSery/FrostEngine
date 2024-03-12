@@ -7,7 +7,8 @@ namespace FrostEngine
 	{
 		m_Window = new frost::core::Window({ data.title.c_str(), data.size });
 		frost::core::Input::GetInstance()->init(m_Window);
-		m_RenderDevice = new frost::core::RenderDevice(*m_Window);
+		m_RenderDevice = frost::core::RenderDevice::GetInstance();
+		m_RenderDevice->Init(m_Window);
 		m_SceneManager = &frost::core::SceneManager::GetInstance();
 
 		m_CurrentScene = &m_SceneManager->GetActiveScene();
