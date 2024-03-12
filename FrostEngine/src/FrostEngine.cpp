@@ -1,10 +1,12 @@
 #include "FrostEngine.h"
+#include <Core/Input/Input.h>
 
 namespace FrostEngine
 {
 	void Application::Init(const InitData& data)
 	{
 		m_Window = new frost::core::Window({ data.title.c_str(), data.size });
+		frost::core::Input::GetInstance()->init(m_Window);
 		m_RenderDevice = new frost::core::RenderDevice(*m_Window);
 		m_SceneManager = &frost::core::SceneManager::GetInstance();
 
