@@ -10,7 +10,7 @@ namespace frost::core
 		GLFWwindow* window = nullptr;
 	};
 
-	Window::Window(S_WindowProperties Properties) 
+	Window::Window(S_WindowProperties Properties)
 		: m_impl(std::make_unique<Internal>())
 	{
 
@@ -70,7 +70,7 @@ namespace frost::core
 			glfwWindowShouldClose(m_impl->window) == 0;
 	}
 
-	void* Window::GetInternal()
+	void* Window::GetInternal() const
 	{
 		return m_impl->window;
 	}

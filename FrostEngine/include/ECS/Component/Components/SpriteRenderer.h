@@ -1,13 +1,17 @@
 #pragma once
-
 #include "ECS/Component/IComponent.h"
 #include "glm/vec4.hpp"
+
+#include "Render/Buffer.h"
+#include "Render/VertexArrayObject.h"
+#include "Core/Export.h"
+
 
 namespace frost::ECS
 {
 	class GameObject;
 	class Transform;
-
+	class Texture;
 	enum class S_SpriteType
 	{
 		none,
@@ -16,18 +20,14 @@ namespace frost::ECS
 		circle
 	};
 
-	class SpriteRenderer : public IComponent
+	class FROST_ENGINE_API SpriteRenderer : public IComponent
 	{
 		FROST_DEFINE_RTTI(SpriteRenderer)
 
 	public:
 
 		// Constructors and Destructors
-		SpriteRenderer(GameObject& _GameObject, S_SpriteType& _SpriteType);
-		SpriteRenderer(GameObject& _GameObject, S_SpriteType& _SpriteType, const glm::vec4& _NewColor);
-		SpriteRenderer(GameObject& _GameObject, S_SpriteType& _SpriteType, const std::string& _SpriteTexturePath);
-		SpriteRenderer(GameObject& _GameObject, S_SpriteType& _SpriteType, const std::string& _SpriteTexturePath, const glm::vec4& _Color);
-
+		SpriteRenderer(GameObject& _GameObject);
 		~SpriteRenderer();
 
 		// Frost engine life cycle methods
@@ -38,18 +38,25 @@ namespace frost::ECS
 		// Getters and Setters
 		[[nodiscard]] virtual void GetData(bool _ForceLoggerDraw) const;
 
-		[[nodiscard]] S_SpriteType GetSpriteType() const;
-		void SetSpriteType(S_SpriteType _NewSpriteType);
-
 		[[nodiscard]] std::string GetTexture() const;
-		void SetTexture(const std::string& _NewTexutePath);
+		[[nodiscard]] void SetTexture(const std::string& _NewTexturePath);
 
 		[[nodiscard]] glm::vec4 GetColor() const;
 		void SetColor(const glm::vec4& _NewColor);
 
 	private:
-		S_SpriteType m_spriteType = S_SpriteType::none;
 		std::string m_spriteTexturePath = "";
 		glm::vec4 m_color = { 1, 1, 1, 1 };
+		frost::core::Texture* m_spriteTexture;
+
+
+		float* vertices;
+		unsigned int* indices;
+
+	public:
+
+		frost::core::Buffer VBO;
+		frost::core::Buffer IBO;
+		frost::core::VertexArrayObject VAO;
 	};
 }

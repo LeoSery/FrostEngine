@@ -8,21 +8,27 @@
 #include <memory>
 #include <vector>
 
-namespace frost::core 
+namespace frost::core
 {
 	class Window;
-	
+
 	class FROST_ENGINE_API RenderDevice
 	{
 	public:
 
 		// Constructors and Destructors
 		RenderDevice(const RenderDevice&) = delete;
-		explicit RenderDevice(Window& _Window);
+		explicit RenderDevice();
 		~RenderDevice();
 
+		RenderDevice* Init(const Window* _window);
+
+		static RenderDevice* GetInstance();
+
+		static RenderDevice* m_instance;
+
+
 		// Methods
-		void RenderTest();
 		void AddVAO(VertexArrayObject _NewVAO);
 
 		// Frost engine life cycle methods
@@ -31,25 +37,23 @@ namespace frost::core
 	private:
 
 		// Fields
-		unsigned int m_vao;
-		unsigned int m_vs;
-		unsigned int m_fs;
-	
+		unsigned int m_vao = 0;
+		unsigned int m_vs = 0;
+		unsigned int m_fs = 0;
+
 		int m_positionLocation;
 		int m_rotationLocation;
 		int m_scaleLocation;
 		int m_aspectRatioLocation;
 		int m_texture;
 
-		float m_a = 0.0f;
 		Shader m_shaderProgram;
-		Texture m_testTex;
 		[[nodiscard]] std::vector<VertexArrayObject> GetVaoToRender();
 
 		// Methods
 		void ClearVaosToRender();
 
-	//forward Declaraction for pimple idiom
+		//forward Declaraction for pimple idiom
 	private:
 		struct Internal;
 		std::unique_ptr<Internal> m_internal;

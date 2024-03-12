@@ -1,24 +1,27 @@
 #include "Render/VertexArrayObject.h"
+#include "Render/Texture.h"
 #include "Render/Buffer.h"
 #include "GL/glew.h"
 #include "GLFW/glfw3.h"
+#include <iostream>
 
-namespace frost::core 
+namespace frost::core
 {
-	
+
 	VertexArrayObject::VertexArrayObject()
+		: Texture(nullptr)
 	{
 		m_positionLocation = { 0,0 };
 		m_rotationLocation = 0.f;
-		m_scaleLocation = {1,1};
-		
+		m_scaleLocation = { 1,1 };
+
 		glCreateVertexArrays(1, &m_gl_ID);
-	
+
 		//On active l'attribut 0 du VAO
 		glEnableVertexArrayAttrib(m_gl_ID, 0);
 		glVertexArrayAttribBinding(m_gl_ID, 0, 0);
 		glVertexArrayAttribFormat(m_gl_ID, 0, 2 /*L'attribut a une taille de 2 GL_FLOAT*/, GL_FLOAT, GL_FALSE, 0);
-	
+
 		//On active l'attribut 1 du VAO <-- TexCoord
 		glEnableVertexArrayAttrib(m_gl_ID, 1);
 		glVertexArrayAttribBinding(m_gl_ID, 1, 0); //On Bind l'attribut 1 qui est la couleur des vertices
@@ -29,18 +32,28 @@ namespace frost::core
 	VertexArrayObject::~VertexArrayObject()
 	{
 	}
-	
+
 	void VertexArrayObject::Bind()
 	{
 		glBindVertexArray(m_gl_ID);
+		if (Texture != nullptr)
+		{
+			Texture->Bind();
+		}
 	}
-	
+
 	void VertexArrayObject::Unbind()
 	{
 		glBindVertexArray(0);
+
+		if (Texture != nullptr)
+		{
+			Texture->Unbind();
+		}
+
 	}
 
-	void VertexArrayObject::BindBuffer( E_TypeBuffer _bufferType, Buffer& _buffer)
+	void VertexArrayObject::BindBuffer(E_TypeBuffer _bufferType, Buffer& _buffer)
 	{
 		switch (_bufferType)
 		{
@@ -57,39 +70,49 @@ namespace frost::core
 		default:
 			break;
 		}
-		
+
 	}
 
-	
+	void VertexArrayObject::SetTexture(frost::core::Texture* _texture)
+	{
+		Texture = _texture;
+	}
+
+	Texture* VertexArrayObject::GetTexture()
+	{
+		return Texture;
+	}
+
+
 	void VertexArrayObject::SetLocation(glm::vec2 _newLocation)
 	{
 		m_positionLocation = _newLocation;
 	}
-	
+
 	void VertexArrayObject::SetRotation(float _newRotation)
 	{
 		m_rotationLocation = _newRotation;
 	}
-	
+
 	void VertexArrayObject::SetScale(glm::vec2 _newScale)
 	{
 		m_scaleLocation = _newScale;
 	}
-	
+
 	glm::vec2 VertexArrayObject::GetLocation()
 	{
 		return m_positionLocation;
 	}
-	
+
 	glm::vec2 VertexArrayObject::GetScale()
 	{
 		return m_scaleLocation;
 	}
-	
+
 	float VertexArrayObject::GetRotation()
 	{
 		return m_rotationLocation;
 	}
-	
-	
+
+
 }
