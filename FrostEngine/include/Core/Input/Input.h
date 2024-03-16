@@ -12,9 +12,6 @@
 #include <vector>
 #include <map>
 
-
-
-
 namespace frost::core 
 {
 	class Window;
@@ -24,7 +21,7 @@ namespace frost::core
 		
 
 	protected: 
-		static Input* m_Instance;
+		static Input* m_instance;
 
 	public:
         Input(Input& other) = delete;
@@ -48,9 +45,15 @@ namespace frost::core
 		std::map<int, std::string> KeyBind; //key = Action
 		std::map<std::string,std::vector<std::function<void()>> > ActionBind; //Action = Function to call
 
-		void AddAction(std::string ActionName);
+	public:
 
-		bool AddKeyToAction(int key, std::string ActionName);//return true if succesfully added
+		void AddAction(std::string _actionName);
+
+		bool AddActionToKey(int key, std::string _actionName);//return true if succesfully added
+
+		void AddFunctionToAction(std::string _actionName, std::function<void()> _functionToCall);
+
+		void CallAction(std::string _actionToCall);
 
 	public:
 
