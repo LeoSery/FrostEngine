@@ -21,7 +21,7 @@ public:
 		Logger::LogInfo("Creating 2 GameObjects and set their pos");
 		GameObject* GameObjectTest = new GameObject("GameObjectTest");
 		Transform* TransformC = GameObjectTest->GetComponent<Transform>();
-		TransformC->position = glm::vec2(1, 2);
+		TransformC->position = glm::vec2(0, 0);
 
 		GameObjectTest->AddTag("Tag1");
 		GameObjectTest->AddTag("Tag2");

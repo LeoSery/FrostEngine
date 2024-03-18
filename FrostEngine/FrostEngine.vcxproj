@@ -15,7 +15,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\Core\Input\IInputable.h" />
     <ClInclude Include="include\Core\Internal\AuthorizationBadge.h" />
     <ClInclude Include="include\Core\Internal\RTTI.h" />
     <ClInclude Include="include\Core\Serial\Save.h" />
@@ -46,7 +45,6 @@
     <ClInclude Include="include\Core\Input\Input.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Core\Input\IInputable.cpp" />
     <ClCompile Include="src\Core\Input\Input.cpp" />
     <ClCompile Include="src\Core\Serial\XmlParser.cpp" />
     <ClCompile Include="src\ECS\Component\Components\SpriteRenderer.cpp" />
