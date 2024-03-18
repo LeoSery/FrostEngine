@@ -19,7 +19,6 @@
     <ClCompile Include="src\ECS\Component\Components\SpriteRenderer.cpp" />
     <ClCompile Include="src\FrostEngine.cpp" />
     <ClCompile Include="src\Core\Input\Input.cpp" />
-    <ClCompile Include="src\Core\Input\IInputable.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Core\Internal\AuthorizationBadge.h" />
@@ -50,7 +49,6 @@
     <ClInclude Include="include\Utils\Logger.h" />
     <ClInclude Include="include\FrostEngine.h" />
     <ClInclude Include="include\Core\Input\Input.h" />
-    <ClInclude Include="include\Core\Input\IInputable.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="src\Render\Shaders\DefaultVertexShader.glsl" />
