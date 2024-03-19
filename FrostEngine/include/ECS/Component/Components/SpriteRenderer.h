@@ -1,12 +1,13 @@
  #pragma once
 
 #include "ECS/Component/IComponent.h"
-#include "glm/vec4.hpp"
 
-#include "Render/Buffer.h"
 #include "Render/VertexArrayObject.h"
+#include "Render/Buffer.h"
+
 #include "Core/Export.h"
 
+#include "glm/vec4.hpp"
 
 namespace frost::ECS
 {

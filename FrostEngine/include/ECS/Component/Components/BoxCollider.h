@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Core/SceneManagement/SceneManager.h"
+#include "Core/Export.h"
 
 #include "ECS/Component/IComponent.h"
 
@@ -10,7 +11,7 @@ namespace frost::ECS
 {
 	class GameObject;
 
-	class BoxCollider : public IComponent
+	class FROST_ENGINE_API BoxCollider : public IComponent
 	{
 		FROST_DEFINE_RTTI(BoxCollider)
 
@@ -26,7 +27,7 @@ namespace frost::ECS
 		virtual void Destroy() override;
 
 		// Methods
-		//bool BoxCollider::IsColliding(BoxCollider& _Other);
+		bool IsColliding(BoxCollider& _Other);
 
 		// Getters and Setters
 		[[nodiscard]] bool GetIsStatic() const;
@@ -34,9 +35,9 @@ namespace frost::ECS
 		void GetData(bool _ForceLoggerDraw) const;
 		glm::mat2 GetRotationMatrix() const;
 		std::vector<glm::vec2>* GetVertices() const;
-		//std::vector<glm::vec2> BoxCollider::GetAxes(const std::vector<glm::vec2>* _Vertices);
-		//bool BoxCollider::SAT(BoxCollider& _Other);
-		//bool BoxCollider::AABB(BoxCollider& _Other)
+
+		bool SAT(BoxCollider& _Other);
+		bool AABB(BoxCollider& _Other);
 
 		// Fields
 		std::vector<frost::ECS::GameObject*> CollidingObjects;

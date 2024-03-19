@@ -10,7 +10,7 @@ namespace frost::ECS
 {
 	BoxCollider::BoxCollider(GameObject& _GameObject) : IComponent(_GameObject)
 	{
-
+		Start();
 	}
 
 	BoxCollider::~BoxCollider()
@@ -24,6 +24,7 @@ namespace frost::ECS
 
 		m_transform = GetParentObject().GetComponent<frost::ECS::Transform>();
 		glm::mat2 RotationMatrix = GetRotationMatrix();
+		m_vertices = new std::vector<glm::vec2>();
 
 		// the transform is the center of the box, so we need to calculate the vertices based on the center
 		m_vertices->push_back(((m_transform->position * RotationMatrix) + glm::vec2(-0.5, 0.5)) * m_transform->scale); // top left
@@ -50,75 +51,68 @@ namespace frost::ECS
 
 	}
 
-    //bool BoxCollider::IsColliding(BoxCollider& _Other)
-    //{
-    //    /*if (!AABB(_Other))
-    //        return false;*/
-
-    //   /* return SAT(_Other);*/
-    //}
-
-    //bool BoxCollider::AABB(BoxCollider& _Other)
-    //{
-    //    // Calculate minimum and maximum extents for both boxes
-    //    glm::vec2 min1 = m_transform->position - m_transform->scale * 0.5f;
-    //    glm::vec2 max1 = m_transform->position + m_transform->scale * 0.5f;
-    //    glm::vec2 min2 = _Other.m_transform->position - _Other.m_transform->scale * 0.5f;
-    //    glm::vec2 max2 = _Other.m_transform->position + _Other.m_transform->scale * 0.5f;
-
-    //    // Check for overlap on both axes (x and y)
-    //    return (min1.x <= max2.x && max1.x >= min2.x) &&
-    //        (min1.y <= max2.y && max1.y >= min2.y);
-    //}
-
-  //  bool BoxCollider::SAT(BoxCollider& _Other)
-  //  {
-  //      // 2.1. Get axes for both boxes (considering potential rotation)
-  //      std::vector<glm::vec2> axes1 = GetAxes(m_vertices);
-  //      std::vector<glm::vec2> axes2 = GetAxes(_Other.m_vertices);
-
-  //      // 2.2. Test each axis for separation
-  //      for (const glm::vec2& axis : axes1)
-		//{
-  //          float minA = Project(axis, m_vertices[0]);
-  //          float maxA = minA;
-
-  //          for (int i = 1; i < 4; ++i)
-		//	{
-  //              float projection = Project(axis, m_vertices[i]);
-  //              minA = std::min(minA, projection);
-  //              maxA = std::max(maxA, projection);
-  //          }
-
-  //          float minB = Project(axis, _Other.m_vertices[0]);
-  //          float maxB = minB;
-
-  //          for (int i = 1; i < 4; ++i)
-		//	{
-  //              float projection = Project(axis, _Other.m_vertices[i]);
-  //              minB = std::min(minB, projection);
-  //              maxB = std::max(maxB, projection);
-  //          }
-
-  //          // If projections don't overlap on any axis, there's no collision
-  //          if (maxA < minB || maxB < minA)
-		//	{
-  //              return false;
-  //          }
-  //      }
-
-  //      // If no axis separates the boxes, there's collision
-  //      return true;
-  //  }
-
-    /*std::vector<glm::vec2> BoxCollider::GetAxes(const std::vector<glm::vec2>* _Vertices)
+    bool BoxCollider::IsColliding(BoxCollider& _Other)
     {
-        std::vector<glm::vec2> axes;
-        for (int i = 0; i < 4; ++i) {
-            axes.push_back(glm::normalize(_Vertices->at((i + 1) % 4) - _Vertices->at(i)));
-        }
-        return axes;
-    }*/
+		if (_Other.GetIsStatic() || !_Other.IsActive())
+			return false;
+
+        if (!AABB(_Other))
+            return false;
+
+       return SAT(_Other);
+    }
+
+    bool BoxCollider::AABB(BoxCollider& _Other)
+    {
+        glm::vec2 min1 = m_transform->position - m_transform->scale * 0.5f;
+        glm::vec2 max1 = m_transform->position + m_transform->scale * 0.5f;
+        glm::vec2 min2 = _Other.m_transform->position - _Other.m_transform->scale * 0.5f;
+        glm::vec2 max2 = _Other.m_transform->position + _Other.m_transform->scale * 0.5f;
+
+        return (min1.x <= max2.x && max1.x >= min2.x) &&
+            (min1.y <= max2.y && max1.y >= min2.y);
+    }
+
+    bool BoxCollider::SAT(BoxCollider& _Other)
+    {
+        glm::mat2 RotationMatrix = GetRotationMatrix();
+		glm::mat2 RotationMatrixOther = _Other.GetRotationMatrix();
+
+		glm::vec2 axes[4] = {
+			RotationMatrix * (m_vertices->at(1) - m_vertices->at(0)),
+			RotationMatrix * (m_vertices->at(2) - m_vertices->at(1)),
+			RotationMatrixOther * (_Other.m_vertices->at(1) - _Other.m_vertices->at(0)),
+			RotationMatrixOther * (_Other.m_vertices->at(2) - _Other.m_vertices->at(1))
+		};
+
+		for (int i = 0; i < 4; i++)
+		{
+			float min1 = glm::dot(m_vertices->at(0), axes[i]);
+			float max1 = min1;
+			float min2 = glm::dot(_Other.m_vertices->at(0), axes[i]);
+			float max2 = min2;
+
+			for (int j = 1; j < 4; j++)
+			{
+				float projection = glm::dot(m_vertices->at(j), axes[i]);
+				if (projection < min1)
+					min1 = projection;
+				if (projection > max1)
+					max1 = projection;
+
+				projection = glm::dot(_Other.m_vertices->at(j), axes[i]);
+				if (projection < min2)
+					min2 = projection;
+				if (projection > max2)
+					max2 = projection;
+			}
+
+			if (max1 < min2 || max2 < min1)
+				return false;
+		}
+
+		return true;	
+    }
 
 	bool BoxCollider::GetIsStatic() const
 	{
