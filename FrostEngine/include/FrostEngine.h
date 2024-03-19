@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ECS/Component/Components/SpriteRenderer.h"
+#include "ECS/Component/Components/BoxCollider.h"
 
 #include "Core/SceneManagement/SceneManager.h"
 #include "Core/Window.h"

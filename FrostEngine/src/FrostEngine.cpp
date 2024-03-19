@@ -10,7 +10,6 @@ namespace FrostEngine
 		m_RenderDevice = frost::core::RenderDevice::GetInstance();
 		m_RenderDevice->Init(m_Window);
 		m_SceneManager = &frost::core::SceneManager::GetInstance();
-
 		m_CurrentScene = &m_SceneManager->GetActiveScene();
 	}
 
