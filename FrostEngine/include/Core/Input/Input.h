@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Core/Export.h"
+
 #include <GLFW/glfw3.h>
 #include <functional>
 #include <string>
