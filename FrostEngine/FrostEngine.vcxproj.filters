@@ -18,6 +18,7 @@
     <ClCompile Include="src\Render\TextureMgr.cpp" />
     <ClCompile Include="src\ECS\Component\Components\SpriteRenderer.cpp" />
     <ClCompile Include="src\FrostEngine.cpp" />
+    <ClCompile Include="src\ECS\Component\Components\BoxCollider.cpp" />
     <ClCompile Include="src\Core\Input\Input.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -48,6 +49,7 @@
     <ClInclude Include="include\ECS\Component\Components\SpriteRenderer.h" />
     <ClInclude Include="include\Utils\Logger.h" />
     <ClInclude Include="include\FrostEngine.h" />
+    <ClInclude Include="include\ECS\Component\Components\BoxCollider.h" />
     <ClInclude Include="include\Core\Input\Input.h" />
   </ItemGroup>
   <ItemGroup>

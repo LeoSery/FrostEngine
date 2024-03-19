@@ -1,5 +1,6 @@
 #include "ECS/Component/Components/Transform.h"
 #include "Utils/Logger.h"
+
 #include <iostream>
 
 namespace frost::ECS

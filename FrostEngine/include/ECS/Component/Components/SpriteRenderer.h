@@ -1,4 +1,5 @@
-#pragma once
+ #pragma once
+
 #include "ECS/Component/IComponent.h"
 #include "glm/vec4.hpp"
 

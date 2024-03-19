@@ -5,7 +5,6 @@
 
 #include <iostream>
 
-
 namespace frost::core
 {
 	Input* Input::m_instance = nullptr;
