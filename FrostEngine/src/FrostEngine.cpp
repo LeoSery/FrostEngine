@@ -10,7 +10,6 @@ namespace FrostEngine
 		m_RenderDevice = frost::core::RenderDevice::GetInstance();
 		m_RenderDevice->Init(m_Window);
 		m_SceneManager = &frost::core::SceneManager::GetInstance();
-
 		m_CurrentScene = &m_SceneManager->GetActiveScene();
 	}
 
@@ -36,6 +35,8 @@ namespace FrostEngine
 					BrowseAllChilds(child, deltaTime);
 				}
 			}
+
+			frost::core::Input::GetInstance()->Update();
 
 			// temporary render update (replace with SpriteRenderer Update function)
 			/////////////////////////////////////////////////////////////
