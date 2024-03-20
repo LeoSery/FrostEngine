@@ -36,14 +36,23 @@ namespace frost::ECS
 		glm::mat2 GetRotationMatrix() const;
 		std::vector<glm::vec2>* GetVertices() const;
 
-		bool SAT(BoxCollider& _Other);
-		bool AABB(BoxCollider& _Other);
+		struct CollisionData
+		{
+			bool top;
+			bool bottom;
+			bool left;
+			bool right;
+		};
 
 		// Fields
 		std::vector<frost::ECS::GameObject*> CollidingObjects;
-		bool isColliding = false;
-
+		CollisionData CollisionData;
+		 
 	private:
+		// Methods
+		bool SAT(BoxCollider& _Other) const;
+		bool AABB(BoxCollider& _Other) const;
+
 		// Settings
 		bool m_isStatic = false;
 
