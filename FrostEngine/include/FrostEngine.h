@@ -42,7 +42,8 @@ namespace FrostEngine
 		void Run();
 
 	private:
-		void BrowseAllChilds(frost::ECS::GameObject* _GameObject, float _DeltaTime, void(*func)(frost::ECS::GameObject*, float));
+		void BrowseAllChilds(frost::ECS::GameObject* _GameObject, float _DeltaTime);
+		//void BrowseAllChilds(frost::ECS::GameObject* _GameObject, float _DeltaTime, void(*func)(frost::ECS::GameObject*, float));
 		void UpdateObjectComponents(frost::ECS::GameObject* _GameObject, float _DeltaTime);
 	};
 
