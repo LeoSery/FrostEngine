@@ -59,7 +59,8 @@ namespace frost::ECS
         if (!AABB(_Other))
             return false;
 
-       return SAT(_Other);
+		BoxCollider::CollisionData Data = SAT(_Other);
+		return Data.isColliding;
     }
 
     bool BoxCollider::AABB(BoxCollider& _Other) const
@@ -73,10 +74,17 @@ namespace frost::ECS
             (min1.y <= max2.y && max1.y >= min2.y);
     }
 
-    bool BoxCollider::SAT(BoxCollider& _Other) const
+	BoxCollider::CollisionData BoxCollider::SAT(BoxCollider& _Other) const
     {
         glm::mat2 RotationMatrix = GetRotationMatrix();
 		glm::mat2 RotationMatrixOther = _Other.GetRotationMatrix();
+
+		BoxCollider::CollisionData Data = CollisionData();
+
+		float min1;
+		float max1;
+		float min2;
+		float max2;
 
 		glm::vec2 axes[4] = {
 			RotationMatrix * (m_vertices->at(1) - m_vertices->at(0)),
@@ -87,10 +95,10 @@ namespace frost::ECS
 
 		for (int i = 0; i < 4; i++)
 		{
-			float min1 = glm::dot(m_vertices->at(0), axes[i]);
-			float max1 = min1;
-			float min2 = glm::dot(_Other.m_vertices->at(0), axes[i]);
-			float max2 = min2;
+			min1 = glm::dot(m_vertices->at(0), axes[i]);
+			max1 = min1;
+			min2 = glm::dot(_Other.m_vertices->at(0), axes[i]);
+			max2 = min2;
 
 			for (int j = 1; j < 4; j++)
 			{
@@ -108,10 +116,19 @@ namespace frost::ECS
 			}
 
 			if (max1 < min2 || max2 < min1)
-				return false;
+			{
+				Data.isColliding = false;
+				return Data;
+			}
 		}
 
-		return true;	
+		//return true;
+		Data.isColliding = true;
+		Data.top = max1 - min2;
+		Data.bottom = max2 - min1;
+		Data.left = max1 - min2;
+		Data.right = max2 - min1;
+		return Data;
     }
 
 	bool BoxCollider::GetIsStatic() const
