@@ -5,7 +5,6 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
 
-
 namespace frost::core
 {
 	Input* Input::m_instance = nullptr;

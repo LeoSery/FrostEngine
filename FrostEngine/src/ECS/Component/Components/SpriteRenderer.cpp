@@ -49,12 +49,10 @@ namespace frost::ECS
 	void SpriteRenderer::Start()
 	{
 		frost::core::RenderDevice::GetInstance()->AddVAO(VAO);
-
 	}
 
 	void SpriteRenderer::Update(float /*_DeltaTime*/)
 	{
-
 		VAO.SetLocation({ this->GetParentObject().GetComponent<Transform>()->position });
 		VAO.SetScale({ this->GetParentObject().GetComponent<Transform>()->scale });
 		VAO.SetRotation({ this->GetParentObject().GetComponent<Transform>()->rotation });
