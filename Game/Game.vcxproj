@@ -57,6 +57,9 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
   <PropertyGroup Label="Vcpkg">
     <VcpkgEnableManifest>true</VcpkgEnableManifest>
   </PropertyGroup>
@@ -134,11 +137,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Game.cpp" />
+    <ClCompile Include="src\TestInput.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="ressources\Textures\T_Debug.png" />
     <Image Include="ressources\Textures\T_Debug_Quad.png" />
     <Image Include="ressources\Textures\T_PlaceHolder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\TestInput.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

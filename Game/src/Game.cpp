@@ -1,4 +1,5 @@
 #include "FrostEngine.h"
+#include "TestInput.h"
 
 #pragma region "Alias"
 using SpriteRenderer = frost::ECS::SpriteRenderer;
@@ -26,7 +27,7 @@ public:
 
 		// Create GameObjects
 		// GameObject 1
-		GameObjectTest = new GameObject("GameObjectTest");
+		GameObjectTest = GameObject::New("GameObjectTest", m_CurrentScene->GetRoot());
 		GameObjectTest->AddComponent<SpriteRenderer>();
 		GameObjectTest->AddComponent<BoxCollider>();
 
@@ -43,7 +44,7 @@ public:
 		GameObjectTest->AddTag("Tag2");
 
 		// GameObject 2
-		GameObjectTest2 = new GameObject("GameObjectTest2");
+		GameObjectTest2 = GameObject::New("GameObjectTest2", m_CurrentScene->GetRoot());
 		GameObjectTest2->AddComponent<SpriteRenderer>();
 		GameObjectTest2->AddComponent<BoxCollider>();
 
@@ -56,6 +57,9 @@ public:
 		// Debug Data
 		GameObjectTest->GetData(true);
 		GameObjectTest2->GetData(true);
+
+		TestInput* Test = TestInput::New("Hehe");
+		Test;
 	}
 
 	void Update(float deltaTime) override
