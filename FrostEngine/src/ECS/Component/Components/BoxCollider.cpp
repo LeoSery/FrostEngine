@@ -62,7 +62,7 @@ namespace frost::ECS
        return SAT(_Other);
     }
 
-    bool BoxCollider::AABB(BoxCollider& _Other)
+    bool BoxCollider::AABB(BoxCollider& _Other) const
     {
         glm::vec2 min1 = m_transform->position - m_transform->scale * 0.5f;
         glm::vec2 max1 = m_transform->position + m_transform->scale * 0.5f;
@@ -73,7 +73,7 @@ namespace frost::ECS
             (min1.y <= max2.y && max1.y >= min2.y);
     }
 
-    bool BoxCollider::SAT(BoxCollider& _Other)
+    bool BoxCollider::SAT(BoxCollider& _Other) const
     {
         glm::mat2 RotationMatrix = GetRotationMatrix();
 		glm::mat2 RotationMatrixOther = _Other.GetRotationMatrix();

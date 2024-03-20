@@ -24,24 +24,29 @@ namespace FrostEngine
 			float deltaTime = std::chrono::duration<float, std::chrono::seconds::period>(now - lastUpdateTime).count();
 			lastUpdateTime = now;
 
+			// User Update()
 			Update(deltaTime);
 
+			// Components Update()
 			if (m_CurrentScene != nullptr)
 			{
 				UpdateObjectComponents(m_CurrentScene->GetRoot(), deltaTime);
 
-				for (auto* child : m_CurrentScene->GetRoot()->GetChildren())
-				{
-					BrowseAllChilds(child, deltaTime);
-				}
+				//for (auto* child : m_CurrentScene->GetRoot()->GetChildren())
+				//{
+				//	//BrowseAllChilds(child, deltaTime);
+				//}
 			}
 
-			// temporary render update (replace with SpriteRenderer Update function)
-			/////////////////////////////////////////////////////////////
-			m_RenderDevice->Update();
-			/////////////////////////////////////////////////////////////
+			//Physics Update()
 
+
+			// Render Update()
+			m_RenderDevice->Update();
+
+			// Logger Update()
 			frost::utils::Logger::GetInstance()->Show();
+
 		} while (m_Window->PollEvents());
 	}
 
@@ -51,18 +56,19 @@ namespace FrostEngine
 		delete m_Window;
 	}
 
-	void Application::BrowseAllChilds(frost::ECS::GameObject* _GameObject, float _DeltaTime)
+	void Application::BrowseAllChilds(frost::ECS::GameObject* _GameObject, float _DeltaTime, void(*func)(frost::ECS::GameObject*, float))
 	{
 		if (!_GameObject)
 			return;
 
-		UpdateObjectComponents(_GameObject, _DeltaTime);
+		//UpdateObjectComponents(_GameObject, _DeltaTime);
+		func(_GameObject, _DeltaTime);
 
-		for (auto* child : _GameObject->GetChildren())
-		{
-			if (child->IsActive())
-				BrowseAllChilds(child, _DeltaTime);
-		}
+		//for (auto* child : _GameObject->GetChildren())
+		//{
+		//	//if (child->IsActive())
+		//		//BrowseAllChilds(child, _DeltaTime, func(_GameObject, _DeltaTime));
+		//}
 	}
 
 	void Application::UpdateObjectComponents(frost::ECS::GameObject* _GameObject, float _DeltaTime)
