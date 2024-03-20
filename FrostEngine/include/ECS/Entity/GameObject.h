@@ -16,11 +16,13 @@ namespace frost::ECS
 
     class FROST_ENGINE_API GameObject : public Tree<GameObject>
     {
-    public:
-
+    protected:
         // Constructors and Destructors
-        explicit GameObject(std::string _Name, GameObject* _Parent);
-        explicit GameObject(std::string _Name);
+        explicit GameObject(std::string _Name, GameObject* _Parent = nullptr);
+        void Init();
+
+    public:
+        static GameObject* New(std::string _Name, GameObject* _Parent = nullptr);
 
         ~GameObject();
 

@@ -5,7 +5,7 @@ namespace frost::core
     Scene::Scene(const AuthorizationBadge<SceneManager>& , std::string _Name)
         : m_uuid(uuids::uuid_system_generator{}()), m_name(std::move(_Name))
     {
-        m_root = new ECS::GameObject("SceneRoot", nullptr);
+        m_root = ECS::GameObject::New("SceneRoot", nullptr);
     }
 
     Scene::~Scene()

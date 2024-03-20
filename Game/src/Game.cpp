@@ -1,4 +1,5 @@
 #include "FrostEngine.h"
+#include "TestInput.h"
 
 #pragma region "Alias"
 using SceneManager = frost::core::SceneManager;
@@ -19,19 +20,23 @@ public:
 		Application::Init({ "Mon super jeu", glm::ivec2(1600, 900) });
 
 		Logger::LogInfo("Creating 2 GameObjects and set their pos");
-		GameObject* GameObjectTest = new GameObject("GameObjectTest");
+		GameObject* GameObjectTest = GameObject::New("GameObjectTest");
 		Transform* TransformC = GameObjectTest->GetComponent<Transform>();
 		TransformC->position = glm::vec2(0, 0);
 
 		GameObjectTest->AddTag("Tag1");
 		GameObjectTest->AddTag("Tag2");
 
-		GameObject* GameObjectTest2 = new GameObject("GameObjectTest2");
+		GameObject* GameObjectTest2 = GameObject::New("GameObjectTest2");
 		Transform* TransformC2 = GameObjectTest2->GetComponent<Transform>();
 		TransformC2->position = glm::vec2(1, 2);
 
 		GameObjectTest->GetData(true);
 		GameObjectTest2->GetData(true);
+
+		TestInput* Test = TestInput::New("Hehe");
+		Test->Begin();
+
 	}
 
 	void Update(float deltaTime) override
