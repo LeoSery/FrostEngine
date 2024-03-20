@@ -32,10 +32,10 @@ namespace FrostEngine
 			{
 				UpdateObjectComponents(m_CurrentScene->GetRoot(), deltaTime);
 
-				//for (auto* child : m_CurrentScene->GetRoot()->GetChildren())
-				//{
-				//	//BrowseAllChilds(child, deltaTime);
-				//}
+				for (auto* child : m_CurrentScene->GetRoot()->GetChildren())
+				{
+					BrowseAllChilds(child, deltaTime);
+				}
 			}
 
 			//Physics Update()
@@ -56,20 +56,34 @@ namespace FrostEngine
 		delete m_Window;
 	}
 
-	void Application::BrowseAllChilds(frost::ECS::GameObject* _GameObject, float _DeltaTime, void(*func)(frost::ECS::GameObject*, float))
+	void Application::BrowseAllChilds(frost::ECS::GameObject* _GameObject, float _DeltaTime)
 	{
 		if (!_GameObject)
 			return;
 
-		//UpdateObjectComponents(_GameObject, _DeltaTime);
-		func(_GameObject, _DeltaTime);
+		UpdateObjectComponents(_GameObject, _DeltaTime);
 
-		//for (auto* child : _GameObject->GetChildren())
-		//{
-		//	//if (child->IsActive())
-		//		//BrowseAllChilds(child, _DeltaTime, func(_GameObject, _DeltaTime));
-		//}
+		for (auto* child : _GameObject->GetChildren())
+		{
+			if (child->IsActive())
+				BrowseAllChilds(child, _DeltaTime);
+		}
 	}
+
+	//void Application::BrowseAllChilds(frost::ECS::GameObject* _GameObject, float _DeltaTime, void(*func)(frost::ECS::GameObject*, float))
+	//{
+	//	if (!_GameObject)
+	//		return;
+
+	//	//UpdateObjectComponents(_GameObject, _DeltaTime);
+	//	func(_GameObject, _DeltaTime);
+
+	//	//for (auto* child : _GameObject->GetChildren())
+	//	//{
+	//	//	//if (child->IsActive())
+	//	//		//BrowseAllChilds(child, _DeltaTime, func(_GameObject, _DeltaTime));
+	//	//}
+	//}
 
 	void Application::UpdateObjectComponents(frost::ECS::GameObject* _GameObject, float _DeltaTime)
 	{

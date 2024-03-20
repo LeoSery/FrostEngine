@@ -60,9 +60,9 @@ public:
 
 	void Update(float deltaTime) override
 	{
-		auto* tmp = GameObjectTest->GetComponent<BoxCollider>();
+		/*auto* tmp = GameObjectTest->GetComponent<BoxCollider>();
 		bool IsColliding = GameObjectTest2->GetComponent<BoxCollider>()->IsColliding(*tmp);
-		Logger::LogInfo("IsColliding : " + std::to_string(IsColliding));
+		Logger::LogInfo("IsColliding : " + std::to_string(IsColliding));*/
 
 		(void)deltaTime; //this is to avoid warning when delta time is not used
 		// To do : update game logic (one frame)
