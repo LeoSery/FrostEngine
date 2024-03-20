@@ -1,6 +1,8 @@
 #include "FrostEngine.h"
 #include <Core/Input/Input.h>
 
+#include <functional>
+
 namespace FrostEngine
 {
 	void Application::Init(const InitData& data)
@@ -34,11 +36,19 @@ namespace FrostEngine
 
 				for (auto* child : m_CurrentScene->GetRoot()->GetChildren())
 				{
-					BrowseAllChilds(child, deltaTime);
+					BrowseAllComponents(child, deltaTime);
 				}
 			}
 
 			//Physics Update()
+			if (m_CurrentScene != nullptr)
+			{
+				for (auto* child : m_CurrentScene->GetRoot()->GetChildren())
+				{
+					BrowseAllBoxCollider(child);
+				}
+			}
+
 
 			frost::core::Input::GetInstance()->Update();
 			// Render Update()
@@ -56,7 +66,7 @@ namespace FrostEngine
 		delete m_Window;
 	}
 
-	void Application::BrowseAllChilds(frost::ECS::GameObject* _GameObject, float _DeltaTime)
+	void Application::BrowseAllComponents(frost::ECS::GameObject* _GameObject, float _DeltaTime)
 	{
 		if (!_GameObject)
 			return;
@@ -66,24 +76,9 @@ namespace FrostEngine
 		for (auto* child : _GameObject->GetChildren())
 		{
 			if (child->IsActive())
-				BrowseAllChilds(child, _DeltaTime);
+				BrowseAllComponents(child, _DeltaTime);
 		}
 	}
-
-	//void Application::BrowseAllChilds(frost::ECS::GameObject* _GameObject, float _DeltaTime, void(*func)(frost::ECS::GameObject*, float))
-	//{
-	//	if (!_GameObject)
-	//		return;
-
-	//	//UpdateObjectComponents(_GameObject, _DeltaTime);
-	//	func(_GameObject, _DeltaTime);
-
-	//	//for (auto* child : _GameObject->GetChildren())
-	//	//{
-	//	//	//if (child->IsActive())
-	//	//		//BrowseAllChilds(child, _DeltaTime, func(_GameObject, _DeltaTime));
-	//	//}
-	//}
 
 	void Application::UpdateObjectComponents(frost::ECS::GameObject* _GameObject, float _DeltaTime)
 	{
@@ -91,6 +86,20 @@ namespace FrostEngine
 		{
 			if (component->IsActive())
 				component->Update(_DeltaTime);
+		}
+	}
+
+	void Application::BrowseAllBoxCollider(frost::ECS::GameObject* _GameObject)
+	{
+		if (!_GameObject)
+			return;
+
+		for (auto* child : _GameObject->GetChildren())
+		{
+			if (child->IsActive())
+			{
+				
+			}
 		}
 	}
 }
