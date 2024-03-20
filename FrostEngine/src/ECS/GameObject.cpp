@@ -9,17 +9,24 @@
 namespace frost::ECS
 {
     GameObject::GameObject(std::string _Name, GameObject* _Parent)
-        : Tree<GameObject>(_Parent), m_name(std::move(_Name)), m_uuid(uuids::uuid_system_generator{}())
+        : Tree<GameObject>(_Parent/* ? _Parent : core::SceneManager::GetInstance().GetActiveScene().GetRoot()*/)
+        , m_name(std::move(_Name))
+        , m_uuid(uuids::uuid_system_generator{}())
+    {
+    }
+
+    void GameObject::Init()
     {
         AddComponent<Transform>();
         SetActive(true);
         Start();
     }
 
-    GameObject::GameObject(std::string _Name)
-        : GameObject(std::move(_Name), core::SceneManager::GetInstance().GetActiveScene().GetRoot())
+    GameObject* GameObject::New(std::string _Name, GameObject* _Parent)
     {
-
+        GameObject* result = new GameObject(_Name, _Parent);
+        result->Init();
+        return result;
     }
 
     GameObject::~GameObject()
@@ -116,7 +123,7 @@ namespace frost::ECS
         frost::utils::Logger* Logger = frost::utils::Logger::GetInstance();
 
         Logger->LogInfo(m_name + " Infos: ");
-        Logger->LogInfo("- Parent: " + GetParent()->GetName());
+        Logger->LogInfo("- Parent: " + (GetParent() ? GetParent()->GetName() : "None"));
         Logger->LogInfo(std::format("- UUID: {}", uuids::to_string(m_uuid)));
 
         Logger->LogInfo("- Name: " + m_name);

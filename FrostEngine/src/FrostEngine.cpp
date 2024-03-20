@@ -40,7 +40,7 @@ namespace FrostEngine
 
 			//Physics Update()
 
-
+			frost::core::Input::GetInstance()->Update();
 			// Render Update()
 			m_RenderDevice->Update();
 

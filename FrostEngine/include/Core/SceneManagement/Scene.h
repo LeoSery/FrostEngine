@@ -11,12 +11,12 @@ namespace frost::core
 {
 	class SceneManager;
 
-	class Scene
+	class FROST_ENGINE_API Scene
 	{
-    public:
+	public:
 
 		//Constructors and Destructors
-        explicit Scene(const AuthorizationBadge<SceneManager>&, std::string _Name);
+		explicit Scene(const AuthorizationBadge<SceneManager>&, std::string _Name);
 		~Scene();
 
 		//Copy and Move Constructors
