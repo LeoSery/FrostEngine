@@ -26,8 +26,18 @@ namespace frost::ECS
 		virtual void Update(float _DeltaTime) override;
 		virtual void Destroy() override;
 
+		// Structs
+		struct CollisionData
+		{
+			bool isColliding = false;
+			float top;
+			float bottom;
+			float left;
+			float right;
+		};
+
 		// Methods
-		bool IsColliding(BoxCollider& _Other);
+		CollisionData IsColliding(BoxCollider& _Other);
 
 		// Getters and Setters
 		[[nodiscard]] bool GetIsStatic() const;
@@ -35,15 +45,6 @@ namespace frost::ECS
 		void GetData(bool _ForceLoggerDraw) const;
 		glm::mat2 GetRotationMatrix() const;
 		std::vector<glm::vec2>* GetVertices() const;
-
-		struct CollisionData
-		{
-			bool isColliding;
-			float top;
-			float bottom;
-			float left;
-			float right;
-		};
 
 		// Fields
 		std::vector<frost::ECS::GameObject*> CollidingObjects;

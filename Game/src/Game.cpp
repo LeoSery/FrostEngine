@@ -13,8 +13,8 @@ using Logger = frost::utils::Logger;
 class MyGameApp : public FrostEngine::Application
 {
 public:
-	GameObject* GameObjectTest;
-	GameObject* GameObjectTest2;
+	GameObject* GameObjectTest = nullptr;
+	GameObject* GameObjectTest2 = nullptr;
 
 	void Init() override
 	{
@@ -32,7 +32,7 @@ public:
 		GameObjectTest->AddComponent<BoxCollider>();
 
 		Transform* TransformC = GameObjectTest->GetComponent<Transform>();
-		TransformC->position = glm::vec2(0, 0);
+		TransformC->position = glm::vec2(-0.5, 0.5);
 
 		SpriteRenderer* SpriteRendererC = GameObjectTest->GetComponent<SpriteRenderer>();
 		SpriteRendererC->SetTexture("T_Debug_Quad.png");
@@ -49,7 +49,7 @@ public:
 		GameObjectTest2->AddComponent<BoxCollider>();
 
 		Transform* TransformC2 = GameObjectTest2->GetComponent<Transform>();
-		TransformC2->position = glm::vec2(0.5, 0);
+		TransformC2->position = glm::vec2(0.5, 0.5);
 
 		SpriteRenderer* SpriteRendererC2 = GameObjectTest2->GetComponent<SpriteRenderer>();
 		SpriteRendererC2->SetTexture("T_DebugHolder.png");
@@ -67,6 +67,9 @@ public:
 		/*auto* tmp = GameObjectTest->GetComponent<BoxCollider>();
 		bool IsColliding = GameObjectTest2->GetComponent<BoxCollider>()->IsColliding(*tmp);
 		Logger::LogInfo("IsColliding : " + std::to_string(IsColliding));*/
+
+		//GameObjectTest->GetComponent<Transform>();
+		//GameObjectTest2->GetComponent<Transform>();
 
 		(void)deltaTime; //this is to avoid warning when delta time is not used
 		// To do : update game logic (one frame)

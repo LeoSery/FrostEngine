@@ -51,16 +51,18 @@ namespace frost::ECS
 
 	}
 
-    bool BoxCollider::IsColliding(BoxCollider& _Other)
+	BoxCollider::CollisionData BoxCollider::IsColliding(BoxCollider& _Other)
     {
+		BoxCollider::CollisionData Data = CollisionData();
+
 		if (_Other.GetIsStatic() || !_Other.IsActive())
-			return false;
+			return Data;
 
         if (!AABB(_Other))
-            return false;
+            return Data;
 
-		BoxCollider::CollisionData Data = SAT(_Other);
-		return Data.isColliding;
+		Data = SAT(_Other);
+		return Data;
     }
 
     bool BoxCollider::AABB(BoxCollider& _Other) const
@@ -122,7 +124,6 @@ namespace frost::ECS
 			}
 		}
 
-		//return true;
 		Data.isColliding = true;
 		Data.top = max1 - min2;
 		Data.bottom = max2 - min1;
