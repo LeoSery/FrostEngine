@@ -36,8 +36,6 @@ namespace FrostEngine
 			// Components Update()
 			if (m_CurrentScene != nullptr)
 			{
-				ObjectsToUpdate.push_back(m_CurrentScene->GetRoot());
-
 				UpdateObjectComponents(m_CurrentScene->GetRoot(), deltaTime);
 
 				for (auto* child : m_CurrentScene->GetRoot()->GetChildren())
@@ -47,7 +45,7 @@ namespace FrostEngine
 			}
 
 			//Physics Update()
-			PhysUpdate();			
+			PhysUpdate();
 
 
 			frost::core::Input::GetInstance()->Update();
@@ -107,9 +105,10 @@ namespace FrostEngine
 
 					if (otherBoxCollider && otherObject != object)
 					{
-						if (boxCollider->IsColliding(*otherBoxCollider).isColliding)
+						auto CollisionData = boxCollider->IsColliding(*otherBoxCollider);
+						if (CollisionData.isColliding)
 						{
-							Hits[boxCollider].push_back(boxCollider->IsColliding(*otherBoxCollider));
+							Hits[boxCollider].push_back(CollisionData);
 						}
 					}
 				}

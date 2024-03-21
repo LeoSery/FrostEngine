@@ -43,7 +43,6 @@ namespace FrostEngine
 
 	private:
 		void BrowseAllComponents(frost::ECS::GameObject* _GameObject, float _DeltaTime);
-		void BrowseAllBoxCollider(frost::ECS::GameObject* _GameObject);
 		void UpdateObjectComponents(frost::ECS::GameObject* _GameObject, float _DeltaTime);
 		void PhysUpdate();
 

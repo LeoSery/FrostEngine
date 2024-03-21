@@ -30,10 +30,11 @@ namespace frost::ECS
 		struct CollisionData
 		{
 			bool isColliding = false;
-			float top;
-			float bottom;
-			float left;
-			float right;
+			BoxCollider* otherCollider = nullptr;
+			float top = 0.0f;
+			float bottom = 0.0f;
+			float left = 0.0f;
+			float right = 0.0f;
 		};
 
 		// Methods
@@ -48,7 +49,7 @@ namespace frost::ECS
 
 		// Fields
 		std::vector<frost::ECS::GameObject*> CollidingObjects;
-		 
+
 	private:
 		// Methods
 		CollisionData SAT(BoxCollider& _Other) const;

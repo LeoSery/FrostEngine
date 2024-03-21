@@ -32,7 +32,7 @@ public:
 		GameObjectTest->AddComponent<BoxCollider>();
 
 		Transform* TransformC = GameObjectTest->GetComponent<Transform>();
-		TransformC->position = glm::vec2(-0.5, 0.5);
+		TransformC->position = glm::vec2(-0.45, 0.20);
 
 		SpriteRenderer* SpriteRendererC = GameObjectTest->GetComponent<SpriteRenderer>();
 		SpriteRendererC->SetTexture("T_Debug_Quad.png");
@@ -49,7 +49,7 @@ public:
 		GameObjectTest2->AddComponent<BoxCollider>();
 
 		Transform* TransformC2 = GameObjectTest2->GetComponent<Transform>();
-		TransformC2->position = glm::vec2(0.5, 0.5);
+		TransformC2->position = glm::vec2(0.5, 0.25);
 
 		SpriteRenderer* SpriteRendererC2 = GameObjectTest2->GetComponent<SpriteRenderer>();
 		SpriteRendererC2->SetTexture("T_DebugHolder.png");
@@ -68,8 +68,8 @@ public:
 		bool IsColliding = GameObjectTest2->GetComponent<BoxCollider>()->IsColliding(*tmp);
 		Logger::LogInfo("IsColliding : " + std::to_string(IsColliding));*/
 
-		//GameObjectTest->GetComponent<Transform>();
-		//GameObjectTest2->GetComponent<Transform>();
+		//GameObjectTest->GetComponent<Transform>()->GetData(true);
+		//GameObjectTest2->GetComponent<Transform>()->GetData(true);
 
 		(void)deltaTime; //this is to avoid warning when delta time is not used
 		// To do : update game logic (one frame)

@@ -52,33 +52,54 @@ namespace frost::ECS
 	}
 
 	BoxCollider::CollisionData BoxCollider::IsColliding(BoxCollider& _Other)
-    {
+	{
 		BoxCollider::CollisionData Data = CollisionData();
 
 		if (_Other.GetIsStatic() || !_Other.IsActive())
 			return Data;
 
-        if (!AABB(_Other))
-            return Data;
+		if (!AABB(_Other))
+			return Data;
 
 		Data = SAT(_Other);
 		return Data;
-    }
+	}
 
-    bool BoxCollider::AABB(BoxCollider& _Other) const
-    {
-        glm::vec2 min1 = m_transform->position - m_transform->scale * 0.5f;
-        glm::vec2 max1 = m_transform->position + m_transform->scale * 0.5f;
-        glm::vec2 min2 = _Other.m_transform->position - _Other.m_transform->scale * 0.5f;
-        glm::vec2 max2 = _Other.m_transform->position + _Other.m_transform->scale * 0.5f;
+	//bool BoxCollider::AABB(BoxCollider& _Other) const
+	//{
+	//	glm::vec2 min1 = m_transform->position - m_transform->scale * 0.5f;
+	//	glm::vec2 max1 = m_transform->position + m_transform->scale * 0.5f;
+	//	glm::vec2 min2 = _Other.m_transform->position - _Other.m_transform->scale * 0.5f;
+	//	glm::vec2 max2 = _Other.m_transform->position + _Other.m_transform->scale * 0.5f;
 
-        return (min1.x <= max2.x && max1.x >= min2.x) &&
-            (min1.y <= max2.y && max1.y >= min2.y);
-    }
+	//	return (min1.x <= max2.x && max1.x >= min2.x) &&
+	//		(min1.y <= max2.y && max1.y >= min2.y);
+	//	//return (max1.x >= min2.x && min1.x <= max2.x) &&
+	//	//	(max1.y >= min2.y && min1.y <= max2.y);
+	//}
+
+	bool BoxCollider::AABB(BoxCollider& _Other) const
+	{
+		std::vector<glm::vec2>* otherVertices = _Other.GetVertices();
+
+		float MinX = m_vertices->at(0).x;
+		float MaxX = m_vertices->at(2).x;
+		float MinY = m_vertices->at(0).y;
+		float MaxY = m_vertices->at(2).y;
+
+		float otherMinX = otherVertices->at(0).x;
+		float otherMaxX = otherVertices->at(2).x;
+		float otherMinY = otherVertices->at(0).y;
+		float otherMaxY = otherVertices->at(2).y;
+
+		// Testez la condition de collision AABB
+		return (MaxX >= otherMinX && MaxY >= otherMinY &&
+			otherMaxX >= MinX && otherMaxY >= MinY);
+	}
 
 	BoxCollider::CollisionData BoxCollider::SAT(BoxCollider& _Other) const
-    {
-        glm::mat2 RotationMatrix = GetRotationMatrix();
+	{
+		glm::mat2 RotationMatrix = GetRotationMatrix();
 		glm::mat2 RotationMatrixOther = _Other.GetRotationMatrix();
 
 		BoxCollider::CollisionData Data = CollisionData();
@@ -125,12 +146,13 @@ namespace frost::ECS
 		}
 
 		Data.isColliding = true;
+		Data.otherCollider = &_Other;
 		Data.top = max1 - min2;
 		Data.bottom = max2 - min1;
 		Data.left = max1 - min2;
 		Data.right = max2 - min1;
 		return Data;
-    }
+	}
 
 	bool BoxCollider::GetIsStatic() const
 	{
@@ -158,7 +180,7 @@ namespace frost::ECS
 
 	glm::mat2 BoxCollider::GetRotationMatrix() const
 	{
-		glm::mat2 NewMatrix (glm::vec2(cos(m_transform->rotation), -sin(m_transform->rotation)), glm::vec2(sin(m_transform->rotation), cos(m_transform->rotation)));
+		glm::mat2 NewMatrix(glm::vec2(cos(m_transform->rotation), -sin(m_transform->rotation)), glm::vec2(sin(m_transform->rotation), cos(m_transform->rotation)));
 		return NewMatrix;
 	}
 
