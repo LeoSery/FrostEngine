@@ -7,7 +7,7 @@ namespace frost::ECS
 {
 	class GameObject;
 
-	class Transform : public IComponent
+	class FROST_ENGINE_API Transform : public IComponent
 	{
 		FROST_DEFINE_RTTI(Transform)
 
