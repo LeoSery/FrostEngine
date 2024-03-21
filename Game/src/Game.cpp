@@ -1,5 +1,9 @@
+// Engine includes
 #include "FrostEngine.h"
-#include "TestInput.h"
+
+// Game includes
+#include "Player.h"
+
 
 #pragma region "Alias"
 using SpriteRenderer = frost::ECS::SpriteRenderer;
@@ -23,43 +27,18 @@ public:
 		SceneManager::GetInstance().CreateScene(MainSceneName);
 		SceneManager::GetInstance().LoadScene(MainSceneName);
 		Application::Init({ "Mon super jeu", glm::ivec2(1600, 900) });
-		Logger::LogInfo("Creating 2 GameObjects and set their pos");
 
-		// Create GameObjects
-		// GameObject 1
-		GameObjectTest = GameObject::New("GameObjectTest", m_CurrentScene->GetRoot());
-		GameObjectTest->AddComponent<SpriteRenderer>();
-		GameObjectTest->AddComponent<BoxCollider>();
+		Player* PlayerEntity = Player::New("Player", m_CurrentScene->GetRoot());
+		SpriteRenderer* PlayerSpriteRenderer = PlayerEntity->AddComponent<SpriteRenderer>();
+		PlayerSpriteRenderer->SetTexture("T_Debug_Quad.png");
 
-		Transform* TransformC = GameObjectTest->GetComponent<Transform>();
-		TransformC->position = glm::vec2(-0.45, 0.20);
+		BoxCollider* BoxColliderComponent = PlayerEntity->AddComponent<BoxCollider>();
+		BoxColliderComponent;
 
-		SpriteRenderer* SpriteRendererC = GameObjectTest->GetComponent<SpriteRenderer>();
-		SpriteRendererC->SetTexture("T_Debug_Quad.png");
+		Transform* PlayerTransform = PlayerEntity->GetComponent<Transform>();
+		PlayerTransform->position = glm::vec2(-0.5, 0.25);
 
-		BoxCollider* BoxColliderC = GameObjectTest->GetComponent<BoxCollider>();
-		BoxColliderC->SetIsStatic(true);
-
-		GameObjectTest->AddTag("Tag1");
-		GameObjectTest->AddTag("Tag2");
-
-		// GameObject 2
-		GameObjectTest2 = GameObject::New("GameObjectTest2", m_CurrentScene->GetRoot());
-		GameObjectTest2->AddComponent<SpriteRenderer>();
-		GameObjectTest2->AddComponent<BoxCollider>();
-
-		Transform* TransformC2 = GameObjectTest2->GetComponent<Transform>();
-		TransformC2->position = glm::vec2(0.5, 0.25);
-
-		SpriteRenderer* SpriteRendererC2 = GameObjectTest2->GetComponent<SpriteRenderer>();
-		SpriteRendererC2->SetTexture("T_DebugHolder.png");
-
-		// Debug Data
-		GameObjectTest->GetData(true);
-		GameObjectTest2->GetData(true);
-
-		TestInput* Test = TestInput::New("Hehe");
-		Test;
+		PlayerEntity->GetData(true);
 	}
 
 	void Update(float deltaTime) override

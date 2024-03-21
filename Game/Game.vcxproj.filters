@@ -22,7 +22,7 @@
     <ClCompile Include="src\Game.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\TestInput.cpp">
+    <ClCompile Include="src\Player.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -38,7 +38,7 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\TestInput.h">
+    <ClInclude Include="src\Player.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>

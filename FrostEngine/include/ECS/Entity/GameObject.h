@@ -35,6 +35,7 @@ namespace frost::ECS
 		[[nodiscard]] const std::string& GetName() const;
 		void SetName(const std::string& _Name);
 
+		[[nodiscard]] Transform& GetTransform();
 		[[nodiscard]] const Transform& GetTransform() const;
 		void SetTransform(const Transform& _Transform);
 
