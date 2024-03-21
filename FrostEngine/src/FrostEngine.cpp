@@ -9,8 +9,10 @@ namespace FrostEngine
 	{
 		m_Window = new frost::core::Window({ data.title.c_str(), data.size });
 		frost::core::Input::GetInstance()->init(m_Window);
+
 		m_RenderDevice = frost::core::RenderDevice::GetInstance();
 		m_RenderDevice->Init(m_Window);
+
 		m_SceneManager = &frost::core::SceneManager::GetInstance();
 		m_CurrentScene = &m_SceneManager->GetActiveScene();
 	}
@@ -26,12 +28,16 @@ namespace FrostEngine
 			float deltaTime = std::chrono::duration<float, std::chrono::seconds::period>(now - lastUpdateTime).count();
 			lastUpdateTime = now;
 
+			ObjectsToUpdate.clear();
+
 			// User Update()
 			Update(deltaTime);
 
 			// Components Update()
 			if (m_CurrentScene != nullptr)
 			{
+				ObjectsToUpdate.push_back(m_CurrentScene->GetRoot());
+
 				UpdateObjectComponents(m_CurrentScene->GetRoot(), deltaTime);
 
 				for (auto* child : m_CurrentScene->GetRoot()->GetChildren())
@@ -41,13 +47,7 @@ namespace FrostEngine
 			}
 
 			//Physics Update()
-			if (m_CurrentScene != nullptr)
-			{
-				for (auto* child : m_CurrentScene->GetRoot()->GetChildren())
-				{
-					BrowseAllBoxCollider(child);
-				}
-			}
+			PhysUpdate();			
 
 
 			frost::core::Input::GetInstance()->Update();
@@ -71,6 +71,8 @@ namespace FrostEngine
 		if (!_GameObject)
 			return;
 
+		ObjectsToUpdate.push_back(_GameObject);
+
 		UpdateObjectComponents(_GameObject, _DeltaTime);
 
 		for (auto* child : _GameObject->GetChildren())
@@ -89,17 +91,57 @@ namespace FrostEngine
 		}
 	}
 
-	void Application::BrowseAllBoxCollider(frost::ECS::GameObject* _GameObject)
+	void Application::PhysUpdate()
 	{
-		if (!_GameObject)
-			return;
+		std::map<frost::ECS::BoxCollider*, std::vector<frost::ECS::BoxCollider::CollisionData>> Hits;
 
-		for (auto* child : _GameObject->GetChildren())
+		for (auto* object : ObjectsToUpdate)
 		{
-			if (child->IsActive())
+			auto* boxCollider = object->GetComponent<frost::ECS::BoxCollider>();
+
+			if (boxCollider)
 			{
-				
+				for (auto* otherObject : ObjectsToUpdate)
+				{
+					auto* otherBoxCollider = otherObject->GetComponent<frost::ECS::BoxCollider>();
+
+					if (otherBoxCollider && otherObject != object)
+					{
+						if (boxCollider->IsColliding(*otherBoxCollider).isColliding)
+						{
+							Hits[boxCollider].push_back(boxCollider->IsColliding(*otherBoxCollider));
+						}
+					}
+				}
 			}
+		}
+
+		// foreach element on Hits map, iterate on the vector find the largets value on each field of CollisionData
+		for (auto& [boxCollider, collisions] : Hits)
+		{
+			frost::ECS::BoxCollider::CollisionData largestCollision = { false, 0, 0, 0, 0 };
+
+			for (auto& collision : collisions)
+			{
+				if (collision.top > largestCollision.top)
+					largestCollision.top = collision.top;
+
+				if (collision.bottom < largestCollision.bottom)
+					largestCollision.bottom = collision.bottom;
+
+				if (collision.left < largestCollision.left)
+					largestCollision.left = collision.left;
+
+				if (collision.right > largestCollision.right)
+					largestCollision.right = collision.right;
+			}
+
+			// Apply the collision
+			auto* transform = boxCollider->GetParentObject().GetComponent<frost::ECS::Transform>();
+			transform->position.y += largestCollision.top;
+			transform->position.y += largestCollision.bottom;
+			transform->position.x += largestCollision.left;
+			transform->position.x += largestCollision.right;
 		}
 	}
 }
