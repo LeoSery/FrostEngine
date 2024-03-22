@@ -63,8 +63,8 @@ namespace frost::ECS
 		/*if (!AABB(_Other))
 			return Data;*/
 
-		//Data = SAT(_Other);
-		//return Data;
+			//Data = SAT(_Other);
+			//return Data;
 	}
 
 	BoxCollider::CollisionData BoxCollider::AABB(BoxCollider& _Other) const
@@ -92,7 +92,7 @@ namespace frost::ECS
 
 		if (!isCollide)
 			return Data;
-		
+
 		Data.isColliding = isCollide;
 		Data.otherCollider = &_Other;
 		Data.top = MaxY - otherMinY;
@@ -102,7 +102,7 @@ namespace frost::ECS
 		return Data;
 	}
 
-	BoxCollider::CollisionData BoxCollider::SAT(BoxCollider& _Other) const
+	/*BoxCollider::CollisionData BoxCollider::SAT(BoxCollider& _Other) const
 	{
 		glm::mat2 RotationMatrix = GetRotationMatrix();
 		glm::mat2 RotationMatrixOther = _Other.GetRotationMatrix();
@@ -157,7 +157,7 @@ namespace frost::ECS
 		Data.left = max1 - min2;
 		Data.right = max2 - min1;
 		return Data;
-	}
+	}*/
 
 	bool BoxCollider::GetIsStatic() const
 	{
