@@ -84,17 +84,25 @@ namespace frost::ECS
 
 		float MinX = m_vertices->at(0).x;
 		float MaxX = m_vertices->at(2).x;
-		float MinY = m_vertices->at(0).y;
-		float MaxY = m_vertices->at(2).y;
+		float MaxY = m_vertices->at(0).y;
+		float MinY = m_vertices->at(2).y;
 
 		float otherMinX = otherVertices->at(0).x;
 		float otherMaxX = otherVertices->at(2).x;
-		float otherMinY = otherVertices->at(0).y;
-		float otherMaxY = otherVertices->at(2).y;
+		float otherMaxY = otherVertices->at(0).y;
+		float otherMinY = otherVertices->at(2).y;
 
 		// Testez la condition de collision AABB
-		return (MaxX >= otherMinX && MaxY >= otherMinY &&
-			otherMaxX >= MinX && otherMaxY >= MinY);
+		/*return (MaxX >= otherMinX && MaxY >= otherMinY &&
+			otherMaxX >= MinX && otherMaxY >= MinY);*/
+
+		bool AisToTheRightOfB = MinX > otherMaxX;
+		bool AisToTheLeftOfB = MaxX < otherMinX;
+
+		bool AisAboveB = MinY > otherMaxY;
+		bool AisBelowB = MaxY < otherMinY;
+
+		return !(AisToTheRightOfB || AisToTheLeftOfB || AisAboveB || AisBelowB);
 	}
 
 	BoxCollider::CollisionData BoxCollider::SAT(BoxCollider& _Other) const
