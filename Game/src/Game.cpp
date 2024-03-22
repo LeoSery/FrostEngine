@@ -22,12 +22,14 @@ public:
 
 	void Init() override
 	{
-		// Game Setup
+		//// Game Setup
+		// Scene
 		std::string MainSceneName = "GameScene";
 		SceneManager::GetInstance().CreateScene(MainSceneName);
 		SceneManager::GetInstance().LoadScene(MainSceneName);
 		Application::Init({ "Mon super jeu", glm::ivec2(1600, 900) });
 
+		// Player
 		Player* PlayerEntity = Player::New("Player", m_CurrentScene->GetRoot());
 		SpriteRenderer* PlayerSpriteRenderer = PlayerEntity->AddComponent<SpriteRenderer>();
 		PlayerSpriteRenderer->SetTexture("T_Debug_Quad.png");
@@ -39,6 +41,19 @@ public:
 		PlayerTransform->position = glm::vec2(-0.5, 0.25);
 
 		PlayerEntity->GetData(true);
+
+		// Enemy
+		GameObject* Enemy = GameObject::New("Enemy", m_CurrentScene->GetRoot());
+		SpriteRenderer* EnemySpriteRenderer = Enemy->AddComponent<SpriteRenderer>();
+		EnemySpriteRenderer->SetTexture("T_Debug_Quad.png");
+
+		BoxCollider* EnemyBoxCollider = Enemy->AddComponent<BoxCollider>();
+		EnemyBoxCollider;
+
+		Transform* EnemyTransform = Enemy->GetComponent<Transform>();
+		EnemyTransform->position = glm::vec2(0.5, 0.25);
+
+		Enemy->GetData(true);
 	}
 
 	void Update(float deltaTime) override
