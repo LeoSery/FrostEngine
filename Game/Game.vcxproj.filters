@@ -25,6 +25,9 @@
     <ClCompile Include="src\Player.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="src\MovementScript.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="ressources\Textures\T_Debug_Quad.png">
@@ -39,6 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Player.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MovementScript.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>

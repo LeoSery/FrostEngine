@@ -3,12 +3,13 @@
 
 // Game includes
 #include "Player.h"
+#include "MovementScript.h"
 
 #include "ECS/Entity/GameObject.h"
 
 Player::Player(std::string _name, GameObject* _Parent) : GameObject(_name, _Parent)
 {
-
+	m_MovementScript = this->AddComponent<MovementScript>();
 }
 
 Player* Player::New(std::string _name, GameObject* _parent)
@@ -49,24 +50,20 @@ void Player::Start()
 
 void Player::MoveForward()
 {
-	//frost::utils::Logger::LogInfo("Moving forward");
-	GetTransform().position.y += 0.01f;
+	m_MovementScript->AddAcceleration({ 0.0f,1.0f });
 }
 
 void Player::MoveBackward()
 {
-	//frost::utils::Logger::LogInfo("Moving backward");
-	GetTransform().position.y -= 0.01f;
+	m_MovementScript->AddAcceleration({ 0.0f,-1.0f });
 }
 
 void Player::MoveLeft()
 {
-	//frost::utils::Logger::LogInfo("Moving Left");
-	GetTransform().position.x -= 0.01f;
+	m_MovementScript->AddAcceleration({ -1.0f,0.0f });
 }
 
 void Player::MoveRight()
 {
-	//frost::utils::Logger::LogInfo("Moving Right");
-	GetTransform().position.x += 0.01f;
+	m_MovementScript->AddAcceleration({ 1.0f,0.0f });
 }
