@@ -59,12 +59,6 @@ namespace frost::ECS
 			return Data;
 
 		return AABB(_Other);
-
-		/*if (!AABB(_Other))
-			return Data;*/
-
-		//Data = SAT(_Other);
-		//return Data;
 	}
 
 	BoxCollider::CollisionData BoxCollider::AABB(BoxCollider& _Other) const
@@ -92,70 +86,13 @@ namespace frost::ECS
 
 		if (!isCollide)
 			return Data;
-		
+
 		Data.isColliding = isCollide;
 		Data.otherCollider = &_Other;
 		Data.top = MaxY - otherMinY;
 		Data.bottom = MinY - otherMaxY;
 		Data.left = MinX - otherMaxX;
 		Data.right = MaxX - otherMinX;
-		return Data;
-	}
-
-	BoxCollider::CollisionData BoxCollider::SAT(BoxCollider& _Other) const
-	{
-		glm::mat2 RotationMatrix = GetRotationMatrix();
-		glm::mat2 RotationMatrixOther = _Other.GetRotationMatrix();
-
-		BoxCollider::CollisionData Data = CollisionData();
-
-		float min1;
-		float max1;
-		float min2;
-		float max2;
-
-		glm::vec2 axes[4] = {
-			RotationMatrix * (m_vertices->at(1) - m_vertices->at(0)),
-			RotationMatrix * (m_vertices->at(2) - m_vertices->at(1)),
-			RotationMatrixOther * (_Other.m_vertices->at(1) - _Other.m_vertices->at(0)),
-			RotationMatrixOther * (_Other.m_vertices->at(2) - _Other.m_vertices->at(1))
-		};
-
-		for (int i = 0; i < 4; i++)
-		{
-			min1 = glm::dot(m_vertices->at(0), axes[i]);
-			max1 = min1;
-			min2 = glm::dot(_Other.m_vertices->at(0), axes[i]);
-			max2 = min2;
-
-			for (int j = 1; j < 4; j++)
-			{
-				float projection = glm::dot(m_vertices->at(j), axes[i]);
-				if (projection < min1)
-					min1 = projection;
-				if (projection > max1)
-					max1 = projection;
-
-				projection = glm::dot(_Other.m_vertices->at(j), axes[i]);
-				if (projection < min2)
-					min2 = projection;
-				if (projection > max2)
-					max2 = projection;
-			}
-
-			if (max1 < min2 || max2 < min1)
-			{
-				Data.isColliding = false;
-				return Data;
-			}
-		}
-
-		Data.isColliding = true;
-		Data.otherCollider = &_Other;
-		Data.top = max1 - min2;
-		Data.bottom = max2 - min1;
-		Data.left = max1 - min2;
-		Data.right = max2 - min1;
 		return Data;
 	}
 

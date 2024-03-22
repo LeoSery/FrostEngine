@@ -121,7 +121,7 @@ namespace FrostEngine
 			auto* transform = boxCollider->GetParentObject().GetComponent<frost::ECS::Transform>();
 
 			if (transform && !transform->isMovingEntity)
-				return;
+				continue;
 
 			frost::ECS::BoxCollider::CollisionData largestCollision = { false, 0, 0, 0, 0 };
 
@@ -150,13 +150,13 @@ namespace FrostEngine
 
 				// find the smallest offset
 				if (absTop < absBottom && absTop < absLeft && absTop < absRight && absTop != 0)
-					transform->position.y -= largestCollision.top;
+					transform->position.y -= abs(largestCollision.top);
 				else if (absBottom < absTop && absBottom < absLeft && absBottom < absRight && absBottom != 0)
-					transform->position.y -= largestCollision.bottom;
+					transform->position.y += abs(largestCollision.bottom);
 				else if (absLeft < absTop && absLeft < absBottom && absLeft < absRight && absLeft != 0)
-					transform->position.x -= largestCollision.left;
-				else
-					transform->position.x -= largestCollision.right;
+					transform->position.x += abs(largestCollision.left);
+				else if (absRight < absTop && absRight < absBottom && absRight < absLeft && absRight != 0)
+					transform->position.x -= abs(largestCollision.right);
 			}
 		}
 	}
