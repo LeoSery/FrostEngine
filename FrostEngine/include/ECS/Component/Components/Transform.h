@@ -34,5 +34,6 @@ namespace frost::ECS
 		glm::vec2 position = { 0, 0 };
 		float rotation = 0;
 		glm::vec2 scale = { 1, 1 };
+		bool isMovingEntity = false;
 	};
 }

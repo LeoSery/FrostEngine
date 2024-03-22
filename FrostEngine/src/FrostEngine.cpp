@@ -118,6 +118,11 @@ namespace FrostEngine
 		// foreach element on Hits map, iterate on the vector find the largets value on each field of CollisionData
 		for (auto& [boxCollider, collisions] : Hits)
 		{
+			auto* transform = boxCollider->GetParentObject().GetComponent<frost::ECS::Transform>();
+
+			if (transform && !transform->isMovingEntity)
+				return;
+
 			frost::ECS::BoxCollider::CollisionData largestCollision = { false, 0, 0, 0, 0 };
 
 			for (auto& collision : collisions)
@@ -136,11 +141,23 @@ namespace FrostEngine
 			}
 
 			// Apply the collision
-			auto* transform = boxCollider->GetParentObject().GetComponent<frost::ECS::Transform>();
-			transform->position.y += largestCollision.top;
-			transform->position.y += largestCollision.bottom;
-			transform->position.x += largestCollision.left;
-			transform->position.x += largestCollision.right;
+			if (transform)
+			{
+				float absTop = abs(largestCollision.top);
+				float absBottom = abs(largestCollision.bottom);
+				float absLeft = abs(largestCollision.left);
+				float absRight = abs(largestCollision.right);
+
+				// find the smallest offset
+				if (absTop < absBottom && absTop < absLeft && absTop < absRight && absTop != 0)
+					transform->position.y -= largestCollision.top;
+				else if (absBottom < absTop && absBottom < absLeft && absBottom < absRight && absBottom != 0)
+					transform->position.y -= largestCollision.bottom;
+				else if (absLeft < absTop && absLeft < absBottom && absLeft < absRight && absLeft != 0)
+					transform->position.x -= largestCollision.left;
+				else
+					transform->position.x -= largestCollision.right;
+			}
 		}
 	}
 }
