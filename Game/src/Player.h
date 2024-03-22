@@ -2,6 +2,8 @@
 
 #include "FrostEngine.h"
 
+class MovementScript;
+
 class Player : public frost::ECS::GameObject
 {
 public:
@@ -15,5 +17,8 @@ private:
 	void MoveLeft();
 	void MoveRight();
 	float A = 0;
+
+private:
+	MovementScript* m_MovementScript;
 };
 
