@@ -49,24 +49,24 @@ void Player::Start()
 
 void Player::MoveForward()
 {
-	frost::utils::Logger::LogInfo("Moving forward");
+	//frost::utils::Logger::LogInfo("Moving forward");
 	GetTransform().position.y += 0.01f;
 }
 
 void Player::MoveBackward()
 {
-	frost::utils::Logger::LogInfo("Moving backward");
+	//frost::utils::Logger::LogInfo("Moving backward");
 	GetTransform().position.y -= 0.01f;
 }
 
 void Player::MoveLeft()
 {
-	frost::utils::Logger::LogInfo("Moving Left");
+	//frost::utils::Logger::LogInfo("Moving Left");
 	GetTransform().position.x -= 0.01f;
 }
 
 void Player::MoveRight()
 {
-	frost::utils::Logger::LogInfo("Moving Right");
+	//frost::utils::Logger::LogInfo("Moving Right");
 	GetTransform().position.x += 0.01f;
 }
