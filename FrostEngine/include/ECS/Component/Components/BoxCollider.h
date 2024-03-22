@@ -53,7 +53,7 @@ namespace frost::ECS
 	private:
 		// Methods
 		CollisionData SAT(BoxCollider& _Other) const;
-		bool AABB(BoxCollider& _Other) const;
+		BoxCollider::CollisionData AABB(BoxCollider& _Other) const;
 
 		// Settings
 		bool m_isStatic = false;

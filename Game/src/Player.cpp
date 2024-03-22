@@ -23,8 +23,9 @@ void Player::Start()
 	// Start the GameObject
 	GameObject::Start();
 
-	//// Create Inputs
+	GetTransform().isMovingEntity = true;
 
+	//// Create Inputs
 	// Forward
 	frost::core::Input::GetInstance()->AddAction("MovingForward");
 	frost::core::Input::GetInstance()->AddActionToKey(frost::core::Input::Key::W, "MovingForward");

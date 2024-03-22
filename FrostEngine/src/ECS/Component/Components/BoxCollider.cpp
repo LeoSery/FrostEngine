@@ -58,29 +58,19 @@ namespace frost::ECS
 		if (_Other.GetIsStatic() || !_Other.IsActive())
 			return Data;
 
-		if (!AABB(_Other))
-			return Data;
+		return AABB(_Other);
 
-		Data = SAT(_Other);
-		return Data;
+		/*if (!AABB(_Other))
+			return Data;*/
+
+		//Data = SAT(_Other);
+		//return Data;
 	}
 
-	//bool BoxCollider::AABB(BoxCollider& _Other) const
-	//{
-	//	glm::vec2 min1 = m_transform->position - m_transform->scale * 0.5f;
-	//	glm::vec2 max1 = m_transform->position + m_transform->scale * 0.5f;
-	//	glm::vec2 min2 = _Other.m_transform->position - _Other.m_transform->scale * 0.5f;
-	//	glm::vec2 max2 = _Other.m_transform->position + _Other.m_transform->scale * 0.5f;
-
-	//	return (min1.x <= max2.x && max1.x >= min2.x) &&
-	//		(min1.y <= max2.y && max1.y >= min2.y);
-	//	//return (max1.x >= min2.x && min1.x <= max2.x) &&
-	//	//	(max1.y >= min2.y && min1.y <= max2.y);
-	//}
-
-	bool BoxCollider::AABB(BoxCollider& _Other) const
+	BoxCollider::CollisionData BoxCollider::AABB(BoxCollider& _Other) const
 	{
 		std::vector<glm::vec2>* otherVertices = _Other.GetVertices();
+		BoxCollider::CollisionData Data = CollisionData();
 
 		float MinX = m_vertices->at(0).x;
 		float MaxX = m_vertices->at(2).x;
@@ -92,17 +82,24 @@ namespace frost::ECS
 		float otherMaxY = otherVertices->at(0).y;
 		float otherMinY = otherVertices->at(2).y;
 
-		// Testez la condition de collision AABB
-		/*return (MaxX >= otherMinX && MaxY >= otherMinY &&
-			otherMaxX >= MinX && otherMaxY >= MinY);*/
-
 		bool AisToTheRightOfB = MinX > otherMaxX;
 		bool AisToTheLeftOfB = MaxX < otherMinX;
 
 		bool AisAboveB = MinY > otherMaxY;
 		bool AisBelowB = MaxY < otherMinY;
 
-		return !(AisToTheRightOfB || AisToTheLeftOfB || AisAboveB || AisBelowB);
+		bool isCollide = !(AisToTheRightOfB || AisToTheLeftOfB || AisAboveB || AisBelowB);
+
+		if (!isCollide)
+			return Data;
+		
+		Data.isColliding = isCollide;
+		Data.otherCollider = &_Other;
+		Data.top = MaxY - otherMinY;
+		Data.bottom = MinY - otherMaxY;
+		Data.left = MinX - otherMaxX;
+		Data.right = MaxX - otherMinX;
+		return Data;
 	}
 
 	BoxCollider::CollisionData BoxCollider::SAT(BoxCollider& _Other) const
