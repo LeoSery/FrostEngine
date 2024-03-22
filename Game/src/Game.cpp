@@ -38,7 +38,7 @@ public:
 		BoxColliderComponent;
 
 		Transform* PlayerTransform = PlayerEntity->GetComponent<Transform>();
-		PlayerTransform->position = glm::vec2(-0.5, 0.25);
+		PlayerTransform->position = glm::vec2(-0.6, 0);
 
 		PlayerEntity->GetData(true);
 
@@ -51,7 +51,7 @@ public:
 		EnemyBoxCollider;
 
 		Transform* EnemyTransform = Enemy->GetComponent<Transform>();
-		EnemyTransform->position = glm::vec2(0.5, 0.25);
+		EnemyTransform->position = glm::vec2(0.6, 0);
 
 		Enemy->GetData(true);
 	}
