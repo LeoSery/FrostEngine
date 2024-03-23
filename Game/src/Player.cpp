@@ -6,10 +6,12 @@
 #include "MovementScript.h"
 
 #include "ECS/Entity/GameObject.h"
-
+#include "MovementScript.h"
 Player::Player(std::string _name, GameObject* _Parent) : GameObject(_name, _Parent)
 {
-	m_MovementScript = this->AddComponent<MovementScript>();
+
+	m_MovementScript = AddComponent<MovementScript>();
+
 }
 
 Player* Player::New(std::string _name, GameObject* _parent)
@@ -50,20 +52,36 @@ void Player::Start()
 
 void Player::MoveForward()
 {
-	m_MovementScript->AddAcceleration({ 0.0f,1.0f });
+	//frost::utils::Logger::LogInfo("Moving forward");
+	//GetTransform().position.y += 0.01f;
+	m_MovementScript->AddAcceleration(GetTransform().GetForwardVector());
+
 }
 
 void Player::MoveBackward()
 {
-	m_MovementScript->AddAcceleration({ 0.0f,-1.0f });
+
+	//frost::utils::Logger::LogInfo("Moving backward");
+	//GetTransform().position.y -= 0.01f;
+
+	m_MovementScript->AddAcceleration(GetTransform().GetForwardVector() * -1.0f );
 }
 
 void Player::MoveLeft()
 {
-	m_MovementScript->AddAcceleration({ -1.0f,0.0f });
+
+	//frost::utils::Logger::LogInfo("Moving Left");
+	//GetTransform().position.x -= 0.01f;
+
+	//m_MovementScript->AddAcceleration({ -1.0f,0.0f });
+	m_MovementScript->AddRotationAcceleration(-1.0f);
 }
 
 void Player::MoveRight()
 {
-	m_MovementScript->AddAcceleration({ 1.0f,0.0f });
+
+	//frost::utils::Logger::LogInfo("Moving Right");
+	//GetTransform().position.x += 0.01f;
+
+	m_MovementScript->AddRotationAcceleration(1.0f);
 }
