@@ -22,17 +22,29 @@ public:
 	void Destroy() override;
 
 	void AddAcceleration(glm::vec2 _Acceleration);
+	void AddRotationAcceleration(float _Acceleration);
 
-private:
+#pragma region Movement
+
+private: //Movement Variables
 	glm::vec2 m_CurrentVelocity = { 0.0f  , 0.0f} ;
 	glm::vec2 m_InputAcceleration = { 0.0f  , 0.0f} ;
 
 	float m_friction = 0.1f;
-	float m_MaxSpeed = 1.0f;
+	float m_MaxSpeed = 0.10f;
 
 	frost::ECS::GameObject* m_OwningObject;
 
-	private:
+private: //Movement Functions
 		void ClampVelocity();
+		
+#pragma endregion
+
+private:
+	float m_Rotationfriction = 0.1f;
+	float m_MaxRotationSpeed = 0.05f;
+	float m_CurrentRotationVelocity = 0.0f;
+	float m_InputRotationAcceleration = 0.0f;
+
 };
 
