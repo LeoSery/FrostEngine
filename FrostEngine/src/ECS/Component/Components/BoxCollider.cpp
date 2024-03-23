@@ -92,7 +92,7 @@ namespace frost::ECS
 
 		if (!isCollide)
 			return Data;
-		
+
 		Data.isColliding = isCollide;
 		Data.otherCollider = &_Other;
 		Data.top = MaxY - otherMinY;

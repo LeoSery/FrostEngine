@@ -58,6 +58,7 @@ public:
 	void Update(float deltaTime) override
 	{
 
+		//PlayerEntity->GetComponent<Transform>()->GetData(true);
 
 		(void)deltaTime; //this is to avoid warning when delta time is not used
 		// To do : update game logic (one frame)
