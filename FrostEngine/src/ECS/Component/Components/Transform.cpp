@@ -2,6 +2,9 @@
 #include "Utils/Logger.h"
 
 #include <iostream>
+#include <cmath>
+
+#include "glm/mat2x2.hpp"
 
 namespace frost::ECS
 {
@@ -60,5 +63,13 @@ namespace frost::ECS
 	void Transform::Scale(const glm::vec2& _Scale)
 	{
 		scale *= _Scale;
+	}
+	glm::vec2 Transform::GetForwardVector() const
+	{
+		glm::vec2 forward = { 0.0f, 1.0f };
+		// { cos(rotation), -sin(rotation), sin(rotation), cos(rotation) };
+		glm::mat2 rotationMatrice(glm::vec2(cos(rotation), -sin(rotation)), glm::vec2(sin(rotation), cos(rotation)));
+
+		return rotationMatrice * forward;
 	}
 }
