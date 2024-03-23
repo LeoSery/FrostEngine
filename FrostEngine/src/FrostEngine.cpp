@@ -121,7 +121,7 @@ namespace FrostEngine
 			auto* transform = boxCollider->GetParentObject().GetComponent<frost::ECS::Transform>();
 
 			if (transform && !transform->isMovingEntity)
-				return;
+				continue;
 
 			frost::ECS::BoxCollider::CollisionData largestCollision = { false, 0, 0, 0, 0 };
 
