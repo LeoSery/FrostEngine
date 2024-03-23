@@ -9,10 +9,10 @@
 namespace frost::ECS
 {
 	float squareVertices[16] = {
-	-0.5f,  0.5f, /*UV*/0.0f, 1.0f,
-	-0.5f, -0.5f, /*UV*/0.0f, 0.0f,
-	 0.5f, -0.5f, /*UV*/1.0f, 0.0f,
-	 0.5f,  0.5f, /*UV*/1.0f, 1.0f,
+	-1.0f,  1.0f, /*UV*/0.0f, 1.0f,
+	-1.0f, -1.0f, /*UV*/0.0f, 0.0f,
+	 1.0f, -1.0f, /*UV*/1.0f, 0.0f,
+	 1.0f,  1.0f, /*UV*/1.0f, 1.0f,
 	};
 
 	unsigned int squareIndices[6] = { 0, 1, 2, 0, 2, 3 };
