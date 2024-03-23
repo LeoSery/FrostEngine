@@ -30,7 +30,12 @@ namespace frost::core
 		m_internal->window = reinterpret_cast<GLFWwindow*>(_window->GetInternal());
 		glewInit();
 
+		
 		m_shaderProgram.InitShader("default.vert", "default.frag");// set shaderProgram of used shader
+
+		//for alpha blending
+		glEnable(GL_BLEND);
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
 		//PickUp Position of the shader in memory
 		m_positionLocation = glGetUniformLocation(m_shaderProgram.m_gl_ID, "uPosition");
