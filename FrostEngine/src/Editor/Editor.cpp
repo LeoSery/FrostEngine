@@ -51,14 +51,16 @@ namespace frost::editor
         ImGui::SetNextWindowSize(ImVec2(300, 700));
         if (ImGui::Begin("Hierarchy", NULL, ImGuiWindowFlags_NoCollapse))
         {
-            if (ImGui::Button("Add Player"))
-            {
-                //GameObject::AddChild;
-            }
-            if (ImGui::Button("Supp Player"))
-            {
-                //GameObject::Destroy;
-            }
+
+            //ImGui::GetMainViewport();
+            //if (ImGui::Button("Add Player"))
+            //{
+            //    //GameObject::AddChild;
+            //}
+            //if (ImGui::Button("Supp Player"))
+            //{
+            //    //GameObject::Destroy;
+            //}
             DrawHierachyValue(m_CurrentScene);
             ImGui::End();
         }
@@ -68,38 +70,25 @@ namespace frost::editor
         ImGui::SetNextWindowSize(ImVec2(300, 705));
         if (ImGui::Begin("Inspector", NULL, ImGuiWindowFlags_NoCollapse))
         {
+
             ImGui::End();
         }
       
         //ImGui::Begin("Inspector", NULL, ImGuiWindowFlags_NoCollapse);
         
 
-       ImGui::SetNextWindowSize(ImVec2(1000, 80));
-        if (ImGui::Begin("Scene", NULL, ImGuiWindowFlags_NoCollapse))
-        {
-            if (ImGui::Button("Launch Game"))
-            {
-
-            }
-            ImGui::Button("Stop");
-            ImGui::End();
-        }
 #ifdef _DEBUG
-        //ImGui::SetNextWindowSize(ImVec2(1600, 200));
-        if (ImGui::BeginChild("Logger", ImVec2(500, 200), true))
+        ImGui::SetNextWindowSize(ImVec2(1600, 200));
+        if (ImGui::Begin("Console", NULL, ImGuiWindowFlags_NoCollapse))
         {
-            if (ImGui::BeginTabBar("Tabs"))
-            {
-                if (ImGui::BeginTabItem("Console"))
-                {
-                    frost::utils::Logger::GetInstance()->DrawLogger();
-                    ImGui::EndTabItem();
-                }
-                ImGui::EndTabBar();
-            }
+
+             frost::utils::Logger::GetInstance()->DrawLogger();
+    
+                
+
 
             //ImGui::Button("Clear");
-            ImGui::EndChild();
+            ImGui::End();
         }
 #endif
         ImGui::Render();
@@ -126,9 +115,6 @@ namespace frost::editor
         ImGui_ImplOpenGL3_Init();
         ImGui::StyleColorsDark();
 
-       
-
-
         return 0;
     }
 
@@ -143,9 +129,9 @@ namespace frost::editor
     {
         for(auto* child : m_CurrentScene->GetRoot()->GetChildren())
         {
-            ((void)child);
-            if (ImGui::Button("player"))
-            {
+ 
+            if (ImGui::Button(child->GetName().c_str()))
+            {        
                 DrawInsperctorValue(child);
             }  
         }
@@ -156,8 +142,8 @@ namespace frost::editor
 
         if (ImGui::Begin("Inspector", NULL, ImGuiWindowFlags_NoCollapse))
         {
-            
-            frost::ECS::Transform* tr = m_child->GetComponent<  frost::ECS::Transform>();
+            ImGui::GetMainViewport();
+            frost::ECS::Transform* tr = m_child->GetComponent<frost::ECS::Transform>();
             // Get Transform //
             //ImGui::InputFloat2("Transform[X/Y]", &tr->position.x);
             if (ImGui::InputFloat2("Transform[X/Y]", &tr->position.x))
