@@ -37,10 +37,14 @@ namespace frost::ECS
         if (m_currentParent)
             m_currentParent->RemoveChild(static_cast<T*>(this));
 
-        for (auto* child : m_childrens)
+        std::vector<T*> TempChildrens = m_childrens;
+
+        for (auto* child : TempChildrens)
         {
             delete child;
         }
+
+        m_childrens.clear();
     }
 
     template<typename T>
