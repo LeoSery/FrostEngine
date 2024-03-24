@@ -17,6 +17,7 @@
   <ItemGroup>
     <None Include="ressources\Shaders\default.frag" />
     <None Include="ressources\Shaders\default.vert" />
+    <None Include="imgui.ini" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Game.cpp">

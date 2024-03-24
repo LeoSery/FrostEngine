@@ -1,5 +1,5 @@
 #include "Utils/Logger.h"
-
+#include "imgui.h"
 #include <iostream>
 
 namespace frost::utils
@@ -65,4 +65,93 @@ namespace frost::utils
 			m_instance = nullptr;
 		}
 	}
+
+#ifdef _DEBUG
+	void Logger::DrawLogger()
+	{
+
+		if (ImGui::Checkbox("Info##Filter", &m_showLogInfo))
+		{
+		}
+		ImGui::SameLine();
+
+		if (ImGui::Checkbox("Warning##Filter", &m_showLogWarning))
+		{
+		}
+		ImGui::SameLine();
+
+		if (ImGui::Checkbox("Error##Filter", &m_showLogError))
+		{
+		}
+		ImGui::SameLine();
+
+		if (ImGui::Button("Clear"))
+		{
+			m_logStack.clear();
+		}
+
+		if (ImGui::BeginTable("Logs##Logger", 2, ImGuiTableFlags_Resizable | ImGuiTableFlags_NoSavedSettings | ImGuiTableFlags_Borders))
+		{
+			ImGui::TableSetupColumn("Type");
+			ImGui::TableSetupColumn("Message");
+			ImGui::TableHeadersRow();
+			ImGui::TableNextRow();
+
+			for (const S_LogData& info : m_logStack)
+			{
+				ImVec4 color = ImVec4(1, 1, 1, 1);
+				const char* text = nullptr;
+				switch (info.logType)
+				{
+				case E_LogType::Info:
+				{
+					if (!m_showLogInfo)
+					{
+						continue;
+					}
+
+					color = ImVec4(1, 1, 1, 1);
+					text = "Info";
+				}
+				break;
+
+				case E_LogType::Warning:
+				{
+					if (!m_showLogWarning)
+					{
+						continue;
+					}
+
+					color = ImVec4(1, 1, 0, 1);
+					text = "Warning";
+				}
+				break;
+
+				case E_LogType::Error:
+				{
+					if (!m_showLogError)
+					{
+						continue;
+					}
+
+					color = ImVec4(1, 0, 0, 1);
+					text = "Error";
+				}
+				break;
+
+				default:
+					continue;
+				}
+
+				ImGui::TableSetColumnIndex(0);
+				ImGui::TextColored(color, text);
+				ImGui::TableSetColumnIndex(1);
+				ImGui::Text(info.logContent.c_str());
+				ImGui::TableNextRow();
+			}
+
+			ImGui::EndTable();
+		}
+	}
+#endif
 }

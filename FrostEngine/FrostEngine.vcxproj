@@ -35,6 +35,7 @@
     <ClInclude Include="include\ECS\System\Tree.h" />
     <ClInclude Include="include\Core\SceneManagement\SceneManager.h" />
     <ClInclude Include="include\ECS\Component\Components\Transform.h" />
+    <ClInclude Include="include\Editor\Editor.h" />
     <ClInclude Include="include\FrostEngine.h" />
     <ClInclude Include="include\Render\Buffer.h" />
     <ClInclude Include="include\Render\RenderDevice.h" />
@@ -50,6 +51,7 @@
     <ClCompile Include="src\ECS\Component\Components\BoxCollider.cpp" />
     <ClCompile Include="src\Core\Serial\XmlParser.cpp" />
     <ClCompile Include="src\ECS\Component\Components\SpriteRenderer.cpp" />
+    <ClCompile Include="src\Editor\Editor.cpp" />
     <ClCompile Include="src\FrostEngine.cpp" />
     <ClCompile Include="src\Render\Buffer.cpp" />
     <ClCompile Include="src\Render\TextureMgr.cpp" />
