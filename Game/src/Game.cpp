@@ -18,6 +18,7 @@ class MyGameApp : public FrostEngine::Application
 public:
 	GameObject* PlayerEntity = nullptr;
 	GameObject* Enemy = nullptr;
+	GameObject* Enemy2 = nullptr;
 
 	void Init() override
 	{
@@ -51,6 +52,20 @@ public:
 		EnemyTransform->position = glm::vec2(0.6, 0);
 
 		Enemy->GetData(true);
+
+
+		// Enemy 2
+		Enemy2 = GameObject::New("Enemy2", m_CurrentScene->GetRoot());
+		SpriteRenderer* Enemy2SpriteRenderer = Enemy2->AddComponent<SpriteRenderer>();
+		Enemy2SpriteRenderer->SetTexture("T_Debug_Quad.png");
+
+		BoxCollider* Enemy2BoxCollider = Enemy2->AddComponent<BoxCollider>();
+		Enemy2BoxCollider;
+
+		Transform* Enemy2Transform = Enemy2->GetComponent<Transform>();
+		Enemy2Transform->position = glm::vec2(0.6, 0);
+
+		Enemy2->GetData(true);
 	}
 
 	void Update(float deltaTime) override

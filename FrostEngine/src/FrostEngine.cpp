@@ -13,14 +13,13 @@ namespace FrostEngine
 		m_RenderDevice = frost::core::RenderDevice::GetInstance();
 		m_RenderDevice->Init(m_Window);
 
+		m_SceneManager = &frost::core::SceneManager::GetInstance();
+		m_CurrentScene = &m_SceneManager->GetActiveScene();
 
 #ifdef _DEBUG 
 		m_Editor = frost::editor::Editor::GetInstance();
 		m_Editor->Init(m_Window);
-#endif		
-
-		m_SceneManager = &frost::core::SceneManager::GetInstance();
-		m_CurrentScene = &m_SceneManager->GetActiveScene();
+#endif	
 	}
 
 	void Application::Run()
@@ -55,12 +54,13 @@ namespace FrostEngine
 			// Render Update()
 			m_RenderDevice->Update();
 
+			// Logger Update()
+			frost::utils::Logger::GetInstance()->Show();
+
 #ifdef _DEBUG
 			// Editor Update()
 			m_Editor->DrawEditor();
 #endif 
-			// Logger Update()
-			frost::utils::Logger::GetInstance()->Show();
 
 		} while (m_Window->PollEvents());
 
