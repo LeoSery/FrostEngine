@@ -11,6 +11,7 @@
 #include "Render/RenderDevice.h"
 
 #include "Utils/Logger.h"
+#include "Editor/Editor.h"
 
 #include <chrono>
 #include <thread>
@@ -25,6 +26,7 @@ namespace FrostEngine
 		frost::core::SceneManager* m_SceneManager = nullptr;
 
 		frost::core::Scene* m_CurrentScene = nullptr;
+		frost::editor::Editor* m_Editor = nullptr;
 
 	public:
 		struct InitData

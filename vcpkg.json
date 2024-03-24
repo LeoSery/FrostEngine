@@ -16,6 +16,15 @@
     "imgui",
     "glew",
     "stduuid",
-    "rapidxml"
+    "rapidxml",
+    {
+      "name": "imgui",
+      "default-features": false,
+      "features": [
+        "glfw-binding",
+        "opengl3-binding",
+        "glut-binding"
+      ]
+    }
   ]
 }
