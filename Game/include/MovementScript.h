@@ -27,8 +27,8 @@ public:
 #pragma region Movement
 
 private: //Movement Variables
-	glm::vec2 m_CurrentVelocity = { 0.0f  , 0.0f} ;
-	glm::vec2 m_InputAcceleration = { 0.0f  , 0.0f} ;
+	glm::vec2 m_CurrentVelocity = { 0.0f  , 0.0f };
+	glm::vec2 m_InputAcceleration = { 0.0f  , 0.0f };
 
 	float m_friction = 10.0f;
 	float m_MaxSpeed = 1.0f;
@@ -36,8 +36,8 @@ private: //Movement Variables
 	frost::ECS::GameObject* m_OwningObject;
 
 private: //Movement Functions
-		void ClampVelocity();
-		
+	void ClampVelocity();
+
 #pragma endregion
 
 private:

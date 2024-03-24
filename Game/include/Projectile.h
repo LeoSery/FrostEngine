@@ -9,7 +9,7 @@ public:
 	static Projectile* New(std::string _name, GameObject* _parent);
 	Projectile(std::string _name, GameObject* _parent);
 	virtual void Start();
-	virtual void Update(float _DeltaTime);
+	virtual void Tick(float _DeltaTime);
 
 private:
 	MovementScript* m_MovementScript;

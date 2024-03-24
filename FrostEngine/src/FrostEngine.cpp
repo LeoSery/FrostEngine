@@ -33,20 +33,17 @@ namespace FrostEngine
 			// User Update()
 			Update(deltaTime);
 
-			// Components Update()
+			// GameObjects Update()
 			if (m_CurrentScene != nullptr)
 			{
-				UpdateObjectComponents(m_CurrentScene->GetRoot(), deltaTime);
-
 				for (auto* child : m_CurrentScene->GetRoot()->GetChildren())
 				{
-					BrowseAllComponents(child, deltaTime);
+					BrowseAllGameObjects(child, deltaTime);
 				}
 			}
 
 			//Physics Update()
 			PhysUpdate();
-
 
 			frost::core::Input::GetInstance()->Update();
 			// Render Update()
@@ -64,28 +61,20 @@ namespace FrostEngine
 		delete m_Window;
 	}
 
-	void Application::BrowseAllComponents(frost::ECS::GameObject* _GameObject, float _DeltaTime)
+	void Application::BrowseAllGameObjects(frost::ECS::GameObject* _GameObject, float _DeltaTime)
 	{
 		if (!_GameObject)
 			return;
 
 		ObjectsToUpdate.push_back(_GameObject);
 
-		UpdateObjectComponents(_GameObject, _DeltaTime);
+		if (_GameObject->IsActive())
+			_GameObject->Update(_DeltaTime);
 
 		for (auto* child : _GameObject->GetChildren())
 		{
 			if (child->IsActive())
-				BrowseAllComponents(child, _DeltaTime);
-		}
-	}
-
-	void Application::UpdateObjectComponents(frost::ECS::GameObject* _GameObject, float _DeltaTime)
-	{
-		for (auto* component : _GameObject->GetAllComponents())
-		{
-			if (component->IsActive())
-				component->Update(_DeltaTime);
+				BrowseAllGameObjects(child, _DeltaTime);
 		}
 	}
 

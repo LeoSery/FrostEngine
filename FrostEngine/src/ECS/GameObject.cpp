@@ -8,11 +8,11 @@
 
 namespace frost::ECS
 {
-	GameObject::GameObject(std::string _Name, GameObject* _Parent)
-		: Tree<GameObject>(_Parent/* ? _Parent : core::SceneManager::GetInstance().GetActiveScene().GetRoot()*/)
+	GameObject::GameObject(std::string _Name, GameObject* _Parent) : Tree<GameObject>(_Parent)
 		, m_name(std::move(_Name))
 		, m_uuid(uuids::uuid_system_generator{}())
 	{
+
 	}
 
 	void GameObject::Init()
@@ -54,6 +54,7 @@ namespace frost::ECS
 		{
 			component->Update(_DeltaTime);
 		}
+		Tick(_DeltaTime);
 	}
 
 	void GameObject::Destroy()
@@ -166,5 +167,10 @@ namespace frost::ECS
 	std::vector<IComponent*> GameObject::GetAllComponents() const
 	{
 		return m_components;
+	}
+
+	void GameObject::Tick(float _DeltaTime)
+	{
+		_DeltaTime;
 	}
 }

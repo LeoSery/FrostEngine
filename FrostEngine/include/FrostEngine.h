@@ -42,8 +42,7 @@ namespace FrostEngine
 		void Run();
 
 	private:
-		void BrowseAllComponents(frost::ECS::GameObject* _GameObject, float _DeltaTime);
-		void UpdateObjectComponents(frost::ECS::GameObject* _GameObject, float _DeltaTime);
+		void BrowseAllGameObjects(frost::ECS::GameObject* _GameObject, float _DeltaTime);
 		void PhysUpdate();
 
 		std::vector<frost::ECS::GameObject*> ObjectsToUpdate;

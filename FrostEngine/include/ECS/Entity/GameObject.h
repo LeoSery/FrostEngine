@@ -28,7 +28,7 @@ namespace frost::ECS
 
 		// Frost engine life cycle methods
 		virtual void Start();
-		virtual void Update(float _DeltaTime);
+		void Update(float _DeltaTime);
 		virtual void Destroy();
 
 		// Getters and Setters
@@ -60,6 +60,9 @@ namespace frost::ECS
 
 		template <typename Component>
 		void RemoveComponent();
+
+		// Methods
+		virtual void Tick(float _DeltaTime);
 
 	private:
 		uuids::uuid m_uuid;

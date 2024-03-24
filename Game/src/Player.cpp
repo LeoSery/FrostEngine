@@ -57,10 +57,10 @@ void Player::Start()
 	frost::core::Input::GetInstance()->BindFunctionToAction("Fire", this, [this]() { Fire(); }, frost::core::Input::ActionType::Press);
 }
 
-void Player::Update(float _DeltaTime)
+void Player::Tick(float _DeltaTime)
 {
 	_DeltaTime;
-	std::cout << "Player Update" << std::endl;
+	//std::cout << "Player Update" << std::endl;
 }
 
 void Player::MoveForward()
@@ -77,7 +77,7 @@ void Player::MoveBackward()
 	//frost::utils::Logger::LogInfo("Moving backward");
 	//GetTransform().position.y -= 0.01f;
 
-	m_MovementScript->AddAcceleration(GetTransform().GetForwardVector() * -1.0f );
+	m_MovementScript->AddAcceleration(GetTransform().GetForwardVector() * -1.0f);
 }
 
 void Player::MoveLeft()
@@ -101,8 +101,8 @@ void Player::MoveRight()
 
 void Player::Fire()
 {
-		//frost::utils::Logger::LogInfo("Fire");
-		GameObject* projectile = Projectile::New("Projectile", this);
-		projectile->GetTransform().position = GetTransform().position;
-		projectile->GetTransform().rotation = GetTransform().rotation;
+	//frost::utils::Logger::LogInfo("Fire");
+	GameObject* projectile = Projectile::New("Projectile", this);
+	projectile->GetTransform().position = GetTransform().position;
+	projectile->GetTransform().rotation = GetTransform().rotation;
 }

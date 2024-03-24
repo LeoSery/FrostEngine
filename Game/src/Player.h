@@ -10,14 +10,14 @@ public:
 	Player(std::string _name, GameObject* _parent);
 	virtual void Start();
 
-	virtual void Update(float _DeltaTime) override;
+	virtual void Tick(float _DeltaTime) override;
 
 private:
 	void MoveForward();
 	void MoveBackward();
 	void MoveLeft();
 	void MoveRight();
-	
+
 	void Fire();
 
 private:
