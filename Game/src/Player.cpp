@@ -1,17 +1,19 @@
 // Engine includes
 #include "Core/Input/Input.h"
+#include "ECS/Entity/GameObject.h"
+#include "ECS/Component/Components/SpriteRenderer.h"
 
 // Game includes
 #include "Player.h"
+#include "Projectile.h"
 #include "MovementScript.h"
+#include <iostream>
 
-#include "ECS/Entity/GameObject.h"
-#include "MovementScript.h"
+
 Player::Player(std::string _name, GameObject* _Parent) : GameObject(_name, _Parent)
 {
-
 	m_MovementScript = AddComponent<MovementScript>();
-
+	this->AddComponent<frost::ECS::SpriteRenderer>()->SetTexture("PlayerShip/PlayerShip_FullHealh.png");
 }
 
 Player* Player::New(std::string _name, GameObject* _parent)
@@ -28,7 +30,7 @@ void Player::Start()
 
 	GetTransform().isMovingEntity = true;
 
-	//// Create Inputs
+#pragma region "Input"
 	// Forward
 	frost::core::Input::GetInstance()->AddAction("MovingForward");
 	frost::core::Input::GetInstance()->AddActionToKey(frost::core::Input::Key::W, "MovingForward");
@@ -48,6 +50,17 @@ void Player::Start()
 	frost::core::Input::GetInstance()->AddAction("MovingRight");
 	frost::core::Input::GetInstance()->AddActionToKey(frost::core::Input::Key::D, "MovingRight");
 	frost::core::Input::GetInstance()->BindFunctionToAction("MovingRight", this, [this]() { MoveRight(); }, frost::core::Input::ActionType::OnGoing);
+
+	// Fire
+	frost::core::Input::GetInstance()->AddAction("Fire");
+	frost::core::Input::GetInstance()->AddActionToKey(frost::core::Input::Key::SPACE, "Fire");
+	frost::core::Input::GetInstance()->BindFunctionToAction("Fire", this, [this]() { Fire(); }, frost::core::Input::ActionType::Press);
+}
+
+void Player::Update(float _DeltaTime)
+{
+	_DeltaTime;
+	std::cout << "Player Update" << std::endl;
 }
 
 void Player::MoveForward()
@@ -84,4 +97,12 @@ void Player::MoveRight()
 	//GetTransform().position.x += 0.01f;
 
 	m_MovementScript->AddRotationAcceleration(1.0f);
+}
+
+void Player::Fire()
+{
+		//frost::utils::Logger::LogInfo("Fire");
+		GameObject* projectile = Projectile::New("Projectile", this);
+		projectile->GetTransform().position = GetTransform().position;
+		projectile->GetTransform().rotation = GetTransform().rotation;
 }

@@ -1,6 +1,5 @@
 #pragma once
-
-#include "FrostEngine.h"
+#include "ECS/Entity/GameObject.h"
 
 class MovementScript;
 
@@ -11,12 +10,15 @@ public:
 	Player(std::string _name, GameObject* _parent);
 	virtual void Start();
 
+	virtual void Update(float _DeltaTime) override;
+
 private:
 	void MoveForward();
 	void MoveBackward();
 	void MoveLeft();
 	void MoveRight();
-	float A = 0;
+	
+	void Fire();
 
 private:
 	MovementScript* m_MovementScript;

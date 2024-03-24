@@ -15,7 +15,7 @@ namespace frost::ECS
 
 	BoxCollider::~BoxCollider()
 	{
-
+		delete m_vertices;
 	}
 
 	void BoxCollider::Start()
@@ -23,14 +23,15 @@ namespace frost::ECS
 		m_currentScene = &frost::core::SceneManager::GetInstance().GetActiveScene();
 
 		m_transform = GetParentObject().GetComponent<frost::ECS::Transform>();
-		glm::mat2 RotationMatrix = GetRotationMatrix();
+	/*	glm::mat2 RotationMatrix = GetRotationMatrix();*/
+		
 		m_vertices = new std::vector<glm::vec2>();
 
 		// the transform is the center of the box, so we need to calculate the vertices based on the center
-		m_vertices->push_back(((m_transform->position * RotationMatrix) + glm::vec2(  -	1.0,	1.0)) * m_transform->scale); // top left
-		m_vertices->push_back(((m_transform->position * RotationMatrix) + glm::vec2(  -	1.0,  -	1.0)) * m_transform->scale); // bottom left
-		m_vertices->push_back(((m_transform->position * RotationMatrix) + glm::vec2(	1.0,  -	1.0)) * m_transform->scale); // bottom right
-		m_vertices->push_back(((m_transform->position * RotationMatrix) + glm::vec2(	1.0,	1.0)) * m_transform->scale); // top right
+		m_vertices->push_back(((m_transform->position /* RotationMatrix*/) + glm::vec2(  -	1.0,	1.0)) * m_transform->scale); // top left
+		m_vertices->push_back(((m_transform->position /* RotationMatrix*/) + glm::vec2(  -	1.0,  -	1.0)) * m_transform->scale); // bottom left
+		m_vertices->push_back(((m_transform->position /* RotationMatrix*/) + glm::vec2(	1.0,  -	1.0)) * m_transform->scale); // bottom right
+		m_vertices->push_back(((m_transform->position/* * RotationMatrix*/) + glm::vec2(	1.0,	1.0)) * m_transform->scale); // top right
 	}
 
 	void BoxCollider::Update(float /*_DeltaTime*/)
@@ -39,10 +40,10 @@ namespace frost::ECS
 		{
 			glm::mat2 RotationMatrix = GetRotationMatrix();
 
-			m_vertices->at(0) = ((m_transform->position * RotationMatrix) + glm::vec2(-	1.0,	1.0)) * m_transform->scale;
-			m_vertices->at(1) = ((m_transform->position * RotationMatrix) + glm::vec2(-	1.0, -	1.0)) * m_transform->scale;
-			m_vertices->at(2) = ((m_transform->position * RotationMatrix) + glm::vec2(	1.0, -	1.0)) * m_transform->scale;
-			m_vertices->at(3) = ((m_transform->position * RotationMatrix) + glm::vec2(	1.0,	1.0)) * m_transform->scale;
+			m_vertices->at(0) = ((m_transform->position /* RotationMatrix*/) + glm::vec2(-1.0, 1.0)) * m_transform->scale;
+			m_vertices->at(1) = ((m_transform->position /* RotationMatrix*/) + glm::vec2(-1.0, -1.0)) * m_transform->scale;
+			m_vertices->at(2) = ((m_transform->position /* RotationMatrix*/) + glm::vec2(1.0, -1.0)) * m_transform->scale;
+			m_vertices->at(3) = ((m_transform->position /* RotationMatrix*/) + glm::vec2(	1.0,	1.0)) * m_transform->scale;
 		}
 	}
 

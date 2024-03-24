@@ -25,28 +25,25 @@ void MovementScript::Update(float _DeltaTime)
 
 
 	//Update Rotation
-	m_CurrentRotationVelocity = m_CurrentRotationVelocity + (m_InputRotationAcceleration * m_MaxRotationSpeed) - ( m_Rotationfriction * m_CurrentRotationVelocity);
-
+	float futureRotationVelocity = m_CurrentRotationVelocity + (m_InputRotationAcceleration * m_MaxRotationSpeed) - (m_Rotationfriction * m_CurrentRotationVelocity);
 	m_InputRotationAcceleration = 0.0f; //Consume the acceleration
 
 	if (glm::abs(m_CurrentRotationVelocity) > m_MaxRotationSpeed)
 	{
 		m_CurrentRotationVelocity = m_CurrentRotationVelocity * (m_MaxRotationSpeed / glm::abs(m_CurrentRotationVelocity));
 	}
+	m_CurrentRotationVelocity += futureRotationVelocity * _DeltaTime;
+
 	m_OwningObject->GetTransform().rotation += m_CurrentRotationVelocity;
-
-
-
-
-
 
 
 
 	//Update the position
 	glm::vec2 futureVelocity = m_CurrentVelocity + (m_InputAcceleration * m_MaxSpeed)  - (m_friction * m_CurrentVelocity);
-	m_CurrentVelocity = glm::length(futureVelocity)> SMALLNUMBER ? futureVelocity : ZeroVector2;
-	ClampVelocity();
+	glm::vec2 Delta = glm::length(futureVelocity)> SMALLNUMBER ? futureVelocity : ZeroVector2;
 	m_InputAcceleration = { 0.0f, 0.0f }; //Consume the acceleration
+	m_CurrentVelocity += Delta * _DeltaTime;
+	ClampVelocity();
 	m_OwningObject->GetTransform().position += m_CurrentVelocity;
 
 

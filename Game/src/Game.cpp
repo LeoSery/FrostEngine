@@ -30,8 +30,6 @@ public:
 
 		// Player
 		PlayerEntity = Player::New("Player", m_CurrentScene->GetRoot());
-		SpriteRenderer* PlayerSpriteRenderer = PlayerEntity->AddComponent<SpriteRenderer>();
-		PlayerSpriteRenderer->SetTexture("T_Debug_Quad.png");
 
 		BoxCollider* BoxColliderComponent = PlayerEntity->AddComponent<BoxCollider>();
 		BoxColliderComponent;
