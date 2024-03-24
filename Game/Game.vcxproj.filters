@@ -28,6 +28,9 @@
     <ClCompile Include="src\MovementScript.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="src\Projectile.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="ressources\Textures\T_Debug_Quad.png">
@@ -39,12 +42,18 @@
     <Image Include="ressources\Textures\T_PlaceHolder.png">
       <Filter>Fichiers de ressources</Filter>
     </Image>
+    <Image Include="ressources\Textures\PlayerShip\PlayerShip_FullHealh.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Player.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="include\MovementScript.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Projectile.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
