@@ -59,6 +59,7 @@ namespace FrostEngine
 
 #ifdef _DEBUG
 			// Editor Update()
+			//m_Editor->GetInstance()->DrawEditor();
 			m_Editor->DrawEditor();
 #endif 
 

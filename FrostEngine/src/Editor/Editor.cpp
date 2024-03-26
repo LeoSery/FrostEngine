@@ -47,11 +47,10 @@ namespace frost::editor
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
-
         ImGui::SetNextWindowSize(ImVec2(300, 700));
         if (ImGui::Begin("Hierarchy", NULL, ImGuiWindowFlags_NoCollapse))
-        {
 
+        {
             //ImGui::GetMainViewport();
             //if (ImGui::Button("Add Player"))
             //{
@@ -65,28 +64,17 @@ namespace frost::editor
             ImGui::End();
         }
 
-
-
         ImGui::SetNextWindowSize(ImVec2(300, 705));
-        if (ImGui::Begin("Inspector", NULL, ImGuiWindowFlags_NoCollapse))
-        {
-
-            ImGui::End();
-        }
-      
-        //ImGui::Begin("Inspector", NULL, ImGuiWindowFlags_NoCollapse);
-        
+        ImGui::Begin("Inspector", NULL, ImGuiWindowFlags_NoCollapse);
+        ImGui::End();
+            
 
 #ifdef _DEBUG
         ImGui::SetNextWindowSize(ImVec2(1600, 200));
         if (ImGui::Begin("Console", NULL, ImGuiWindowFlags_NoCollapse))
         {
-
              frost::utils::Logger::GetInstance()->DrawLogger();
-    
-                
-
-
+   
             //ImGui::Button("Clear");
             ImGui::End();
         }
@@ -114,7 +102,7 @@ namespace frost::editor
         ImGui_ImplGlfw_InitForOpenGL(static_cast<GLFWwindow*>(_Window->GetInternal()), true);
         ImGui_ImplOpenGL3_Init();
         ImGui::StyleColorsDark();
-
+        ShowInspector = true;
         return 0;
     }
 
@@ -129,53 +117,54 @@ namespace frost::editor
     {
         for(auto* child : m_CurrentScene->GetRoot()->GetChildren())
         {
- 
+
             if (ImGui::Button(child->GetName().c_str()))
-            {        
-                DrawInsperctorValue(child);
+            {                    
+                DrawInsperctorValue(child);              
             }  
         }
     }
 
     void Editor::DrawInsperctorValue(frost::ECS::GameObject* m_child)
     {
-
-        if (ImGui::Begin("Inspector", NULL, ImGuiWindowFlags_NoCollapse))
+        if (ShowInspector)
         {
-            ImGui::GetMainViewport();
-            frost::ECS::Transform* tr = m_child->GetComponent<frost::ECS::Transform>();
-            // Get Transform //
-            //ImGui::InputFloat2("Transform[X/Y]", &tr->position.x);
-            if (ImGui::InputFloat2("Transform[X/Y]", &tr->position.x))
+            if (ImGui::Begin("Inspector", NULL, ImGuiWindowFlags_NoCollapse))
             {
-               
-            }
-            // Get Rotation //
-            //ImGui::InputFloat("Rotation", &tr->rotation);
-            if (ImGui::InputFloat2("Rotation", &tr->rotation))
-            {
+                //ImGui::GetMainViewport();
+                frost::ECS::Transform* tr = m_child->GetComponent<frost::ECS::Transform>();
+                // Get Transform //
+                //ImGui::InputFloat2("Transform[X/Y]", &tr->position.x);
+                if (ImGui::InputFloat2("Transform[X/Y]", &tr->position.x))
+                {
+                    //ISOnInspector = false;
+                }
+                // Get Rotation //
+                //ImGui::InputFloat("Rotation", &tr->rotation);
+                if (ImGui::InputFloat2("Rotation", &tr->rotation))
+                {
 
-            }
-            // Get Scale //
-            //ImGui::InputFloat2("Scale[X/Y]", &tr->scale.x);
-            if (ImGui::InputFloat2("Scale[X / Y]", &tr->scale.x))
-            {
+                }
+                // Get Scale //
+                //ImGui::InputFloat2("Scale[X/Y]", &tr->scale.x);
+                if (ImGui::InputFloat2("Scale[X / Y]", &tr->scale.x))
+                {
 
-            }
+                }
+                ImGui::InputFloat2("Scale[X / Y]", &tr->scale.x);
+                //if (ImGui::Checkbox("IsCollide", &ISCollide))
+                //{
+                //    ISCollide = true;
+                //    if (!ISCollide)
+                //    {
+                //        ISCollide = false;
+                //    }
+                //}
 
-            //if (ImGui::Checkbox("IsCollide", &ISCollide))
-            //{
-            //    ISCollide = true;
-            //    if (!ISCollide)
-            //    {
-            //        ISCollide = false;
-            //    }
-            //}
-              
-            //SpriteRenderer* sr = m_child->GetComponent<SpriteRenderer>();
-            ImGui::End();
+                //SpriteRenderer* sr = m_child->GetComponent<SpriteRenderer>();
+                ImGui::End();
+            }
         }
-
 
     }
     

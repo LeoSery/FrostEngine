@@ -47,6 +47,9 @@ namespace frost::editor
 		//example collide
 		bool ISCollide = true;
 
+		bool ShowInspector = false;
+
+
 	private:
 		static Editor* m_Instance;
 
