@@ -5,7 +5,6 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
 
-
 namespace frost::core
 {
 	Input* Input::m_instance = nullptr;
@@ -16,7 +15,9 @@ namespace frost::core
 	};
 
 	Input::Input() : m_internal(new Internal)
-	{}
+	{
+
+	}
 
 	Input::~Input()
 	{
@@ -25,9 +26,9 @@ namespace frost::core
 
 	Input* Input::GetInstance()
 	{
-		if (m_instance == nullptr) {
+		if (m_instance == nullptr)
 			m_instance = new Input;
-		}
+
 		return m_instance;
 	}
 
@@ -40,54 +41,38 @@ namespace frost::core
 
 	void Input::key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
 	{
-		key;
 		scancode;
-		action;
 		mods;
 		window;
+
 		if (m_instance->KeyBind.contains(key))
 		{
 			switch (action)
 			{
-
 			case 0: //Released
-
 				m_instance->CallAction(m_instance->KeyBind.at(key), action);
 				if (m_instance->KeyPressed.contains(key))
-				{
 					m_instance->KeyPressed.at(key) = false;
-				}
 				else
-				{
 					m_instance->KeyPressed.insert({ key , false });
-				}
 				break;
 
 			case 1: //Pressed
-
 				m_instance->CallAction(m_instance->KeyBind.at(key), action);
-
 				if (m_instance->KeyPressed.contains(key))
-				{
 					m_instance->KeyPressed.at(key) = true;
-				}
 				else
-				{
 					m_instance->KeyPressed.insert({ key , true });
-				}
-
 				break;
 
 			default:
 				break;
 			}
 		}
-
 	}
 
 	void Input::Update()
 	{
-
 		for (std::pair<int, bool> elem : KeyPressed)
 		{
 			if (KeyBind.contains(elem.first) && elem.second)
@@ -105,14 +90,11 @@ namespace frost::core
 			m_instance->ActionBind.insert(toadd);
 		}
 		else
-		{
 			frost::utils::Logger::LogWarning("Can't add " + _actionName + " already exists");
-		}
 	}
 
 	bool Input::AddActionToKey(Key _key, std::string _actionName)
 	{
-
 		if (m_instance->ActionBind.contains(_actionName))
 		{
 			if (m_instance->KeyBind.contains(_key))
@@ -127,9 +109,8 @@ namespace frost::core
 			return true;
 		}
 		else
-		{
 			frost::utils::Logger::LogWarning("Action " + _actionName + " does not exist");
-		}
+
 		return false;
 	}
 
@@ -154,15 +135,11 @@ namespace frost::core
 			}
 		}
 		else
-		{
 			frost::utils::Logger::LogError("Action " + _actionName + " does not exist");
-		}
-
 	}
 
 	void Input::CallAction(std::string _actionToCall, int _action)
 	{
-
 		std::vector<ObjectFunction>* ObjectsFunc;
 		switch (_action)
 		{
@@ -182,26 +159,17 @@ namespace frost::core
 		for (size_t i = 0; i < ObjectsFunc->size(); i++)
 		{
 			if (ObjectsFunc->at(i).Object != nullptr)
-			{
 				ObjectsFunc->at(i).Function();
-			}
 			else
-			{
 				ObjectsFunc->erase(ObjectsFunc->begin() + i);
-			}
 		}
 	}
 
 	void Input::RemoveAction(std::string _actionName)
 	{
 		if (m_instance->ActionBind.contains(_actionName))
-		{
 			m_instance->ActionBind.erase(_actionName);
-		}
 		else
-		{
 			frost::utils::Logger::LogWarning("Unable to remove action : " + _actionName);
-		}
 	}
-
 }

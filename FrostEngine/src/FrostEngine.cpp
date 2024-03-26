@@ -9,12 +9,8 @@ namespace FrostEngine
 	{
 		m_Window = new frost::core::Window({ data.title.c_str(), data.size });
 		frost::core::Input::GetInstance()->init(m_Window);
-
-		
-		
 		m_RenderDevice = frost::core::RenderDevice::GetInstance();
 		m_RenderDevice->Init(m_Window);
-
 		m_SceneManager = &frost::core::SceneManager::GetInstance();
 		m_CurrentScene = &m_SceneManager->GetActiveScene();
 
@@ -61,26 +57,19 @@ namespace FrostEngine
 
 #ifdef _DEBUG
 			// Editor Update()
-
 			m_Editor->DrawEditor();
-			
 #endif 
-
 		} while (m_Window->PollEvents());
-
-		
 	}
 
 	void Application::Shutdown()
 	{
-
 #ifdef _DEBUG	
 		m_Editor->Shutdown();
 		delete m_Editor;
 #endif
 		delete m_RenderDevice;
 		delete m_Window;
-
 	}
 
 	void Application::BrowseAllGameObjects(frost::ECS::GameObject* _GameObject, float _DeltaTime)

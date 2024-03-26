@@ -38,7 +38,6 @@ namespace FrostEngine
 		// Methods
 		virtual void Init() = 0;
 		void Init(const InitData& data);
-
 		virtual void Update(float deltaTime) = 0;
 		virtual void Shutdown();
 		void Run();

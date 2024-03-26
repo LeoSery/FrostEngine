@@ -13,7 +13,6 @@ namespace frost::core
 	Window::Window(S_WindowProperties Properties)
 		: m_impl(std::make_unique<Internal>())
 	{
-
 		if (!glfwInit())
 		{
 			fprintf(stderr, "Failed to initialize GLFW\n");
@@ -74,5 +73,4 @@ namespace frost::core
 	{
 		return m_impl->window;
 	}
-
 }
