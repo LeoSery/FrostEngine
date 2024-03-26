@@ -11,6 +11,7 @@
 
 
 #include "GLFW/glfw3.h"
+#include <iostream>
 
 
 namespace frost::editor 
@@ -20,7 +21,7 @@ namespace frost::editor
 
     Editor::Editor()
     {
-
+        
     }
 
     Editor::~Editor()
@@ -61,6 +62,7 @@ namespace frost::editor
             //    //GameObject::Destroy;
             //}
             DrawHierachyValue(m_CurrentScene);
+            DrawInsperctorValue();
             ImGui::End();
         }
 
@@ -102,7 +104,6 @@ namespace frost::editor
         ImGui_ImplGlfw_InitForOpenGL(static_cast<GLFWwindow*>(_Window->GetInternal()), true);
         ImGui_ImplOpenGL3_Init();
         ImGui::StyleColorsDark();
-        ShowInspector = true;
         return 0;
     }
 
@@ -117,22 +118,21 @@ namespace frost::editor
     {
         for(auto* child : m_CurrentScene->GetRoot()->GetChildren())
         {
-
             if (ImGui::Button(child->GetName().c_str()))
-            {                    
-                DrawInsperctorValue(child);              
-            }  
+            {
+                SelectEntity = child;
+            }        
         }
     }
 
-    void Editor::DrawInsperctorValue(frost::ECS::GameObject* m_child)
+    void Editor::DrawInsperctorValue()
     {
-        if (ShowInspector)
+        if (SelectEntity != nullptr)
         {
             if (ImGui::Begin("Inspector", NULL, ImGuiWindowFlags_NoCollapse))
             {
                 //ImGui::GetMainViewport();
-                frost::ECS::Transform* tr = m_child->GetComponent<frost::ECS::Transform>();
+                frost::ECS::Transform* tr = SelectEntity->GetComponent<frost::ECS::Transform>();
                 // Get Transform //
                 //ImGui::InputFloat2("Transform[X/Y]", &tr->position.x);
                 if (ImGui::InputFloat2("Transform[X/Y]", &tr->position.x))
@@ -151,7 +151,6 @@ namespace frost::editor
                 {
 
                 }
-                ImGui::InputFloat2("Scale[X / Y]", &tr->scale.x);
                 //if (ImGui::Checkbox("IsCollide", &ISCollide))
                 //{
                 //    ISCollide = true;
