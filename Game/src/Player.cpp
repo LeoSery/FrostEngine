@@ -2,6 +2,8 @@
 #include "Core/Input/Input.h"
 #include "ECS/Entity/GameObject.h"
 #include "ECS/Component/Components/SpriteRenderer.h"
+#include "ECS/Component/Components/BoxCollider.h"
+#include "Utils/Logger.h"
 
 // Game includes
 #include "Player.h"
@@ -61,6 +63,12 @@ void Player::Tick(float _DeltaTime)
 {
 	_DeltaTime;
 	//std::cout << "Player Update" << std::endl;
+}
+
+void Player::OnCollisionEnter(const frost::ECS::CollisionData* _CollisionData)
+{
+	std::string ColName = _CollisionData->otherCollider->GetParentObject().GetName();
+	frost::utils::Logger::LogInfo("Collision with " + ColName);
 }
 
 void Player::MoveForward()

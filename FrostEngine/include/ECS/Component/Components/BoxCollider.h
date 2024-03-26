@@ -10,6 +10,18 @@
 namespace frost::ECS
 {
 	class GameObject;
+	class BoxCollider;
+
+	// Structs
+	struct CollisionData
+	{
+		bool isColliding = false;
+		BoxCollider* otherCollider = nullptr;
+		float top = 0.0f;
+		float bottom = 0.0f;
+		float left = 0.0f;
+		float right = 0.0f;
+	};
 
 	class FROST_ENGINE_API BoxCollider : public IComponent
 	{
@@ -26,17 +38,6 @@ namespace frost::ECS
 		virtual void Update(float _DeltaTime) override;
 		virtual void Destroy() override;
 
-		// Structs
-		struct CollisionData
-		{
-			bool isColliding = false;
-			BoxCollider* otherCollider = nullptr;
-			float top = 0.0f;
-			float bottom = 0.0f;
-			float left = 0.0f;
-			float right = 0.0f;
-		};
-
 		// Methods
 		CollisionData IsColliding(BoxCollider& _Other);
 
@@ -52,7 +53,7 @@ namespace frost::ECS
 
 	private:
 		// Methods
-		BoxCollider::CollisionData AABB(BoxCollider& _Other) const;
+		CollisionData AABB(BoxCollider& _Other) const;
 
 		// Settings
 		bool m_isStatic = false;

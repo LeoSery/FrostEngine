@@ -173,4 +173,9 @@ namespace frost::ECS
 	{
 		_DeltaTime;
 	}
+
+	void GameObject::OnCollisionEnter(const CollisionData* _CollisionData)
+	{
+		_CollisionData;
+	}
 }
