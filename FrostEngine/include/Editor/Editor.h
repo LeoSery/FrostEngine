@@ -9,6 +9,7 @@ namespace frost::core {
 	class Window;
 	class Scene;
 	class SceneManager;
+
 	
 }
 
@@ -42,7 +43,7 @@ namespace frost::editor
 		void Shutdown();
 
 		void DrawHierachyValue(frost::core::Scene* m_CurrentScene);
-		void DrawInsperctorValue(frost::ECS::GameObject* m_child);
+		void DrawInsperctorValue();
 		
 		//example collide
 		bool ISCollide = true;
@@ -52,7 +53,7 @@ namespace frost::editor
 
 	private:
 		static Editor* m_Instance;
-
+		frost::ECS::GameObject* SelectEntity = nullptr;
 		
 
 	};
