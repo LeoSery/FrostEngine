@@ -50,9 +50,7 @@ namespace frost::utils
 	Logger* Logger::GetInstance()
 	{
 		if (!m_instance)
-		{
 			m_instance = new Logger();
-		}
 
 		return m_instance;
 	}
@@ -72,16 +70,19 @@ namespace frost::utils
 
 		if (ImGui::Checkbox("Info##Filter", &m_showLogInfo))
 		{
+
 		}
 		ImGui::SameLine();
 
 		if (ImGui::Checkbox("Warning##Filter", &m_showLogWarning))
 		{
+
 		}
 		ImGui::SameLine();
 
 		if (ImGui::Checkbox("Error##Filter", &m_showLogError))
 		{
+
 		}
 		ImGui::SameLine();
 
@@ -149,7 +150,6 @@ namespace frost::utils
 				ImGui::Text(info.logContent.c_str());
 				ImGui::TableNextRow();
 			}
-
 			ImGui::EndTable();
 		}
 	}

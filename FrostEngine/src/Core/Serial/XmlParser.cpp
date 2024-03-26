@@ -37,10 +37,10 @@ namespace frost::core
 	bool XmlParser::ParseRootNode(rapidxml::xml_document<>& _XmlDoc)
 	{
 		rapidxml::xml_node<>* node = _XmlDoc.first_node("root");
+
 		if (!node)
-		{
 			return false;
-		}
+
 		return ParsePlayerNode(node);
 	}
 

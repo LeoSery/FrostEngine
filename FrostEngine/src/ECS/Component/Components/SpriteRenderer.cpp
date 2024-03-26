@@ -8,7 +8,8 @@
 
 namespace frost::ECS
 {
-	float squareVertices[16] = {
+	float squareVertices[16] =
+	{
 	-1.0f,  1.0f, /*UV*/0.0f, 1.0f,
 	-1.0f, -1.0f, /*UV*/0.0f, 0.0f,
 	 1.0f, -1.0f, /*UV*/1.0f, 0.0f,
@@ -17,10 +18,8 @@ namespace frost::ECS
 
 	unsigned int squareIndices[6] = { 0, 1, 2, 0, 2, 3 };
 
-	SpriteRenderer::SpriteRenderer(GameObject& _GameObject)
-		: IComponent(_GameObject)
+	SpriteRenderer::SpriteRenderer(GameObject& _GameObject) : IComponent(_GameObject)
 	{
-
 		vertices = new float[16];
 		std::copy(squareVertices, squareVertices + 16, vertices);
 

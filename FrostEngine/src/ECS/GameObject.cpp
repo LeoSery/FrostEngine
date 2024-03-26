@@ -31,7 +31,6 @@ namespace frost::ECS
 
 	GameObject::~GameObject()
 	{
-		//Destroy();
 		for (const IComponent* component : m_components)
 		{
 			delete component;

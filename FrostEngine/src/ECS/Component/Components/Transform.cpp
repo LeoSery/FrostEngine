@@ -33,7 +33,7 @@ namespace frost::ECS
 
 	void Transform::Destroy()
 	{
-
+		
 	}
 
 	void Transform::GetData(bool _ForceLoggerDraw) const
@@ -67,7 +67,6 @@ namespace frost::ECS
 	glm::vec2 Transform::GetForwardVector() const
 	{
 		glm::vec2 forward = { 0.0f, 1.0f };
-		// { cos(rotation), -sin(rotation), sin(rotation), cos(rotation) };
 		glm::mat2 rotationMatrice(glm::vec2(cos(rotation), -sin(rotation)), glm::vec2(sin(rotation), cos(rotation)));
 
 		return rotationMatrice * forward;
