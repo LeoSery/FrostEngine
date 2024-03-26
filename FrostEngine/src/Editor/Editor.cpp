@@ -8,8 +8,8 @@
 #include "Core/Window.h"
 #include "Utils/Logger.h"
 #include "ECS/Component/Components/Transform.h"
-
-
+#include "ECS/Component/Components/SpriteRenderer.h"
+#include "ECS/Component/Components/BoxCollider.h"
 #include "GLFW/glfw3.h"
 #include <iostream>
 
@@ -133,6 +133,9 @@ namespace frost::editor
             {
                 //ImGui::GetMainViewport();
                 frost::ECS::Transform* tr = SelectEntity->GetComponent<frost::ECS::Transform>();
+                frost::ECS::SpriteRenderer* sr = SelectEntity->GetComponent<frost::ECS::SpriteRenderer>();
+                //frost::ECS::BoxCollider* bc = SelectEntity->GetComponent<frost::ECS::BoxCollider>();
+
                 // Get Transform //
                 //ImGui::InputFloat2("Transform[X/Y]", &tr->position.x);
                 if (ImGui::InputFloat2("Transform[X/Y]", &tr->position.x))
@@ -151,14 +154,23 @@ namespace frost::editor
                 {
 
                 }
-                //if (ImGui::Checkbox("IsCollide", &ISCollide))
-                //{
-                //    ISCollide = true;
-                //    if (!ISCollide)
-                //    {
-                //        ISCollide = false;
-                //    }
-                //}
+                 
+                // Get Collider //
+                if (ImGui::Checkbox("IsMovingEntity", &tr->isMovingEntity))
+                {
+                    tr->isMovingEntity = true;
+                    if (!tr->isMovingEntity)
+                    {
+                        tr->isMovingEntity = false;
+                    }
+                }
+
+                ImGui::Text("Path Image : %sr" , sr->GetTexture().c_str());
+                
+                //ImGui::Checkbox("Box Collider", &bc->);
+
+                //ImGui::Button(sr->GetColor().c_str());
+                
 
                 //SpriteRenderer* sr = m_child->GetComponent<SpriteRenderer>();
                 ImGui::End();
