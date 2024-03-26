@@ -1,7 +1,13 @@
 #pragma once
+
 #include "ECS/Entity/GameObject.h"
 
 class MovementScript;
+
+namespace frost::ECS
+{
+	struct CollisionData;
+}
 
 class Player : public frost::ECS::GameObject
 {
@@ -11,6 +17,7 @@ public:
 	virtual void Start();
 
 	virtual void Tick(float _DeltaTime) override;
+	virtual void OnCollisionEnter(const frost::ECS::CollisionData* _CollisionData) override;
 
 private:
 	void MoveForward();

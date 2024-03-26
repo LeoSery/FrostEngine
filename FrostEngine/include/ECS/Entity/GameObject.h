@@ -13,6 +13,7 @@
 namespace frost::ECS
 {
 	class IComponent;
+	struct CollisionData;
 
 	class FROST_ENGINE_API GameObject : public Tree<GameObject>
 	{
@@ -63,6 +64,7 @@ namespace frost::ECS
 
 		// Methods
 		virtual void Tick(float _DeltaTime);
+		virtual void OnCollisionEnter(const CollisionData* _CollisionData);
 
 	private:
 		uuids::uuid m_uuid;

@@ -98,7 +98,7 @@ namespace FrostEngine
 
 	void Application::PhysUpdate()
 	{
-		std::map<frost::ECS::BoxCollider*, std::vector<frost::ECS::BoxCollider::CollisionData>> Hits;
+		std::map < frost::ECS::BoxCollider*, std::vector < frost::ECS::CollisionData >> Hits;
 
 		for (auto* object : ObjectsToUpdate)
 		{
@@ -130,10 +130,12 @@ namespace FrostEngine
 			if (transform && !transform->isMovingEntity)
 				continue;
 
-			frost::ECS::BoxCollider::CollisionData largestCollision = { false, 0, 0, 0, 0 };
+			frost::ECS::CollisionData largestCollision = { false, 0, 0, 0, 0 };
 
 			for (auto& collision : collisions)
 			{
+				boxCollider->GetParentObject().OnCollisionEnter(&collision);
+
 				if (collision.top > largestCollision.top)
 					largestCollision.top = collision.top;
 

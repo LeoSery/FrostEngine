@@ -15,7 +15,6 @@ namespace frost::ECS
 	class	GameObject;
 }
 
-
 namespace frost::core
 {
 
