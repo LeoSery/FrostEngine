@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structfrost_1_1core_1_1_input_1_1_object_function" kind="struct" language="C++" prot="public">
+    <compoundname>frost::core::Input::ObjectFunction</compoundname>
+    <includes refid="_input_8h" local="no">Input.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structfrost_1_1core_1_1_input_1_1_object_function_1a112497f2918c657abd8d4ba506b9d113" prot="public" static="no" mutable="no">
+        <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object" kindref="compound">frost::ECS::GameObject</ref> *</type>
+        <definition>frost::ECS::GameObject* frost::core::Input::ObjectFunction::Object</definition>
+        <argsstring></argsstring>
+        <name>Object</name>
+        <qualifiedname>frost::core::Input::ObjectFunction::Object</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/Input/Input.h" line="165" column="24" bodyfile="include/Core/Input/Input.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfrost_1_1core_1_1_input_1_1_object_function_1a67d9ef3c901ebc65fbc2bf996f9cdfcb" prot="public" static="no" mutable="no">
+        <type>std::function&lt; void()&gt;</type>
+        <definition>std::function&lt;void()&gt; frost::core::Input::ObjectFunction::Function</definition>
+        <argsstring></argsstring>
+        <name>Function</name>
+        <qualifiedname>frost::core::Input::ObjectFunction::Function</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/Input/Input.h" line="166" column="14" bodyfile="include/Core/Input/Input.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>frost::ECS::Tree&lt; GameObject &gt;</label>
+        <link refid="classfrost_1_1_e_c_s_1_1_tree"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_currentParent</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>frost::ECS::GameObject</label>
+        <link refid="classfrost_1_1_e_c_s_1_1_game_object"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>frost::core::Input::ObjectFunction</label>
+        <link refid="structfrost_1_1core_1_1_input_1_1_object_function"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>Object</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/Core/Input/Input.h" line="163" column="1" bodyfile="include/Core/Input/Input.h" bodystart="164" bodyend="167"/>
+    <listofallmembers>
+      <member refid="structfrost_1_1core_1_1_input_1_1_object_function_1a67d9ef3c901ebc65fbc2bf996f9cdfcb" prot="public" virt="non-virtual"><scope>frost::core::Input::ObjectFunction</scope><name>Function</name></member>
+      <member refid="structfrost_1_1core_1_1_input_1_1_object_function_1a112497f2918c657abd8d4ba506b9d113" prot="public" virt="non-virtual"><scope>frost::core::Input::ObjectFunction</scope><name>Object</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

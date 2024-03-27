@@ -1,0 +1,292 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classfrost_1_1core_1_1_texture" kind="class" language="C++" prot="public">
+    <compoundname>frost::core::Texture</compoundname>
+    <includes refid="_texture_8h" local="no">Texture.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classfrost_1_1core_1_1_texture_1aef6eedf2775658af13fbbee6ebab1c58" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int frost::core::Texture::ID</definition>
+        <argsstring></argsstring>
+        <name>ID</name>
+        <qualifiedname>frost::core::Texture::ID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Render/Texture.h" line="33" column="14" bodyfile="include/Render/Texture.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfrost_1_1core_1_1_texture_1ad73d1a11af0a02df16289739b98fa22a" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string frost::core::Texture::FilePath</definition>
+        <argsstring></argsstring>
+        <name>FilePath</name>
+        <qualifiedname>frost::core::Texture::FilePath</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Render/Texture.h" line="34" column="13" bodyfile="include/Render/Texture.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfrost_1_1core_1_1_texture_1a4d573cbe17c92bfd785f6c7f76eb7622" prot="private" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* frost::core::Texture::LocalBuffer</definition>
+        <argsstring></argsstring>
+        <name>LocalBuffer</name>
+        <qualifiedname>frost::core::Texture::LocalBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Render/Texture.h" line="35" column="15" bodyfile="include/Render/Texture.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfrost_1_1core_1_1_texture_1a1e246b40e81774310fd3ab7813b1d077" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int frost::core::Texture::Width</definition>
+        <argsstring></argsstring>
+        <name>Width</name>
+        <qualifiedname>frost::core::Texture::Width</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Render/Texture.h" line="36" column="5" bodyfile="include/Render/Texture.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfrost_1_1core_1_1_texture_1aae89f608e3d7c320bfdc3526e697dc66" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int frost::core::Texture::Height</definition>
+        <argsstring></argsstring>
+        <name>Height</name>
+        <qualifiedname>frost::core::Texture::Height</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Render/Texture.h" line="36" column="11" bodyfile="include/Render/Texture.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfrost_1_1core_1_1_texture_1ad1ed6da91fcff8cbdb5e8bbf07262c90" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int frost::core::Texture::BPP</definition>
+        <argsstring></argsstring>
+        <name>BPP</name>
+        <qualifiedname>frost::core::Texture::BPP</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Render/Texture.h" line="36" column="18" bodyfile="include/Render/Texture.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classfrost_1_1core_1_1_texture_1a2140467b9a298d6474de2200fcc2ae3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>frost::core::Texture::Texture</definition>
+        <argsstring>(const std::string &amp;_Name)</argsstring>
+        <name>Texture</name>
+        <qualifiedname>frost::core::Texture::Texture</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>_Name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Render/Texture.h" line="12" column="1" bodyfile="src/Render/Texture.cpp" bodystart="14" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1core_1_1_texture_1a955ff95837cd98a6805a8af5cf1e0815" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>frost::core::Texture::Texture</definition>
+        <argsstring>()</argsstring>
+        <name>Texture</name>
+        <qualifiedname>frost::core::Texture::Texture</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Render/Texture.h" line="13" column="1" bodyfile="src/Render/Texture.cpp" bodystart="23" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1core_1_1_texture_1a98d14a3e2174106bf934def0e77e60c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>frost::core::Texture::~Texture</definition>
+        <argsstring>()</argsstring>
+        <name>~Texture</name>
+        <qualifiedname>frost::core::Texture::~Texture</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Render/Texture.h" line="14" column="1" bodyfile="src/Render/Texture.cpp" bodystart="31" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1core_1_1_texture_1a982fdc1f871725510ca1eace1d7c10c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool frost::core::Texture::SetTexture</definition>
+        <argsstring>(const std::string _name)</argsstring>
+        <name>SetTexture</name>
+        <qualifiedname>frost::core::Texture::SetTexture</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Render/Texture.h" line="17" column="6" bodyfile="src/Render/Texture.cpp" bodystart="48" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1core_1_1_texture_1ad77492083b34caa72c906c81f73fa6b3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void frost::core::Texture::Bind</definition>
+        <argsstring>(unsigned int _Slot=0) const</argsstring>
+        <name>Bind</name>
+        <qualifiedname>frost::core::Texture::Bind</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>_Slot</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Render/Texture.h" line="20" column="6" bodyfile="src/Render/Texture.cpp" bodystart="71" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1core_1_1_texture_1aebaa2a8b1741931a688fda39f5ff47a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void frost::core::Texture::Unbind</definition>
+        <argsstring>()</argsstring>
+        <name>Unbind</name>
+        <qualifiedname>frost::core::Texture::Unbind</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Render/Texture.h" line="21" column="6" bodyfile="src/Render/Texture.cpp" bodystart="78" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1core_1_1_texture_1a86b85d78d189ba03c64fbb3ac7961987" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int frost::core::Texture::GetWidth</definition>
+        <argsstring>() const</argsstring>
+        <name>GetWidth</name>
+        <qualifiedname>frost::core::Texture::GetWidth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Render/Texture.h" line="24" column="13" bodyfile="include/Render/Texture.h" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1core_1_1_texture_1af7e1e2344212d4c6c821325237d3687e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int frost::core::Texture::GetHeight</definition>
+        <argsstring>() const</argsstring>
+        <name>GetHeight</name>
+        <qualifiedname>frost::core::Texture::GetHeight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Render/Texture.h" line="25" column="13" bodyfile="include/Render/Texture.h" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1core_1_1_texture_1a2cd74f3793202179cbd0dd5daa18c5b6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int frost::core::Texture::GetID</definition>
+        <argsstring>() const</argsstring>
+        <name>GetID</name>
+        <qualifiedname>frost::core::Texture::GetID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Render/Texture.h" line="26" column="22" bodyfile="include/Render/Texture.h" bodystart="26" bodyend="26"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classfrost_1_1core_1_1_texture_1a9fc71c261b32aee54efb317d2d406de5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void frost::core::Texture::initialize</definition>
+        <argsstring>()</argsstring>
+        <name>initialize</name>
+        <qualifiedname>frost::core::Texture::initialize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Render/Texture.h" line="30" column="6" bodyfile="src/Render/Texture.cpp" bodystart="36" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1core_1_1_texture_1a222529fc62dd2afdc10942a458829fbd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool frost::core::Texture::LoadImage</definition>
+        <argsstring>(const std::string _name)</argsstring>
+        <name>LoadImage</name>
+        <qualifiedname>frost::core::Texture::LoadImage</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Render/Texture.h" line="31" column="6" bodyfile="src/Render/Texture.cpp" bodystart="83" bodyend="104"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Render/Texture.h" line="7" column="1" bodyfile="include/Render/Texture.h" bodystart="8" bodyend="37"/>
+    <listofallmembers>
+      <member refid="classfrost_1_1core_1_1_texture_1ad77492083b34caa72c906c81f73fa6b3" prot="public" virt="non-virtual"><scope>frost::core::Texture</scope><name>Bind</name></member>
+      <member refid="classfrost_1_1core_1_1_texture_1ad1ed6da91fcff8cbdb5e8bbf07262c90" prot="private" virt="non-virtual"><scope>frost::core::Texture</scope><name>BPP</name></member>
+      <member refid="classfrost_1_1core_1_1_texture_1ad73d1a11af0a02df16289739b98fa22a" prot="private" virt="non-virtual"><scope>frost::core::Texture</scope><name>FilePath</name></member>
+      <member refid="classfrost_1_1core_1_1_texture_1af7e1e2344212d4c6c821325237d3687e" prot="public" virt="non-virtual"><scope>frost::core::Texture</scope><name>GetHeight</name></member>
+      <member refid="classfrost_1_1core_1_1_texture_1a2cd74f3793202179cbd0dd5daa18c5b6" prot="public" virt="non-virtual"><scope>frost::core::Texture</scope><name>GetID</name></member>
+      <member refid="classfrost_1_1core_1_1_texture_1a86b85d78d189ba03c64fbb3ac7961987" prot="public" virt="non-virtual"><scope>frost::core::Texture</scope><name>GetWidth</name></member>
+      <member refid="classfrost_1_1core_1_1_texture_1aae89f608e3d7c320bfdc3526e697dc66" prot="private" virt="non-virtual"><scope>frost::core::Texture</scope><name>Height</name></member>
+      <member refid="classfrost_1_1core_1_1_texture_1aef6eedf2775658af13fbbee6ebab1c58" prot="private" virt="non-virtual"><scope>frost::core::Texture</scope><name>ID</name></member>
+      <member refid="classfrost_1_1core_1_1_texture_1a9fc71c261b32aee54efb317d2d406de5" prot="private" virt="non-virtual"><scope>frost::core::Texture</scope><name>initialize</name></member>
+      <member refid="classfrost_1_1core_1_1_texture_1a222529fc62dd2afdc10942a458829fbd" prot="private" virt="non-virtual"><scope>frost::core::Texture</scope><name>LoadImage</name></member>
+      <member refid="classfrost_1_1core_1_1_texture_1a4d573cbe17c92bfd785f6c7f76eb7622" prot="private" virt="non-virtual"><scope>frost::core::Texture</scope><name>LocalBuffer</name></member>
+      <member refid="classfrost_1_1core_1_1_texture_1a982fdc1f871725510ca1eace1d7c10c3" prot="public" virt="non-virtual"><scope>frost::core::Texture</scope><name>SetTexture</name></member>
+      <member refid="classfrost_1_1core_1_1_texture_1a2140467b9a298d6474de2200fcc2ae3f" prot="public" virt="non-virtual"><scope>frost::core::Texture</scope><name>Texture</name></member>
+      <member refid="classfrost_1_1core_1_1_texture_1a955ff95837cd98a6805a8af5cf1e0815" prot="public" virt="non-virtual"><scope>frost::core::Texture</scope><name>Texture</name></member>
+      <member refid="classfrost_1_1core_1_1_texture_1aebaa2a8b1741931a688fda39f5ff47a5" prot="public" virt="non-virtual"><scope>frost::core::Texture</scope><name>Unbind</name></member>
+      <member refid="classfrost_1_1core_1_1_texture_1a1e246b40e81774310fd3ab7813b1d077" prot="private" virt="non-virtual"><scope>frost::core::Texture</scope><name>Width</name></member>
+      <member refid="classfrost_1_1core_1_1_texture_1a98d14a3e2174106bf934def0e77e60c2" prot="public" virt="non-virtual"><scope>frost::core::Texture</scope><name>~Texture</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

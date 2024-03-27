@@ -1,0 +1,318 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classfrost_1_1_e_c_s_1_1_i_component" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>frost::ECS::IComponent</compoundname>
+    <basecompoundref refid="classfrost_1_1core_1_1_r_t_t_i" prot="public" virt="non-virtual">frost::core::RTTI</basecompoundref>
+    <derivedcompoundref refid="classfrost_1_1_e_c_s_1_1_box_collider" prot="public" virt="non-virtual">frost::ECS::BoxCollider</derivedcompoundref>
+    <derivedcompoundref refid="classfrost_1_1_e_c_s_1_1_sprite_renderer" prot="public" virt="non-virtual">frost::ECS::SpriteRenderer</derivedcompoundref>
+    <derivedcompoundref refid="classfrost_1_1_e_c_s_1_1_transform" prot="public" virt="non-virtual">frost::ECS::Transform</derivedcompoundref>
+    <includes refid="_i_component_8h" local="no">IComponent.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classfrost_1_1_e_c_s_1_1_i_component_1a5d26cf57acad61ebfa5472ca1a8e03a9" prot="protected" static="no" mutable="no">
+        <type>uuids::uuid</type>
+        <definition>uuids::uuid frost::ECS::IComponent::m_uuid</definition>
+        <argsstring></argsstring>
+        <name>m_uuid</name>
+        <qualifiedname>frost::ECS::IComponent::m_uuid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Component/IComponent.h" line="39" column="13" bodyfile="include/ECS/Component/IComponent.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfrost_1_1_e_c_s_1_1_i_component_1a6104e07a728dc58f66cc0df421eefb5d" prot="protected" static="no" mutable="no">
+        <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object" kindref="compound">GameObject</ref> &amp;</type>
+        <definition>GameObject&amp; frost::ECS::IComponent::m_parentObject</definition>
+        <argsstring></argsstring>
+        <name>m_parentObject</name>
+        <qualifiedname>frost::ECS::IComponent::m_parentObject</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Component/IComponent.h" line="40" column="12" bodyfile="include/ECS/Component/IComponent.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfrost_1_1_e_c_s_1_1_i_component_1ab5995c7763e343eae8148429a73f64f8" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool frost::ECS::IComponent::m_isActive</definition>
+        <argsstring></argsstring>
+        <name>m_isActive</name>
+        <qualifiedname>frost::ECS::IComponent::m_isActive</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Component/IComponent.h" line="41" column="6" bodyfile="include/ECS/Component/IComponent.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_i_component_1a15ede560c92670c8f07329c3aba756f7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>frost::ECS::IComponent::FROST_DEFINE_RTTI</definition>
+        <argsstring>(IComponent)</argsstring>
+        <name>FROST_DEFINE_RTTI</name>
+        <qualifiedname>frost::ECS::IComponent::FROST_DEFINE_RTTI</qualifiedname>
+        <param>
+          <type><ref refid="classfrost_1_1_e_c_s_1_1_i_component" kindref="compound">IComponent</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Component/IComponent.h" line="15" column="1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_i_component_1ae8ccddcb37fe3aa6b23f072dc135b5c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>frost::ECS::IComponent::IComponent</definition>
+        <argsstring>()=delete</argsstring>
+        <name>IComponent</name>
+        <qualifiedname>frost::ECS::IComponent::IComponent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Component/IComponent.h" line="20" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_i_component_1a4a818549a56da125f0e36ff06061e70c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>frost::ECS::IComponent::IComponent</definition>
+        <argsstring>(GameObject &amp;_GameObject)</argsstring>
+        <name>IComponent</name>
+        <qualifiedname>frost::ECS::IComponent::IComponent</qualifiedname>
+        <param>
+          <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object" kindref="compound">GameObject</ref> &amp;</type>
+          <declname>_GameObject</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Component/IComponent.h" line="21" column="1" bodyfile="src/ECS/Component/IComponent.cpp" bodystart="6" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_i_component_1afc487e5613cb97ab86062c8405d798d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>frost::ECS::IComponent::~IComponent</definition>
+        <argsstring>()</argsstring>
+        <name>~IComponent</name>
+        <qualifiedname>frost::ECS::IComponent::~IComponent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Component/IComponent.h" line="23" column="9" bodyfile="src/ECS/Component/IComponent.cpp" bodystart="11" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_i_component_1ac6fbd116991fc86765ca2e07db086a02" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void frost::ECS::IComponent::Start</definition>
+        <argsstring>()=0</argsstring>
+        <name>Start</name>
+        <qualifiedname>frost::ECS::IComponent::Start</qualifiedname>
+        <reimplementedby refid="classfrost_1_1_e_c_s_1_1_box_collider_1ab096f6c7a983a2384d650efb74bdbc4f">Start</reimplementedby>
+        <reimplementedby refid="classfrost_1_1_e_c_s_1_1_sprite_renderer_1acdc9ab4287a5d1b3a9350dbd62ecfe28">Start</reimplementedby>
+        <reimplementedby refid="classfrost_1_1_e_c_s_1_1_transform_1a4b60e14321538cc280dcbffd3020a796">Start</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Component/IComponent.h" line="26" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_i_component_1a45e8fc1c29ec737a38994109c69a0806" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void frost::ECS::IComponent::Update</definition>
+        <argsstring>(float _DeltaTime)=0</argsstring>
+        <name>Update</name>
+        <qualifiedname>frost::ECS::IComponent::Update</qualifiedname>
+        <reimplementedby refid="classfrost_1_1_e_c_s_1_1_box_collider_1acd8bd4864af9b97b965f855dcc905a74">Update</reimplementedby>
+        <reimplementedby refid="classfrost_1_1_e_c_s_1_1_sprite_renderer_1a83383dc71f8d4b5efeb08ef5b961bec9">Update</reimplementedby>
+        <reimplementedby refid="classfrost_1_1_e_c_s_1_1_transform_1a4290b0f2925289346fda60ef987af086">Update</reimplementedby>
+        <param>
+          <type>float</type>
+          <declname>_DeltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Component/IComponent.h" line="27" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_i_component_1ab405ccdb0c52b3ce8209fc956f88226f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void frost::ECS::IComponent::Destroy</definition>
+        <argsstring>()=0</argsstring>
+        <name>Destroy</name>
+        <qualifiedname>frost::ECS::IComponent::Destroy</qualifiedname>
+        <reimplementedby refid="classfrost_1_1_e_c_s_1_1_box_collider_1a4bad23db7e3fe21d2dc65d424abda4ac">Destroy</reimplementedby>
+        <reimplementedby refid="classfrost_1_1_e_c_s_1_1_sprite_renderer_1aafdc497b51b6f58f97e89e5da9e79dcd">Destroy</reimplementedby>
+        <reimplementedby refid="classfrost_1_1_e_c_s_1_1_transform_1a549a5d79ba8eb8981550b6435011cd20">Destroy</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Component/IComponent.h" line="28" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_i_component_1a4a7fc37eada09e556897c7bab9a42d36" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool frost::ECS::IComponent::IsActive</definition>
+        <argsstring>() const</argsstring>
+        <name>IsActive</name>
+        <qualifiedname>frost::ECS::IComponent::IsActive</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Component/IComponent.h" line="31" column="7" bodyfile="src/ECS/Component/IComponent.cpp" bodystart="16" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_i_component_1afd80a286387f80ee2dd592d9366f7645" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void frost::ECS::IComponent::SetActive</definition>
+        <argsstring>(bool _IsActive)</argsstring>
+        <name>SetActive</name>
+        <qualifiedname>frost::ECS::IComponent::SetActive</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>_IsActive</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Component/IComponent.h" line="32" column="6" bodyfile="src/ECS/Component/IComponent.cpp" bodystart="21" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_i_component_1adbb9c447e4a2a65e828cb0e2bd60d7a4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uuids::uuid</type>
+        <definition>uuids::uuid frost::ECS::IComponent::GetUUID</definition>
+        <argsstring>() const</argsstring>
+        <name>GetUUID</name>
+        <qualifiedname>frost::ECS::IComponent::GetUUID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Component/IComponent.h" line="34" column="14" bodyfile="src/ECS/Component/IComponent.cpp" bodystart="26" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_i_component_1a1df5779e3ba49dfcdee54914de867474" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object" kindref="compound">GameObject</ref> &amp;</type>
+        <definition>GameObject &amp; frost::ECS::IComponent::GetParentObject</definition>
+        <argsstring>() const</argsstring>
+        <name>GetParentObject</name>
+        <qualifiedname>frost::ECS::IComponent::GetParentObject</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Component/IComponent.h" line="36" column="13" bodyfile="src/ECS/Component/IComponent.cpp" bodystart="31" bodyend="34"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>frost::ECS::BoxCollider</label>
+        <link refid="classfrost_1_1_e_c_s_1_1_box_collider"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>frost::ECS::IComponent</label>
+        <link refid="classfrost_1_1_e_c_s_1_1_i_component"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>frost::ECS::SpriteRenderer</label>
+        <link refid="classfrost_1_1_e_c_s_1_1_sprite_renderer"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>frost::ECS::Transform</label>
+        <link refid="classfrost_1_1_e_c_s_1_1_transform"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>frost::core::RTTI</label>
+        <link refid="classfrost_1_1core_1_1_r_t_t_i"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>frost::ECS::Tree&lt; GameObject &gt;</label>
+        <link refid="classfrost_1_1_e_c_s_1_1_tree"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_currentParent</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>frost::ECS::GameObject</label>
+        <link refid="classfrost_1_1_e_c_s_1_1_game_object"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>frost::ECS::IComponent</label>
+        <link refid="classfrost_1_1_e_c_s_1_1_i_component"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_parentObject</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>frost::core::RTTI</label>
+        <link refid="classfrost_1_1core_1_1_r_t_t_i"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/ECS/Component/IComponent.h" line="13" column="1" bodyfile="include/ECS/Component/IComponent.h" bodystart="14" bodyend="42"/>
+    <listofallmembers>
+      <member refid="classfrost_1_1_e_c_s_1_1_i_component_1ab405ccdb0c52b3ce8209fc956f88226f" prot="public" virt="pure-virtual"><scope>frost::ECS::IComponent</scope><name>Destroy</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_i_component_1a15ede560c92670c8f07329c3aba756f7" prot="private" virt="non-virtual"><scope>frost::ECS::IComponent</scope><name>FROST_DEFINE_RTTI</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_i_component_1a1df5779e3ba49dfcdee54914de867474" prot="public" virt="non-virtual"><scope>frost::ECS::IComponent</scope><name>GetParentObject</name></member>
+      <member refid="classfrost_1_1core_1_1_r_t_t_i_1ab67a37bae5aeb3024dbd568bd4c9a9ea" prot="public" virt="pure-virtual"><scope>frost::ECS::IComponent</scope><name>GetTypeName</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_i_component_1adbb9c447e4a2a65e828cb0e2bd60d7a4" prot="public" virt="non-virtual"><scope>frost::ECS::IComponent</scope><name>GetUUID</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_i_component_1ae8ccddcb37fe3aa6b23f072dc135b5c6" prot="public" virt="non-virtual"><scope>frost::ECS::IComponent</scope><name>IComponent</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_i_component_1a4a818549a56da125f0e36ff06061e70c" prot="public" virt="non-virtual"><scope>frost::ECS::IComponent</scope><name>IComponent</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_i_component_1a4a7fc37eada09e556897c7bab9a42d36" prot="public" virt="non-virtual"><scope>frost::ECS::IComponent</scope><name>IsActive</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_i_component_1ab5995c7763e343eae8148429a73f64f8" prot="protected" virt="non-virtual"><scope>frost::ECS::IComponent</scope><name>m_isActive</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_i_component_1a6104e07a728dc58f66cc0df421eefb5d" prot="protected" virt="non-virtual"><scope>frost::ECS::IComponent</scope><name>m_parentObject</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_i_component_1a5d26cf57acad61ebfa5472ca1a8e03a9" prot="protected" virt="non-virtual"><scope>frost::ECS::IComponent</scope><name>m_uuid</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_i_component_1afd80a286387f80ee2dd592d9366f7645" prot="public" virt="non-virtual"><scope>frost::ECS::IComponent</scope><name>SetActive</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_i_component_1ac6fbd116991fc86765ca2e07db086a02" prot="public" virt="pure-virtual"><scope>frost::ECS::IComponent</scope><name>Start</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_i_component_1a45e8fc1c29ec737a38994109c69a0806" prot="public" virt="pure-virtual"><scope>frost::ECS::IComponent</scope><name>Update</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_i_component_1afc487e5613cb97ab86062c8405d798d7" prot="public" virt="virtual"><scope>frost::ECS::IComponent</scope><name>~IComponent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

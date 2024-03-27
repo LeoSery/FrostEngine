@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_d44c64559bbebec7f509842c48db8b23" kind="dir">
+    <compoundname>include</compoundname>
+    <innerdir refid="dir_8213943ce0b792be39d34390845932ae">include/Core</innerdir>
+    <innerdir refid="dir_073402b06d831bb0ea44664935cf1ebd">include/ECS</innerdir>
+    <innerdir refid="dir_9879a2d9fc75d55adf27ec2dfa65cb52">include/Editor</innerdir>
+    <innerdir refid="dir_afbc4937c10bc7b2412dc0981b689e1b">include/Render</innerdir>
+    <innerdir refid="dir_2d1d991c66e7a032b2ab80c11328e79c">include/Utils</innerdir>
+    <innerfile refid="_frost_engine_8h">FrostEngine.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/"/>
+  </compounddef>
+</doxygen>

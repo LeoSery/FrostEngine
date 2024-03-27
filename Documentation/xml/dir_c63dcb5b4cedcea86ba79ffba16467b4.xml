@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_c63dcb5b4cedcea86ba79ffba16467b4" kind="dir">
+    <compoundname>src/Core/Input</compoundname>
+    <innerfile refid="_input_8cpp">Input.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Core/Input/"/>
+  </compounddef>
+</doxygen>

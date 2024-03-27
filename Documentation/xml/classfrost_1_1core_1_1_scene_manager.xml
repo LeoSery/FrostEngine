@@ -1,0 +1,294 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classfrost_1_1core_1_1_scene_manager" kind="class" language="C++" prot="public">
+    <compoundname>frost::core::SceneManager</compoundname>
+    <includes refid="_scene_manager_8h" local="no">SceneManager.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classfrost_1_1core_1_1_scene_manager_1a9aed8c346018827911fbd76979cf282c" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classfrost_1_1core_1_1_scene" kindref="compound">Scene</ref> &gt;</type>
+        <definition>std::vector&lt;Scene&gt; frost::core::SceneManager::m_scenes</definition>
+        <argsstring></argsstring>
+        <name>m_scenes</name>
+        <qualifiedname>frost::core::SceneManager::m_scenes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/SceneManagement/SceneManager.h" line="35" column="13" bodyfile="include/Core/SceneManagement/SceneManager.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfrost_1_1core_1_1_scene_manager_1a84d2fbbe14724c7f3e5a08ffc3840d3b" prot="private" static="no" mutable="no">
+        <type><ref refid="classfrost_1_1core_1_1_scene" kindref="compound">Scene</ref> *</type>
+        <definition>Scene* frost::core::SceneManager::m_activeScene</definition>
+        <argsstring></argsstring>
+        <name>m_activeScene</name>
+        <qualifiedname>frost::core::SceneManager::m_activeScene</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/SceneManagement/SceneManager.h" line="36" column="7" bodyfile="include/Core/SceneManagement/SceneManager.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classfrost_1_1core_1_1_scene_manager_1a48db0881386fac491acae3e1a085af91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>frost::core::SceneManager::~SceneManager</definition>
+        <argsstring>()=default</argsstring>
+        <name>~SceneManager</name>
+        <qualifiedname>frost::core::SceneManager::~SceneManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/SceneManagement/SceneManager.h" line="12" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1core_1_1_scene_manager_1a98b7f4b06af80385436cd4e5719483e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>frost::core::SceneManager::SceneManager</definition>
+        <argsstring>(const SceneManager &amp;_Other)=delete</argsstring>
+        <name>SceneManager</name>
+        <qualifiedname>frost::core::SceneManager::SceneManager</qualifiedname>
+        <param>
+          <type>const <ref refid="classfrost_1_1core_1_1_scene_manager" kindref="compound">SceneManager</ref> &amp;</type>
+          <declname>_Other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/SceneManagement/SceneManager.h" line="15" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1core_1_1_scene_manager_1af39c972a64ec499d00ac8e95cfe248e5" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>frost::core::SceneManager::SceneManager</definition>
+        <argsstring>(SceneManager &amp;&amp;_Other) noexcept=delete</argsstring>
+        <name>SceneManager</name>
+        <qualifiedname>frost::core::SceneManager::SceneManager</qualifiedname>
+        <param>
+          <type><ref refid="classfrost_1_1core_1_1_scene_manager" kindref="compound">SceneManager</ref> &amp;&amp;</type>
+          <declname>_Other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/SceneManagement/SceneManager.h" line="16" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1core_1_1_scene_manager_1abca017b803fe023cf12fc0607c6aea19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classfrost_1_1core_1_1_scene_manager" kindref="compound">SceneManager</ref> &amp;</type>
+        <definition>SceneManager &amp; frost::core::SceneManager::operator=</definition>
+        <argsstring>(const SceneManager &amp;_Other)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>frost::core::SceneManager::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classfrost_1_1core_1_1_scene_manager" kindref="compound">SceneManager</ref> &amp;</type>
+          <declname>_Other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/SceneManagement/SceneManager.h" line="17" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1core_1_1_scene_manager_1afb4ba8d46301ee3374bb44d94840cadc" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classfrost_1_1core_1_1_scene_manager" kindref="compound">SceneManager</ref> &amp;</type>
+        <definition>SceneManager &amp; frost::core::SceneManager::operator=</definition>
+        <argsstring>(SceneManager &amp;&amp;_Other) noexcept=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>frost::core::SceneManager::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classfrost_1_1core_1_1_scene_manager" kindref="compound">SceneManager</ref> &amp;&amp;</type>
+          <declname>_Other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/SceneManagement/SceneManager.h" line="18" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1core_1_1_scene_manager_1a20388056002976929cbc0abeeac86f8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classfrost_1_1core_1_1_scene" kindref="compound">Scene</ref> &amp;</type>
+        <definition>Scene &amp; frost::core::SceneManager::CreateScene</definition>
+        <argsstring>(const std::string &amp;_Name)</argsstring>
+        <name>CreateScene</name>
+        <qualifiedname>frost::core::SceneManager::CreateScene</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>_Name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/SceneManagement/SceneManager.h" line="24" column="7" bodyfile="src/Core/SceneManager.cpp" bodystart="13" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1core_1_1_scene_manager_1abe66ddc6ab1efdd67a0f743097da5d1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void frost::core::SceneManager::RemoveScene</definition>
+        <argsstring>(const std::string &amp;_SceneName)</argsstring>
+        <name>RemoveScene</name>
+        <qualifiedname>frost::core::SceneManager::RemoveScene</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>_SceneName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/SceneManagement/SceneManager.h" line="25" column="6" bodyfile="src/Core/SceneManager.cpp" bodystart="30" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1core_1_1_scene_manager_1a53fb3404794a9d243be1049f7fb1192c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void frost::core::SceneManager::LoadScene</definition>
+        <argsstring>(const std::string &amp;_SceneName)</argsstring>
+        <name>LoadScene</name>
+        <qualifiedname>frost::core::SceneManager::LoadScene</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>_SceneName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/SceneManagement/SceneManager.h" line="26" column="6" bodyfile="src/Core/SceneManager.cpp" bodystart="40" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1core_1_1_scene_manager_1a627cf41a8f9aab63d4c035cc01e28875" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classfrost_1_1core_1_1_scene" kindref="compound">Scene</ref> &amp;</type>
+        <definition>Scene &amp; frost::core::SceneManager::GetActiveScene</definition>
+        <argsstring>()</argsstring>
+        <name>GetActiveScene</name>
+        <qualifiedname>frost::core::SceneManager::GetActiveScene</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/SceneManagement/SceneManager.h" line="29" column="8" bodyfile="src/Core/SceneManager.cpp" bodystart="50" bodyend="56"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classfrost_1_1core_1_1_scene_manager_1ae5963de250ff2e10c2063358c54687e7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classfrost_1_1core_1_1_scene_manager" kindref="compound">SceneManager</ref> &amp;</type>
+        <definition>SceneManager &amp; frost::core::SceneManager::GetInstance</definition>
+        <argsstring>()</argsstring>
+        <name>GetInstance</name>
+        <qualifiedname>frost::core::SceneManager::GetInstance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/SceneManagement/SceneManager.h" line="21" column="22" bodyfile="src/Core/SceneManager.cpp" bodystart="7" bodyend="11"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classfrost_1_1core_1_1_scene_manager_1ae48a2f1c7946e5484939c737cea883fe" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void frost::core::SceneManager::AddScene</definition>
+        <argsstring>(Scene &amp;&amp;_TargetScene)</argsstring>
+        <name>AddScene</name>
+        <qualifiedname>frost::core::SceneManager::AddScene</qualifiedname>
+        <param>
+          <type><ref refid="classfrost_1_1core_1_1_scene" kindref="compound">Scene</ref> &amp;&amp;</type>
+          <declname>_TargetScene</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/SceneManagement/SceneManager.h" line="32" column="6" bodyfile="src/Core/SceneManager.cpp" bodystart="22" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1core_1_1_scene_manager_1a25156021fdd47cbe55abb195724e3646" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>frost::core::SceneManager::SceneManager</definition>
+        <argsstring>()=default</argsstring>
+        <name>SceneManager</name>
+        <qualifiedname>frost::core::SceneManager::SceneManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/SceneManagement/SceneManager.h" line="33" column="1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>frost::ECS::Tree&lt; GameObject &gt;</label>
+        <link refid="classfrost_1_1_e_c_s_1_1_tree"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_currentParent</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>frost::ECS::GameObject</label>
+        <link refid="classfrost_1_1_e_c_s_1_1_game_object"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>frost::core::Scene</label>
+        <link refid="classfrost_1_1core_1_1_scene"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_root</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>frost::core::SceneManager</label>
+        <link refid="classfrost_1_1core_1_1_scene_manager"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_activeScene</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/Core/SceneManagement/SceneManager.h" line="7" column="1" bodyfile="include/Core/SceneManagement/SceneManager.h" bodystart="8" bodyend="37"/>
+    <listofallmembers>
+      <member refid="classfrost_1_1core_1_1_scene_manager_1ae48a2f1c7946e5484939c737cea883fe" prot="private" virt="non-virtual"><scope>frost::core::SceneManager</scope><name>AddScene</name></member>
+      <member refid="classfrost_1_1core_1_1_scene_manager_1a20388056002976929cbc0abeeac86f8b" prot="public" virt="non-virtual"><scope>frost::core::SceneManager</scope><name>CreateScene</name></member>
+      <member refid="classfrost_1_1core_1_1_scene_manager_1a627cf41a8f9aab63d4c035cc01e28875" prot="public" virt="non-virtual"><scope>frost::core::SceneManager</scope><name>GetActiveScene</name></member>
+      <member refid="classfrost_1_1core_1_1_scene_manager_1ae5963de250ff2e10c2063358c54687e7" prot="public" virt="non-virtual"><scope>frost::core::SceneManager</scope><name>GetInstance</name></member>
+      <member refid="classfrost_1_1core_1_1_scene_manager_1a53fb3404794a9d243be1049f7fb1192c" prot="public" virt="non-virtual"><scope>frost::core::SceneManager</scope><name>LoadScene</name></member>
+      <member refid="classfrost_1_1core_1_1_scene_manager_1a84d2fbbe14724c7f3e5a08ffc3840d3b" prot="private" virt="non-virtual"><scope>frost::core::SceneManager</scope><name>m_activeScene</name></member>
+      <member refid="classfrost_1_1core_1_1_scene_manager_1a9aed8c346018827911fbd76979cf282c" prot="private" virt="non-virtual"><scope>frost::core::SceneManager</scope><name>m_scenes</name></member>
+      <member refid="classfrost_1_1core_1_1_scene_manager_1abca017b803fe023cf12fc0607c6aea19" prot="public" virt="non-virtual"><scope>frost::core::SceneManager</scope><name>operator=</name></member>
+      <member refid="classfrost_1_1core_1_1_scene_manager_1afb4ba8d46301ee3374bb44d94840cadc" prot="public" virt="non-virtual"><scope>frost::core::SceneManager</scope><name>operator=</name></member>
+      <member refid="classfrost_1_1core_1_1_scene_manager_1abe66ddc6ab1efdd67a0f743097da5d1a" prot="public" virt="non-virtual"><scope>frost::core::SceneManager</scope><name>RemoveScene</name></member>
+      <member refid="classfrost_1_1core_1_1_scene_manager_1a98b7f4b06af80385436cd4e5719483e2" prot="public" virt="non-virtual"><scope>frost::core::SceneManager</scope><name>SceneManager</name></member>
+      <member refid="classfrost_1_1core_1_1_scene_manager_1af39c972a64ec499d00ac8e95cfe248e5" prot="public" virt="non-virtual"><scope>frost::core::SceneManager</scope><name>SceneManager</name></member>
+      <member refid="classfrost_1_1core_1_1_scene_manager_1a25156021fdd47cbe55abb195724e3646" prot="private" virt="non-virtual"><scope>frost::core::SceneManager</scope><name>SceneManager</name></member>
+      <member refid="classfrost_1_1core_1_1_scene_manager_1a48db0881386fac491acae3e1a085af91" prot="public" virt="non-virtual"><scope>frost::core::SceneManager</scope><name>~SceneManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_scene_8h" kind="file" language="C++">
+    <compoundname>Scene.h</compoundname>
+    <includes refid="_authorization_badge_8h" local="yes">Core/Internal/AuthorizationBadge.h</includes>
+    <includes refid="_game_object_8h" local="yes">ECS/Entity/GameObject.h</includes>
+    <includes local="yes">stduuid/uuid.h</includes>
+    <includedby refid="_scene_manager_8h" local="yes">include/Core/SceneManagement/SceneManager.h</includedby>
+    <includedby refid="_editor_8h" local="yes">include/Editor/Editor.h</includedby>
+    <includedby refid="_scene_8cpp" local="yes">src/Core/Scene.cpp</includedby>
+    <incdepgraph>
+      <node id="8">
+        <label>Core/export.h</label>
+        <link refid="_export_8h"/>
+      </node>
+      <node id="2">
+        <label>Core/Internal/AuthorizationBadge.h</label>
+        <link refid="_authorization_badge_8h"/>
+      </node>
+      <node id="6">
+        <label>Core/Internal/RTTI.h</label>
+        <link refid="_r_t_t_i_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/Core/SceneManagement/Scene.h</label>
+        <link refid="_scene_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ECS/Component/Components/Transform.h</label>
+        <link refid="_transform_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ECS/Component/IComponent.h</label>
+        <link refid="_i_component_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ECS/Entity/GameObject.h</label>
+        <link refid="_game_object_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>GameObject.hxx</label>
+        <link refid="_game_object_8hxx"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>ECS/System/Tree.h</label>
+        <link refid="_tree_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>glm/vec2.hpp</label>
+      </node>
+      <node id="9">
+        <label>stduuid/uuid.h</label>
+      </node>
+      <node id="7">
+        <label>string</label>
+      </node>
+      <node id="13">
+        <label>unordered_set</label>
+      </node>
+      <node id="12">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/Core/SceneManagement/Scene.h</label>
+        <link refid="_scene_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/Core/SceneManagement/SceneManager.h</label>
+        <link refid="_scene_manager_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>include/ECS/Component/Components/BoxCollider.h</label>
+        <link refid="_box_collider_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>include/Editor/Editor.h</label>
+        <link refid="_editor_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>include/FrostEngine.h</label>
+        <link refid="_frost_engine_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>src/Core/Scene.cpp</label>
+        <link refid="_scene_8cpp"/>
+      </node>
+      <node id="9">
+        <label>src/Core/SceneManager.cpp</label>
+        <link refid="_scene_manager_8cpp"/>
+      </node>
+      <node id="6">
+        <label>src/ECS/Component/Components/BoxCollider.cpp</label>
+        <link refid="_box_collider_8cpp"/>
+      </node>
+      <node id="10">
+        <label>src/ECS/GameObject.cpp</label>
+        <link refid="_game_object_8cpp"/>
+      </node>
+      <node id="7">
+        <label>src/Editor/Editor.cpp</label>
+        <link refid="_editor_8cpp"/>
+      </node>
+      <node id="5">
+        <label>src/FrostEngine.cpp</label>
+        <link refid="_frost_engine_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classfrost_1_1core_1_1_scene" prot="public">frost::core::Scene</innerclass>
+    <innernamespace refid="namespacefrost">frost</innernamespace>
+    <innernamespace refid="namespacefrost_1_1core">frost::core</innernamespace>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="_scene_8h_1af945b5de700ba8bed8687b77383ed4f2" prot="public" static="no">
+        <name>UUID_SYSTEM_GENERATOR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/SceneManagement/Scene.h" line="7" column="9" bodyfile="include/Core/SceneManagement/Scene.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_authorization_badge_8h" kindref="compound">Core/Internal/AuthorizationBadge.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_game_object_8h" kindref="compound">ECS/Entity/GameObject.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="_scene_8h_1af945b5de700ba8bed8687b77383ed4f2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UUID_SYSTEM_GENERATOR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;stduuid/uuid.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacefrost_1_1core" kindref="compound">frost::core</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">SceneManager;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="classfrost_1_1core_1_1_scene" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="_export_8h_1a76e8ddc2fd5dcbd64bb60019fb4f0e30" kindref="member">FROST_ENGINE_API</ref><sp/><ref refid="classfrost_1_1core_1_1_scene" kindref="compound">Scene</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Constructors<sp/>and<sp/>Destructors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_scene" kindref="compound">Scene</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_authorization_badge" kindref="compound">AuthorizationBadge&lt;SceneManager&gt;</ref>&amp;,<sp/>std::string<sp/>_Name);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_scene" kindref="compound">~Scene</ref>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Copy<sp/>and<sp/>Move<sp/>Constructors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="classfrost_1_1core_1_1_scene_1af548ceb8f75f7286d4402cd995eb71e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_scene_1af548ceb8f75f7286d4402cd995eb71e1" kindref="member">Scene</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_scene" kindref="compound">Scene</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24" refid="classfrost_1_1core_1_1_scene_1a42644788ca6cd56315be9d0cbdb2de31" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_scene" kindref="compound">Scene</ref>&amp;<sp/><ref refid="classfrost_1_1core_1_1_scene_1a42644788ca6cd56315be9d0cbdb2de31" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_scene" kindref="compound">Scene</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_scene" kindref="compound">Scene</ref>(<ref refid="classfrost_1_1core_1_1_scene" kindref="compound">Scene</ref>&amp;&amp;<sp/>_Other)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_scene" kindref="compound">Scene</ref>&amp;<sp/>operator=(<ref refid="classfrost_1_1core_1_1_scene" kindref="compound">Scene</ref>&amp;&amp;<sp/>_Other)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Getters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>GetName()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classfrost_1_1_e_c_s_1_1_game_object" kindref="compound">ECS::GameObject</ref>*<sp/>GetRoot()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33" refid="classfrost_1_1core_1_1_scene_1a1a40471ced8f611f74d5ef2f17dbb81a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uuids::uuid<sp/><ref refid="classfrost_1_1core_1_1_scene_1a1a40471ced8f611f74d5ef2f17dbb81a" kindref="member">m_uuid</ref>;</highlight></codeline>
+<codeline lineno="34" refid="classfrost_1_1core_1_1_scene_1a8e4793dcc7c5f702adc8b26d252ec0ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classfrost_1_1core_1_1_scene_1a8e4793dcc7c5f702adc8b26d252ec0ef" kindref="member">m_name</ref>;</highlight></codeline>
+<codeline lineno="35" refid="classfrost_1_1core_1_1_scene_1a2e78f12904d8b377bbcbd3d09a4a39c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1_e_c_s_1_1_game_object" kindref="compound">ECS::GameObject</ref>*<sp/><ref refid="classfrost_1_1core_1_1_scene_1a2e78f12904d8b377bbcbd3d09a4a39c5" kindref="member">m_root</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="include/Core/SceneManagement/Scene.h"/>
+  </compounddef>
+</doxygen>

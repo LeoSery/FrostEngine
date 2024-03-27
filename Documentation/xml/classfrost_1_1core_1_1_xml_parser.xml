@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classfrost_1_1core_1_1_xml_parser" kind="class" language="C++" prot="public">
+    <compoundname>frost::core::XmlParser</compoundname>
+    <includes refid="_xml_parser_8h" local="no">XmlParser.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classfrost_1_1core_1_1_xml_parser_1aed91cd49100867d70c82f401ace2609f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>frost::core::XmlParser::XmlParser</definition>
+        <argsstring>()=default</argsstring>
+        <name>XmlParser</name>
+        <qualifiedname>frost::core::XmlParser::XmlParser</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/Serial/XmlParser.h" line="14" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1core_1_1_xml_parser_1a1fe40916d0edd228fa00a986c11fdd9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void frost::core::XmlParser::SetParser</definition>
+        <argsstring>()</argsstring>
+        <name>SetParser</name>
+        <qualifiedname>frost::core::XmlParser::SetParser</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/Serial/XmlParser.h" line="17" column="6" bodyfile="src/Core/Serial/XmlParser.cpp" bodystart="27" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1core_1_1_xml_parser_1a52ec7c7e45a92713149db3f5f9b84fdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool frost::core::XmlParser::Parse</definition>
+        <argsstring>(const char *_FilePath)</argsstring>
+        <name>Parse</name>
+        <qualifiedname>frost::core::XmlParser::Parse</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>_FilePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/Serial/XmlParser.h" line="20" column="6" bodyfile="src/Core/Serial/XmlParser.cpp" bodystart="11" bodyend="25"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classfrost_1_1core_1_1_xml_parser_1a228d6851ba1fb613fa2ddda2b2e923b1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool frost::core::XmlParser::ParsePlayerNode</definition>
+        <argsstring>(rapidxml::xml_node&lt;&gt; *_XmlNode)</argsstring>
+        <name>ParsePlayerNode</name>
+        <qualifiedname>frost::core::XmlParser::ParsePlayerNode</qualifiedname>
+        <param>
+          <type>rapidxml::xml_node&lt;&gt; *</type>
+          <declname>_XmlNode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/Serial/XmlParser.h" line="23" column="6" bodyfile="src/Core/Serial/XmlParser.cpp" bodystart="47" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1core_1_1_xml_parser_1acad79558568dbfb452295e5f272686a2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool frost::core::XmlParser::ParseRootNode</definition>
+        <argsstring>(rapidxml::xml_document&lt;&gt; &amp;_XmlDoc)</argsstring>
+        <name>ParseRootNode</name>
+        <qualifiedname>frost::core::XmlParser::ParseRootNode</qualifiedname>
+        <param>
+          <type>rapidxml::xml_document&lt;&gt; &amp;</type>
+          <declname>_XmlDoc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/Serial/XmlParser.h" line="24" column="6" bodyfile="src/Core/Serial/XmlParser.cpp" bodystart="37" bodyend="45"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Core/Serial/XmlParser.h" line="9" column="1" bodyfile="include/Core/Serial/XmlParser.h" bodystart="10" bodyend="25"/>
+    <listofallmembers>
+      <member refid="classfrost_1_1core_1_1_xml_parser_1a52ec7c7e45a92713149db3f5f9b84fdc" prot="public" virt="non-virtual"><scope>frost::core::XmlParser</scope><name>Parse</name></member>
+      <member refid="classfrost_1_1core_1_1_xml_parser_1a228d6851ba1fb613fa2ddda2b2e923b1" prot="private" virt="non-virtual"><scope>frost::core::XmlParser</scope><name>ParsePlayerNode</name></member>
+      <member refid="classfrost_1_1core_1_1_xml_parser_1acad79558568dbfb452295e5f272686a2" prot="private" virt="non-virtual"><scope>frost::core::XmlParser</scope><name>ParseRootNode</name></member>
+      <member refid="classfrost_1_1core_1_1_xml_parser_1a1fe40916d0edd228fa00a986c11fdd9d" prot="public" virt="non-virtual"><scope>frost::core::XmlParser</scope><name>SetParser</name></member>
+      <member refid="classfrost_1_1core_1_1_xml_parser_1aed91cd49100867d70c82f401ace2609f" prot="public" virt="non-virtual"><scope>frost::core::XmlParser</scope><name>XmlParser</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

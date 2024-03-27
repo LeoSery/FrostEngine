@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="namespacefrost_1_1core" kind="namespace" language="C++">
+    <compoundname>frost::core</compoundname>
+    <innerclass refid="classfrost_1_1core_1_1_authorization_badge" prot="public">frost::core::AuthorizationBadge</innerclass>
+    <innerclass refid="classfrost_1_1core_1_1_buffer" prot="public">frost::core::Buffer</innerclass>
+    <innerclass refid="classfrost_1_1core_1_1_input" prot="public">frost::core::Input</innerclass>
+    <innerclass refid="classfrost_1_1core_1_1_render_device" prot="public">frost::core::RenderDevice</innerclass>
+    <innerclass refid="classfrost_1_1core_1_1_r_t_t_i" prot="public">frost::core::RTTI</innerclass>
+    <innerclass refid="structfrost_1_1core_1_1_s___animation_data" prot="public">frost::core::S_AnimationData</innerclass>
+    <innerclass refid="structfrost_1_1core_1_1_s___static_tile_data" prot="public">frost::core::S_StaticTileData</innerclass>
+    <innerclass refid="structfrost_1_1core_1_1_s___texture_data" prot="public">frost::core::S_TextureData</innerclass>
+    <innerclass refid="classfrost_1_1core_1_1_save" prot="public">frost::core::Save</innerclass>
+    <innerclass refid="classfrost_1_1core_1_1_scene" prot="public">frost::core::Scene</innerclass>
+    <innerclass refid="classfrost_1_1core_1_1_scene_manager" prot="public">frost::core::SceneManager</innerclass>
+    <innerclass refid="classfrost_1_1core_1_1_shader" prot="public">frost::core::Shader</innerclass>
+    <innerclass refid="classfrost_1_1core_1_1_signal" prot="public">frost::core::Signal</innerclass>
+    <innerclass refid="classfrost_1_1core_1_1_slot" prot="public">frost::core::Slot</innerclass>
+    <innerclass refid="classfrost_1_1core_1_1_texture" prot="public">frost::core::Texture</innerclass>
+    <innerclass refid="classfrost_1_1core_1_1_texture_manager" prot="public">frost::core::TextureManager</innerclass>
+    <innerclass refid="classfrost_1_1core_1_1_vertex_array_object" prot="public">frost::core::VertexArrayObject</innerclass>
+    <innerclass refid="classfrost_1_1core_1_1_window" prot="public">frost::core::Window</innerclass>
+    <innerclass refid="classfrost_1_1core_1_1_xml_parser" prot="public">frost::core::XmlParser</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Core/Input/Input.h" line="18" column="1"/>
+  </compounddef>
+</doxygen>

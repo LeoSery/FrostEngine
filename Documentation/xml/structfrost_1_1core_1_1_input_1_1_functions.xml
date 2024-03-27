@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structfrost_1_1core_1_1_input_1_1_functions" kind="struct" language="C++" prot="public">
+    <compoundname>frost::core::Input::Functions</compoundname>
+    <includes refid="_input_8h" local="no">Input.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structfrost_1_1core_1_1_input_1_1_functions_1af5280a65c750a0c92fd6862aed6d35a1" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structfrost_1_1core_1_1_input_1_1_object_function" kindref="compound">ObjectFunction</ref> &gt;</type>
+        <definition>std::vector&lt;ObjectFunction&gt; frost::core::Input::Functions::FunctionPressed</definition>
+        <argsstring></argsstring>
+        <name>FunctionPressed</name>
+        <qualifiedname>frost::core::Input::Functions::FunctionPressed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/Input/Input.h" line="170" column="12" bodyfile="include/Core/Input/Input.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfrost_1_1core_1_1_input_1_1_functions_1a8e30d936b04fb730131bd2874d6b1348" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structfrost_1_1core_1_1_input_1_1_object_function" kindref="compound">ObjectFunction</ref> &gt;</type>
+        <definition>std::vector&lt;ObjectFunction&gt; frost::core::Input::Functions::FunctionReleased</definition>
+        <argsstring></argsstring>
+        <name>FunctionReleased</name>
+        <qualifiedname>frost::core::Input::Functions::FunctionReleased</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/Input/Input.h" line="171" column="12" bodyfile="include/Core/Input/Input.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfrost_1_1core_1_1_input_1_1_functions_1a0b925020d8541e54a29810ba3a1ebb4d" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structfrost_1_1core_1_1_input_1_1_object_function" kindref="compound">ObjectFunction</ref> &gt;</type>
+        <definition>std::vector&lt;ObjectFunction&gt; frost::core::Input::Functions::FunctionOnGoing</definition>
+        <argsstring></argsstring>
+        <name>FunctionOnGoing</name>
+        <qualifiedname>frost::core::Input::Functions::FunctionOnGoing</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/Input/Input.h" line="172" column="12" bodyfile="include/Core/Input/Input.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Core/Input/Input.h" line="168" column="1" bodyfile="include/Core/Input/Input.h" bodystart="169" bodyend="173"/>
+    <listofallmembers>
+      <member refid="structfrost_1_1core_1_1_input_1_1_functions_1a0b925020d8541e54a29810ba3a1ebb4d" prot="public" virt="non-virtual"><scope>frost::core::Input::Functions</scope><name>FunctionOnGoing</name></member>
+      <member refid="structfrost_1_1core_1_1_input_1_1_functions_1af5280a65c750a0c92fd6862aed6d35a1" prot="public" virt="non-virtual"><scope>frost::core::Input::Functions</scope><name>FunctionPressed</name></member>
+      <member refid="structfrost_1_1core_1_1_input_1_1_functions_1a8e30d936b04fb730131bd2874d6b1348" prot="public" virt="non-virtual"><scope>frost::core::Input::Functions</scope><name>FunctionReleased</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

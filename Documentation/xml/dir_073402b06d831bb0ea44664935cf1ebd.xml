@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_073402b06d831bb0ea44664935cf1ebd" kind="dir">
+    <compoundname>include/ECS</compoundname>
+    <innerdir refid="dir_a2d385c6839e8c185073da6d6a72d057">include/ECS/Component</innerdir>
+    <innerdir refid="dir_46ce0b0270e77352f693c14d4e38e411">include/ECS/Entity</innerdir>
+    <innerdir refid="dir_65f0a7ca88ba6aa11b3101582b1e6c29">include/ECS/System</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/ECS/"/>
+  </compounddef>
+</doxygen>

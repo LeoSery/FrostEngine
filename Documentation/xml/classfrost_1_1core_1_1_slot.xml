@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classfrost_1_1core_1_1_slot" kind="class" language="C++" prot="public">
+    <compoundname>frost::core::Slot</compoundname>
+    <includes refid="_slot_8h" local="no">Slot.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename ...</type>
+        <declname>Args</declname>
+        <defname>Args</defname>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classfrost_1_1core_1_1_slot_1a0973353bc0bf6c78dc51b2482d69bbe5" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool frost::core::Slot&lt; Args &gt;::m_init</definition>
+        <argsstring></argsstring>
+        <name>m_init</name>
+        <qualifiedname>frost::core::Slot::m_init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/SignalSlot/Slot.h" line="30" column="14" bodyfile="include/Core/SignalSlot/Slot.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfrost_1_1core_1_1_slot_1a383aa35946bf4f3cf8e41dfecfef6c03" prot="private" static="no" mutable="no">
+        <type>std::function&lt; void(Args...)&gt;</type>
+        <definition>std::function&lt;void(Args...)&gt; frost::core::Slot&lt; Args &gt;::m_callback</definition>
+        <argsstring></argsstring>
+        <name>m_callback</name>
+        <qualifiedname>frost::core::Slot::m_callback</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/SignalSlot/Slot.h" line="31" column="23" bodyfile="include/Core/SignalSlot/Slot.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classfrost_1_1core_1_1_slot_1a33461063679cc57aacc713afcf0dcc68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>frost::core::Slot&lt; Args &gt;::Slot</definition>
+        <argsstring>(const Slot &amp;)=delete</argsstring>
+        <name>Slot</name>
+        <qualifiedname>frost::core::Slot::Slot</qualifiedname>
+        <param>
+          <type>const <ref refid="classfrost_1_1core_1_1_slot" kindref="compound">Slot</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/SignalSlot/Slot.h" line="13" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1core_1_1_slot_1a0977dae02fcf3c7ae79b43451a8d8e6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>frost::core::Slot&lt; Args &gt;::Slot</definition>
+        <argsstring>(Slot &amp;&amp;)=delete</argsstring>
+        <name>Slot</name>
+        <qualifiedname>frost::core::Slot::Slot</qualifiedname>
+        <param>
+          <type><ref refid="classfrost_1_1core_1_1_slot" kindref="compound">Slot</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/SignalSlot/Slot.h" line="14" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1core_1_1_slot_1ae357c24cc5a564870c55e4f9af6f9342" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classfrost_1_1core_1_1_slot" kindref="compound">Slot</ref> &amp;</type>
+        <definition>Slot &amp; frost::core::Slot&lt; Args &gt;::operator=</definition>
+        <argsstring>(const Slot &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>frost::core::Slot::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classfrost_1_1core_1_1_slot" kindref="compound">Slot</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/SignalSlot/Slot.h" line="15" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1core_1_1_slot_1ae4d4471a14a828281a16683142aa2846" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>frost::core::Slot&lt; Args &gt;::Slot</definition>
+        <argsstring>()</argsstring>
+        <name>Slot</name>
+        <qualifiedname>frost::core::Slot::Slot</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/SignalSlot/Slot.h" line="18" column="9" bodyfile="include/Core/SignalSlot/Slot.hxx" bodystart="8" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1core_1_1_slot_1a529281ee33d8e8204cb2a67f0d87e74d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>frost::core::Slot&lt; Args &gt;::Slot</definition>
+        <argsstring>(const std::function&lt; void(Args...)&gt; &amp;_Callback)</argsstring>
+        <name>Slot</name>
+        <qualifiedname>frost::core::Slot::Slot</qualifiedname>
+        <param>
+          <type>const std::function&lt; void(Args...)&gt; &amp;</type>
+          <declname>_Callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/SignalSlot/Slot.h" line="19" column="9" bodyfile="include/Core/SignalSlot/Slot.hxx" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1core_1_1_slot_1abef7a0209b4a3886fc60151236a744ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>frost::core::Slot&lt; Args &gt;::~Slot</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Slot</name>
+        <qualifiedname>frost::core::Slot::~Slot</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/SignalSlot/Slot.h" line="20" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1core_1_1_slot_1a9702a99b1d0d9fa4a59da08190c9b13b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void frost::core::Slot&lt; Args &gt;::operator()</definition>
+        <argsstring>(Args &amp;&amp;... _Parameters)</argsstring>
+        <name>operator()</name>
+        <qualifiedname>frost::core::Slot::operator()</qualifiedname>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>_Parameters</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/SignalSlot/Slot.h" line="23" column="14" bodyfile="include/Core/SignalSlot/Slot.hxx" bodystart="20" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1core_1_1_slot_1a8c1ee571dfdde225d4a175033a97cd34" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void frost::core::Slot&lt; Args &gt;::call</definition>
+        <argsstring>(Args &amp;&amp;... _Parameters)</argsstring>
+        <name>call</name>
+        <qualifiedname>frost::core::Slot::call</qualifiedname>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>_Parameters</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/SignalSlot/Slot.h" line="26" column="14" bodyfile="include/Core/SignalSlot/Slot.hxx" bodystart="26" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1core_1_1_slot_1a0dff0269bd7fa4f3c7ac61ed94f94504" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void frost::core::Slot&lt; Args &gt;::setSlotFunction</definition>
+        <argsstring>(std::function&lt; void(Args...)&gt; _Callback)</argsstring>
+        <name>setSlotFunction</name>
+        <qualifiedname>frost::core::Slot::setSlotFunction</qualifiedname>
+        <param>
+          <type>std::function&lt; void(Args...)&gt;</type>
+          <declname>_Callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/SignalSlot/Slot.h" line="27" column="14" bodyfile="include/Core/SignalSlot/Slot.hxx" bodystart="33" bodyend="37"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Core/SignalSlot/Slot.h" line="8" column="5" bodyfile="include/Core/SignalSlot/Slot.h" bodystart="9" bodyend="32"/>
+    <listofallmembers>
+      <member refid="classfrost_1_1core_1_1_slot_1a8c1ee571dfdde225d4a175033a97cd34" prot="public" virt="non-virtual"><scope>frost::core::Slot</scope><name>call</name></member>
+      <member refid="classfrost_1_1core_1_1_slot_1a383aa35946bf4f3cf8e41dfecfef6c03" prot="private" virt="non-virtual"><scope>frost::core::Slot</scope><name>m_callback</name></member>
+      <member refid="classfrost_1_1core_1_1_slot_1a0973353bc0bf6c78dc51b2482d69bbe5" prot="private" virt="non-virtual"><scope>frost::core::Slot</scope><name>m_init</name></member>
+      <member refid="classfrost_1_1core_1_1_slot_1a9702a99b1d0d9fa4a59da08190c9b13b" prot="public" virt="non-virtual"><scope>frost::core::Slot</scope><name>operator()</name></member>
+      <member refid="classfrost_1_1core_1_1_slot_1ae357c24cc5a564870c55e4f9af6f9342" prot="public" virt="non-virtual"><scope>frost::core::Slot</scope><name>operator=</name></member>
+      <member refid="classfrost_1_1core_1_1_slot_1a0dff0269bd7fa4f3c7ac61ed94f94504" prot="public" virt="non-virtual"><scope>frost::core::Slot</scope><name>setSlotFunction</name></member>
+      <member refid="classfrost_1_1core_1_1_slot_1a33461063679cc57aacc713afcf0dcc68" prot="public" virt="non-virtual"><scope>frost::core::Slot</scope><name>Slot</name></member>
+      <member refid="classfrost_1_1core_1_1_slot_1a0977dae02fcf3c7ae79b43451a8d8e6a" prot="public" virt="non-virtual"><scope>frost::core::Slot</scope><name>Slot</name></member>
+      <member refid="classfrost_1_1core_1_1_slot_1ae4d4471a14a828281a16683142aa2846" prot="public" virt="non-virtual"><scope>frost::core::Slot</scope><name>Slot</name></member>
+      <member refid="classfrost_1_1core_1_1_slot_1a529281ee33d8e8204cb2a67f0d87e74d" prot="public" virt="non-virtual"><scope>frost::core::Slot</scope><name>Slot</name></member>
+      <member refid="classfrost_1_1core_1_1_slot_1abef7a0209b4a3886fc60151236a744ea" prot="public" virt="non-virtual"><scope>frost::core::Slot</scope><name>~Slot</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classfrost_1_1core_1_1_authorization_badge" kind="class" language="C++" prot="public">
+    <compoundname>frost::core::AuthorizationBadge</compoundname>
+    <includes refid="_authorization_badge_8h" local="no">AuthorizationBadge.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename <ref refid="classfrost_1_1core_1_1_authorization_badge_1a1f85751fe4ef9f1e73afed95c5a6e739" kindref="member">T</ref></type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classfrost_1_1core_1_1_authorization_badge_1a1f85751fe4ef9f1e73afed95c5a6e739" prot="private" static="no" mutable="no">
+        <type>friend</type>
+        <definition>friend frost::core::AuthorizationBadge&lt; T &gt;::T</definition>
+        <argsstring></argsstring>
+        <name>T</name>
+        <qualifiedname>frost::core::AuthorizationBadge::T</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/Internal/AuthorizationBadge.h" line="8" column="8" bodyfile="include/Core/Internal/AuthorizationBadge.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classfrost_1_1core_1_1_authorization_badge_1adf284dd2476ce8f6b4b01e4a2a625ac0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>frost::core::AuthorizationBadge&lt; T &gt;::AuthorizationBadge</definition>
+        <argsstring>()</argsstring>
+        <name>AuthorizationBadge</name>
+        <qualifiedname>frost::core::AuthorizationBadge::AuthorizationBadge</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/Internal/AuthorizationBadge.h" line="9" column="1" bodyfile="include/Core/Internal/AuthorizationBadge.h" bodystart="9" bodyend="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Core/Internal/AuthorizationBadge.h" line="6" column="1" bodyfile="include/Core/Internal/AuthorizationBadge.h" bodystart="7" bodyend="10"/>
+    <listofallmembers>
+      <member refid="classfrost_1_1core_1_1_authorization_badge_1adf284dd2476ce8f6b4b01e4a2a625ac0" prot="private" virt="non-virtual"><scope>frost::core::AuthorizationBadge</scope><name>AuthorizationBadge</name></member>
+      <member refid="classfrost_1_1core_1_1_authorization_badge_1a1f85751fe4ef9f1e73afed95c5a6e739" prot="private" virt="non-virtual"><scope>frost::core::AuthorizationBadge</scope><name>T</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

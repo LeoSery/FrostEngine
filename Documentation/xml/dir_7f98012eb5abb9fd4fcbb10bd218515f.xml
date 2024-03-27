@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_7f98012eb5abb9fd4fcbb10bd218515f" kind="dir">
+    <compoundname>include/Core/Serial</compoundname>
+    <innerfile refid="_save_8h">Save.h</innerfile>
+    <innerfile refid="_texture_manager_8h">TextureManager.h</innerfile>
+    <innerfile refid="_xml_parser_8h">XmlParser.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Core/Serial/"/>
+  </compounddef>
+</doxygen>

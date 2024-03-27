@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structfrost_1_1utils_1_1_logger_1_1_s___log_data" kind="struct" language="C++" prot="private">
+    <compoundname>frost::utils::Logger::S_LogData</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structfrost_1_1utils_1_1_logger_1_1_s___log_data_1a28ab5f7fd849893384d7567c69191428" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacefrost_1_1utils_1ac08ad1f31b7b88124893b9c467840d30" kindref="member">E_LogType</ref></type>
+        <definition>E_LogType frost::utils::Logger::S_LogData::logType</definition>
+        <argsstring></argsstring>
+        <name>logType</name>
+        <qualifiedname>frost::utils::Logger::S_LogData::logType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Utils/Logger.h" line="45" column="11" bodyfile="include/Utils/Logger.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfrost_1_1utils_1_1_logger_1_1_s___log_data_1ad5a96adf8e1be7cba693c8137a0bdfb8" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string frost::utils::Logger::S_LogData::logContent</definition>
+        <argsstring></argsstring>
+        <name>logContent</name>
+        <qualifiedname>frost::utils::Logger::S_LogData::logContent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Utils/Logger.h" line="46" column="13" bodyfile="include/Utils/Logger.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Utils/Logger.h" line="43" column="1" bodyfile="include/Utils/Logger.h" bodystart="44" bodyend="47"/>
+    <listofallmembers>
+      <member refid="structfrost_1_1utils_1_1_logger_1_1_s___log_data_1ad5a96adf8e1be7cba693c8137a0bdfb8" prot="public" virt="non-virtual"><scope>frost::utils::Logger::S_LogData</scope><name>logContent</name></member>
+      <member refid="structfrost_1_1utils_1_1_logger_1_1_s___log_data_1a28ab5f7fd849893384d7567c69191428" prot="public" virt="non-virtual"><scope>frost::utils::Logger::S_LogData</scope><name>logType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

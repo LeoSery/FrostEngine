@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_05cc9ef8bd3f8306bc335cbc3ae5be6c" kind="dir">
+    <compoundname>include/ECS/Component/Components</compoundname>
+    <innerfile refid="_box_collider_8h">BoxCollider.h</innerfile>
+    <innerfile refid="_sprite_renderer_8h">SpriteRenderer.h</innerfile>
+    <innerfile refid="_transform_8h">Transform.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/ECS/Component/Components/"/>
+  </compounddef>
+</doxygen>

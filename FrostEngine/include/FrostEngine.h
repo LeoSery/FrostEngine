@@ -1,5 +1,13 @@
 #pragma once
 
+/*!
+* \file FrostEngine.cpp
+* \brief Main file for the FrostEngine.
+*
+* \details This file contains the main methods for the FrostEngine, such as the engine's initialization, main loop and shutdown.
+* It also contains the methods for updating GameObjects, physics and rendering.
+*/
+
 #include "ECS/Component/Components/SpriteRenderer.h"
 #include "ECS/Component/Components/BoxCollider.h"
 
@@ -16,8 +24,23 @@
 #include <chrono>
 #include <thread>
 
+
+/*!
+ * \namespace FrostEngine
+ *
+ * \brief The main namespace for the FrostEngine.
+ *
+ * \details FrostEngine is the engine's main namespace and contains the engine's
+ * update loop for updating GameObjects, physics and OpenGL rendering.
+ */
 namespace FrostEngine
 {
+	/*
+	* \class Application
+	* \brief Main engine class that initializes/shuts down the different engine modules,
+	* runs the main loop for updating physics, GameObjects and rendering,
+	* and all the components on which they depend.
+	*/
 	class FROST_ENGINE_API Application
 	{
 	protected:
@@ -37,7 +60,7 @@ namespace FrostEngine
 
 		// Methods
 		virtual void Init() = 0;
-		void Init(const InitData& data);
+		void Init(const InitData& _data);
 		virtual void Update(float deltaTime) = 0;
 		virtual void Shutdown();
 		void Run();
@@ -49,7 +72,14 @@ namespace FrostEngine
 		std::vector<frost::ECS::GameObject*> ObjectsToUpdate;
 	};
 
-	// Engine life cycle
+	/*
+	* \brief Macro for creating an application class.
+	* \fn int main(int argc, char** argv) FROST_APPLICATION(ApplicationClass)
+	* 
+	* \details this macro retrieves the class created by the user and inherited from the engine,
+	* so that the engine's lifecycle methods can be used on the class passed as the scope of the
+	* 'FROST_APPLICATION(ApplicationClass)' macro.
+	*/
 #define FROST_APPLICATION(ApplicationClass) \
 	int main(int argc, char** argv) \
 	{ \

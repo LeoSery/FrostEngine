@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structfrost_1_1core_1_1_window_1_1_internal" kind="struct" language="C++" prot="public">
+    <compoundname>frost::core::Window::Internal</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structfrost_1_1core_1_1_window_1_1_internal_1a8d7379254d57c9aa09806a16d2b990c1" prot="public" static="no" mutable="no">
+        <type>GLFWwindow *</type>
+        <definition>GLFWwindow* frost::core::Window::Internal::window</definition>
+        <argsstring></argsstring>
+        <name>window</name>
+        <qualifiedname>frost::core::Window::Internal::window</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Core/Window.cpp" line="10" column="12" bodyfile="src/Core/Window.cpp" bodystart="10" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Core/Window.cpp" line="8" column="1" bodyfile="src/Core/Window.cpp" bodystart="9" bodyend="11"/>
+    <listofallmembers>
+      <member refid="structfrost_1_1core_1_1_window_1_1_internal_1a8d7379254d57c9aa09806a16d2b990c1" prot="public" virt="non-virtual"><scope>frost::core::Window::Internal</scope><name>window</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
