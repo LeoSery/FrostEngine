@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_signal_8h" kind="file" language="C++">
+    <compoundname>Signal.h</compoundname>
+    <includes refid="_slot_8h" local="yes">Core/SignalSlot/Slot.h</includes>
+    <includes local="no">vector</includes>
+    <includes refid="_signal_8hxx" local="yes">Core/SignalSlot/Signal.hxx</includes>
+    <includedby refid="_signal_8hxx" local="yes">include/Core/SignalSlot/Signal.hxx</includedby>
+    <includedby refid="_render_device_8cpp" local="yes">src/Render/RenderDevice.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/Core/SignalSlot/Signal.h</label>
+        <link refid="_signal_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Core/SignalSlot/Signal.hxx</label>
+        <link refid="_signal_8hxx"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Core/SignalSlot/Slot.h</label>
+        <link refid="_slot_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Core/SignalSlot/Slot.hxx</label>
+        <link refid="_slot_8hxx"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>functional</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/Core/SignalSlot/Signal.h</label>
+        <link refid="_signal_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/Core/SignalSlot/Signal.hxx</label>
+        <link refid="_signal_8hxx"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/Render/RenderDevice.cpp</label>
+        <link refid="_render_device_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classfrost_1_1core_1_1_signal" prot="public">frost::core::Signal</innerclass>
+    <innernamespace refid="namespacefrost">frost</innernamespace>
+    <innernamespace refid="namespacefrost_1_1core">frost::core</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_slot_8h" kindref="compound">Core/SignalSlot/Slot.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacefrost_1_1core" kindref="compound">frost::core</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>...Args&gt;</highlight></codeline>
+<codeline lineno="10" refid="classfrost_1_1core_1_1_signal" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classfrost_1_1core_1_1_signal" kindref="compound">Signal</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Disabling<sp/>default<sp/>constructors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="classfrost_1_1core_1_1_signal_1ae9c78b879942622626fd02c4ffa7f9f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_signal_1ae9c78b879942622626fd02c4ffa7f9f7" kindref="member">Signal</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_signal" kindref="compound">Signal</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="16" refid="classfrost_1_1core_1_1_signal_1a4b1168600225cc01f9149249d3c42ed2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_signal_1a4b1168600225cc01f9149249d3c42ed2" kindref="member">Signal</ref>(<ref refid="classfrost_1_1core_1_1_signal" kindref="compound">Signal</ref>&amp;&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="17" refid="classfrost_1_1core_1_1_signal_1a240eb7459df6a092c225187b2875a6a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_signal" kindref="compound">Signal</ref>&amp;<sp/><ref refid="classfrost_1_1core_1_1_signal_1a240eb7459df6a092c225187b2875a6a1" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_signal" kindref="compound">Signal</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Constructor<sp/>and<sp/>Destructors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="classfrost_1_1core_1_1_signal_1a9f55548d5fd77fcbf001d9f5313bc011" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_signal_1a9f55548d5fd77fcbf001d9f5313bc011" kindref="member">Signal</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21" refid="classfrost_1_1core_1_1_signal_1a566db0d19cb050a2ee098c3daf33849e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_signal_1a566db0d19cb050a2ee098c3daf33849e" kindref="member">~Signal</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Methods</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_signal_1ab7df8faaf22330578bd0037b363e22fe" kindref="member">Connect</ref>(<ref refid="classfrost_1_1core_1_1_slot" kindref="compound">Slot&lt;Args...&gt;</ref>&amp;<sp/>_Slot);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_signal_1a29ec325e767d863452dafdaee5003af2" kindref="member">Disconnect</ref>(<ref refid="classfrost_1_1core_1_1_slot" kindref="compound">Slot&lt;Args...&gt;</ref>&amp;<sp/>_Slot);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_signal_1a29ec325e767d863452dafdaee5003af2" kindref="member">Disconnect</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_signal_1a726de81a5f75b6ea5a5468a45f8d6221" kindref="member">Emit</ref>(Args&amp;&amp;...<sp/>_Parameters);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Operators</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_signal_1a95a904b20c5f52ef623edaaf14bce0d8" kindref="member">operator()</ref>(Args&amp;&amp;...<sp/>_Parameters);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33" refid="classfrost_1_1core_1_1_signal_1a4c85348fd61d64fa7950d4e795e0726e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;<ref refid="classfrost_1_1core_1_1_slot" kindref="compound">Slot</ref>&lt;Args...&gt;*&gt;<sp/><ref refid="classfrost_1_1core_1_1_signal_1a4c85348fd61d64fa7950d4e795e0726e" kindref="member">m_connectedSlots</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_signal_8hxx" kindref="compound">Core/SignalSlot/Signal.hxx</ref>&quot;</highlight></codeline>
+    </programlisting>
+    <location file="include/Core/SignalSlot/Signal.h"/>
+  </compounddef>
+</doxygen>

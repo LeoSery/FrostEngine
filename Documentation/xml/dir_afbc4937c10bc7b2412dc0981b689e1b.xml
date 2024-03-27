@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_afbc4937c10bc7b2412dc0981b689e1b" kind="dir">
+    <compoundname>include/Render</compoundname>
+    <innerfile refid="_buffer_8h">Buffer.h</innerfile>
+    <innerfile refid="_render_device_8h">RenderDevice.h</innerfile>
+    <innerfile refid="_shader_8h">Shader.h</innerfile>
+    <innerfile refid="_texture_8h">Texture.h</innerfile>
+    <innerfile refid="_vertex_array_object_8h">VertexArrayObject.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Render/"/>
+  </compounddef>
+</doxygen>

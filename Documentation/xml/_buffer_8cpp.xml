@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_buffer_8cpp" kind="file" language="C++">
+    <compoundname>Buffer.cpp</compoundname>
+    <includes refid="_buffer_8h" local="yes">Render/Buffer.h</includes>
+    <includes local="yes">GL/glew.h</includes>
+    <includes local="yes">GLFW/glfw3.h</includes>
+    <includes local="no">iostream</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>Core/Export.h</label>
+        <link refid="_export_8h"/>
+      </node>
+      <node id="2">
+        <label>Render/Buffer.h</label>
+        <link refid="_buffer_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/Render/Buffer.cpp</label>
+        <link refid="_buffer_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="6">
+        <label>GLFW/glfw3.h</label>
+      </node>
+      <node id="7">
+        <label>iostream</label>
+      </node>
+      <node id="4">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structfrost_1_1core_1_1_buffer_1_1_internal" prot="public">frost::core::Buffer::Internal</innerclass>
+    <innernamespace refid="namespacefrost">frost</innernamespace>
+    <innernamespace refid="namespacefrost_1_1core">frost::core</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_buffer_8h" kindref="compound">Render/Buffer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GL/glew.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GLFW/glfw3.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacefrost_1_1core" kindref="compound">frost::core</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="structfrost_1_1core_1_1_buffer_1_1_internal" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfrost_1_1core_1_1_buffer_1_1_internal" kindref="compound">Buffer::Internal</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="12" refid="structfrost_1_1core_1_1_buffer_1_1_internal_1ab84a6d161efaece3ec064d0bfc27e7ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GLuint<sp/><ref refid="structfrost_1_1core_1_1_buffer_1_1_internal_1ab84a6d161efaece3ec064d0bfc27e7ba" kindref="member">m_gl_ID</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="classfrost_1_1core_1_1_buffer_1a0184cd087b1e4dee984b0f817073e2b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_buffer_1a0184cd087b1e4dee984b0f817073e2b5" kindref="member">Buffer::Buffer</ref>()</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:m_internal(new<sp/><ref refid="structfrost_1_1core_1_1_buffer_1_1_internal" kindref="compound">Internal</ref>)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>{}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="classfrost_1_1core_1_1_buffer_1a8d58506537292319e1868a02ed9fcb25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_buffer_1a8d58506537292319e1868a02ed9fcb25" kindref="member">Buffer::~Buffer</ref>()</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>{}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classfrost_1_1core_1_1_buffer_1ad0fbde8938604ff7dde4eacaba3b65c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_buffer_1ad0fbde8938604ff7dde4eacaba3b65c4" kindref="member">Buffer::CreateData</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>data,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glCreateBuffers(1,<sp/>&amp;<ref refid="classfrost_1_1core_1_1_buffer_1a9d9a0f5e303ac5d61fc1bba4b7fb6aed" kindref="member">m_internal</ref>-&gt;m_gl_ID);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glNamedBufferStorage(<ref refid="classfrost_1_1core_1_1_buffer_1a9d9a0f5e303ac5d61fc1bba4b7fb6aed" kindref="member">m_internal</ref>-&gt;m_gl_ID,<sp/>size,<sp/>data,<sp/>0);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;<ref refid="classfrost_1_1core_1_1_buffer_1a05649a462b41a3c0cf9e8341715fdfd3" kindref="member">GetBufferID</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classfrost_1_1core_1_1_buffer_1a05649a462b41a3c0cf9e8341715fdfd3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_buffer_1a05649a462b41a3c0cf9e8341715fdfd3" kindref="member">Buffer::GetBufferID</ref>()</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_buffer_1a9d9a0f5e303ac5d61fc1bba4b7fb6aed" kindref="member">m_internal</ref>-&gt;m_gl_ID;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/Render/Buffer.cpp"/>
+  </compounddef>
+</doxygen>

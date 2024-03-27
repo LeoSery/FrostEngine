@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classfrost_1_1utils_1_1_logger" kind="class" language="C++" prot="public">
+    <compoundname>frost::utils::Logger</compoundname>
+    <includes refid="_logger_8h" local="no">Logger.h</includes>
+    <innerclass refid="structfrost_1_1utils_1_1_logger_1_1_s___log_data" prot="private">frost::utils::Logger::S_LogData</innerclass>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classfrost_1_1utils_1_1_logger_1a7d86e9ecf97ad07afe1969f9ed0c209a" prot="private" static="yes" mutable="no">
+        <type><ref refid="classfrost_1_1utils_1_1_logger" kindref="compound">Logger</ref> *</type>
+        <definition>Logger * frost::utils::Logger::m_instance</definition>
+        <argsstring></argsstring>
+        <name>m_instance</name>
+        <qualifiedname>frost::utils::Logger::m_instance</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Utils/Logger.h" line="49" column="15" bodyfile="include/Utils/Logger.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classfrost_1_1utils_1_1_logger_1a45e6c9c6565e37b9732b213b41ce4c19" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structfrost_1_1utils_1_1_logger_1_1_s___log_data" kindref="compound">S_LogData</ref> &gt;</type>
+        <definition>std::vector&lt;S_LogData&gt; frost::utils::Logger::m_logStack</definition>
+        <argsstring></argsstring>
+        <name>m_logStack</name>
+        <qualifiedname>frost::utils::Logger::m_logStack</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Utils/Logger.h" line="50" column="13" bodyfile="include/Utils/Logger.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfrost_1_1utils_1_1_logger_1a0a8e660f359fd246c552db3664b30fbf" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool frost::utils::Logger::m_showLogError</definition>
+        <argsstring></argsstring>
+        <name>m_showLogError</name>
+        <qualifiedname>frost::utils::Logger::m_showLogError</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Utils/Logger.h" line="51" column="6" bodyfile="include/Utils/Logger.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfrost_1_1utils_1_1_logger_1a78734d9fcbe965e9e0efb7df3650a2e6" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool frost::utils::Logger::m_showLogWarning</definition>
+        <argsstring></argsstring>
+        <name>m_showLogWarning</name>
+        <qualifiedname>frost::utils::Logger::m_showLogWarning</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Utils/Logger.h" line="52" column="6" bodyfile="include/Utils/Logger.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfrost_1_1utils_1_1_logger_1a9e1ece8abbb7af9d1927bad7a3109679" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool frost::utils::Logger::m_showLogInfo</definition>
+        <argsstring></argsstring>
+        <name>m_showLogInfo</name>
+        <qualifiedname>frost::utils::Logger::m_showLogInfo</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Utils/Logger.h" line="53" column="6" bodyfile="include/Utils/Logger.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classfrost_1_1utils_1_1_logger_1acb49ea9d169be26018438483455ea2d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>frost::utils::Logger::Logger</definition>
+        <argsstring>()</argsstring>
+        <name>Logger</name>
+        <qualifiedname>frost::utils::Logger::Logger</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Utils/Logger.h" line="22" column="1" bodyfile="src/Utils/Logger.cpp" bodystart="9" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1utils_1_1_logger_1a31bb560f520fb6811ea8ef5c3ac3ca3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>frost::utils::Logger::~Logger</definition>
+        <argsstring>()</argsstring>
+        <name>~Logger</name>
+        <qualifiedname>frost::utils::Logger::~Logger</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Utils/Logger.h" line="23" column="1" bodyfile="src/Utils/Logger.cpp" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1utils_1_1_logger_1a49af0a8da8bd5c5222e7f4474c1ecaf2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void frost::utils::Logger::Log</definition>
+        <argsstring>(E_LogType _Type, const std::string &amp;_Content)</argsstring>
+        <name>Log</name>
+        <qualifiedname>frost::utils::Logger::Log</qualifiedname>
+        <param>
+          <type><ref refid="namespacefrost_1_1utils_1ac08ad1f31b7b88124893b9c467840d30" kindref="member">E_LogType</ref></type>
+          <declname>_Type</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>_Content</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Utils/Logger.h" line="26" column="6" bodyfile="src/Utils/Logger.cpp" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1utils_1_1_logger_1a9ebe619cce25c88017f6d968eb9376af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void frost::utils::Logger::Show</definition>
+        <argsstring>()</argsstring>
+        <name>Show</name>
+        <qualifiedname>frost::utils::Logger::Show</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Utils/Logger.h" line="27" column="6" bodyfile="src/Utils/Logger.cpp" bodystart="24" bodyend="33"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classfrost_1_1utils_1_1_logger_1aa9492b991b4583aae82fef8368730aa5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void frost::utils::Logger::LogInfo</definition>
+        <argsstring>(const std::string &amp;_Content)</argsstring>
+        <name>LogInfo</name>
+        <qualifiedname>frost::utils::Logger::LogInfo</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>_Content</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Utils/Logger.h" line="30" column="13" bodyfile="src/Utils/Logger.cpp" bodystart="35" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1utils_1_1_logger_1aad1c2e3c78b39231d2019dc0843cca72" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void frost::utils::Logger::LogWarning</definition>
+        <argsstring>(const std::string &amp;_Content)</argsstring>
+        <name>LogWarning</name>
+        <qualifiedname>frost::utils::Logger::LogWarning</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>_Content</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Utils/Logger.h" line="31" column="13" bodyfile="src/Utils/Logger.cpp" bodystart="40" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1utils_1_1_logger_1af7995344e912027c72c20e6c7a8108be" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void frost::utils::Logger::LogError</definition>
+        <argsstring>(const std::string &amp;_Content)</argsstring>
+        <name>LogError</name>
+        <qualifiedname>frost::utils::Logger::LogError</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>_Content</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Utils/Logger.h" line="32" column="13" bodyfile="src/Utils/Logger.cpp" bodystart="45" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1utils_1_1_logger_1a2d6186fe376f325ca9fbc37c6672d6bf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classfrost_1_1utils_1_1_logger" kindref="compound">Logger</ref> *</type>
+        <definition>Logger * frost::utils::Logger::GetInstance</definition>
+        <argsstring>()</argsstring>
+        <name>GetInstance</name>
+        <qualifiedname>frost::utils::Logger::GetInstance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Utils/Logger.h" line="39" column="16" bodyfile="src/Utils/Logger.cpp" bodystart="50" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1utils_1_1_logger_1a5d287cd826d0847f8216b9682e82c023" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void frost::utils::Logger::DeleteInstance</definition>
+        <argsstring>()</argsstring>
+        <name>DeleteInstance</name>
+        <qualifiedname>frost::utils::Logger::DeleteInstance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Utils/Logger.h" line="40" column="13" bodyfile="src/Utils/Logger.cpp" bodystart="58" bodyend="65"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>frost::utils::Logger</label>
+        <link refid="classfrost_1_1utils_1_1_logger"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>m_instance</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/Utils/Logger.h" line="17" column="1" bodyfile="include/Utils/Logger.h" bodystart="18" bodyend="54"/>
+    <listofallmembers>
+      <member refid="classfrost_1_1utils_1_1_logger_1a5d287cd826d0847f8216b9682e82c023" prot="public" virt="non-virtual"><scope>frost::utils::Logger</scope><name>DeleteInstance</name></member>
+      <member refid="classfrost_1_1utils_1_1_logger_1a2d6186fe376f325ca9fbc37c6672d6bf" prot="public" virt="non-virtual"><scope>frost::utils::Logger</scope><name>GetInstance</name></member>
+      <member refid="classfrost_1_1utils_1_1_logger_1a49af0a8da8bd5c5222e7f4474c1ecaf2" prot="public" virt="non-virtual"><scope>frost::utils::Logger</scope><name>Log</name></member>
+      <member refid="classfrost_1_1utils_1_1_logger_1af7995344e912027c72c20e6c7a8108be" prot="public" virt="non-virtual"><scope>frost::utils::Logger</scope><name>LogError</name></member>
+      <member refid="classfrost_1_1utils_1_1_logger_1acb49ea9d169be26018438483455ea2d5" prot="public" virt="non-virtual"><scope>frost::utils::Logger</scope><name>Logger</name></member>
+      <member refid="classfrost_1_1utils_1_1_logger_1aa9492b991b4583aae82fef8368730aa5" prot="public" virt="non-virtual"><scope>frost::utils::Logger</scope><name>LogInfo</name></member>
+      <member refid="classfrost_1_1utils_1_1_logger_1aad1c2e3c78b39231d2019dc0843cca72" prot="public" virt="non-virtual"><scope>frost::utils::Logger</scope><name>LogWarning</name></member>
+      <member refid="classfrost_1_1utils_1_1_logger_1a7d86e9ecf97ad07afe1969f9ed0c209a" prot="private" virt="non-virtual"><scope>frost::utils::Logger</scope><name>m_instance</name></member>
+      <member refid="classfrost_1_1utils_1_1_logger_1a45e6c9c6565e37b9732b213b41ce4c19" prot="private" virt="non-virtual"><scope>frost::utils::Logger</scope><name>m_logStack</name></member>
+      <member refid="classfrost_1_1utils_1_1_logger_1a0a8e660f359fd246c552db3664b30fbf" prot="private" virt="non-virtual"><scope>frost::utils::Logger</scope><name>m_showLogError</name></member>
+      <member refid="classfrost_1_1utils_1_1_logger_1a9e1ece8abbb7af9d1927bad7a3109679" prot="private" virt="non-virtual"><scope>frost::utils::Logger</scope><name>m_showLogInfo</name></member>
+      <member refid="classfrost_1_1utils_1_1_logger_1a78734d9fcbe965e9e0efb7df3650a2e6" prot="private" virt="non-virtual"><scope>frost::utils::Logger</scope><name>m_showLogWarning</name></member>
+      <member refid="classfrost_1_1utils_1_1_logger_1a9ebe619cce25c88017f6d968eb9376af" prot="public" virt="non-virtual"><scope>frost::utils::Logger</scope><name>Show</name></member>
+      <member refid="classfrost_1_1utils_1_1_logger_1a31bb560f520fb6811ea8ef5c3ac3ca3a" prot="public" virt="non-virtual"><scope>frost::utils::Logger</scope><name>~Logger</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

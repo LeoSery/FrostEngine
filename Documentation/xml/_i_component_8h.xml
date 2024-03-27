@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_i_component_8h" kind="file" language="C++">
+    <compoundname>IComponent.h</compoundname>
+    <includes refid="_r_t_t_i_8h" local="yes">Core/Internal/RTTI.h</includes>
+    <includes refid="_export_8h" local="yes">Core/export.h</includes>
+    <includes local="yes">stduuid/uuid.h</includes>
+    <includedby refid="_box_collider_8h" local="yes">include/ECS/Component/Components/BoxCollider.h</includedby>
+    <includedby refid="_sprite_renderer_8h" local="yes">include/ECS/Component/Components/SpriteRenderer.h</includedby>
+    <includedby refid="_transform_8h" local="yes">include/ECS/Component/Components/Transform.h</includedby>
+    <includedby refid="_i_component_8cpp" local="yes">src/ECS/Component/IComponent.cpp</includedby>
+    <includedby refid="_game_object_8cpp" local="yes">src/ECS/GameObject.cpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>Core/export.h</label>
+        <link refid="_export_8h"/>
+      </node>
+      <node id="2">
+        <label>Core/Internal/RTTI.h</label>
+        <link refid="_r_t_t_i_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/ECS/Component/IComponent.h</label>
+        <link refid="_i_component_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stduuid/uuid.h</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="11">
+        <label>include/Core/SceneManagement/Scene.h</label>
+        <link refid="_scene_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>include/Core/SceneManagement/SceneManager.h</label>
+        <link refid="_scene_manager_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/ECS/Component/Components/BoxCollider.h</label>
+        <link refid="_box_collider_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>include/ECS/Component/Components/SpriteRenderer.h</label>
+        <link refid="_sprite_renderer_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>include/ECS/Component/Components/Transform.h</label>
+        <link refid="_transform_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/ECS/Component/IComponent.h</label>
+        <link refid="_i_component_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>include/ECS/Entity/GameObject.h</label>
+        <link refid="_game_object_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>include/ECS/Entity/GameObject.hxx</label>
+        <link refid="_game_object_8hxx"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>include/Editor/Editor.h</label>
+        <link refid="_editor_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>include/FrostEngine.h</label>
+        <link refid="_frost_engine_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>src/Core/Scene.cpp</label>
+        <link refid="_scene_8cpp"/>
+      </node>
+      <node id="14">
+        <label>src/Core/SceneManager.cpp</label>
+        <link refid="_scene_manager_8cpp"/>
+      </node>
+      <node id="5">
+        <label>src/ECS/Component/Components/BoxCollider.cpp</label>
+        <link refid="_box_collider_8cpp"/>
+      </node>
+      <node id="8">
+        <label>src/ECS/Component/Components/SpriteRenderer.cpp</label>
+        <link refid="_sprite_renderer_8cpp"/>
+      </node>
+      <node id="19">
+        <label>src/ECS/Component/Components/Transform.cpp</label>
+        <link refid="_transform_8cpp"/>
+      </node>
+      <node id="18">
+        <label>src/ECS/Component/IComponent.cpp</label>
+        <link refid="_i_component_8cpp"/>
+      </node>
+      <node id="15">
+        <label>src/ECS/GameObject.cpp</label>
+        <link refid="_game_object_8cpp"/>
+      </node>
+      <node id="6">
+        <label>src/Editor/Editor.cpp</label>
+        <link refid="_editor_8cpp"/>
+      </node>
+      <node id="4">
+        <label>src/FrostEngine.cpp</label>
+        <link refid="_frost_engine_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classfrost_1_1_e_c_s_1_1_i_component" prot="public">frost::ECS::IComponent</innerclass>
+    <innernamespace refid="namespacefrost">frost</innernamespace>
+    <innernamespace refid="namespacefrost_1_1_e_c_s">frost::ECS</innernamespace>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="_i_component_8h_1af945b5de700ba8bed8687b77383ed4f2" prot="public" static="no">
+        <name>UUID_SYSTEM_GENERATOR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Component/IComponent.h" line="6" column="9" bodyfile="include/ECS/Component/IComponent.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_r_t_t_i_8h" kindref="compound">Core/Internal/RTTI.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_export_8h" kindref="compound">Core/export.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="_i_component_8h_1af945b5de700ba8bed8687b77383ed4f2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UUID_SYSTEM_GENERATOR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;stduuid/uuid.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacefrost_1_1_e_c_s" kindref="compound">frost::ECS</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">GameObject;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="classfrost_1_1_e_c_s_1_1_i_component" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="_export_8h_1a76e8ddc2fd5dcbd64bb60019fb4f0e30" kindref="member">FROST_ENGINE_API</ref><sp/><ref refid="classfrost_1_1_e_c_s_1_1_i_component" kindref="compound">IComponent</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_r_t_t_i" kindref="compound">core::RTTI</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="15" refid="classfrost_1_1_e_c_s_1_1_i_component_1a15ede560c92670c8f07329c3aba756f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1_e_c_s_1_1_i_component_1a15ede560c92670c8f07329c3aba756f7" kindref="member">FROST_DEFINE_RTTI</ref>(<ref refid="classfrost_1_1_e_c_s_1_1_i_component" kindref="compound">IComponent</ref>);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Constructors<sp/>and<sp/>destructors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="classfrost_1_1_e_c_s_1_1_i_component_1ae8ccddcb37fe3aa6b23f072dc135b5c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1_e_c_s_1_1_i_component_1ae8ccddcb37fe3aa6b23f072dc135b5c6" kindref="member">IComponent</ref>()<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1_e_c_s_1_1_i_component" kindref="compound">IComponent</ref>(<ref refid="classfrost_1_1_e_c_s_1_1_game_object" kindref="compound">GameObject</ref>&amp;<sp/>_GameObject);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1_e_c_s_1_1_i_component" kindref="compound">~IComponent</ref>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Frost<sp/>engine<sp/>life<sp/>cycle<sp/>methods</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="classfrost_1_1_e_c_s_1_1_i_component_1ac6fbd116991fc86765ca2e07db086a02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1_e_c_s_1_1_i_component_1ac6fbd116991fc86765ca2e07db086a02" kindref="member">Start</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="27" refid="classfrost_1_1_e_c_s_1_1_i_component_1a45e8fc1c29ec737a38994109c69a0806" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1_e_c_s_1_1_i_component_1a45e8fc1c29ec737a38994109c69a0806" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>_DeltaTime)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="28" refid="classfrost_1_1_e_c_s_1_1_i_component_1ab405ccdb0c52b3ce8209fc956f88226f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1_e_c_s_1_1_i_component_1ab405ccdb0c52b3ce8209fc956f88226f" kindref="member">Destroy</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Getters<sp/>and<sp/>setters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>IsActive()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SetActive(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>_IsActive);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>uuids::uuid<sp/>GetUUID()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classfrost_1_1_e_c_s_1_1_game_object" kindref="compound">GameObject</ref>&amp;<sp/>GetParentObject()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39" refid="classfrost_1_1_e_c_s_1_1_i_component_1a5d26cf57acad61ebfa5472ca1a8e03a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uuids::uuid<sp/><ref refid="classfrost_1_1_e_c_s_1_1_i_component_1a5d26cf57acad61ebfa5472ca1a8e03a9" kindref="member">m_uuid</ref>;</highlight></codeline>
+<codeline lineno="40" refid="classfrost_1_1_e_c_s_1_1_i_component_1a6104e07a728dc58f66cc0df421eefb5d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1_e_c_s_1_1_game_object" kindref="compound">GameObject</ref>&amp;<sp/><ref refid="classfrost_1_1_e_c_s_1_1_i_component_1a6104e07a728dc58f66cc0df421eefb5d" kindref="member">m_parentObject</ref>;</highlight></codeline>
+<codeline lineno="41" refid="classfrost_1_1_e_c_s_1_1_i_component_1ab5995c7763e343eae8148429a73f64f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_isActive<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="include/ECS/Component/IComponent.h"/>
+  </compounddef>
+</doxygen>

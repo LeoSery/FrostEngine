@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classfrost_1_1core_1_1_r_t_t_i" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>frost::core::RTTI</compoundname>
+    <derivedcompoundref refid="classfrost_1_1_e_c_s_1_1_i_component" prot="public" virt="non-virtual">frost::ECS::IComponent</derivedcompoundref>
+    <includes refid="_r_t_t_i_8h" local="no">RTTI.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classfrost_1_1core_1_1_r_t_t_i_1ab67a37bae5aeb3024dbd568bd4c9a9ea" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>const std::string</type>
+        <definition>virtual const std::string frost::core::RTTI::GetTypeName</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetTypeName</name>
+        <qualifiedname>frost::core::RTTI::GetTypeName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/Internal/RTTI.h" line="10" column="27"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>frost::ECS::BoxCollider</label>
+        <link refid="classfrost_1_1_e_c_s_1_1_box_collider"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>frost::ECS::IComponent</label>
+        <link refid="classfrost_1_1_e_c_s_1_1_i_component"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>frost::ECS::SpriteRenderer</label>
+        <link refid="classfrost_1_1_e_c_s_1_1_sprite_renderer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>frost::ECS::Transform</label>
+        <link refid="classfrost_1_1_e_c_s_1_1_transform"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>frost::core::RTTI</label>
+        <link refid="classfrost_1_1core_1_1_r_t_t_i"/>
+      </node>
+    </inheritancegraph>
+    <location file="include/Core/Internal/RTTI.h" line="7" column="1" bodyfile="include/Core/Internal/RTTI.h" bodystart="8" bodyend="11"/>
+    <listofallmembers>
+      <member refid="classfrost_1_1core_1_1_r_t_t_i_1ab67a37bae5aeb3024dbd568bd4c9a9ea" prot="public" virt="pure-virtual"><scope>frost::core::RTTI</scope><name>GetTypeName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

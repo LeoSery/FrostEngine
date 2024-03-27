@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_logger_8h" kind="file" language="C++">
+    <compoundname>Logger.h</compoundname>
+    <includes refid="_export_8h" local="yes">Core/Export.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">string</includes>
+    <includedby refid="_frost_engine_8h" local="yes">include/FrostEngine.h</includedby>
+    <includedby refid="_input_8cpp" local="yes">src/Core/Input/Input.cpp</includedby>
+    <includedby refid="_xml_parser_8cpp" local="yes">src/Core/Serial/XmlParser.cpp</includedby>
+    <includedby refid="_box_collider_8cpp" local="yes">src/ECS/Component/Components/BoxCollider.cpp</includedby>
+    <includedby refid="_sprite_renderer_8cpp" local="yes">src/ECS/Component/Components/SpriteRenderer.cpp</includedby>
+    <includedby refid="_transform_8cpp" local="yes">src/ECS/Component/Components/Transform.cpp</includedby>
+    <includedby refid="_game_object_8cpp" local="yes">src/ECS/GameObject.cpp</includedby>
+    <includedby refid="_editor_8cpp" local="yes">src/Editor/Editor.cpp</includedby>
+    <includedby refid="_shader_8cpp" local="yes">src/Render/Shader.cpp</includedby>
+    <includedby refid="_texture_8cpp" local="yes">src/Render/Texture.cpp</includedby>
+    <includedby refid="_texture_mgr_8cpp" local="no">src/Render/TextureMgr.cpp</includedby>
+    <includedby refid="_logger_8cpp" local="yes">src/Utils/Logger.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>Core/Export.h</label>
+        <link refid="_export_8h"/>
+      </node>
+      <node id="1">
+        <label>include/Utils/Logger.h</label>
+        <link refid="_logger_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/FrostEngine.h</label>
+        <link refid="_frost_engine_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/Utils/Logger.h</label>
+        <link refid="_logger_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/Core/Input/Input.cpp</label>
+        <link refid="_input_8cpp"/>
+      </node>
+      <node id="5">
+        <label>src/Core/Serial/XmlParser.cpp</label>
+        <link refid="_xml_parser_8cpp"/>
+      </node>
+      <node id="6">
+        <label>src/ECS/Component/Components/BoxCollider.cpp</label>
+        <link refid="_box_collider_8cpp"/>
+      </node>
+      <node id="7">
+        <label>src/ECS/Component/Components/SpriteRenderer.cpp</label>
+        <link refid="_sprite_renderer_8cpp"/>
+      </node>
+      <node id="8">
+        <label>src/ECS/Component/Components/Transform.cpp</label>
+        <link refid="_transform_8cpp"/>
+      </node>
+      <node id="9">
+        <label>src/ECS/GameObject.cpp</label>
+        <link refid="_game_object_8cpp"/>
+      </node>
+      <node id="10">
+        <label>src/Editor/Editor.cpp</label>
+        <link refid="_editor_8cpp"/>
+      </node>
+      <node id="3">
+        <label>src/FrostEngine.cpp</label>
+        <link refid="_frost_engine_8cpp"/>
+      </node>
+      <node id="11">
+        <label>src/Render/Shader.cpp</label>
+        <link refid="_shader_8cpp"/>
+      </node>
+      <node id="12">
+        <label>src/Render/Texture.cpp</label>
+        <link refid="_texture_8cpp"/>
+      </node>
+      <node id="13">
+        <label>src/Render/TextureMgr.cpp</label>
+        <link refid="_texture_mgr_8cpp"/>
+      </node>
+      <node id="14">
+        <label>src/Utils/Logger.cpp</label>
+        <link refid="_logger_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classfrost_1_1utils_1_1_logger" prot="public">frost::utils::Logger</innerclass>
+    <innerclass refid="structfrost_1_1utils_1_1_logger_1_1_s___log_data" prot="private">frost::utils::Logger::S_LogData</innerclass>
+    <innernamespace refid="namespacefrost">frost</innernamespace>
+    <innernamespace refid="namespacefrost_1_1utils">frost::utils</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_export_8h" kindref="compound">Core/Export.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacefrost_1_1utils" kindref="compound">frost::utils</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10" refid="namespacefrost_1_1utils_1ac08ad1f31b7b88124893b9c467840d30" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="namespacefrost_1_1utils_1ac08ad1f31b7b88124893b9c467840d30" kindref="member">E_LogType</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacefrost_1_1utils_1ac08ad1f31b7b88124893b9c467840d30a4059b0251f66a18cb56f544728796875" kindref="member">Info</ref>,</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacefrost_1_1utils_1ac08ad1f31b7b88124893b9c467840d30a0eaadb4fcb48a0a0ed7bc9868be9fbaa" kindref="member">Warning</ref>,</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacefrost_1_1utils_1ac08ad1f31b7b88124893b9c467840d30a902b0d55fddef6f8d651fe1035b7d4bd" kindref="member">Error</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="classfrost_1_1utils_1_1_logger" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="_export_8h_1a76e8ddc2fd5dcbd64bb60019fb4f0e30" kindref="member">FROST_ENGINE_API</ref><sp/><ref refid="classfrost_1_1utils_1_1_logger" kindref="compound">Logger</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Constructors<sp/>and<sp/>Destructors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1utils_1_1_logger" kindref="compound">Logger</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1utils_1_1_logger" kindref="compound">~Logger</ref>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Methods</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Log(<ref refid="namespacefrost_1_1utils_1ac08ad1f31b7b88124893b9c467840d30" kindref="member">E_LogType</ref><sp/>_Type,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>_Content);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Show();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Static<sp/>Methods</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>LogInfo(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>_Content);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>LogWarning(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>_Content);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>LogError(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>_Content);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DrawLogger();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Singleton</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1utils_1_1_logger" kindref="compound">Logger</ref>*<sp/>GetInstance();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DeleteInstance();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="43" refid="structfrost_1_1utils_1_1_logger_1_1_s___log_data" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfrost_1_1utils_1_1_logger_1_1_s___log_data" kindref="compound">S_LogData</ref></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="45" refid="structfrost_1_1utils_1_1_logger_1_1_s___log_data_1a28ab5f7fd849893384d7567c69191428" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacefrost_1_1utils_1ac08ad1f31b7b88124893b9c467840d30" kindref="member">E_LogType</ref><sp/><ref refid="structfrost_1_1utils_1_1_logger_1_1_s___log_data_1a28ab5f7fd849893384d7567c69191428" kindref="member">logType</ref>;</highlight></codeline>
+<codeline lineno="46" refid="structfrost_1_1utils_1_1_logger_1_1_s___log_data_1ad5a96adf8e1be7cba693c8137a0bdfb8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="structfrost_1_1utils_1_1_logger_1_1_s___log_data_1ad5a96adf8e1be7cba693c8137a0bdfb8" kindref="member">logContent</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="classfrost_1_1utils_1_1_logger_1a7d86e9ecf97ad07afe1969f9ed0c209a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1utils_1_1_logger" kindref="compound">Logger</ref>*<sp/><ref refid="classfrost_1_1utils_1_1_logger_1a7d86e9ecf97ad07afe1969f9ed0c209a" kindref="member">m_instance</ref>;</highlight></codeline>
+<codeline lineno="50" refid="classfrost_1_1utils_1_1_logger_1a45e6c9c6565e37b9732b213b41ce4c19" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;S_LogData&gt;<sp/><ref refid="classfrost_1_1utils_1_1_logger_1a45e6c9c6565e37b9732b213b41ce4c19" kindref="member">m_logStack</ref>;</highlight></codeline>
+<codeline lineno="51" refid="classfrost_1_1utils_1_1_logger_1a0a8e660f359fd246c552db3664b30fbf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_showLogError<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52" refid="classfrost_1_1utils_1_1_logger_1a78734d9fcbe965e9e0efb7df3650a2e6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_showLogWarning<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53" refid="classfrost_1_1utils_1_1_logger_1a9e1ece8abbb7af9d1927bad7a3109679" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_showLogInfo<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="include/Utils/Logger.h"/>
+  </compounddef>
+</doxygen>

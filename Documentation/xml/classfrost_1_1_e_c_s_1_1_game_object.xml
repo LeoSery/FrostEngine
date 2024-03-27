@@ -1,0 +1,584 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classfrost_1_1_e_c_s_1_1_game_object" kind="class" language="C++" prot="public">
+    <compoundname>frost::ECS::GameObject</compoundname>
+    <basecompoundref refid="classfrost_1_1_e_c_s_1_1_tree" prot="public" virt="non-virtual">frost::ECS::Tree&lt; GameObject &gt;</basecompoundref>
+    <includes refid="_game_object_8h" local="no">GameObject.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classfrost_1_1_e_c_s_1_1_game_object_1abc1edb98de3d4c9bf22e64c9de7738a8" prot="private" static="no" mutable="no">
+        <type>uuids::uuid</type>
+        <definition>uuids::uuid frost::ECS::GameObject::m_uuid</definition>
+        <argsstring></argsstring>
+        <name>m_uuid</name>
+        <qualifiedname>frost::ECS::GameObject::m_uuid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Entity/GameObject.h" line="70" column="13" bodyfile="include/ECS/Entity/GameObject.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfrost_1_1_e_c_s_1_1_game_object_1a32c97ff45f583e680613504f2e56c94e" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string frost::ECS::GameObject::m_name</definition>
+        <argsstring></argsstring>
+        <name>m_name</name>
+        <qualifiedname>frost::ECS::GameObject::m_name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Entity/GameObject.h" line="71" column="13" bodyfile="include/ECS/Entity/GameObject.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfrost_1_1_e_c_s_1_1_game_object_1aee5e27c87ef538d824f8d05c25af738d" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classfrost_1_1_e_c_s_1_1_i_component" kindref="compound">IComponent</ref> * &gt;</type>
+        <definition>std::vector&lt;IComponent*&gt; frost::ECS::GameObject::m_components</definition>
+        <argsstring></argsstring>
+        <name>m_components</name>
+        <qualifiedname>frost::ECS::GameObject::m_components</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Entity/GameObject.h" line="72" column="13" bodyfile="include/ECS/Entity/GameObject.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfrost_1_1_e_c_s_1_1_game_object_1a09b0ecc64d0cb94a61c702120e1826cc" prot="private" static="no" mutable="no">
+        <type>std::unordered_set&lt; std::string &gt;</type>
+        <definition>std::unordered_set&lt;std::string&gt; frost::ECS::GameObject::m_tags</definition>
+        <argsstring></argsstring>
+        <name>m_tags</name>
+        <qualifiedname>frost::ECS::GameObject::m_tags</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Entity/GameObject.h" line="73" column="20" bodyfile="include/ECS/Entity/GameObject.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classfrost_1_1_e_c_s_1_1_game_object_1accb6fae231bf07539dd6fbabffe8e004" prot="private" static="no" mutable="no">
+        <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">bool</ref></type>
+        <definition>bool frost::ECS::GameObject::m_isActive</definition>
+        <argsstring></argsstring>
+        <name>m_isActive</name>
+        <qualifiedname>frost::ECS::GameObject::m_isActive</qualifiedname>
+        <initializer>= <ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">true</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Entity/GameObject.h" line="74" column="6" bodyfile="include/ECS/Entity/GameObject.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1a4ee598dbe6aa94bd70a8a336763d505e" prot="protected" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>frost::ECS::GameObject::GameObject</definition>
+        <argsstring>(std::string _Name, GameObject *_Parent=nullptr)</argsstring>
+        <name>GameObject</name>
+        <qualifiedname>frost::ECS::GameObject::GameObject</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>_Name</declname>
+        </param>
+        <param>
+          <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object" kindref="compound">GameObject</ref> *</type>
+          <declname>_Parent</declname>
+          <defval><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">nullptr</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Entity/GameObject.h" line="22" column="10" bodyfile="src/ECS/GameObject.cpp" bodystart="11" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1aef0c47865ebc108f16082f6761e0fc3b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">void</ref></type>
+        <definition>void frost::ECS::GameObject::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <qualifiedname>frost::ECS::GameObject::Init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Entity/GameObject.h" line="23" column="6" bodyfile="src/ECS/GameObject.cpp" bodystart="18" bodyend="23"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1a93094df56d29c3cf9b580c04e5df276e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object" kindref="compound">GameObject</ref> *</type>
+        <definition>GameObject * frost::ECS::GameObject::New</definition>
+        <argsstring>(std::string _Name, GameObject *_Parent)</argsstring>
+        <name>New</name>
+        <qualifiedname>frost::ECS::GameObject::New</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>_Name</declname>
+        </param>
+        <param>
+          <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object" kindref="compound">GameObject</ref> *</type>
+          <declname>_Parent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Entity/GameObject.h" line="26" column="19" bodyfile="src/ECS/GameObject.cpp" bodystart="25" bodyend="30"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1a58cce04a96a9ec1f2b0acfa71ecf36f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>frost::ECS::GameObject::~GameObject</definition>
+        <argsstring>()</argsstring>
+        <name>~GameObject</name>
+        <qualifiedname>frost::ECS::GameObject::~GameObject</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Entity/GameObject.h" line="28" column="1" bodyfile="src/ECS/GameObject.cpp" bodystart="32" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1aee962f32a90c6a024b4aec9af6890bc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">void</ref></type>
+        <definition>void frost::ECS::GameObject::Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>frost::ECS::GameObject::Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Entity/GameObject.h" line="31" column="14" bodyfile="src/ECS/GameObject.cpp" bodystart="42" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1ae255ddb881cf99fe2ff8804b0ce1ebcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">void</ref></type>
+        <definition>void frost::ECS::GameObject::Update</definition>
+        <argsstring>(float _DeltaTime)</argsstring>
+        <name>Update</name>
+        <qualifiedname>frost::ECS::GameObject::Update</qualifiedname>
+        <param>
+          <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">float</ref></type>
+          <declname>_DeltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Entity/GameObject.h" line="32" column="6" bodyfile="src/ECS/GameObject.cpp" bodystart="50" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1ac8565285ac1dff0ab7763fd89fbe9a07" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">void</ref></type>
+        <definition>void frost::ECS::GameObject::Destroy</definition>
+        <argsstring>()</argsstring>
+        <name>Destroy</name>
+        <qualifiedname>frost::ECS::GameObject::Destroy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Entity/GameObject.h" line="33" column="14" bodyfile="src/ECS/GameObject.cpp" bodystart="59" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1a89e305bd72073af2e287a9ec36347885" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">const</ref> std::string &amp;</type>
+        <definition>const std::string &amp; frost::ECS::GameObject::GetName</definition>
+        <argsstring>() const</argsstring>
+        <name>GetName</name>
+        <qualifiedname>frost::ECS::GameObject::GetName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Entity/GameObject.h" line="36" column="20" bodyfile="src/ECS/GameObject.cpp" bodystart="67" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1a589b872f5286cbefec883f91f3f8a43c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">void</ref></type>
+        <definition>void frost::ECS::GameObject::SetName</definition>
+        <argsstring>(const std::string &amp;_Name)</argsstring>
+        <name>SetName</name>
+        <qualifiedname>frost::ECS::GameObject::SetName</qualifiedname>
+        <param>
+          <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">const</ref> std::string &amp;</type>
+          <declname>_Name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Entity/GameObject.h" line="37" column="6" bodyfile="src/ECS/GameObject.cpp" bodystart="72" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1a64e1296bcb6dfe126f61d40f03f9d850" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classfrost_1_1_e_c_s_1_1_transform" kindref="compound">Transform</ref> &amp;</type>
+        <definition>Transform &amp; frost::ECS::GameObject::GetTransform</definition>
+        <argsstring>()</argsstring>
+        <name>GetTransform</name>
+        <qualifiedname>frost::ECS::GameObject::GetTransform</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Entity/GameObject.h" line="39" column="12" bodyfile="src/ECS/GameObject.cpp" bodystart="77" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1a90021a88c8a0cfd61f2ba34838fab505" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">const</ref> <ref refid="classfrost_1_1_e_c_s_1_1_transform" kindref="compound">Transform</ref> &amp;</type>
+        <definition>const Transform &amp; frost::ECS::GameObject::GetTransform</definition>
+        <argsstring>() const</argsstring>
+        <name>GetTransform</name>
+        <qualifiedname>frost::ECS::GameObject::GetTransform</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Entity/GameObject.h" line="40" column="18" bodyfile="src/ECS/GameObject.cpp" bodystart="82" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1aa06c00e8f2a0423adfcf7746214a2c63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">void</ref></type>
+        <definition>void frost::ECS::GameObject::SetTransform</definition>
+        <argsstring>(const Transform &amp;_Transform)</argsstring>
+        <name>SetTransform</name>
+        <qualifiedname>frost::ECS::GameObject::SetTransform</qualifiedname>
+        <param>
+          <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">const</ref> <ref refid="classfrost_1_1_e_c_s_1_1_transform" kindref="compound">Transform</ref> &amp;</type>
+          <declname>_Transform</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Entity/GameObject.h" line="41" column="6" bodyfile="src/ECS/GameObject.cpp" bodystart="87" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1a0bc93ac28b5d6d3f0d6482b27d51fc04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">void</ref></type>
+        <definition>void frost::ECS::GameObject::AddTag</definition>
+        <argsstring>(const std::string &amp;_Tag)</argsstring>
+        <name>AddTag</name>
+        <qualifiedname>frost::ECS::GameObject::AddTag</qualifiedname>
+        <param>
+          <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">const</ref> std::string &amp;</type>
+          <declname>_Tag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Entity/GameObject.h" line="43" column="6" bodyfile="src/ECS/GameObject.cpp" bodystart="96" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1af040548223ffbe0d7bc01236a28db093" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">bool</ref></type>
+        <definition>bool frost::ECS::GameObject::HasTag</definition>
+        <argsstring>(const std::string &amp;_Tag) const</argsstring>
+        <name>HasTag</name>
+        <qualifiedname>frost::ECS::GameObject::HasTag</qualifiedname>
+        <param>
+          <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">const</ref> std::string &amp;</type>
+          <declname>_Tag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Entity/GameObject.h" line="44" column="7" bodyfile="src/ECS/GameObject.cpp" bodystart="101" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1a6877af1b8578f3e34965a50fbea39b9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">void</ref></type>
+        <definition>void frost::ECS::GameObject::RemoveTag</definition>
+        <argsstring>(const std::string &amp;_Tag)</argsstring>
+        <name>RemoveTag</name>
+        <qualifiedname>frost::ECS::GameObject::RemoveTag</qualifiedname>
+        <param>
+          <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">const</ref> std::string &amp;</type>
+          <declname>_Tag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Entity/GameObject.h" line="45" column="6" bodyfile="src/ECS/GameObject.cpp" bodystart="106" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1a3f6388c14983bf6a82a6713fa8f319fd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">bool</ref></type>
+        <definition>bool frost::ECS::GameObject::IsActive</definition>
+        <argsstring>() const</argsstring>
+        <name>IsActive</name>
+        <qualifiedname>frost::ECS::GameObject::IsActive</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Entity/GameObject.h" line="47" column="7" bodyfile="src/ECS/GameObject.cpp" bodystart="111" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1a524d545d997f2423772983de55ff0e7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">void</ref></type>
+        <definition>void frost::ECS::GameObject::SetActive</definition>
+        <argsstring>(bool _IsActive)</argsstring>
+        <name>SetActive</name>
+        <qualifiedname>frost::ECS::GameObject::SetActive</qualifiedname>
+        <param>
+          <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">bool</ref></type>
+          <declname>_IsActive</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Entity/GameObject.h" line="48" column="6" bodyfile="src/ECS/GameObject.cpp" bodystart="116" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1afcf916c94153da406d3b6b02c268cc12" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uuids::uuid</type>
+        <definition>uuids::uuid frost::ECS::GameObject::GetUUID</definition>
+        <argsstring>() const</argsstring>
+        <name>GetUUID</name>
+        <qualifiedname>frost::ECS::GameObject::GetUUID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Entity/GameObject.h" line="50" column="14" bodyfile="src/ECS/GameObject.cpp" bodystart="121" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1acbc23df5043a175e19b741f3f0012493" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">void</ref></type>
+        <definition>void frost::ECS::GameObject::GetData</definition>
+        <argsstring>(bool _ForceLoggerDraw) const</argsstring>
+        <name>GetData</name>
+        <qualifiedname>frost::ECS::GameObject::GetData</qualifiedname>
+        <param>
+          <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">bool</ref></type>
+          <declname>_ForceLoggerDraw</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Entity/GameObject.h" line="51" column="6" bodyfile="src/ECS/GameObject.cpp" bodystart="126" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1ace060681033ac1b8ee5b8474adef6278" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classfrost_1_1_e_c_s_1_1_i_component" kindref="compound">IComponent</ref> * &gt;</type>
+        <definition>std::vector&lt; IComponent * &gt; frost::ECS::GameObject::GetAllComponents</definition>
+        <argsstring>() const</argsstring>
+        <name>GetAllComponents</name>
+        <qualifiedname>frost::ECS::GameObject::GetAllComponents</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Entity/GameObject.h" line="53" column="14" bodyfile="src/ECS/GameObject.cpp" bodystart="166" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1aacd32740cad705264179d84079c93d50" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">typename</ref> <ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">Component</ref></type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">Component</ref> *</type>
+        <definition>Component * frost::ECS::GameObject::AddComponent</definition>
+        <argsstring>()</argsstring>
+        <name>AddComponent</name>
+        <qualifiedname>frost::ECS::GameObject::AddComponent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Entity/GameObject.h" line="57" column="11" bodyfile="include/ECS/Entity/GameObject.hxx" bodystart="40" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">typename</ref> <ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">Component</ref></type>
+          </param>
+        </templateparamlist>
+        <type>Component *</type>
+        <definition>Component * frost::ECS::GameObject::GetComponent</definition>
+        <argsstring>() const</argsstring>
+        <name>GetComponent</name>
+        <qualifiedname>frost::ECS::GameObject::GetComponent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Entity/GameObject.h" line="60" column="12" bodyfile="include/ECS/Entity/GameObject.hxx" bodystart="7" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1a70063403c466783a0df41f9bbf80d561" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">typename</ref> <ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">Component</ref></type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">void</ref></type>
+        <definition>void frost::ECS::GameObject::RemoveComponent</definition>
+        <argsstring>()</argsstring>
+        <name>RemoveComponent</name>
+        <qualifiedname>frost::ECS::GameObject::RemoveComponent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Entity/GameObject.h" line="63" column="6" bodyfile="include/ECS/Entity/GameObject.hxx" bodystart="23" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1a7c4e491726fc8e6e38d44bad57767949" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">void</ref></type>
+        <definition>void frost::ECS::GameObject::Tick</definition>
+        <argsstring>(float _DeltaTime)</argsstring>
+        <name>Tick</name>
+        <qualifiedname>frost::ECS::GameObject::Tick</qualifiedname>
+        <param>
+          <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">float</ref></type>
+          <declname>_DeltaTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Entity/GameObject.h" line="66" column="14" bodyfile="src/ECS/GameObject.cpp" bodystart="171" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1a7cef60d07aedb9e5df69c9244ca3c3fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">void</ref></type>
+        <definition>void frost::ECS::GameObject::OnCollisionEnter</definition>
+        <argsstring>(const CollisionData *_CollisionData)</argsstring>
+        <name>OnCollisionEnter</name>
+        <qualifiedname>frost::ECS::GameObject::OnCollisionEnter</qualifiedname>
+        <param>
+          <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">const</ref> <ref refid="structfrost_1_1_e_c_s_1_1_collision_data" kindref="compound">CollisionData</ref> *</type>
+          <declname>_CollisionData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Entity/GameObject.h" line="67" column="14" bodyfile="src/ECS/GameObject.cpp" bodystart="176" bodyend="179"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>frost::ECS::Tree&lt; GameObject &gt;</label>
+        <link refid="classfrost_1_1_e_c_s_1_1_tree"/>
+      </node>
+      <node id="1">
+        <label>frost::ECS::GameObject</label>
+        <link refid="classfrost_1_1_e_c_s_1_1_game_object"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>frost::ECS::Tree&lt; GameObject &gt;</label>
+        <link refid="classfrost_1_1_e_c_s_1_1_tree"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>m_currentParent</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>frost::ECS::GameObject</label>
+        <link refid="classfrost_1_1_e_c_s_1_1_game_object"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/ECS/Entity/GameObject.h" line="18" column="1" bodyfile="include/ECS/Entity/GameObject.h" bodystart="19" bodyend="75"/>
+    <listofallmembers>
+      <member refid="classfrost_1_1_e_c_s_1_1_tree_1a06a7965afc419f69a05f27036e66778d" prot="public" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>AddChild</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_game_object_1aacd32740cad705264179d84079c93d50" prot="public" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>AddComponent</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a0bc93ac28b5d6d3f0d6482b27d51fc04" prot="public" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>AddTag</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_game_object_1ac8565285ac1dff0ab7763fd89fbe9a07" prot="public" virt="virtual"><scope>frost::ECS::GameObject</scope><name>Destroy</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a4ee598dbe6aa94bd70a8a336763d505e" prot="protected" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>GameObject</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_game_object_1ace060681033ac1b8ee5b8474adef6278" prot="public" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>GetAllComponents</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_tree_1a7af404ad98fdef819bdb8b91f013db46" prot="public" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>GetChildren</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" prot="public" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>GetComponent</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_game_object_1acbc23df5043a175e19b741f3f0012493" prot="public" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>GetData</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a89e305bd72073af2e287a9ec36347885" prot="public" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>GetName</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_tree_1a46fee815299cf1d045dcb8844b985bd4" prot="public" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>GetParent</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_tree_1acbfccbc87953e29ccebd56d20d456a5a" prot="public" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>GetParent</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_tree_1a5d1973e5c828d1b84748f3dd938a2309" prot="public" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>GetRoot</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a64e1296bcb6dfe126f61d40f03f9d850" prot="public" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>GetTransform</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a90021a88c8a0cfd61f2ba34838fab505" prot="public" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>GetTransform</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_game_object_1afcf916c94153da406d3b6b02c268cc12" prot="public" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>GetUUID</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_game_object_1af040548223ffbe0d7bc01236a28db093" prot="public" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>HasTag</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_game_object_1aef0c47865ebc108f16082f6761e0fc3b" prot="protected" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>Init</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a3f6388c14983bf6a82a6713fa8f319fd" prot="public" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>IsActive</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_tree_1aef9d65eab9cd2bc4dc06c874c8fee7f8" prot="private" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>m_childrens</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_game_object_1aee5e27c87ef538d824f8d05c25af738d" prot="private" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>m_components</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_tree_1a13093cc6ac491246a1dc42b600dfb22f" prot="private" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>m_currentParent</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_game_object_1accb6fae231bf07539dd6fbabffe8e004" prot="private" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>m_isActive</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a32c97ff45f583e680613504f2e56c94e" prot="private" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>m_name</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a09b0ecc64d0cb94a61c702120e1826cc" prot="private" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>m_tags</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_game_object_1abc1edb98de3d4c9bf22e64c9de7738a8" prot="private" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>m_uuid</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a93094df56d29c3cf9b580c04e5df276e" prot="public" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>New</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a7cef60d07aedb9e5df69c9244ca3c3fb" prot="public" virt="virtual"><scope>frost::ECS::GameObject</scope><name>OnCollisionEnter</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_tree_1ad0052319bdecede6d6c6ffc18404bd0c" prot="public" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>RemoveChild</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a70063403c466783a0df41f9bbf80d561" prot="public" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>RemoveComponent</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a6877af1b8578f3e34965a50fbea39b9b" prot="public" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>RemoveTag</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a524d545d997f2423772983de55ff0e7a" prot="public" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>SetActive</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a589b872f5286cbefec883f91f3f8a43c" prot="public" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>SetName</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_tree_1a423ce7696c1711a8a51c2750cd499135" prot="public" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>SetParent</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_game_object_1aa06c00e8f2a0423adfcf7746214a2c63" prot="public" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>SetTransform</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_game_object_1aee962f32a90c6a024b4aec9af6890bc4" prot="public" virt="virtual"><scope>frost::ECS::GameObject</scope><name>Start</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a7c4e491726fc8e6e38d44bad57767949" prot="public" virt="virtual"><scope>frost::ECS::GameObject</scope><name>Tick</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_tree_1a71825dcbc0789b497810b6f7f77d44cd" prot="public" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>Tree</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_game_object_1ae255ddb881cf99fe2ff8804b0ce1ebcc" prot="public" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>Update</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a58cce04a96a9ec1f2b0acfa71ecf36f3" prot="public" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>~GameObject</name></member>
+      <member refid="classfrost_1_1_e_c_s_1_1_tree_1ab1d3dce624fd3244a7fb64c245485e7d" prot="public" virt="virtual"><scope>frost::ECS::GameObject</scope><name>~Tree</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_render_device_8h" kind="file" language="C++">
+    <compoundname>RenderDevice.h</compoundname>
+    <includes refid="_vertex_array_object_8h" local="yes">Render/VertexArrayObject.h</includes>
+    <includes refid="_texture_8h" local="yes">Render/Texture.h</includes>
+    <includes refid="_shader_8h" local="yes">Render/Shader.h</includes>
+    <includes refid="_export_8h" local="yes">Core/Export.h</includes>
+    <includes local="yes">glm/glm.hpp</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="_frost_engine_8h" local="yes">include/FrostEngine.h</includedby>
+    <includedby refid="_sprite_renderer_8cpp" local="no">src/ECS/Component/Components/SpriteRenderer.cpp</includedby>
+    <includedby refid="_render_device_8cpp" local="yes">src/Render/RenderDevice.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>Core/Export.h</label>
+        <link refid="_export_8h"/>
+      </node>
+      <node id="1">
+        <label>include/Render/RenderDevice.h</label>
+        <link refid="_render_device_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Render/Shader.h</label>
+        <link refid="_shader_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Render/Texture.h</label>
+        <link refid="_texture_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Render/VertexArrayObject.h</label>
+        <link refid="_vertex_array_object_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="9">
+        <label>GLFW/glfw3.h</label>
+      </node>
+      <node id="13">
+        <label>cerrno</label>
+      </node>
+      <node id="11">
+        <label>fstream</label>
+      </node>
+      <node id="14">
+        <label>glm/glm.hpp</label>
+      </node>
+      <node id="4">
+        <label>glm/vec2.hpp</label>
+      </node>
+      <node id="10">
+        <label>iostream</label>
+      </node>
+      <node id="15">
+        <label>memory</label>
+      </node>
+      <node id="12">
+        <label>sstream</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="16">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/FrostEngine.h</label>
+        <link refid="_frost_engine_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/Render/RenderDevice.h</label>
+        <link refid="_render_device_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/ECS/Component/Components/SpriteRenderer.cpp</label>
+        <link refid="_sprite_renderer_8cpp"/>
+      </node>
+      <node id="3">
+        <label>src/FrostEngine.cpp</label>
+        <link refid="_frost_engine_8cpp"/>
+      </node>
+      <node id="5">
+        <label>src/Render/RenderDevice.cpp</label>
+        <link refid="_render_device_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classfrost_1_1core_1_1_render_device" prot="public">frost::core::RenderDevice</innerclass>
+    <innernamespace refid="namespacefrost">frost</innernamespace>
+    <innernamespace refid="namespacefrost_1_1core">frost::core</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_vertex_array_object_8h" kindref="compound">Render/VertexArrayObject.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_texture_8h" kindref="compound">Render/Texture.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_shader_8h" kindref="compound">Render/Shader.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_export_8h" kindref="compound">Core/Export.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;glm/glm.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacefrost_1_1core" kindref="compound">frost::core</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Window;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="classfrost_1_1core_1_1_render_device" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="_export_8h_1a76e8ddc2fd5dcbd64bb60019fb4f0e30" kindref="member">FROST_ENGINE_API</ref><sp/><ref refid="classfrost_1_1core_1_1_render_device" kindref="compound">RenderDevice</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Constructors<sp/>and<sp/>Destructors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="classfrost_1_1core_1_1_render_device_1afcf0eed557a92e7f92804b5825f72afe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_render_device_1afcf0eed557a92e7f92804b5825f72afe" kindref="member">RenderDevice</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_render_device" kindref="compound">RenderDevice</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_render_device" kindref="compound">RenderDevice</ref>();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_render_device" kindref="compound">~RenderDevice</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_render_device" kindref="compound">RenderDevice</ref>*<sp/>Init(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_window" kindref="compound">Window</ref>*<sp/>_window);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_render_device" kindref="compound">RenderDevice</ref>*<sp/>GetInstance();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="classfrost_1_1core_1_1_render_device_1a09510acece108f9534fb662803a3bf2a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_render_device" kindref="compound">RenderDevice</ref>*<sp/><ref refid="classfrost_1_1core_1_1_render_device_1a09510acece108f9534fb662803a3bf2a" kindref="member">m_instance</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Methods</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>AddVAO(<ref refid="classfrost_1_1core_1_1_vertex_array_object" kindref="compound">VertexArrayObject</ref><sp/>_NewVAO);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>SetZoom(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>_zoom);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>GetZoom();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>SetClearColor(glm::vec4<sp/>_color);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Frost<sp/>engine<sp/>life<sp/>cycle<sp/>methods</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>Update();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Fields</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classfrost_1_1core_1_1_render_device_1ac455808f74af661c0fd6fdee2004c450" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_vao<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="45" refid="classfrost_1_1core_1_1_render_device_1a4e9f2965804adee6d7098d19e3aed782" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_vs<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="46" refid="classfrost_1_1core_1_1_render_device_1a92b6cd49f4b9aa9f7b8fb699d027a567" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_fs<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="classfrost_1_1core_1_1_render_device_1a04a7ac61e44dfd5685dde301ee225428" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_render_device_1a04a7ac61e44dfd5685dde301ee225428" kindref="member">m_positionLocation</ref>;</highlight></codeline>
+<codeline lineno="49" refid="classfrost_1_1core_1_1_render_device_1a8201a495f2444abb86bd18933fa24023" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_render_device_1a8201a495f2444abb86bd18933fa24023" kindref="member">m_rotationLocation</ref>;</highlight></codeline>
+<codeline lineno="50" refid="classfrost_1_1core_1_1_render_device_1a081f933b4303e9f99ca62e559dbfbb87" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_render_device_1a081f933b4303e9f99ca62e559dbfbb87" kindref="member">m_scaleLocation</ref>;</highlight></codeline>
+<codeline lineno="51" refid="classfrost_1_1core_1_1_render_device_1af6dd4570d9d9c086491f0da43163961c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_render_device_1af6dd4570d9d9c086491f0da43163961c" kindref="member">m_aspectRatioLocation</ref>;</highlight></codeline>
+<codeline lineno="52" refid="classfrost_1_1core_1_1_render_device_1ab1d3803292d9c4c2cd9c25638e72e4ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_render_device_1ab1d3803292d9c4c2cd9c25638e72e4ea" kindref="member">m_texture</ref>;</highlight></codeline>
+<codeline lineno="53" refid="classfrost_1_1core_1_1_render_device_1a54c643482d7f472fa46106edc775d0ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_render_device_1a54c643482d7f472fa46106edc775d0ec" kindref="member">m_zoom</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="classfrost_1_1core_1_1_render_device_1a7ded9ecc66f35b7e8f4515fcb01f32f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glm::vec4<sp/>m_clearColor<sp/>=<sp/>glm::vec4(0.0f,<sp/>0.0f,<sp/>0.0f,<sp/>1.0f);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="classfrost_1_1core_1_1_render_device_1a36821898542254844857bc9636d9a3bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_shader" kindref="compound">Shader</ref><sp/><ref refid="classfrost_1_1core_1_1_render_device_1a36821898542254844857bc9636d9a3bb" kindref="member">m_shaderProgram</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>std::vector&lt;VertexArrayObject&gt;<sp/>GetVaoToRender();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Methods</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ClearVaosToRender();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//forward<sp/>Declaraction<sp/>for<sp/>pimple<sp/>idiom</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfrost_1_1core_1_1_render_device_1_1_internal" kindref="compound">Internal</ref>;</highlight></codeline>
+<codeline lineno="67" refid="classfrost_1_1core_1_1_render_device_1a559ff3584a5171906172cb69a4e794b7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::unique_ptr&lt;Internal&gt;<sp/><ref refid="classfrost_1_1core_1_1_render_device_1a559ff3584a5171906172cb69a4e794b7" kindref="member">m_internal</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="include/Render/RenderDevice.h"/>
+  </compounddef>
+</doxygen>

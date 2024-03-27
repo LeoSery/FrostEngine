@@ -1,0 +1,798 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.10.0" xml:lang="en-US">
+  <compound refid="class_frost_engine_1_1_application" kind="class"><name>FrostEngine::Application</name>
+    <member refid="class_frost_engine_1_1_application_1abff5e2607f185b0f832900c7cb492940" kind="variable"><name>m_Window</name></member>
+    <member refid="class_frost_engine_1_1_application_1a95538bb88b485ce883340c7a3e455ea5" kind="variable"><name>m_RenderDevice</name></member>
+    <member refid="class_frost_engine_1_1_application_1ac305fe60c219ff5df0401311ec31e4bc" kind="variable"><name>m_SceneManager</name></member>
+    <member refid="class_frost_engine_1_1_application_1aaaf94c391abad09afffe9f3434e43b38" kind="variable"><name>m_CurrentScene</name></member>
+    <member refid="class_frost_engine_1_1_application_1a6aec55145c4edf867263ef6d12e771fa" kind="variable"><name>m_Editor</name></member>
+    <member refid="class_frost_engine_1_1_application_1abe6995f3671f5d2dc5d7e503cb8cd742" kind="variable"><name>ObjectsToUpdate</name></member>
+    <member refid="class_frost_engine_1_1_application_1a72ebc1caea87c96a85fd37fa826970a9" kind="function"><name>Init</name></member>
+    <member refid="class_frost_engine_1_1_application_1a15ce33a8ceee30a1f5d64855340455b2" kind="function"><name>Init</name></member>
+    <member refid="class_frost_engine_1_1_application_1a274e45ecc7248cdd59d10da73bf6fd11" kind="function"><name>Update</name></member>
+    <member refid="class_frost_engine_1_1_application_1a795e0296ed239b425e516b3d5d40f044" kind="function"><name>Shutdown</name></member>
+    <member refid="class_frost_engine_1_1_application_1aa11d0435410ccb65674dc7f15c0d77b6" kind="function"><name>Run</name></member>
+    <member refid="class_frost_engine_1_1_application_1a4b1ae230471227800e412b7d49d463a2" kind="function"><name>BrowseAllGameObjects</name></member>
+    <member refid="class_frost_engine_1_1_application_1a3738a804b7424938a1a0dcf10456eeff" kind="function"><name>PhysUpdate</name></member>
+  </compound>
+  <compound refid="classfrost_1_1core_1_1_authorization_badge" kind="class"><name>frost::core::AuthorizationBadge</name>
+    <member refid="classfrost_1_1core_1_1_authorization_badge_1a1f85751fe4ef9f1e73afed95c5a6e739" kind="variable"><name>T</name></member>
+    <member refid="classfrost_1_1core_1_1_authorization_badge_1adf284dd2476ce8f6b4b01e4a2a625ac0" kind="function"><name>AuthorizationBadge</name></member>
+  </compound>
+  <compound refid="classfrost_1_1_e_c_s_1_1_box_collider" kind="class"><name>frost::ECS::BoxCollider</name>
+    <member refid="classfrost_1_1_e_c_s_1_1_box_collider_1a655dd0007ed5f509807c440ae45e96ce" kind="variable"><name>CollidingObjects</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_box_collider_1a72094fa83f1f232528cc731ce50f39cd" kind="variable"><name>m_isStatic</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_box_collider_1ae852b5b9de84db8ac6e808657248369c" kind="variable"><name>m_vertices</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_box_collider_1acf17ea9dba62a14d4451c6f87deca84c" kind="variable"><name>m_transform</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_box_collider_1ad296a1e0fea570e8b864d56837413430" kind="variable"><name>m_currentScene</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_box_collider_1a856077ff45711d964b58267a356e80d0" kind="function"><name>BoxCollider</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_box_collider_1a5fdef2ea09f30e9dd576ca73e7a503af" kind="function"><name>~BoxCollider</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_box_collider_1ab096f6c7a983a2384d650efb74bdbc4f" kind="function"><name>Start</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_box_collider_1acd8bd4864af9b97b965f855dcc905a74" kind="function"><name>Update</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_box_collider_1a4bad23db7e3fe21d2dc65d424abda4ac" kind="function"><name>Destroy</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_box_collider_1a9618a909dd24002094ad9497eef8f732" kind="function"><name>IsColliding</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_box_collider_1a6fb9364578615f9a651bee5f022106fa" kind="function"><name>GetIsStatic</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_box_collider_1af358c1fd0aef3dbfe226c130e5dbca96" kind="function"><name>SetIsStatic</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_box_collider_1a1582760a5bb835ab5af1eb03414862d7" kind="function"><name>GetData</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_box_collider_1a958f0c85a08f4f857b89171dd84fbd53" kind="function"><name>GetRotationMatrix</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_box_collider_1aeaced076499860417dda5600c89ab5d6" kind="function"><name>GetVertices</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_box_collider_1a6951359b707a4af71b81921714e84c43" kind="function"><name>AABB</name></member>
+  </compound>
+  <compound refid="classfrost_1_1core_1_1_buffer" kind="class"><name>frost::core::Buffer</name>
+    <member refid="classfrost_1_1core_1_1_buffer_1a9d9a0f5e303ac5d61fc1bba4b7fb6aed" kind="variable"><name>m_internal</name></member>
+    <member refid="classfrost_1_1core_1_1_buffer_1a0184cd087b1e4dee984b0f817073e2b5" kind="function"><name>Buffer</name></member>
+    <member refid="classfrost_1_1core_1_1_buffer_1a8d58506537292319e1868a02ed9fcb25" kind="function"><name>~Buffer</name></member>
+    <member refid="classfrost_1_1core_1_1_buffer_1ad0fbde8938604ff7dde4eacaba3b65c4" kind="function"><name>CreateData</name></member>
+    <member refid="classfrost_1_1core_1_1_buffer_1a05649a462b41a3c0cf9e8341715fdfd3" kind="function"><name>GetBufferID</name></member>
+  </compound>
+  <compound refid="structfrost_1_1_e_c_s_1_1_collision_data" kind="struct"><name>frost::ECS::CollisionData</name>
+    <member refid="structfrost_1_1_e_c_s_1_1_collision_data_1a8b6dd02c3619a57f734e40eda5ba2b9b" kind="variable"><name>isColliding</name></member>
+    <member refid="structfrost_1_1_e_c_s_1_1_collision_data_1a7ea72d967a23a4849bf10128ea927396" kind="variable"><name>otherCollider</name></member>
+    <member refid="structfrost_1_1_e_c_s_1_1_collision_data_1a557fc938d26fbfad98c5132fde9c33ea" kind="variable"><name>top</name></member>
+    <member refid="structfrost_1_1_e_c_s_1_1_collision_data_1aa024811b77025eb1a23581c12c5ef060" kind="variable"><name>bottom</name></member>
+    <member refid="structfrost_1_1_e_c_s_1_1_collision_data_1abd0b8d9ee14795e566ff565bce43db02" kind="variable"><name>left</name></member>
+    <member refid="structfrost_1_1_e_c_s_1_1_collision_data_1a6afc67995eeb24d4a3a73923911f8657" kind="variable"><name>right</name></member>
+  </compound>
+  <compound refid="classfrost_1_1editor_1_1_editor" kind="class"><name>frost::editor::Editor</name>
+    <member refid="classfrost_1_1editor_1_1_editor_1a5c3fe36249cf6a0b12b1f9c2d3ad09ac" kind="variable"><name>ISCollide</name></member>
+    <member refid="classfrost_1_1editor_1_1_editor_1a1038c47049daccd90f3401ada84ac543" kind="variable"><name>ShowInspector</name></member>
+    <member refid="classfrost_1_1editor_1_1_editor_1a0b631dc53d1148b5346cd1c2e66a3e9f" kind="variable"><name>m_Instance</name></member>
+    <member refid="classfrost_1_1editor_1_1_editor_1a2923963d26680473e89e635be149e529" kind="variable"><name>SelectEntity</name></member>
+    <member refid="classfrost_1_1editor_1_1_editor_1a9b5e301a069f1e0d751f1a832378d4ba" kind="function"><name>Editor</name></member>
+    <member refid="classfrost_1_1editor_1_1_editor_1ae93faf9d9dce1d0953875c8941e1ae0f" kind="function"><name>~Editor</name></member>
+    <member refid="classfrost_1_1editor_1_1_editor_1a8eb1b251197b14dd0761c90696b9a8e1" kind="function"><name>DrawEditor</name></member>
+    <member refid="classfrost_1_1editor_1_1_editor_1a1b7acf390e927cf262f060cec117ec55" kind="function"><name>Init</name></member>
+    <member refid="classfrost_1_1editor_1_1_editor_1a6d1f00ae866f485fb7012a5e4c18fd75" kind="function"><name>Shutdown</name></member>
+    <member refid="classfrost_1_1editor_1_1_editor_1a7c203be4883363290994e9c27f6aac3d" kind="function"><name>DrawHierachyValue</name></member>
+    <member refid="classfrost_1_1editor_1_1_editor_1aaf04ff0ab46df372d33cba2558848325" kind="function"><name>DrawInsperctorValue</name></member>
+    <member refid="classfrost_1_1editor_1_1_editor_1a1c7c65f2f2e8392ba82e3df7e7be1c8a" kind="function"><name>GetInstance</name></member>
+    <member refid="classfrost_1_1editor_1_1_editor_1abd82b116e70569ee9135cc865ab3228b" kind="function"><name>DeleteEditor</name></member>
+  </compound>
+  <compound refid="structfrost_1_1core_1_1_input_1_1_functions" kind="struct"><name>frost::core::Input::Functions</name>
+    <member refid="structfrost_1_1core_1_1_input_1_1_functions_1af5280a65c750a0c92fd6862aed6d35a1" kind="variable"><name>FunctionPressed</name></member>
+    <member refid="structfrost_1_1core_1_1_input_1_1_functions_1a8e30d936b04fb730131bd2874d6b1348" kind="variable"><name>FunctionReleased</name></member>
+    <member refid="structfrost_1_1core_1_1_input_1_1_functions_1a0b925020d8541e54a29810ba3a1ebb4d" kind="variable"><name>FunctionOnGoing</name></member>
+  </compound>
+  <compound refid="classfrost_1_1_e_c_s_1_1_game_object" kind="class"><name>frost::ECS::GameObject</name>
+    <member refid="classfrost_1_1_e_c_s_1_1_game_object_1abc1edb98de3d4c9bf22e64c9de7738a8" kind="variable"><name>m_uuid</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a32c97ff45f583e680613504f2e56c94e" kind="variable"><name>m_name</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_game_object_1aee5e27c87ef538d824f8d05c25af738d" kind="variable"><name>m_components</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a09b0ecc64d0cb94a61c702120e1826cc" kind="variable"><name>m_tags</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_game_object_1accb6fae231bf07539dd6fbabffe8e004" kind="variable"><name>m_isActive</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a4ee598dbe6aa94bd70a8a336763d505e" kind="function"><name>GameObject</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_game_object_1aef0c47865ebc108f16082f6761e0fc3b" kind="function"><name>Init</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a93094df56d29c3cf9b580c04e5df276e" kind="function"><name>New</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a58cce04a96a9ec1f2b0acfa71ecf36f3" kind="function"><name>~GameObject</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_game_object_1aee962f32a90c6a024b4aec9af6890bc4" kind="function"><name>Start</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_game_object_1ae255ddb881cf99fe2ff8804b0ce1ebcc" kind="function"><name>Update</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_game_object_1ac8565285ac1dff0ab7763fd89fbe9a07" kind="function"><name>Destroy</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a89e305bd72073af2e287a9ec36347885" kind="function"><name>GetName</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a589b872f5286cbefec883f91f3f8a43c" kind="function"><name>SetName</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a64e1296bcb6dfe126f61d40f03f9d850" kind="function"><name>GetTransform</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a90021a88c8a0cfd61f2ba34838fab505" kind="function"><name>GetTransform</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_game_object_1aa06c00e8f2a0423adfcf7746214a2c63" kind="function"><name>SetTransform</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a0bc93ac28b5d6d3f0d6482b27d51fc04" kind="function"><name>AddTag</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_game_object_1af040548223ffbe0d7bc01236a28db093" kind="function"><name>HasTag</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a6877af1b8578f3e34965a50fbea39b9b" kind="function"><name>RemoveTag</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a3f6388c14983bf6a82a6713fa8f319fd" kind="function"><name>IsActive</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a524d545d997f2423772983de55ff0e7a" kind="function"><name>SetActive</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_game_object_1afcf916c94153da406d3b6b02c268cc12" kind="function"><name>GetUUID</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_game_object_1acbc23df5043a175e19b741f3f0012493" kind="function"><name>GetData</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_game_object_1ace060681033ac1b8ee5b8474adef6278" kind="function"><name>GetAllComponents</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_game_object_1aacd32740cad705264179d84079c93d50" kind="function"><name>AddComponent</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kind="function"><name>GetComponent</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a70063403c466783a0df41f9bbf80d561" kind="function"><name>RemoveComponent</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a7c4e491726fc8e6e38d44bad57767949" kind="function"><name>Tick</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_game_object_1a7cef60d07aedb9e5df69c9244ca3c3fb" kind="function"><name>OnCollisionEnter</name></member>
+  </compound>
+  <compound refid="classfrost_1_1_e_c_s_1_1_i_component" kind="class"><name>frost::ECS::IComponent</name>
+    <member refid="classfrost_1_1_e_c_s_1_1_i_component_1a5d26cf57acad61ebfa5472ca1a8e03a9" kind="variable"><name>m_uuid</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_i_component_1a6104e07a728dc58f66cc0df421eefb5d" kind="variable"><name>m_parentObject</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_i_component_1ab5995c7763e343eae8148429a73f64f8" kind="variable"><name>m_isActive</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_i_component_1a15ede560c92670c8f07329c3aba756f7" kind="function"><name>FROST_DEFINE_RTTI</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_i_component_1ae8ccddcb37fe3aa6b23f072dc135b5c6" kind="function"><name>IComponent</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_i_component_1a4a818549a56da125f0e36ff06061e70c" kind="function"><name>IComponent</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_i_component_1afc487e5613cb97ab86062c8405d798d7" kind="function"><name>~IComponent</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_i_component_1ac6fbd116991fc86765ca2e07db086a02" kind="function"><name>Start</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_i_component_1a45e8fc1c29ec737a38994109c69a0806" kind="function"><name>Update</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_i_component_1ab405ccdb0c52b3ce8209fc956f88226f" kind="function"><name>Destroy</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_i_component_1a4a7fc37eada09e556897c7bab9a42d36" kind="function"><name>IsActive</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_i_component_1afd80a286387f80ee2dd592d9366f7645" kind="function"><name>SetActive</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_i_component_1adbb9c447e4a2a65e828cb0e2bd60d7a4" kind="function"><name>GetUUID</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_i_component_1a1df5779e3ba49dfcdee54914de867474" kind="function"><name>GetParentObject</name></member>
+  </compound>
+  <compound refid="struct_frost_engine_1_1_application_1_1_init_data" kind="struct"><name>FrostEngine::Application::InitData</name>
+    <member refid="struct_frost_engine_1_1_application_1_1_init_data_1a68b289e0218fd4c54844ccc9f0d44a9c" kind="variable"><name>title</name></member>
+    <member refid="struct_frost_engine_1_1_application_1_1_init_data_1acc4b521712653b12c243c8d38615f353" kind="variable"><name>size</name></member>
+  </compound>
+  <compound refid="classfrost_1_1core_1_1_input" kind="class"><name>frost::core::Input</name>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915" kind="enum"><name>Key</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a5182bf9fb4559a120f86dcdae2dbd3b2" kind="enumvalue"><name>SPACE</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a6df658cb89f3c79356437f9036cb5a3c" kind="enumvalue"><name>APOSTROPHE</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a1c7b65c7ad692963456411fad67da0b5" kind="enumvalue"><name>COMMA</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a7a0bf0fd66b4b5fae21c6fbffd1de811" kind="enumvalue"><name>MINUS</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915ae33af35aeef007dff6aa3d3733ba772c" kind="enumvalue"><name>PERIOD</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a98860ea39e194b6986ecd9c07576faec" kind="enumvalue"><name>SLASH</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a670dfba664541ae2c183d105876acc25" kind="enumvalue"><name>num_0</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a69098f61d6e36b410b61c40d19f5b577" kind="enumvalue"><name>num_1</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a10353f97a2fb9e7302e41efe640f881c" kind="enumvalue"><name>num_2</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915aa53a6ca1ae5284b26bf24f89895e0363" kind="enumvalue"><name>num_3</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915acbe2142c677482c9c26fab2dd486e950" kind="enumvalue"><name>num_4</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a9f374b0e91e3f13e1d2070dcb197a300" kind="enumvalue"><name>num_5</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a93b48cf941eab9860284d0cf6a8c5ea4" kind="enumvalue"><name>num_6</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a17aeab5d5474a017af69d1ba966b3bf8" kind="enumvalue"><name>num_7</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a4948c9c27a85b90b8052bd9114f14625" kind="enumvalue"><name>num_8</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a7f2b0c2b5475b76025d058ba46998c4f" kind="enumvalue"><name>num_9</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915ad4103bbf4c53c5f2b46c9a82b15e2c7b" kind="enumvalue"><name>SEMICOLON</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a19f3995a54314ebf53d1e73db2fa1642" kind="enumvalue"><name>EQUAL</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a855cc0d8f53b25ed2b88caf32051c58d" kind="enumvalue"><name>A</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915ab820b0701f03fd9b6381dd679495fddf" kind="enumvalue"><name>B</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a7d90970a28f134c05886c12ceb3e4787" kind="enumvalue"><name>C</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a3a06d5453cc9c7477be4ab6b700322c1" kind="enumvalue"><name>D</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915ad1fa9f219d0eefd8ad1dbceaf29c5d0f" kind="enumvalue"><name>E</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a1e5f4e96d6ddeebe5e04274ecdc16c7f" kind="enumvalue"><name>F</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a3153092eeeb67121728d00471fbb768b" kind="enumvalue"><name>G</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915ab28cc81b1c20b4d06465585750781328" kind="enumvalue"><name>H</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a678eb6fce6bd1cd7d7a5787e41cdb234" kind="enumvalue"><name>I</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a90efdaad6c8c6f3fedcedd75d8c73cd8" kind="enumvalue"><name>J</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915abaedefc02c9da63baaefb0d429f00f07" kind="enumvalue"><name>K</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a41a8c6f9226c021b39c131bd947a9490" kind="enumvalue"><name>L</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a6fc09e6a70914c1a1535afd53b2abc83" kind="enumvalue"><name>M</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915ac7721abac245b6fa3e7e293b69ee4c6f" kind="enumvalue"><name>N</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915acd80e9de1f8572f223c3f79dd582d214" kind="enumvalue"><name>O</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915aaef760516c0b424916dfca251a29d597" kind="enumvalue"><name>P</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915ab6b679470e6e1507616b203d24732e97" kind="enumvalue"><name>Q</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a2eb049d92fd8286373692d9e67cccddc" kind="enumvalue"><name>R</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915afe52c3f99348cb4f6f60d038fb166d90" kind="enumvalue"><name>S</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a79a78a37632128ce4c77d7ed840b1fd7" kind="enumvalue"><name>T</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a2f2930e20cea7666468140d19244d5cf" kind="enumvalue"><name>U</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915af2c44a2b5a2f6286fe1bab64898184f2" kind="enumvalue"><name>V</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915aef166c7634266bc78abc634a78090f3b" kind="enumvalue"><name>W</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a174200b2a0c97b5b8fbbbdf6eb4310f0" kind="enumvalue"><name>X</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a06a98da867b5561f853d631c747fd004" kind="enumvalue"><name>Y</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a16a7bab0046d7abff65f4e7929a11f41" kind="enumvalue"><name>Z</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915ad02d1f60fdbba15e11ab5d4f4a6e9642" kind="enumvalue"><name>LEFT_BRACKET</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a394ee0a76cec8557ffbafd1121ac85da" kind="enumvalue"><name>BACKSLASH</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a4326c8efe521ffa568decca94d88338a" kind="enumvalue"><name>RIGHT_BRACKET</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a4715244a23608338f93190f6b25fc696" kind="enumvalue"><name>GRAVE_ACCENT</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915af5e5519ff5158a9436f299db42ec1c5f" kind="enumvalue"><name>WORLD_1</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a1fb9a791064e081207674bed709fc6eb" kind="enumvalue"><name>WORLD_2</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915ae03b19b9330e9585e4ef2fd706b0a84b" kind="enumvalue"><name>ESCAPE</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915ad497cba721328a81e458531fabc4c77a" kind="enumvalue"><name>ENTER</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a44a0daa56bb10f951d85c878052da0d6" kind="enumvalue"><name>TAB</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a66504831cfe733e6750a6de1e6e584ee" kind="enumvalue"><name>BACKSPACE</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a3a9f06d7468b60725a48ceaba21bad34" kind="enumvalue"><name>INSERT</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915adb050be1fd4b51598ea47e3e14b68e9b" kind="enumvalue"><name>RIGHT</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a09a5b9b3c84bb190d3232e8a9304e4c7" kind="enumvalue"><name>LEFT</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a3f3524194cfbfd10928068dc541cb38f" kind="enumvalue"><name>DOWN</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915afa1966a8edf3ee7f8cbc8626f9dd30e3" kind="enumvalue"><name>UP</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915aaf845a136c7c441c3eb10d075d24d2a5" kind="enumvalue"><name>PAGE_UP</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915aae3363b8a05a07c54c613e966f167c96" kind="enumvalue"><name>PAGE_DOWN</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915aea585fc61477f2855dea8cadc9f059d4" kind="enumvalue"><name>HOME</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a3a87c81611c8fa32eed72aa6f285df16" kind="enumvalue"><name>END</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a54a11655f82da349971e057ad375bdb5" kind="enumvalue"><name>CAPS_LOCK</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a7ad731af525de92585d3d0d0551a1f44" kind="enumvalue"><name>SCROLL_LOCK</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a34310a40027d2e9677c52d4e01d4993b" kind="enumvalue"><name>NUM_LOCK</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a2e0f2871a29be141f2fe52cb28be4d23" kind="enumvalue"><name>PRINT_SCREEN</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915ac79b8aed5dfdac5e7b33d6f893f13e4a" kind="enumvalue"><name>PAUSE</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a42d44d1254f3cea2277f1bade3dfd55a" kind="enumvalue"><name>F1</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a35645db9c0246f072de4b96f0c14e508" kind="enumvalue"><name>F2</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915ade050ddca5664392a48a60f702bf3c58" kind="enumvalue"><name>F3</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915ae2ab6969b8fdb996a7acb3ec405c1165" kind="enumvalue"><name>F4</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915aea0a5f6024c680ba6e4014c9541e6afa" kind="enumvalue"><name>F5</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a1ad689861550095a275bb7395af517ed" kind="enumvalue"><name>F6</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915ad64c88618cb1e19f884bb8d4ac8bbd87" kind="enumvalue"><name>F7</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a9ec61b4647856744760cce3724f203a2" kind="enumvalue"><name>F8</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a9bc24605cd612be377d4fa50af9bc646" kind="enumvalue"><name>F9</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915afdf4ec1e3f37e71bead21a24b14de4bb" kind="enumvalue"><name>F10</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a2fe7afe7807a63e66d9a02fa92f67f26" kind="enumvalue"><name>F11</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a243ebd36e4f2b03533a846ee5d595f91" kind="enumvalue"><name>F12</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915ae670a49bfc4c89aa7d11c66c3cfb4449" kind="enumvalue"><name>F13</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915aa1dbf34d3ab4e7f5ed7b26eec3b2e6cd" kind="enumvalue"><name>F14</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915aff5994b71fe2baf39afa47e4a2935476" kind="enumvalue"><name>F15</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915afee4c7db602a97d6fb4cd51a8f3707ac" kind="enumvalue"><name>F16</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a8e86e0ff1199606ae193df475a1865cd" kind="enumvalue"><name>F17</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a5c7a13f0122bb372bdd1e55346fcdc2f" kind="enumvalue"><name>F18</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a1cbb84442bb7b541c0c2479edd172603" kind="enumvalue"><name>F19</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a538d4a011507ef7f998b49f534e78267" kind="enumvalue"><name>F20</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a61ab3654f15218421dd894ab8a0862f6" kind="enumvalue"><name>F21</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a51482a3b4f27add80eb5d627fb176d8a" kind="enumvalue"><name>F22</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a681eb55236f9663004a5d949fc8bc8f1" kind="enumvalue"><name>F23</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a2474d37c33595f2f0ab4c0680045ba1e" kind="enumvalue"><name>F24</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a46c7dc22a8b03404a11a07ccfaa5891e" kind="enumvalue"><name>F25</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a6fc9fafd45b09eaecfd8856b2e83c0da" kind="enumvalue"><name>KP_0</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a130f64deeb15d5bd9b345a279b544ebf" kind="enumvalue"><name>KP_1</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a9635a1e7310787563acd37e0a383ca82" kind="enumvalue"><name>KP_2</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a1d83ff140351e7504c24d61d188996e7" kind="enumvalue"><name>KP_3</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915adae9b4dfe555b0ded0bc6bacb8fc2b7d" kind="enumvalue"><name>KP_4</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a09e60d3f777c9697e6eb51edb844a91c" kind="enumvalue"><name>KP_5</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a83084137251b8a2a881d5bdd8deec5fe" kind="enumvalue"><name>KP_6</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a04de403523f87a5ac7b359239eace54c" kind="enumvalue"><name>KP_7</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a0d6d1f4caf86e4ebea98d9e357d74ea8" kind="enumvalue"><name>KP_8</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a58a18f3e9b9aad74dd0b48491d388970" kind="enumvalue"><name>KP_9</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915af98e37a357b9f9bb63df600b46d79932" kind="enumvalue"><name>KP_DECIMAL</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a1482f5edccf5ff9ec8df5b251d8dcf4d" kind="enumvalue"><name>KP_DIVIDE</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a254e9cb884287c958104306b732d5a37" kind="enumvalue"><name>KP_MULTIPLY</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a1d4389d60703778c133c18b351ad7771" kind="enumvalue"><name>KP_SUBTRACT</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915abc709c69421395719eba4b1aaa867b5a" kind="enumvalue"><name>KP_ADD</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915af47e169e2990171c859e3f1d5e3e8523" kind="enumvalue"><name>KP_ENTER</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915aded54598825bfe4ba27575f0288111d5" kind="enumvalue"><name>KP_EQUAL</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915ade0937b2a82c018cfb25cecd392b39b3" kind="enumvalue"><name>LEFT_SHIFT</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a00a4dd97f5ad27e45818d4572ef9c994" kind="enumvalue"><name>LEFT_CONTROL</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915adce15daacae1c75a82ecafb68a91d259" kind="enumvalue"><name>LEFT_ALT</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a8c6c2833dc548807caba94f9de0c37a3" kind="enumvalue"><name>LEFT_SUPER</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a93985a8948b04c97cf9047019c657967" kind="enumvalue"><name>RIGHT_SHIFT</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915aa50386481dfc850273bbf29650b4dc29" kind="enumvalue"><name>RIGHT_CONTROL</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a6350b98071e7f31f68fc93957f936311" kind="enumvalue"><name>RIGHT_ALT</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a7161fc4220b365c32359bf759959b983" kind="enumvalue"><name>RIGHT_SUPER</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1abc09727085c77c80b054f408b6ffeba1" kind="enum"><name>ActionType</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1abc09727085c77c80b054f408b6ffeba1ad8477a65621611faa40d81f7b4c870c0" kind="enumvalue"><name>Release</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1abc09727085c77c80b054f408b6ffeba1a11c6c48f68f8531963e4c357e5016030" kind="enumvalue"><name>Press</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1abc09727085c77c80b054f408b6ffeba1a630ed1da3e803a09341fbb4ed32f0289" kind="enumvalue"><name>OnGoing</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kind="variable"><name>m_instance</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1a0845eb6b6adb8effe9d48ee8e3515aff" kind="variable"><name>m_internal</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1a9f797fbaa12fe46e56e17c311779da00" kind="variable"><name>KeyBind</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1a656348f044ef9121fdc03682fb2fa935" kind="variable"><name>ActionBind</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1ae11bf3987331fc7b34254c42207911e0" kind="variable"><name>KeyPressed</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1a6f60ce79aab82aecb4ef7ca4ce6c2a6e" kind="function"><name>Input</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1a6b6bf862e987b8f465d48e08d79aca8c" kind="function"><name>operator=</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1adbd39585286cf38f4e77e744573ed5fb" kind="function"><name>Input</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1aceb23c9fb1cfeb2551d086b7f80a50e2" kind="function"><name>~Input</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1a25de7f6fca41aaecfab5528075077bc2" kind="function"><name>init</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1a4bd34deaa3a3b9bb1c4036176987874b" kind="function"><name>AddAction</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1a231db8ebc0336e1b22833da90e2358ba" kind="function"><name>AddActionToKey</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1ab36ba9e698b07dc0e5c26d55b86897a7" kind="function"><name>BindFunctionToAction</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1a14b8cdb2bdb019676442a2780c4e9fa7" kind="function"><name>CallAction</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1a4d8207962ea9b24b718c04a570822c32" kind="function"><name>RemoveAction</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1afb9731abb0df0f66b2d1489f7af416e4" kind="function"><name>Update</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1a8267bf0fb8e7ebc8127cc19e777b8467" kind="function"><name>GetInstance</name></member>
+    <member refid="classfrost_1_1core_1_1_input_1a585ccd617c506e4ced316a9dab8daed8" kind="function"><name>key_callback</name></member>
+  </compound>
+  <compound refid="structfrost_1_1core_1_1_buffer_1_1_internal" kind="struct"><name>frost::core::Buffer::Internal</name>
+    <member refid="structfrost_1_1core_1_1_buffer_1_1_internal_1ab84a6d161efaece3ec064d0bfc27e7ba" kind="variable"><name>m_gl_ID</name></member>
+  </compound>
+  <compound refid="structfrost_1_1core_1_1_input_1_1_internal" kind="struct"><name>frost::core::Input::Internal</name>
+    <member refid="structfrost_1_1core_1_1_input_1_1_internal_1ab45510d9dae3de2e16e57fb920e1008c" kind="variable"><name>window</name></member>
+  </compound>
+  <compound refid="structfrost_1_1core_1_1_render_device_1_1_internal" kind="struct"><name>frost::core::RenderDevice::Internal</name>
+    <member refid="structfrost_1_1core_1_1_render_device_1_1_internal_1adbd73cc32baae7c4f702b838b2a383b1" kind="variable"><name>window</name></member>
+    <member refid="structfrost_1_1core_1_1_render_device_1_1_internal_1aaa1ad8a1d2624bc9072e1bf051fc9e93" kind="variable"><name>VaoToRender</name></member>
+  </compound>
+  <compound refid="structfrost_1_1core_1_1_window_1_1_internal" kind="struct"><name>frost::core::Window::Internal</name>
+    <member refid="structfrost_1_1core_1_1_window_1_1_internal_1a8d7379254d57c9aa09806a16d2b990c1" kind="variable"><name>window</name></member>
+  </compound>
+  <compound refid="classfrost_1_1utils_1_1_logger" kind="class"><name>frost::utils::Logger</name>
+    <member refid="classfrost_1_1utils_1_1_logger_1a7d86e9ecf97ad07afe1969f9ed0c209a" kind="variable"><name>m_instance</name></member>
+    <member refid="classfrost_1_1utils_1_1_logger_1a45e6c9c6565e37b9732b213b41ce4c19" kind="variable"><name>m_logStack</name></member>
+    <member refid="classfrost_1_1utils_1_1_logger_1a0a8e660f359fd246c552db3664b30fbf" kind="variable"><name>m_showLogError</name></member>
+    <member refid="classfrost_1_1utils_1_1_logger_1a78734d9fcbe965e9e0efb7df3650a2e6" kind="variable"><name>m_showLogWarning</name></member>
+    <member refid="classfrost_1_1utils_1_1_logger_1a9e1ece8abbb7af9d1927bad7a3109679" kind="variable"><name>m_showLogInfo</name></member>
+    <member refid="classfrost_1_1utils_1_1_logger_1acb49ea9d169be26018438483455ea2d5" kind="function"><name>Logger</name></member>
+    <member refid="classfrost_1_1utils_1_1_logger_1a31bb560f520fb6811ea8ef5c3ac3ca3a" kind="function"><name>~Logger</name></member>
+    <member refid="classfrost_1_1utils_1_1_logger_1a49af0a8da8bd5c5222e7f4474c1ecaf2" kind="function"><name>Log</name></member>
+    <member refid="classfrost_1_1utils_1_1_logger_1a9ebe619cce25c88017f6d968eb9376af" kind="function"><name>Show</name></member>
+    <member refid="classfrost_1_1utils_1_1_logger_1aa9492b991b4583aae82fef8368730aa5" kind="function"><name>LogInfo</name></member>
+    <member refid="classfrost_1_1utils_1_1_logger_1aad1c2e3c78b39231d2019dc0843cca72" kind="function"><name>LogWarning</name></member>
+    <member refid="classfrost_1_1utils_1_1_logger_1af7995344e912027c72c20e6c7a8108be" kind="function"><name>LogError</name></member>
+    <member refid="classfrost_1_1utils_1_1_logger_1a2d6186fe376f325ca9fbc37c6672d6bf" kind="function"><name>GetInstance</name></member>
+    <member refid="classfrost_1_1utils_1_1_logger_1a5d287cd826d0847f8216b9682e82c023" kind="function"><name>DeleteInstance</name></member>
+  </compound>
+  <compound refid="structfrost_1_1core_1_1_input_1_1_object_function" kind="struct"><name>frost::core::Input::ObjectFunction</name>
+    <member refid="structfrost_1_1core_1_1_input_1_1_object_function_1a112497f2918c657abd8d4ba506b9d113" kind="variable"><name>Object</name></member>
+    <member refid="structfrost_1_1core_1_1_input_1_1_object_function_1a67d9ef3c901ebc65fbc2bf996f9cdfcb" kind="variable"><name>Function</name></member>
+  </compound>
+  <compound refid="structfrost_1_1core_1_1_save_1_1_position" kind="struct"><name>frost::core::Save::Position</name>
+    <member refid="structfrost_1_1core_1_1_save_1_1_position_1a90f601d8025b6c86a43a7a4b266dc92f" kind="variable"><name>x</name></member>
+    <member refid="structfrost_1_1core_1_1_save_1_1_position_1a354c8708458fb8dcbec43aebf1c254ee" kind="variable"><name>y</name></member>
+  </compound>
+  <compound refid="classfrost_1_1core_1_1_render_device" kind="class"><name>frost::core::RenderDevice</name>
+    <member refid="classfrost_1_1core_1_1_render_device_1a09510acece108f9534fb662803a3bf2a" kind="variable"><name>m_instance</name></member>
+    <member refid="classfrost_1_1core_1_1_render_device_1ac455808f74af661c0fd6fdee2004c450" kind="variable"><name>m_vao</name></member>
+    <member refid="classfrost_1_1core_1_1_render_device_1a4e9f2965804adee6d7098d19e3aed782" kind="variable"><name>m_vs</name></member>
+    <member refid="classfrost_1_1core_1_1_render_device_1a92b6cd49f4b9aa9f7b8fb699d027a567" kind="variable"><name>m_fs</name></member>
+    <member refid="classfrost_1_1core_1_1_render_device_1a04a7ac61e44dfd5685dde301ee225428" kind="variable"><name>m_positionLocation</name></member>
+    <member refid="classfrost_1_1core_1_1_render_device_1a8201a495f2444abb86bd18933fa24023" kind="variable"><name>m_rotationLocation</name></member>
+    <member refid="classfrost_1_1core_1_1_render_device_1a081f933b4303e9f99ca62e559dbfbb87" kind="variable"><name>m_scaleLocation</name></member>
+    <member refid="classfrost_1_1core_1_1_render_device_1af6dd4570d9d9c086491f0da43163961c" kind="variable"><name>m_aspectRatioLocation</name></member>
+    <member refid="classfrost_1_1core_1_1_render_device_1ab1d3803292d9c4c2cd9c25638e72e4ea" kind="variable"><name>m_texture</name></member>
+    <member refid="classfrost_1_1core_1_1_render_device_1a54c643482d7f472fa46106edc775d0ec" kind="variable"><name>m_zoom</name></member>
+    <member refid="classfrost_1_1core_1_1_render_device_1a7ded9ecc66f35b7e8f4515fcb01f32f2" kind="variable"><name>m_clearColor</name></member>
+    <member refid="classfrost_1_1core_1_1_render_device_1a36821898542254844857bc9636d9a3bb" kind="variable"><name>m_shaderProgram</name></member>
+    <member refid="classfrost_1_1core_1_1_render_device_1a559ff3584a5171906172cb69a4e794b7" kind="variable"><name>m_internal</name></member>
+    <member refid="classfrost_1_1core_1_1_render_device_1afcf0eed557a92e7f92804b5825f72afe" kind="function"><name>RenderDevice</name></member>
+    <member refid="classfrost_1_1core_1_1_render_device_1a625352ae14a36f4af7be022d15928566" kind="function"><name>RenderDevice</name></member>
+    <member refid="classfrost_1_1core_1_1_render_device_1a7384b1c9905350ca241faca7f5548caf" kind="function"><name>~RenderDevice</name></member>
+    <member refid="classfrost_1_1core_1_1_render_device_1a645dc56c7fcfc1dfdcef4a70e6a38649" kind="function"><name>Init</name></member>
+    <member refid="classfrost_1_1core_1_1_render_device_1ac257e450c741fe57475a62dac5e6c0b8" kind="function"><name>AddVAO</name></member>
+    <member refid="classfrost_1_1core_1_1_render_device_1aa86e02329f496c2ad1b4c0c696353f8b" kind="function"><name>SetZoom</name></member>
+    <member refid="classfrost_1_1core_1_1_render_device_1a571fc787fb8052d9e407f008d382898e" kind="function"><name>GetZoom</name></member>
+    <member refid="classfrost_1_1core_1_1_render_device_1a0cba23d460e89439f50f28e3bc068a4b" kind="function"><name>SetClearColor</name></member>
+    <member refid="classfrost_1_1core_1_1_render_device_1aaef5f4a9587e93d13d0600462767d342" kind="function"><name>Update</name></member>
+    <member refid="classfrost_1_1core_1_1_render_device_1a919f3611c9a79235f0cdd641bca3243a" kind="function"><name>GetInstance</name></member>
+    <member refid="classfrost_1_1core_1_1_render_device_1a8a1c6ef404308ddef27b073c603c2a02" kind="function"><name>GetVaoToRender</name></member>
+    <member refid="classfrost_1_1core_1_1_render_device_1ab7464a8766b47476b1f535f1f8f1d739" kind="function"><name>ClearVaosToRender</name></member>
+  </compound>
+  <compound refid="classfrost_1_1core_1_1_r_t_t_i" kind="class"><name>frost::core::RTTI</name>
+    <member refid="classfrost_1_1core_1_1_r_t_t_i_1ab67a37bae5aeb3024dbd568bd4c9a9ea" kind="function"><name>GetTypeName</name></member>
+  </compound>
+  <compound refid="structfrost_1_1core_1_1_s___animation_data" kind="struct"><name>frost::core::S_AnimationData</name>
+    <member refid="structfrost_1_1core_1_1_s___animation_data_1a9b406a9c3b0cc0e0de724f1d0b55efa5" kind="variable"><name>startX</name></member>
+    <member refid="structfrost_1_1core_1_1_s___animation_data_1a36f8dd3bdd152c3a6ab1cf710089c9eb" kind="variable"><name>startY</name></member>
+    <member refid="structfrost_1_1core_1_1_s___animation_data_1ad1ba9e97d0c15841de107aa7c5fe4cd7" kind="variable"><name>sizeX</name></member>
+    <member refid="structfrost_1_1core_1_1_s___animation_data_1af862089b421aacfd467f01fedac0e865" kind="variable"><name>sizeY</name></member>
+    <member refid="structfrost_1_1core_1_1_s___animation_data_1a18194a0816ed9722a5069c9d5f4c8c0e" kind="variable"><name>offsetX</name></member>
+    <member refid="structfrost_1_1core_1_1_s___animation_data_1ad880cf32630b506974c4b8e800210ffa" kind="variable"><name>offsetY</name></member>
+    <member refid="structfrost_1_1core_1_1_s___animation_data_1aa034494d6743698ae3ef3c1fb630d6c8" kind="variable"><name>animationSpriteCount</name></member>
+    <member refid="structfrost_1_1core_1_1_s___animation_data_1ad17e3dd0a8e4a30bff7fc1cbeb44ad5e" kind="variable"><name>spriteOnLine</name></member>
+    <member refid="structfrost_1_1core_1_1_s___animation_data_1a204f3e0766e3e0cdb8e7026dfda5b592" kind="variable"><name>isReverted</name></member>
+    <member refid="structfrost_1_1core_1_1_s___animation_data_1aeab0c7cc32eb8d87858b1a44f2fceeaa" kind="variable"><name>timeBetweenAnimationInS</name></member>
+    <member refid="structfrost_1_1core_1_1_s___animation_data_1a6faf8cf67af7d86c6a29ba2c6b6286b7" kind="function"><name>S_AnimationData</name></member>
+  </compound>
+  <compound refid="structfrost_1_1utils_1_1_logger_1_1_s___log_data" kind="struct"><name>frost::utils::Logger::S_LogData</name>
+    <member refid="structfrost_1_1utils_1_1_logger_1_1_s___log_data_1a28ab5f7fd849893384d7567c69191428" kind="variable"><name>logType</name></member>
+    <member refid="structfrost_1_1utils_1_1_logger_1_1_s___log_data_1ad5a96adf8e1be7cba693c8137a0bdfb8" kind="variable"><name>logContent</name></member>
+  </compound>
+  <compound refid="structfrost_1_1core_1_1_s___static_tile_data" kind="struct"><name>frost::core::S_StaticTileData</name>
+    <member refid="structfrost_1_1core_1_1_s___static_tile_data_1aaf84449ae8bd83dd8c1cd2839a5b13a8" kind="variable"><name>iStartX</name></member>
+    <member refid="structfrost_1_1core_1_1_s___static_tile_data_1a921ba28530417d7d28edabc9200d74bd" kind="variable"><name>iStartY</name></member>
+    <member refid="structfrost_1_1core_1_1_s___static_tile_data_1a19ff1c82dda59bfb254e84dd06e3504f" kind="variable"><name>iSizeX</name></member>
+    <member refid="structfrost_1_1core_1_1_s___static_tile_data_1af6a72b6226f770a7428b3470e97a3e84" kind="variable"><name>iSizeY</name></member>
+    <member refid="structfrost_1_1core_1_1_s___static_tile_data_1aee1836f6dc9b0bcee18eacd77e11fa5e" kind="variable"><name>bIsRevertedX</name></member>
+    <member refid="structfrost_1_1core_1_1_s___static_tile_data_1a285272b6a62a5d1051d875265edbea71" kind="variable"><name>bIsRevertedY</name></member>
+  </compound>
+  <compound refid="structfrost_1_1core_1_1_s___texture_data" kind="struct"><name>frost::core::S_TextureData</name>
+    <member refid="structfrost_1_1core_1_1_s___texture_data_1aebdccf892f05c2e0a56e966b21ee6bd5" kind="variable"><name>animationsData</name></member>
+    <member refid="structfrost_1_1core_1_1_s___texture_data_1a429be9867a069f359abed38d9390b33c" kind="variable"><name>staticTilesData</name></member>
+    <member refid="structfrost_1_1core_1_1_s___texture_data_1a2e5edf44ad83c686efa033f745b2d6e9" kind="function"><name>S_TextureData</name></member>
+    <member refid="structfrost_1_1core_1_1_s___texture_data_1afeece89ee2ab914bf2a71a73fcc871fa" kind="function"><name>~S_TextureData</name></member>
+  </compound>
+  <compound refid="structfrost_1_1core_1_1_window_1_1_s___window_properties" kind="struct"><name>frost::core::Window::S_WindowProperties</name>
+    <member refid="structfrost_1_1core_1_1_window_1_1_s___window_properties_1af1533149ed966a68cae0979911b01d7c" kind="variable"><name>title</name></member>
+    <member refid="structfrost_1_1core_1_1_window_1_1_s___window_properties_1a66b6547bde7505c30ad18900eae55872" kind="variable"><name>size</name></member>
+    <member refid="structfrost_1_1core_1_1_window_1_1_s___window_properties_1aa447621433b6e335d60fb0535ad5cbe8" kind="variable"><name>fullScreen</name></member>
+  </compound>
+  <compound refid="classfrost_1_1core_1_1_save" kind="class"><name>frost::core::Save</name>
+    <member refid="classfrost_1_1core_1_1_save_1af587a753d1942e5969d33e968ada7758" kind="friend"><name>XmlParser</name></member>
+    <member refid="classfrost_1_1core_1_1_save_1a93e51b4e4912039913d9a29680bd8e9d" kind="variable"><name>m_protected_rotation</name></member>
+    <member refid="classfrost_1_1core_1_1_save_1ab3ea457e4568a011e93ecdb5aebcc60a" kind="variable"><name>m_protected_lifePoint</name></member>
+    <member refid="classfrost_1_1core_1_1_save_1a557334849c91621675b52e2786638cee" kind="variable"><name>m_protected_imagePath</name></member>
+    <member refid="classfrost_1_1core_1_1_save_1ae2cb853aaa8673eed954cdf0f045fdaf" kind="variable"><name>m_protected_pos</name></member>
+  </compound>
+  <compound refid="classfrost_1_1core_1_1_scene" kind="class"><name>frost::core::Scene</name>
+    <member refid="classfrost_1_1core_1_1_scene_1a1a40471ced8f611f74d5ef2f17dbb81a" kind="variable"><name>m_uuid</name></member>
+    <member refid="classfrost_1_1core_1_1_scene_1a8e4793dcc7c5f702adc8b26d252ec0ef" kind="variable"><name>m_name</name></member>
+    <member refid="classfrost_1_1core_1_1_scene_1a2e78f12904d8b377bbcbd3d09a4a39c5" kind="variable"><name>m_root</name></member>
+    <member refid="classfrost_1_1core_1_1_scene_1afab3d9c2b96a3ed5f21a1ebd974132fd" kind="function"><name>Scene</name></member>
+    <member refid="classfrost_1_1core_1_1_scene_1a95658cd7dfe02c904472033ee59d384d" kind="function"><name>~Scene</name></member>
+    <member refid="classfrost_1_1core_1_1_scene_1af548ceb8f75f7286d4402cd995eb71e1" kind="function"><name>Scene</name></member>
+    <member refid="classfrost_1_1core_1_1_scene_1a42644788ca6cd56315be9d0cbdb2de31" kind="function"><name>operator=</name></member>
+    <member refid="classfrost_1_1core_1_1_scene_1a652e47bd5845ea329bf36d909062c650" kind="function"><name>Scene</name></member>
+    <member refid="classfrost_1_1core_1_1_scene_1a7f57d49b81215b71cd447fb9bd60fdc7" kind="function"><name>operator=</name></member>
+    <member refid="classfrost_1_1core_1_1_scene_1a9ed64d8f5f163d5170b75b426e022051" kind="function"><name>GetName</name></member>
+    <member refid="classfrost_1_1core_1_1_scene_1a784f6118fca41460f0b11a6818ca1716" kind="function"><name>GetRoot</name></member>
+  </compound>
+  <compound refid="classfrost_1_1core_1_1_scene_manager" kind="class"><name>frost::core::SceneManager</name>
+    <member refid="classfrost_1_1core_1_1_scene_manager_1a9aed8c346018827911fbd76979cf282c" kind="variable"><name>m_scenes</name></member>
+    <member refid="classfrost_1_1core_1_1_scene_manager_1a84d2fbbe14724c7f3e5a08ffc3840d3b" kind="variable"><name>m_activeScene</name></member>
+    <member refid="classfrost_1_1core_1_1_scene_manager_1a48db0881386fac491acae3e1a085af91" kind="function"><name>~SceneManager</name></member>
+    <member refid="classfrost_1_1core_1_1_scene_manager_1a98b7f4b06af80385436cd4e5719483e2" kind="function"><name>SceneManager</name></member>
+    <member refid="classfrost_1_1core_1_1_scene_manager_1af39c972a64ec499d00ac8e95cfe248e5" kind="function"><name>SceneManager</name></member>
+    <member refid="classfrost_1_1core_1_1_scene_manager_1abca017b803fe023cf12fc0607c6aea19" kind="function"><name>operator=</name></member>
+    <member refid="classfrost_1_1core_1_1_scene_manager_1afb4ba8d46301ee3374bb44d94840cadc" kind="function"><name>operator=</name></member>
+    <member refid="classfrost_1_1core_1_1_scene_manager_1a20388056002976929cbc0abeeac86f8b" kind="function"><name>CreateScene</name></member>
+    <member refid="classfrost_1_1core_1_1_scene_manager_1abe66ddc6ab1efdd67a0f743097da5d1a" kind="function"><name>RemoveScene</name></member>
+    <member refid="classfrost_1_1core_1_1_scene_manager_1a53fb3404794a9d243be1049f7fb1192c" kind="function"><name>LoadScene</name></member>
+    <member refid="classfrost_1_1core_1_1_scene_manager_1a627cf41a8f9aab63d4c035cc01e28875" kind="function"><name>GetActiveScene</name></member>
+    <member refid="classfrost_1_1core_1_1_scene_manager_1ae5963de250ff2e10c2063358c54687e7" kind="function"><name>GetInstance</name></member>
+    <member refid="classfrost_1_1core_1_1_scene_manager_1ae48a2f1c7946e5484939c737cea883fe" kind="function"><name>AddScene</name></member>
+    <member refid="classfrost_1_1core_1_1_scene_manager_1a25156021fdd47cbe55abb195724e3646" kind="function"><name>SceneManager</name></member>
+  </compound>
+  <compound refid="classfrost_1_1core_1_1_shader" kind="class"><name>frost::core::Shader</name>
+    <member refid="classfrost_1_1core_1_1_shader_1a648755ef314efdd49ba16021902209cd" kind="variable"><name>m_gl_ID</name></member>
+    <member refid="classfrost_1_1core_1_1_shader_1ac0fa0b8bd667946c82a9eea09a207661" kind="function"><name>Shader</name></member>
+    <member refid="classfrost_1_1core_1_1_shader_1a359a6d6f037f7424246189a88033b885" kind="function"><name>InitShader</name></member>
+    <member refid="classfrost_1_1core_1_1_shader_1ab113148645ab6c6eaaa0ead3f56105b0" kind="function"><name>Enable</name></member>
+    <member refid="classfrost_1_1core_1_1_shader_1a0824ef4f208ee809bf1a0590f6459701" kind="function"><name>Delete</name></member>
+    <member refid="classfrost_1_1core_1_1_shader_1a5594e0b9bdfee8f67b4de71216ba7f57" kind="function"><name>ReadShaderFile</name></member>
+  </compound>
+  <compound refid="classfrost_1_1core_1_1_signal" kind="class"><name>frost::core::Signal</name>
+    <member refid="classfrost_1_1core_1_1_signal_1a4c85348fd61d64fa7950d4e795e0726e" kind="variable"><name>m_connectedSlots</name></member>
+    <member refid="classfrost_1_1core_1_1_signal_1ae9c78b879942622626fd02c4ffa7f9f7" kind="function"><name>Signal</name></member>
+    <member refid="classfrost_1_1core_1_1_signal_1a4b1168600225cc01f9149249d3c42ed2" kind="function"><name>Signal</name></member>
+    <member refid="classfrost_1_1core_1_1_signal_1a240eb7459df6a092c225187b2875a6a1" kind="function"><name>operator=</name></member>
+    <member refid="classfrost_1_1core_1_1_signal_1a9f55548d5fd77fcbf001d9f5313bc011" kind="function"><name>Signal</name></member>
+    <member refid="classfrost_1_1core_1_1_signal_1a566db0d19cb050a2ee098c3daf33849e" kind="function"><name>~Signal</name></member>
+    <member refid="classfrost_1_1core_1_1_signal_1ab7df8faaf22330578bd0037b363e22fe" kind="function"><name>Connect</name></member>
+    <member refid="classfrost_1_1core_1_1_signal_1ae889b5ec698ba0a325f165adb3e2393d" kind="function"><name>Disconnect</name></member>
+    <member refid="classfrost_1_1core_1_1_signal_1a29ec325e767d863452dafdaee5003af2" kind="function"><name>Disconnect</name></member>
+    <member refid="classfrost_1_1core_1_1_signal_1a726de81a5f75b6ea5a5468a45f8d6221" kind="function"><name>Emit</name></member>
+    <member refid="classfrost_1_1core_1_1_signal_1a95a904b20c5f52ef623edaaf14bce0d8" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="classfrost_1_1core_1_1_slot" kind="class"><name>frost::core::Slot</name>
+    <member refid="classfrost_1_1core_1_1_slot_1a0973353bc0bf6c78dc51b2482d69bbe5" kind="variable"><name>m_init</name></member>
+    <member refid="classfrost_1_1core_1_1_slot_1a383aa35946bf4f3cf8e41dfecfef6c03" kind="variable"><name>m_callback</name></member>
+    <member refid="classfrost_1_1core_1_1_slot_1a33461063679cc57aacc713afcf0dcc68" kind="function"><name>Slot</name></member>
+    <member refid="classfrost_1_1core_1_1_slot_1a0977dae02fcf3c7ae79b43451a8d8e6a" kind="function"><name>Slot</name></member>
+    <member refid="classfrost_1_1core_1_1_slot_1ae357c24cc5a564870c55e4f9af6f9342" kind="function"><name>operator=</name></member>
+    <member refid="classfrost_1_1core_1_1_slot_1ae4d4471a14a828281a16683142aa2846" kind="function"><name>Slot</name></member>
+    <member refid="classfrost_1_1core_1_1_slot_1a529281ee33d8e8204cb2a67f0d87e74d" kind="function"><name>Slot</name></member>
+    <member refid="classfrost_1_1core_1_1_slot_1abef7a0209b4a3886fc60151236a744ea" kind="function"><name>~Slot</name></member>
+    <member refid="classfrost_1_1core_1_1_slot_1a9702a99b1d0d9fa4a59da08190c9b13b" kind="function"><name>operator()</name></member>
+    <member refid="classfrost_1_1core_1_1_slot_1a8c1ee571dfdde225d4a175033a97cd34" kind="function"><name>call</name></member>
+    <member refid="classfrost_1_1core_1_1_slot_1a0dff0269bd7fa4f3c7ac61ed94f94504" kind="function"><name>setSlotFunction</name></member>
+  </compound>
+  <compound refid="classfrost_1_1_e_c_s_1_1_sprite_renderer" kind="class"><name>frost::ECS::SpriteRenderer</name>
+    <member refid="classfrost_1_1_e_c_s_1_1_sprite_renderer_1ad31e7fe7b2bb8a57afb1b35fa862cbea" kind="variable"><name>m_spriteTexturePath</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_sprite_renderer_1a23e12269d62bd051db0f5f311f9f4a85" kind="variable"><name>m_color</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_sprite_renderer_1a8fbde5105c99d35b7c89243fcaf28aad" kind="variable"><name>m_spriteTexture</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_sprite_renderer_1a225c73149da790456472a728cdacb325" kind="variable"><name>vertices</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_sprite_renderer_1af8feca8557e37814c6c373671717c7f9" kind="variable"><name>indices</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_sprite_renderer_1a7ebe2e2aebbee6e0e465ade8d313a02c" kind="variable"><name>VBO</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_sprite_renderer_1a79e26cfbd528fa8d734cfb83903a3ce5" kind="variable"><name>IBO</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_sprite_renderer_1a5765a47aeaa373af67ab39b3b73ec2de" kind="variable"><name>VAO</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_sprite_renderer_1a5c4496f040089d2b6875235ffc9e56e0" kind="function"><name>SpriteRenderer</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_sprite_renderer_1ac719222df5088945b90adcbd583e87fc" kind="function"><name>~SpriteRenderer</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_sprite_renderer_1acdc9ab4287a5d1b3a9350dbd62ecfe28" kind="function"><name>Start</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_sprite_renderer_1a83383dc71f8d4b5efeb08ef5b961bec9" kind="function"><name>Update</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_sprite_renderer_1aafdc497b51b6f58f97e89e5da9e79dcd" kind="function"><name>Destroy</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_sprite_renderer_1acbad7757afdbdf22b7d9a2248855e2fd" kind="function"><name>GetData</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_sprite_renderer_1a6976f2408434b2b456de0d3c45795b60" kind="function"><name>GetTexture</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_sprite_renderer_1acbfae3ba93c41c9ff6cfb944303821a7" kind="function"><name>SetTexture</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_sprite_renderer_1a152f0459f0322244730898cde5e82c00" kind="function"><name>GetColor</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_sprite_renderer_1a9cc88f63d65115a541835c74263cb9e5" kind="function"><name>SetColor</name></member>
+  </compound>
+  <compound refid="structstbi__io__callbacks" kind="struct"><name>stbi_io_callbacks</name>
+    <member refid="structstbi__io__callbacks_1a623e46b3a2a019611601409926283a88" kind="variable"><name>read</name></member>
+    <member refid="structstbi__io__callbacks_1a257aac5480a90a6c4b8fbe86c1b01068" kind="variable"><name>skip</name></member>
+    <member refid="structstbi__io__callbacks_1a319639db2f76e715eed7a7a974136832" kind="variable"><name>eof</name></member>
+  </compound>
+  <compound refid="classfrost_1_1core_1_1_texture" kind="class"><name>frost::core::Texture</name>
+    <member refid="classfrost_1_1core_1_1_texture_1aef6eedf2775658af13fbbee6ebab1c58" kind="variable"><name>ID</name></member>
+    <member refid="classfrost_1_1core_1_1_texture_1ad73d1a11af0a02df16289739b98fa22a" kind="variable"><name>FilePath</name></member>
+    <member refid="classfrost_1_1core_1_1_texture_1a4d573cbe17c92bfd785f6c7f76eb7622" kind="variable"><name>LocalBuffer</name></member>
+    <member refid="classfrost_1_1core_1_1_texture_1a1e246b40e81774310fd3ab7813b1d077" kind="variable"><name>Width</name></member>
+    <member refid="classfrost_1_1core_1_1_texture_1aae89f608e3d7c320bfdc3526e697dc66" kind="variable"><name>Height</name></member>
+    <member refid="classfrost_1_1core_1_1_texture_1ad1ed6da91fcff8cbdb5e8bbf07262c90" kind="variable"><name>BPP</name></member>
+    <member refid="classfrost_1_1core_1_1_texture_1a2140467b9a298d6474de2200fcc2ae3f" kind="function"><name>Texture</name></member>
+    <member refid="classfrost_1_1core_1_1_texture_1a955ff95837cd98a6805a8af5cf1e0815" kind="function"><name>Texture</name></member>
+    <member refid="classfrost_1_1core_1_1_texture_1a98d14a3e2174106bf934def0e77e60c2" kind="function"><name>~Texture</name></member>
+    <member refid="classfrost_1_1core_1_1_texture_1a982fdc1f871725510ca1eace1d7c10c3" kind="function"><name>SetTexture</name></member>
+    <member refid="classfrost_1_1core_1_1_texture_1ad77492083b34caa72c906c81f73fa6b3" kind="function"><name>Bind</name></member>
+    <member refid="classfrost_1_1core_1_1_texture_1aebaa2a8b1741931a688fda39f5ff47a5" kind="function"><name>Unbind</name></member>
+    <member refid="classfrost_1_1core_1_1_texture_1a86b85d78d189ba03c64fbb3ac7961987" kind="function"><name>GetWidth</name></member>
+    <member refid="classfrost_1_1core_1_1_texture_1af7e1e2344212d4c6c821325237d3687e" kind="function"><name>GetHeight</name></member>
+    <member refid="classfrost_1_1core_1_1_texture_1a2cd74f3793202179cbd0dd5daa18c5b6" kind="function"><name>GetID</name></member>
+    <member refid="classfrost_1_1core_1_1_texture_1a9fc71c261b32aee54efb317d2d406de5" kind="function"><name>initialize</name></member>
+    <member refid="classfrost_1_1core_1_1_texture_1a222529fc62dd2afdc10942a458829fbd" kind="function"><name>LoadImage</name></member>
+  </compound>
+  <compound refid="classfrost_1_1core_1_1_texture_manager" kind="class"><name>frost::core::TextureManager</name>
+    <member refid="classfrost_1_1core_1_1_texture_manager_1ae639ecdddead4fc17f830fa6edbbe3a6" kind="variable"><name>m_textures</name></member>
+    <member refid="classfrost_1_1core_1_1_texture_manager_1a811edfe4d1891d62fd5de7e2d649acf4" kind="function"><name>TextureManager</name></member>
+    <member refid="classfrost_1_1core_1_1_texture_manager_1a2cc224e561478c71fbaea3dee1f04354" kind="function"><name>~TextureManager</name></member>
+    <member refid="classfrost_1_1core_1_1_texture_manager_1af5f7963947361014eea4f4074e5166cc" kind="function"><name>LoadTexture</name></member>
+    <member refid="classfrost_1_1core_1_1_texture_manager_1a8cdea3d4e51dc59826f3d9725f002203" kind="function"><name>GetTextureData</name></member>
+    <member refid="classfrost_1_1core_1_1_texture_manager_1a3bce744a9537bf8bcd54074cc0634200" kind="function"><name>LoadTextureMetadata</name></member>
+    <member refid="classfrost_1_1core_1_1_texture_manager_1a3a7c033f8fd7e7d7e21a307c19332455" kind="function"><name>LoadAnimationMetadata</name></member>
+  </compound>
+  <compound refid="classfrost_1_1_e_c_s_1_1_transform" kind="class"><name>frost::ECS::Transform</name>
+    <member refid="classfrost_1_1_e_c_s_1_1_transform_1a501448f04c653b40eb6b439fb89f427a" kind="variable"><name>position</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_transform_1ad2b78d7e36deeff39aa1d798b3cbadf3" kind="variable"><name>rotation</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_transform_1a3d8441a6f4f38db9a2ac8b6d8c59cbbf" kind="variable"><name>scale</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_transform_1a3e0dd830ba7c408db7a8fd16e9bd1282" kind="variable"><name>isMovingEntity</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_transform_1a436c82b11fda8350e92d16770018b438" kind="function"><name>Transform</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_transform_1a74221cec682754097918991ccbca2ff5" kind="function"><name>~Transform</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_transform_1a4b60e14321538cc280dcbffd3020a796" kind="function"><name>Start</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_transform_1a4290b0f2925289346fda60ef987af086" kind="function"><name>Update</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_transform_1a549a5d79ba8eb8981550b6435011cd20" kind="function"><name>Destroy</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_transform_1a5bac281e4ae89e08f7dde463244b4367" kind="function"><name>GetData</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_transform_1adcae513a5b2a45cf692e23ec8098b167" kind="function"><name>Translate</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_transform_1adf0d65cad50e05d552dbfe63657d10ec" kind="function"><name>Rotate</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_transform_1abf24b744556036ffd6e78b2427e0edf8" kind="function"><name>Scale</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_transform_1a8975e29122bb6592602d8817a97fca59" kind="function"><name>GetForwardVector</name></member>
+  </compound>
+  <compound refid="classfrost_1_1_e_c_s_1_1_tree" kind="class"><name>frost::ECS::Tree</name>
+    <member refid="classfrost_1_1_e_c_s_1_1_tree_1a13093cc6ac491246a1dc42b600dfb22f" kind="variable"><name>m_currentParent</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_tree_1aef9d65eab9cd2bc4dc06c874c8fee7f8" kind="variable"><name>m_childrens</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_tree_1a71825dcbc0789b497810b6f7f77d44cd" kind="function"><name>Tree</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_tree_1ab1d3dce624fd3244a7fb64c245485e7d" kind="function"><name>~Tree</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_tree_1a7af404ad98fdef819bdb8b91f013db46" kind="function"><name>GetChildren</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_tree_1a423ce7696c1711a8a51c2750cd499135" kind="function"><name>SetParent</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_tree_1a46fee815299cf1d045dcb8844b985bd4" kind="function"><name>GetParent</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_tree_1acbfccbc87953e29ccebd56d20d456a5a" kind="function"><name>GetParent</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_tree_1a5d1973e5c828d1b84748f3dd938a2309" kind="function"><name>GetRoot</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_tree_1ad0052319bdecede6d6c6ffc18404bd0c" kind="function"><name>RemoveChild</name></member>
+    <member refid="classfrost_1_1_e_c_s_1_1_tree_1a06a7965afc419f69a05f27036e66778d" kind="function"><name>AddChild</name></member>
+  </compound>
+  <compound refid="classfrost_1_1core_1_1_vertex_array_object" kind="class"><name>frost::core::VertexArrayObject</name>
+    <member refid="classfrost_1_1core_1_1_vertex_array_object_1a7b27ec8165dc3b235c9e35e3a72b9d34" kind="enum"><name>E_TypeBuffer</name></member>
+    <member refid="classfrost_1_1core_1_1_vertex_array_object_1a7b27ec8165dc3b235c9e35e3a72b9d34a4ad399b4723b5460bb1ffbda6fc3d854" kind="enumvalue"><name>VBO</name></member>
+    <member refid="classfrost_1_1core_1_1_vertex_array_object_1a7b27ec8165dc3b235c9e35e3a72b9d34a3a9ebcc37ba7416e3bf54cde7e5cdb06" kind="enumvalue"><name>IBO</name></member>
+    <member refid="classfrost_1_1core_1_1_vertex_array_object_1a0f8e8bb94e35df2eb67f6500590e78a3" kind="variable"><name>m_gl_ID</name></member>
+    <member refid="classfrost_1_1core_1_1_vertex_array_object_1a1db2f85c4f52a6b6b3fcb8d1a5dfd0cf" kind="variable"><name>m_positionLocation</name></member>
+    <member refid="classfrost_1_1core_1_1_vertex_array_object_1a6c8baa63f7192b61c2dbe2301718d12e" kind="variable"><name>m_rotationLocation</name></member>
+    <member refid="classfrost_1_1core_1_1_vertex_array_object_1a6b409aad79a78238dfad9e85da58302e" kind="variable"><name>m_scaleLocation</name></member>
+    <member refid="classfrost_1_1core_1_1_vertex_array_object_1a44d1b4e4e3feff5bd6c3db887f26461f" kind="variable"><name>Texture</name></member>
+    <member refid="classfrost_1_1core_1_1_vertex_array_object_1ac00884330e94fad2fcb3668fd45eef61" kind="function"><name>VertexArrayObject</name></member>
+    <member refid="classfrost_1_1core_1_1_vertex_array_object_1a20118cfb030085e36dd4696f635d2e85" kind="function"><name>~VertexArrayObject</name></member>
+    <member refid="classfrost_1_1core_1_1_vertex_array_object_1a467185d25111c0c04fb80c046a73d1dc" kind="function"><name>Bind</name></member>
+    <member refid="classfrost_1_1core_1_1_vertex_array_object_1a03fc8ca9198d5e0ac546e9eeea6ed040" kind="function"><name>Unbind</name></member>
+    <member refid="classfrost_1_1core_1_1_vertex_array_object_1ae43a2d3ad722158e5e3b41bdcda6c9e7" kind="function"><name>BindBuffer</name></member>
+    <member refid="classfrost_1_1core_1_1_vertex_array_object_1a341104a4904a52c86b6c29f6b980216b" kind="function"><name>SetTexture</name></member>
+    <member refid="classfrost_1_1core_1_1_vertex_array_object_1a937b1b3b6e8b723b5f34e8bd82033c58" kind="function"><name>GetTexture</name></member>
+    <member refid="classfrost_1_1core_1_1_vertex_array_object_1aea57c2e78474fed43882e6c9cedb686c" kind="function"><name>GetLocation</name></member>
+    <member refid="classfrost_1_1core_1_1_vertex_array_object_1aac9789fee89554bd1f96c4b53e85e354" kind="function"><name>GetScale</name></member>
+    <member refid="classfrost_1_1core_1_1_vertex_array_object_1a070a121676c816352e5fdba2c6e1f0ca" kind="function"><name>GetRotation</name></member>
+    <member refid="classfrost_1_1core_1_1_vertex_array_object_1ab5449f36e7f5c6c337310ae63663817e" kind="function"><name>SetLocation</name></member>
+    <member refid="classfrost_1_1core_1_1_vertex_array_object_1ac821e8a870d390d6b8b589cac0dafc46" kind="function"><name>SetRotation</name></member>
+    <member refid="classfrost_1_1core_1_1_vertex_array_object_1ae38c0325d77bac4d0e07e78598c5f2ba" kind="function"><name>SetScale</name></member>
+  </compound>
+  <compound refid="classfrost_1_1core_1_1_window" kind="class"><name>frost::core::Window</name>
+    <member refid="classfrost_1_1core_1_1_window_1acde012bb6b8ff99d5fa552e45a6c0d17" kind="variable"><name>m_impl</name></member>
+    <member refid="classfrost_1_1core_1_1_window_1ab11a9be1a8093fcfe56430732baee47f" kind="function"><name>Window</name></member>
+    <member refid="classfrost_1_1core_1_1_window_1af21904650564f98b54f6595d0f69fb3e" kind="function"><name>~Window</name></member>
+    <member refid="classfrost_1_1core_1_1_window_1a2777694941fb0597015c5d4062b3472d" kind="function"><name>PollEvents</name></member>
+    <member refid="classfrost_1_1core_1_1_window_1af2fea3da3ade9acb29899c8af45aab5d" kind="function"><name>GetInternal</name></member>
+  </compound>
+  <compound refid="classfrost_1_1core_1_1_xml_parser" kind="class"><name>frost::core::XmlParser</name>
+    <member refid="classfrost_1_1core_1_1_xml_parser_1aed91cd49100867d70c82f401ace2609f" kind="function"><name>XmlParser</name></member>
+    <member refid="classfrost_1_1core_1_1_xml_parser_1a1fe40916d0edd228fa00a986c11fdd9d" kind="function"><name>SetParser</name></member>
+    <member refid="classfrost_1_1core_1_1_xml_parser_1a52ec7c7e45a92713149db3f5f9b84fdc" kind="function"><name>Parse</name></member>
+    <member refid="classfrost_1_1core_1_1_xml_parser_1a228d6851ba1fb613fa2ddda2b2e923b1" kind="function"><name>ParsePlayerNode</name></member>
+    <member refid="classfrost_1_1core_1_1_xml_parser_1acad79558568dbfb452295e5f272686a2" kind="function"><name>ParseRootNode</name></member>
+  </compound>
+  <compound refid="namespacefrost" kind="namespace"><name>frost</name>
+  </compound>
+  <compound refid="namespacefrost_1_1core" kind="namespace"><name>frost::core</name>
+  </compound>
+  <compound refid="namespacefrost_1_1_e_c_s" kind="namespace"><name>frost::ECS</name>
+    <member refid="namespacefrost_1_1_e_c_s_1a0771938ec8797c3f2225b1c35d8495e6" kind="enum"><name>S_SpriteType</name></member>
+    <member refid="namespacefrost_1_1_e_c_s_1a0771938ec8797c3f2225b1c35d8495e6a334c4a4c42fdb79d7ebc3e73b517e6f8" kind="enumvalue"><name>none</name></member>
+    <member refid="namespacefrost_1_1_e_c_s_1a0771938ec8797c3f2225b1c35d8495e6a2fc01ec765ec0cb3dcc559126de20b30" kind="enumvalue"><name>square</name></member>
+    <member refid="namespacefrost_1_1_e_c_s_1a0771938ec8797c3f2225b1c35d8495e6acef44b46f16ae8ecf664df4266ffdbf9" kind="enumvalue"><name>triangle</name></member>
+    <member refid="namespacefrost_1_1_e_c_s_1a0771938ec8797c3f2225b1c35d8495e6a9b6ddeba5b33e577c07c35d8505c6072" kind="enumvalue"><name>circle</name></member>
+    <member refid="namespacefrost_1_1_e_c_s_1a6050a53472f60eac21a8856a3a0ebee2" kind="variable"><name>squareVertices</name></member>
+    <member refid="namespacefrost_1_1_e_c_s_1a919bc4e8bfadb95719878c5b34aba910" kind="variable"><name>squareIndices</name></member>
+  </compound>
+  <compound refid="namespacefrost_1_1editor" kind="namespace"><name>frost::editor</name>
+  </compound>
+  <compound refid="namespacefrost_1_1utils" kind="namespace"><name>frost::utils</name>
+    <member refid="namespacefrost_1_1utils_1ac08ad1f31b7b88124893b9c467840d30" kind="enum"><name>E_LogType</name></member>
+    <member refid="namespacefrost_1_1utils_1ac08ad1f31b7b88124893b9c467840d30a4059b0251f66a18cb56f544728796875" kind="enumvalue"><name>Info</name></member>
+    <member refid="namespacefrost_1_1utils_1ac08ad1f31b7b88124893b9c467840d30a0eaadb4fcb48a0a0ed7bc9868be9fbaa" kind="enumvalue"><name>Warning</name></member>
+    <member refid="namespacefrost_1_1utils_1ac08ad1f31b7b88124893b9c467840d30a902b0d55fddef6f8d651fe1035b7d4bd" kind="enumvalue"><name>Error</name></member>
+  </compound>
+  <compound refid="namespace_frost_engine" kind="namespace"><name>FrostEngine</name>
+  </compound>
+  <compound refid="_export_8h" kind="file"><name>Export.h</name>
+    <member refid="_export_8h_1a76e8ddc2fd5dcbd64bb60019fb4f0e30" kind="define"><name>FROST_ENGINE_API</name></member>
+  </compound>
+  <compound refid="_input_8h" kind="file"><name>Input.h</name>
+  </compound>
+  <compound refid="_authorization_badge_8h" kind="file"><name>AuthorizationBadge.h</name>
+  </compound>
+  <compound refid="_r_t_t_i_8h" kind="file"><name>RTTI.h</name>
+    <member refid="_r_t_t_i_8h_1a25c49f5afb65a5ad42d1d3dbd999307c" kind="define"><name>FROST_DEFINE_RTTI</name></member>
+  </compound>
+  <compound refid="_scene_8h" kind="file"><name>Scene.h</name>
+    <member refid="_scene_8h_1af945b5de700ba8bed8687b77383ed4f2" kind="define"><name>UUID_SYSTEM_GENERATOR</name></member>
+  </compound>
+  <compound refid="_scene_manager_8h" kind="file"><name>SceneManager.h</name>
+  </compound>
+  <compound refid="_save_8h" kind="file"><name>Save.h</name>
+  </compound>
+  <compound refid="_texture_manager_8h" kind="file"><name>TextureManager.h</name>
+  </compound>
+  <compound refid="_xml_parser_8h" kind="file"><name>XmlParser.h</name>
+  </compound>
+  <compound refid="_signal_8h" kind="file"><name>Signal.h</name>
+  </compound>
+  <compound refid="_signal_8hxx" kind="file"><name>Signal.hxx</name>
+  </compound>
+  <compound refid="_slot_8h" kind="file"><name>Slot.h</name>
+  </compound>
+  <compound refid="_slot_8hxx" kind="file"><name>Slot.hxx</name>
+  </compound>
+  <compound refid="_window_8h" kind="file"><name>Window.h</name>
+  </compound>
+  <compound refid="_box_collider_8h" kind="file"><name>BoxCollider.h</name>
+  </compound>
+  <compound refid="_sprite_renderer_8h" kind="file"><name>SpriteRenderer.h</name>
+  </compound>
+  <compound refid="_transform_8h" kind="file"><name>Transform.h</name>
+  </compound>
+  <compound refid="_i_component_8h" kind="file"><name>IComponent.h</name>
+    <member refid="_i_component_8h_1af945b5de700ba8bed8687b77383ed4f2" kind="define"><name>UUID_SYSTEM_GENERATOR</name></member>
+  </compound>
+  <compound refid="_game_object_8h" kind="file"><name>GameObject.h</name>
+    <member refid="_game_object_8h_1af945b5de700ba8bed8687b77383ed4f2" kind="define"><name>UUID_SYSTEM_GENERATOR</name></member>
+  </compound>
+  <compound refid="_game_object_8hxx" kind="file"><name>GameObject.hxx</name>
+  </compound>
+  <compound refid="_tree_8h" kind="file"><name>Tree.h</name>
+  </compound>
+  <compound refid="_editor_8h" kind="file"><name>Editor.h</name>
+  </compound>
+  <compound refid="_frost_engine_8h" kind="file"><name>FrostEngine.h</name>
+    <member refid="_frost_engine_8h_1abe70cfcf67624ce00247bc21c4411ca9" kind="define"><name>FROST_APPLICATION</name></member>
+  </compound>
+  <compound refid="_buffer_8h" kind="file"><name>Buffer.h</name>
+  </compound>
+  <compound refid="_render_device_8h" kind="file"><name>RenderDevice.h</name>
+  </compound>
+  <compound refid="_shader_8h" kind="file"><name>Shader.h</name>
+  </compound>
+  <compound refid="_texture_8h" kind="file"><name>Texture.h</name>
+  </compound>
+  <compound refid="_vertex_array_object_8h" kind="file"><name>VertexArrayObject.h</name>
+  </compound>
+  <compound refid="_logger_8h" kind="file"><name>Logger.h</name>
+  </compound>
+  <compound refid="stb__image_8h" kind="file"><name>stb_image.h</name>
+    <member refid="stb__image_8h_1aed6cd14a3bf678808c4c179e808866aa" kind="define"><name>STBI_VERSION</name></member>
+    <member refid="stb__image_8h_1a2d9ec9850cd12aefe7641b456266a4c2" kind="define"><name>STBIDEF</name></member>
+    <member refid="stb__image_8h_1a06fc87d81c62e9abb8790b6e5713c55b" kind="enum"><name></name></member>
+    <member refid="stb__image_8h_1a06fc87d81c62e9abb8790b6e5713c55ba0177ac2c5002f4f251bb766d41752029" kind="enumvalue"><name>STBI_default</name></member>
+    <member refid="stb__image_8h_1a06fc87d81c62e9abb8790b6e5713c55bad1eb95ca1fa7706bf732bf35a0ed40aa" kind="enumvalue"><name>STBI_grey</name></member>
+    <member refid="stb__image_8h_1a06fc87d81c62e9abb8790b6e5713c55baf5829d16d4cca6077465c5abd346e2f8" kind="enumvalue"><name>STBI_grey_alpha</name></member>
+    <member refid="stb__image_8h_1a06fc87d81c62e9abb8790b6e5713c55baa59123e5d0af25f9b1539f5cf1facddf" kind="enumvalue"><name>STBI_rgb</name></member>
+    <member refid="stb__image_8h_1a06fc87d81c62e9abb8790b6e5713c55baa7b1af0c9f0310c3ada2aa29a32de293" kind="enumvalue"><name>STBI_rgb_alpha</name></member>
+    <member refid="stb__image_8h_1a28eb51a1512ce382ee50f20e1d04d50d" kind="typedef"><name>stbi_uc</name></member>
+    <member refid="stb__image_8h_1a648037d4c55689328ba08c8f5d293df2" kind="typedef"><name>stbi_us</name></member>
+    <member refid="stb__image_8h_1a5bf9d78a27dc1cb216005798fb704bdf" kind="function"><name>stbi_load_from_memory</name></member>
+    <member refid="stb__image_8h_1a354f2a6f7939cf1792db087ad3b2220a" kind="function"><name>stbi_load_from_callbacks</name></member>
+    <member refid="stb__image_8h_1ad3fc296ba0778df0a8094e20da82deab" kind="function"><name>stbi_load</name></member>
+    <member refid="stb__image_8h_1a093f86b90423ff020846c6d002c3296c" kind="function"><name>stbi_load_from_file</name></member>
+    <member refid="stb__image_8h_1a1d5ab90f79c38ced898becd050cfb910" kind="function"><name>stbi_load_gif_from_memory</name></member>
+    <member refid="stb__image_8h_1a2ce4a73cca165fd30e0a23d012d8e770" kind="function"><name>stbi_load_16_from_memory</name></member>
+    <member refid="stb__image_8h_1aa93c0e91f15bf7b1aca8369bf39c5e41" kind="function"><name>stbi_load_16_from_callbacks</name></member>
+    <member refid="stb__image_8h_1a2202a8c0f947dd555c286f7fee1fc39d" kind="function"><name>stbi_load_16</name></member>
+    <member refid="stb__image_8h_1a077867644e156572eaf54d118f65e5a1" kind="function"><name>stbi_load_from_file_16</name></member>
+    <member refid="stb__image_8h_1a09c9f8ddfda96cc62461b86daccf0f77" kind="function"><name>stbi_loadf_from_memory</name></member>
+    <member refid="stb__image_8h_1a7573a229fe25afc452dffddbded8e5a8" kind="function"><name>stbi_loadf_from_callbacks</name></member>
+    <member refid="stb__image_8h_1a4fe9e7c92b7f8e8df8939b776a49cfa8" kind="function"><name>stbi_loadf</name></member>
+    <member refid="stb__image_8h_1a9099e31f34506c8630d58b737aa5a049" kind="function"><name>stbi_loadf_from_file</name></member>
+    <member refid="stb__image_8h_1ab18889e43518d6b4421b705782bb1b5e" kind="function"><name>stbi_hdr_to_ldr_gamma</name></member>
+    <member refid="stb__image_8h_1ae21cc1184eeb5cc814699f1ed62c5258" kind="function"><name>stbi_hdr_to_ldr_scale</name></member>
+    <member refid="stb__image_8h_1a1feccdcf726dcc6b5502e3efa85b7dbb" kind="function"><name>stbi_ldr_to_hdr_gamma</name></member>
+    <member refid="stb__image_8h_1af946583656a362a316b40c0421c20561" kind="function"><name>stbi_ldr_to_hdr_scale</name></member>
+    <member refid="stb__image_8h_1af0e94f316fe1848f632517ca3c11d077" kind="function"><name>stbi_is_hdr_from_callbacks</name></member>
+    <member refid="stb__image_8h_1a5cbc6f5cbb3b2d0d87ee959fcee9d23e" kind="function"><name>stbi_is_hdr_from_memory</name></member>
+    <member refid="stb__image_8h_1ae70f9a302f7e87fd971075e7f758d55c" kind="function"><name>stbi_is_hdr</name></member>
+    <member refid="stb__image_8h_1aaf10d41631e1e9214fde1688bdbd8524" kind="function"><name>stbi_is_hdr_from_file</name></member>
+    <member refid="stb__image_8h_1ac72f312f610a7df1519ea0f2a2f94be9" kind="function"><name>stbi_failure_reason</name></member>
+    <member refid="stb__image_8h_1ad3e11bb44412a7ba348acfbad09caacb" kind="function"><name>stbi_image_free</name></member>
+    <member refid="stb__image_8h_1acfef077febce3bc3f1f339de478f3315" kind="function"><name>stbi_info_from_memory</name></member>
+    <member refid="stb__image_8h_1a86291c64cb663f41a34647d5e1abf363" kind="function"><name>stbi_info_from_callbacks</name></member>
+    <member refid="stb__image_8h_1a548d486e07e0eb95671cb200d3a9530f" kind="function"><name>stbi_is_16_bit_from_memory</name></member>
+    <member refid="stb__image_8h_1a990e0e38ab6e600bd9cbf5d30abd2f8f" kind="function"><name>stbi_is_16_bit_from_callbacks</name></member>
+    <member refid="stb__image_8h_1aede708cca1304520b2afcf4d5eb61d70" kind="function"><name>stbi_info</name></member>
+    <member refid="stb__image_8h_1a28abedef4a0a93909332080df6be0021" kind="function"><name>stbi_info_from_file</name></member>
+    <member refid="stb__image_8h_1a7d9af55a35382c011cc186f7b62c00af" kind="function"><name>stbi_is_16_bit</name></member>
+    <member refid="stb__image_8h_1a42fa266b80bfde22a0781ba2112d1c62" kind="function"><name>stbi_is_16_bit_from_file</name></member>
+    <member refid="stb__image_8h_1a3f02e0053e1c8d08a3ed436e6a82c7c9" kind="function"><name>stbi_set_unpremultiply_on_load</name></member>
+    <member refid="stb__image_8h_1a23525ef2b882f3de426b47ecf8d9151b" kind="function"><name>stbi_convert_iphone_png_to_rgb</name></member>
+    <member refid="stb__image_8h_1ab89c177fc52f1bb2dc1c05e48129a0a4" kind="function"><name>stbi_set_flip_vertically_on_load</name></member>
+    <member refid="stb__image_8h_1acf48dffaa1b2bb00f5a8d9af697c6aca" kind="function"><name>stbi_set_unpremultiply_on_load_thread</name></member>
+    <member refid="stb__image_8h_1aff26696e30b62a40dd00bc12415343f6" kind="function"><name>stbi_convert_iphone_png_to_rgb_thread</name></member>
+    <member refid="stb__image_8h_1ad683202a3f6ec89729b5ad9220ae98ee" kind="function"><name>stbi_set_flip_vertically_on_load_thread</name></member>
+    <member refid="stb__image_8h_1acba137e5310f3c0fe9bb198e4bee3dce" kind="function"><name>stbi_zlib_decode_malloc_guesssize</name></member>
+    <member refid="stb__image_8h_1adc3de199aa29f7370a699ad545155541" kind="function"><name>stbi_zlib_decode_malloc_guesssize_headerflag</name></member>
+    <member refid="stb__image_8h_1afec644d4e1a3cd858dfe0f9c55a1e55c" kind="function"><name>stbi_zlib_decode_malloc</name></member>
+    <member refid="stb__image_8h_1ae8447830c49bc17f8491e12c1f0ded48" kind="function"><name>stbi_zlib_decode_buffer</name></member>
+    <member refid="stb__image_8h_1ad6b5cd73a89037832ee2b2872a17bd1b" kind="function"><name>stbi_zlib_decode_noheader_malloc</name></member>
+    <member refid="stb__image_8h_1a0d12efc011adfff7521f3b924feb0b0e" kind="function"><name>stbi_zlib_decode_noheader_buffer</name></member>
+  </compound>
+  <compound refid="_input_8cpp" kind="file"><name>Input.cpp</name>
+  </compound>
+  <compound refid="_scene_8cpp" kind="file"><name>Scene.cpp</name>
+  </compound>
+  <compound refid="_scene_manager_8cpp" kind="file"><name>SceneManager.cpp</name>
+  </compound>
+  <compound refid="_xml_parser_8cpp" kind="file"><name>XmlParser.cpp</name>
+  </compound>
+  <compound refid="_window_8cpp" kind="file"><name>Window.cpp</name>
+  </compound>
+  <compound refid="_box_collider_8cpp" kind="file"><name>BoxCollider.cpp</name>
+  </compound>
+  <compound refid="_sprite_renderer_8cpp" kind="file"><name>SpriteRenderer.cpp</name>
+  </compound>
+  <compound refid="_transform_8cpp" kind="file"><name>Transform.cpp</name>
+  </compound>
+  <compound refid="_i_component_8cpp" kind="file"><name>IComponent.cpp</name>
+  </compound>
+  <compound refid="_game_object_8cpp" kind="file"><name>GameObject.cpp</name>
+  </compound>
+  <compound refid="_editor_8cpp" kind="file"><name>Editor.cpp</name>
+  </compound>
+  <compound refid="_frost_engine_8cpp" kind="file"><name>FrostEngine.cpp</name>
+  </compound>
+  <compound refid="_buffer_8cpp" kind="file"><name>Buffer.cpp</name>
+  </compound>
+  <compound refid="_render_device_8cpp" kind="file"><name>RenderDevice.cpp</name>
+  </compound>
+  <compound refid="_shader_8cpp" kind="file"><name>Shader.cpp</name>
+  </compound>
+  <compound refid="_texture_8cpp" kind="file"><name>Texture.cpp</name>
+  </compound>
+  <compound refid="_texture_mgr_8cpp" kind="file"><name>TextureMgr.cpp</name>
+  </compound>
+  <compound refid="_vertex_array_object_8cpp" kind="file"><name>VertexArrayObject.cpp</name>
+  </compound>
+  <compound refid="_logger_8cpp" kind="file"><name>Logger.cpp</name>
+  </compound>
+  <compound refid="stb__image_8cpp" kind="file"><name>stb_image.cpp</name>
+    <member refid="stb__image_8cpp_1a18372412ad2fc3ce1e3240b3cf0efe78" kind="define"><name>STB_IMAGE_IMPLEMENTATION</name></member>
+  </compound>
+  <compound refid="dir_a2d385c6839e8c185073da6d6a72d057" kind="dir"><name>include/ECS/Component</name>
+  </compound>
+  <compound refid="dir_9ced74f09c88343535c7b8c7200820c7" kind="dir"><name>src/ECS/Component</name>
+  </compound>
+  <compound refid="dir_05cc9ef8bd3f8306bc335cbc3ae5be6c" kind="dir"><name>include/ECS/Component/Components</name>
+  </compound>
+  <compound refid="dir_63b7c69a9191e1b3bc97a046ace0fa7c" kind="dir"><name>src/ECS/Component/Components</name>
+  </compound>
+  <compound refid="dir_8213943ce0b792be39d34390845932ae" kind="dir"><name>include/Core</name>
+  </compound>
+  <compound refid="dir_a2f0e5642e47e7ed59fe0f0829eafb5f" kind="dir"><name>src/Core</name>
+  </compound>
+  <compound refid="dir_073402b06d831bb0ea44664935cf1ebd" kind="dir"><name>include/ECS</name>
+  </compound>
+  <compound refid="dir_b1a122bf62c958266ec5bf64d14fde5a" kind="dir"><name>src/ECS</name>
+  </compound>
+  <compound refid="dir_9879a2d9fc75d55adf27ec2dfa65cb52" kind="dir"><name>include/Editor</name>
+  </compound>
+  <compound refid="dir_4bd1ebb85acf5915171c6010ad9053a2" kind="dir"><name>src/Editor</name>
+  </compound>
+  <compound refid="dir_46ce0b0270e77352f693c14d4e38e411" kind="dir"><name>include/ECS/Entity</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_5a360ce72f845b04181dbb6c528142b3" kind="dir"><name>include/Core/Input</name>
+  </compound>
+  <compound refid="dir_c63dcb5b4cedcea86ba79ffba16467b4" kind="dir"><name>src/Core/Input</name>
+  </compound>
+  <compound refid="dir_7e1b1a80431eb45361f5edb9732a4332" kind="dir"><name>include/Core/Internal</name>
+  </compound>
+  <compound refid="dir_afbc4937c10bc7b2412dc0981b689e1b" kind="dir"><name>include/Render</name>
+  </compound>
+  <compound refid="dir_4c7ee98193a6cba0af9aae7f963a60da" kind="dir"><name>src/Render</name>
+  </compound>
+  <compound refid="dir_665c62457804a6ac98643cbb82524b84" kind="dir"><name>include/Core/SceneManagement</name>
+  </compound>
+  <compound refid="dir_7f98012eb5abb9fd4fcbb10bd218515f" kind="dir"><name>include/Core/Serial</name>
+  </compound>
+  <compound refid="dir_d1c5ed63838a25c51a75ed1d3f9386de" kind="dir"><name>src/Core/Serial</name>
+  </compound>
+  <compound refid="dir_19dbf4aa5541de506a2fbae08af79e19" kind="dir"><name>include/Core/SignalSlot</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="dir_3f6f21cac221657f9024123675f1b0a0" kind="dir"><name>src/Utils/stb_image</name>
+  </compound>
+  <compound refid="dir_65f0a7ca88ba6aa11b3101582b1e6c29" kind="dir"><name>include/ECS/System</name>
+  </compound>
+  <compound refid="dir_2d1d991c66e7a032b2ab80c11328e79c" kind="dir"><name>include/Utils</name>
+  </compound>
+  <compound refid="dir_a7363e98f9e0bdd87618633653859815" kind="dir"><name>src/Utils</name>
+  </compound>
+</doxygenindex>

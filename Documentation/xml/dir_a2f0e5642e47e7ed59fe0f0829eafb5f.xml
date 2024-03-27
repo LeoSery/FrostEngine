@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_a2f0e5642e47e7ed59fe0f0829eafb5f" kind="dir">
+    <compoundname>src/Core</compoundname>
+    <innerdir refid="dir_c63dcb5b4cedcea86ba79ffba16467b4">src/Core/Input</innerdir>
+    <innerdir refid="dir_d1c5ed63838a25c51a75ed1d3f9386de">src/Core/Serial</innerdir>
+    <innerfile refid="_scene_8cpp">Scene.cpp</innerfile>
+    <innerfile refid="_scene_manager_8cpp">SceneManager.cpp</innerfile>
+    <innerfile refid="_window_8cpp">Window.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Core/"/>
+  </compounddef>
+</doxygen>

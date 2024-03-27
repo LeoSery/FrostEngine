@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_b1a122bf62c958266ec5bf64d14fde5a" kind="dir">
+    <compoundname>src/ECS</compoundname>
+    <innerdir refid="dir_9ced74f09c88343535c7b8c7200820c7">src/ECS/Component</innerdir>
+    <innerfile refid="_game_object_8cpp">GameObject.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/ECS/"/>
+  </compounddef>
+</doxygen>

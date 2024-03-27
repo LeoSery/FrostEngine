@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="namespacefrost_1_1_e_c_s" kind="namespace" language="C++">
+    <compoundname>frost::ECS</compoundname>
+    <innerclass refid="classfrost_1_1_e_c_s_1_1_box_collider" prot="public">frost::ECS::BoxCollider</innerclass>
+    <innerclass refid="structfrost_1_1_e_c_s_1_1_collision_data" prot="public">frost::ECS::CollisionData</innerclass>
+    <innerclass refid="classfrost_1_1_e_c_s_1_1_game_object" prot="public">frost::ECS::GameObject</innerclass>
+    <innerclass refid="classfrost_1_1_e_c_s_1_1_i_component" prot="public">frost::ECS::IComponent</innerclass>
+    <innerclass refid="classfrost_1_1_e_c_s_1_1_sprite_renderer" prot="public">frost::ECS::SpriteRenderer</innerclass>
+    <innerclass refid="classfrost_1_1_e_c_s_1_1_transform" prot="public">frost::ECS::Transform</innerclass>
+    <innerclass refid="classfrost_1_1_e_c_s_1_1_tree" prot="public">frost::ECS::Tree</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacefrost_1_1_e_c_s_1a0771938ec8797c3f2225b1c35d8495e6" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>S_SpriteType</name>
+        <qualifiedname>frost::ECS::S_SpriteType</qualifiedname>
+        <enumvalue id="namespacefrost_1_1_e_c_s_1a0771938ec8797c3f2225b1c35d8495e6a334c4a4c42fdb79d7ebc3e73b517e6f8" prot="public">
+          <name>none</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacefrost_1_1_e_c_s_1a0771938ec8797c3f2225b1c35d8495e6a2fc01ec765ec0cb3dcc559126de20b30" prot="public">
+          <name>square</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacefrost_1_1_e_c_s_1a0771938ec8797c3f2225b1c35d8495e6acef44b46f16ae8ecf664df4266ffdbf9" prot="public">
+          <name>triangle</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacefrost_1_1_e_c_s_1a0771938ec8797c3f2225b1c35d8495e6a9b6ddeba5b33e577c07c35d8505c6072" prot="public">
+          <name>circle</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ECS/Component/Components/SpriteRenderer.h" line="17" column="1" bodyfile="include/ECS/Component/Components/SpriteRenderer.h" bodystart="18" bodyend="23"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacefrost_1_1_e_c_s_1a6050a53472f60eac21a8856a3a0ebee2" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float frost::ECS::squareVertices[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>squareVertices</name>
+        <qualifiedname>frost::ECS::squareVertices</qualifiedname>
+        <initializer>=
+	{
+	-1.0f,  1.0f, 0.0f, 1.0f,
+	-1.0f, -1.0f, 0.0f, 0.0f,
+	 1.0f, -1.0f, 1.0f, 0.0f,
+	 1.0f,  1.0f, 1.0f, 1.0f,
+	}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ECS/Component/Components/SpriteRenderer.cpp" line="11" column="7" bodyfile="src/ECS/Component/Components/SpriteRenderer.cpp" bodystart="11" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefrost_1_1_e_c_s_1a919bc4e8bfadb95719878c5b34aba910" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int frost::ECS::squareIndices[6]</definition>
+        <argsstring>[6]</argsstring>
+        <name>squareIndices</name>
+        <qualifiedname>frost::ECS::squareIndices</qualifiedname>
+        <initializer>= { 0, 1, 2, 0, 2, 3 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/ECS/Component/Components/SpriteRenderer.cpp" line="19" column="14" bodyfile="src/ECS/Component/Components/SpriteRenderer.cpp" bodystart="19" bodyend="19"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Core/Input/Input.h" line="13" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structfrost_1_1core_1_1_window_1_1_s___window_properties" kind="struct" language="C++" prot="public">
+    <compoundname>frost::core::Window::S_WindowProperties</compoundname>
+    <includes refid="_window_8h" local="no">Window.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structfrost_1_1core_1_1_window_1_1_s___window_properties_1af1533149ed966a68cae0979911b01d7c" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* frost::core::Window::S_WindowProperties::title</definition>
+        <argsstring></argsstring>
+        <name>title</name>
+        <qualifiedname>frost::core::Window::S_WindowProperties::title</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/Window.h" line="16" column="12" bodyfile="include/Core/Window.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfrost_1_1core_1_1_window_1_1_s___window_properties_1a66b6547bde7505c30ad18900eae55872" prot="public" static="no" mutable="no">
+        <type>glm::ivec2</type>
+        <definition>glm::ivec2 frost::core::Window::S_WindowProperties::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <qualifiedname>frost::core::Window::S_WindowProperties::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/Window.h" line="17" column="12" bodyfile="include/Core/Window.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfrost_1_1core_1_1_window_1_1_s___window_properties_1aa447621433b6e335d60fb0535ad5cbe8" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool frost::core::Window::S_WindowProperties::fullScreen</definition>
+        <argsstring></argsstring>
+        <name>fullScreen</name>
+        <qualifiedname>frost::core::Window::S_WindowProperties::fullScreen</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/Core/Window.h" line="18" column="6" bodyfile="include/Core/Window.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Core/Window.h" line="14" column="1" bodyfile="include/Core/Window.h" bodystart="15" bodyend="19"/>
+    <listofallmembers>
+      <member refid="structfrost_1_1core_1_1_window_1_1_s___window_properties_1aa447621433b6e335d60fb0535ad5cbe8" prot="public" virt="non-virtual"><scope>frost::core::Window::S_WindowProperties</scope><name>fullScreen</name></member>
+      <member refid="structfrost_1_1core_1_1_window_1_1_s___window_properties_1a66b6547bde7505c30ad18900eae55872" prot="public" virt="non-virtual"><scope>frost::core::Window::S_WindowProperties</scope><name>size</name></member>
+      <member refid="structfrost_1_1core_1_1_window_1_1_s___window_properties_1af1533149ed966a68cae0979911b01d7c" prot="public" virt="non-virtual"><scope>frost::core::Window::S_WindowProperties</scope><name>title</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

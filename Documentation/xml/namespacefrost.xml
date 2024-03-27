@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="namespacefrost" kind="namespace" language="C++">
+    <compoundname>frost</compoundname>
+    <innernamespace refid="namespacefrost_1_1core">frost::core</innernamespace>
+    <innernamespace refid="namespacefrost_1_1_e_c_s">frost::ECS</innernamespace>
+    <innernamespace refid="namespacefrost_1_1editor">frost::editor</innernamespace>
+    <innernamespace refid="namespacefrost_1_1utils">frost::utils</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/Core/Input/Input.h" line="13" column="1"/>
+  </compounddef>
+</doxygen>

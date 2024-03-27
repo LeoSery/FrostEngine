@@ -1,0 +1,276 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="_input_8cpp" kind="file" language="C++">
+    <compoundname>Input.cpp</compoundname>
+    <includes refid="_input_8h" local="yes">Core/Input/Input.h</includes>
+    <includes refid="_logger_8h" local="yes">Utils/Logger.h</includes>
+    <includes refid="_window_8h" local="yes">Core/Window.h</includes>
+    <includes local="no">GLFW/glfw3.h</includes>
+    <includes local="no">iostream</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>Core/Export.h</label>
+        <link refid="_export_8h"/>
+      </node>
+      <node id="2">
+        <label>Core/Input/Input.h</label>
+        <link refid="_input_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Core/Window.h</label>
+        <link refid="_window_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Utils/Logger.h</label>
+        <link refid="_logger_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/Core/Input/Input.cpp</label>
+        <link refid="_input_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>GLFW/glfw3.h</label>
+      </node>
+      <node id="4">
+        <label>functional</label>
+      </node>
+      <node id="11">
+        <label>glm/glm.hpp</label>
+      </node>
+      <node id="13">
+        <label>iostream</label>
+      </node>
+      <node id="8">
+        <label>map</label>
+      </node>
+      <node id="6">
+        <label>memory</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="7">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structfrost_1_1core_1_1_input_1_1_internal" prot="public">frost::core::Input::Internal</innerclass>
+    <innernamespace refid="namespacefrost">frost</innernamespace>
+    <innernamespace refid="namespacefrost_1_1core">frost::core</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_input_8h" kindref="compound">Core/Input/Input.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_logger_8h" kindref="compound">Utils/Logger.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_window_8h" kindref="compound">Core/Window.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;GLFW/glfw3.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacefrost_1_1core" kindref="compound">frost::core</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>Input*<sp/><ref refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kindref="member">Input::m_instance</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="structfrost_1_1core_1_1_input_1_1_internal" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfrost_1_1core_1_1_input_1_1_internal" kindref="compound">Input::Internal</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14" refid="structfrost_1_1core_1_1_input_1_1_internal_1ab45510d9dae3de2e16e57fb920e1008c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GLFWwindow*<sp/><ref refid="structfrost_1_1core_1_1_input_1_1_internal_1ab45510d9dae3de2e16e57fb920e1008c" kindref="member">window</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="classfrost_1_1core_1_1_input_1adbd39585286cf38f4e77e744573ed5fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_input_1adbd39585286cf38f4e77e744573ed5fb" kindref="member">Input::Input</ref>()<sp/>:<sp/>m_internal(new<sp/><ref refid="structfrost_1_1core_1_1_input_1_1_internal" kindref="compound">Internal</ref>)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classfrost_1_1core_1_1_input_1aceb23c9fb1cfeb2551d086b7f80a50e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_input_1aceb23c9fb1cfeb2551d086b7f80a50e2" kindref="member">Input::~Input</ref>()</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kindref="member">m_instance</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classfrost_1_1core_1_1_input_1a8267bf0fb8e7ebc8127cc19e777b8467" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_input" kindref="compound">Input</ref>*<sp/><ref refid="classfrost_1_1core_1_1_input_1a8267bf0fb8e7ebc8127cc19e777b8467" kindref="member">Input::GetInstance</ref>()</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kindref="member">m_instance</ref><sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kindref="member">m_instance</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_input_1adbd39585286cf38f4e77e744573ed5fb" kindref="member">Input</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kindref="member">m_instance</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="classfrost_1_1core_1_1_input_1a25de7f6fca41aaecfab5528075077bc2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_input" kindref="compound">Input</ref>*<sp/><ref refid="classfrost_1_1core_1_1_input_1a25de7f6fca41aaecfab5528075077bc2" kindref="member">Input::init</ref>(<ref refid="classfrost_1_1core_1_1_window" kindref="compound">Window</ref>*<sp/>_window)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_input_1a0845eb6b6adb8effe9d48ee8e3515aff" kindref="member">m_internal</ref>-&gt;window<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">GLFWwindow*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_window-&gt;<ref refid="classfrost_1_1core_1_1_window_1af2fea3da3ade9acb29899c8af45aab5d" kindref="member">GetInternal</ref>());</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwSetKeyCallback(<ref refid="classfrost_1_1core_1_1_input_1a0845eb6b6adb8effe9d48ee8e3515aff" kindref="member">m_internal</ref>-&gt;window,<sp/><ref refid="classfrost_1_1core_1_1_input_1a585ccd617c506e4ced316a9dab8daed8" kindref="member">key_callback</ref>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kindref="member">m_instance</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="classfrost_1_1core_1_1_input_1a585ccd617c506e4ced316a9dab8daed8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_input_1a585ccd617c506e4ced316a9dab8daed8" kindref="member">Input::key_callback</ref>(GLFWwindow*<sp/>window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>scancode,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>action,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mods)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scancode;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mods;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kindref="member">m_instance</ref>-&gt;<ref refid="classfrost_1_1core_1_1_input_1a9f797fbaa12fe46e56e17c311779da00" kindref="member">KeyBind</ref>.contains(key))</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(action)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:<sp/></highlight><highlight class="comment">//Released</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kindref="member">m_instance</ref>-&gt;<ref refid="classfrost_1_1core_1_1_input_1a14b8cdb2bdb019676442a2780c4e9fa7" kindref="member">CallAction</ref>(<ref refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kindref="member">m_instance</ref>-&gt;<ref refid="classfrost_1_1core_1_1_input_1a9f797fbaa12fe46e56e17c311779da00" kindref="member">KeyBind</ref>.at(key),<sp/>action);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kindref="member">m_instance</ref>-&gt;<ref refid="classfrost_1_1core_1_1_input_1ae11bf3987331fc7b34254c42207911e0" kindref="member">KeyPressed</ref>.contains(key))</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kindref="member">m_instance</ref>-&gt;<ref refid="classfrost_1_1core_1_1_input_1ae11bf3987331fc7b34254c42207911e0" kindref="member">KeyPressed</ref>.at(key)<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kindref="member">m_instance</ref>-&gt;<ref refid="classfrost_1_1core_1_1_input_1ae11bf3987331fc7b34254c42207911e0" kindref="member">KeyPressed</ref>.insert({<sp/>key<sp/>,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>});</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:<sp/></highlight><highlight class="comment">//Pressed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kindref="member">m_instance</ref>-&gt;<ref refid="classfrost_1_1core_1_1_input_1a14b8cdb2bdb019676442a2780c4e9fa7" kindref="member">CallAction</ref>(<ref refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kindref="member">m_instance</ref>-&gt;<ref refid="classfrost_1_1core_1_1_input_1a9f797fbaa12fe46e56e17c311779da00" kindref="member">KeyBind</ref>.at(key),<sp/>action);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kindref="member">m_instance</ref>-&gt;<ref refid="classfrost_1_1core_1_1_input_1ae11bf3987331fc7b34254c42207911e0" kindref="member">KeyPressed</ref>.contains(key))</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kindref="member">m_instance</ref>-&gt;<ref refid="classfrost_1_1core_1_1_input_1ae11bf3987331fc7b34254c42207911e0" kindref="member">KeyPressed</ref>.at(key)<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kindref="member">m_instance</ref>-&gt;<ref refid="classfrost_1_1core_1_1_input_1ae11bf3987331fc7b34254c42207911e0" kindref="member">KeyPressed</ref>.insert({<sp/>key<sp/>,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>});</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="classfrost_1_1core_1_1_input_1afb9731abb0df0f66b2d1489f7af416e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_input_1afb9731abb0df0f66b2d1489f7af416e4" kindref="member">Input::Update</ref>()</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::pair&lt;int,<sp/>bool&gt;<sp/>elem<sp/>:<sp/><ref refid="classfrost_1_1core_1_1_input_1ae11bf3987331fc7b34254c42207911e0" kindref="member">KeyPressed</ref>)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classfrost_1_1core_1_1_input_1a9f797fbaa12fe46e56e17c311779da00" kindref="member">KeyBind</ref>.contains(elem.first)<sp/>&amp;&amp;<sp/>elem.second)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_input_1a14b8cdb2bdb019676442a2780c4e9fa7" kindref="member">CallAction</ref>(<ref refid="classfrost_1_1core_1_1_input_1a9f797fbaa12fe46e56e17c311779da00" kindref="member">KeyBind</ref>.at(elem.first),<sp/><ref refid="classfrost_1_1core_1_1_input_1abc09727085c77c80b054f408b6ffeba1a630ed1da3e803a09341fbb4ed32f0289" kindref="member">ActionType::OnGoing</ref>);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="classfrost_1_1core_1_1_input_1a4bd34deaa3a3b9bb1c4036176987874b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_input_1a4bd34deaa3a3b9bb1c4036176987874b" kindref="member">Input::AddAction</ref>(std::string<sp/>_actionName)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kindref="member">m_instance</ref>-&gt;<ref refid="classfrost_1_1core_1_1_input_1a656348f044ef9121fdc03682fb2fa935" kindref="member">ActionBind</ref>.contains(_actionName))</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::pair&lt;std::string,<sp/>std::vector&lt;ObjectFunction&gt;&gt;<sp/>toadd(_actionName,<sp/>std::vector&lt;ObjectFunction&gt;());</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kindref="member">m_instance</ref>-&gt;<ref refid="classfrost_1_1core_1_1_input_1a656348f044ef9121fdc03682fb2fa935" kindref="member">ActionBind</ref>.insert(toadd);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1utils_1_1_logger_1aad1c2e3c78b39231d2019dc0843cca72" kindref="member">frost::utils::Logger::LogWarning</ref>(</highlight><highlight class="stringliteral">&quot;Can&apos;t<sp/>add<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>_actionName<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>already<sp/>exists&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="classfrost_1_1core_1_1_input_1a231db8ebc0336e1b22833da90e2358ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_input_1a231db8ebc0336e1b22833da90e2358ba" kindref="member">Input::AddActionToKey</ref>(<ref refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915" kindref="member">Key</ref><sp/>_key,<sp/>std::string<sp/>_actionName)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kindref="member">m_instance</ref>-&gt;<ref refid="classfrost_1_1core_1_1_input_1a656348f044ef9121fdc03682fb2fa935" kindref="member">ActionBind</ref>.contains(_actionName))</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kindref="member">m_instance</ref>-&gt;<ref refid="classfrost_1_1core_1_1_input_1a9f797fbaa12fe46e56e17c311779da00" kindref="member">KeyBind</ref>.contains(_key))</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kindref="member">m_instance</ref>-&gt;<ref refid="classfrost_1_1core_1_1_input_1a9f797fbaa12fe46e56e17c311779da00" kindref="member">KeyBind</ref>.at(_key)<sp/>=<sp/>_actionName;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::pair&lt;int,<sp/>std::string&gt;<sp/>toadd(_key,<sp/>_actionName);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kindref="member">m_instance</ref>-&gt;<ref refid="classfrost_1_1core_1_1_input_1a9f797fbaa12fe46e56e17c311779da00" kindref="member">KeyBind</ref>.insert(toadd);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1utils_1_1_logger_1aad1c2e3c78b39231d2019dc0843cca72" kindref="member">frost::utils::Logger::LogWarning</ref>(</highlight><highlight class="stringliteral">&quot;Action<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>_actionName<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>does<sp/>not<sp/>exist&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="classfrost_1_1core_1_1_input_1ab36ba9e698b07dc0e5c26d55b86897a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_input_1ab36ba9e698b07dc0e5c26d55b86897a7" kindref="member">Input::BindFunctionToAction</ref>(std::string<sp/>_actionName,<sp/><ref refid="classfrost_1_1_e_c_s_1_1_game_object" kindref="compound">frost::ECS::GameObject</ref>*<sp/>_object,<sp/>std::function&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">()&gt;<sp/>_functionToCall,<sp/><ref refid="classfrost_1_1core_1_1_input_1abc09727085c77c80b054f408b6ffeba1" kindref="member">ActionType</ref><sp/>_onWhat)</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kindref="member">m_instance</ref>-&gt;<ref refid="classfrost_1_1core_1_1_input_1a656348f044ef9121fdc03682fb2fa935" kindref="member">ActionBind</ref>.contains(_actionName))</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(_onWhat)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_input_1abc09727085c77c80b054f408b6ffeba1ad8477a65621611faa40d81f7b4c870c0" kindref="member">frost::core::Input::Release</ref>:</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kindref="member">m_instance</ref>-&gt;<ref refid="classfrost_1_1core_1_1_input_1a656348f044ef9121fdc03682fb2fa935" kindref="member">ActionBind</ref>.at(_actionName).FunctionReleased.push_back({<sp/>_object<sp/>,<sp/>_functionToCall<sp/>});</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_input_1abc09727085c77c80b054f408b6ffeba1a11c6c48f68f8531963e4c357e5016030" kindref="member">frost::core::Input::Press</ref>:</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kindref="member">m_instance</ref>-&gt;<ref refid="classfrost_1_1core_1_1_input_1a656348f044ef9121fdc03682fb2fa935" kindref="member">ActionBind</ref>.at(_actionName).FunctionPressed.push_back({<sp/>_object<sp/>,<sp/>_functionToCall<sp/>});</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_input_1abc09727085c77c80b054f408b6ffeba1a630ed1da3e803a09341fbb4ed32f0289" kindref="member">frost::core::Input::OnGoing</ref>:</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kindref="member">m_instance</ref>-&gt;<ref refid="classfrost_1_1core_1_1_input_1a656348f044ef9121fdc03682fb2fa935" kindref="member">ActionBind</ref>.at(_actionName).FunctionOnGoing.push_back({<sp/>_object<sp/>,<sp/>_functionToCall<sp/>});</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1utils_1_1_logger_1af7995344e912027c72c20e6c7a8108be" kindref="member">frost::utils::Logger::LogError</ref>(</highlight><highlight class="stringliteral">&quot;Action<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>_actionName<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>does<sp/>not<sp/>exist&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="classfrost_1_1core_1_1_input_1a14b8cdb2bdb019676442a2780c4e9fa7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_input_1a14b8cdb2bdb019676442a2780c4e9fa7" kindref="member">Input::CallAction</ref>(std::string<sp/>_actionToCall,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_action)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;ObjectFunction&gt;*<sp/>ObjectsFunc;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(_action)</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ObjectsFunc<sp/>=<sp/>&amp;<ref refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kindref="member">m_instance</ref>-&gt;<ref refid="classfrost_1_1core_1_1_input_1a656348f044ef9121fdc03682fb2fa935" kindref="member">ActionBind</ref>.at(_actionToCall).FunctionReleased;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ObjectsFunc<sp/>=<sp/>&amp;<ref refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kindref="member">m_instance</ref>-&gt;<ref refid="classfrost_1_1core_1_1_input_1a656348f044ef9121fdc03682fb2fa935" kindref="member">ActionBind</ref>.at(_actionToCall).FunctionPressed;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>2:</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ObjectsFunc<sp/>=<sp/>&amp;<ref refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kindref="member">m_instance</ref>-&gt;<ref refid="classfrost_1_1core_1_1_input_1a656348f044ef9121fdc03682fb2fa935" kindref="member">ActionBind</ref>.at(_actionToCall).FunctionOnGoing;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>ObjectsFunc-&gt;size();<sp/>i++)</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ObjectsFunc-&gt;at(i).Object<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ObjectsFunc-&gt;at(i).Function();</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ObjectsFunc-&gt;erase(ObjectsFunc-&gt;begin()<sp/>+<sp/>i);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="classfrost_1_1core_1_1_input_1a4d8207962ea9b24b718c04a570822c32" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_input_1a4d8207962ea9b24b718c04a570822c32" kindref="member">Input::RemoveAction</ref>(std::string<sp/>_actionName)</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kindref="member">m_instance</ref>-&gt;<ref refid="classfrost_1_1core_1_1_input_1a656348f044ef9121fdc03682fb2fa935" kindref="member">ActionBind</ref>.contains(_actionName))</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_input_1ac8d62deb5e08b97f03150b809699aa88" kindref="member">m_instance</ref>-&gt;<ref refid="classfrost_1_1core_1_1_input_1a656348f044ef9121fdc03682fb2fa935" kindref="member">ActionBind</ref>.erase(_actionName);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1utils_1_1_logger_1aad1c2e3c78b39231d2019dc0843cca72" kindref="member">frost::utils::Logger::LogWarning</ref>(</highlight><highlight class="stringliteral">&quot;Unable<sp/>to<sp/>remove<sp/>action<sp/>:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>_actionName);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/Core/Input/Input.cpp"/>
+  </compounddef>
+</doxygen>

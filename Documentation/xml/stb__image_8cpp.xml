@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="stb__image_8cpp" kind="file" language="C++">
+    <compoundname>stb_image.cpp</compoundname>
+    <includes refid="stb__image_8h" local="yes">Utils/stb_image.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>Utils/stb_image.h</label>
+        <link refid="stb__image_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/Utils/stb_image/stb_image.cpp</label>
+        <link refid="stb__image_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="stb__image_8cpp_1a18372412ad2fc3ce1e3240b3cf0efe78" prot="public" static="no">
+        <name>STB_IMAGE_IMPLEMENTATION</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Utils/stb_image/stb_image.cpp" line="1" column="9" bodyfile="src/Utils/stb_image/stb_image.cpp" bodystart="1" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="stb__image_8cpp_1a18372412ad2fc3ce1e3240b3cf0efe78" refkind="member"><highlight class="preprocessor">#define<sp/>STB_IMAGE_IMPLEMENTATION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="stb__image_8h" kindref="compound">Utils/stb_image.h</ref>&quot;</highlight></codeline>
+    </programlisting>
+    <location file="src/Utils/stb_image/stb_image.cpp"/>
+  </compounddef>
+</doxygen>
