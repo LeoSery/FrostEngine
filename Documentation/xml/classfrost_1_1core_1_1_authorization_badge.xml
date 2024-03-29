@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Internal/AuthorizationBadge.h" line="8" column="8" bodyfile="include/Core/Internal/AuthorizationBadge.h" bodystart="8" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Internal/AuthorizationBadge.h" line="30" column="8" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Internal/AuthorizationBadge.h" bodystart="30" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -32,19 +32,23 @@
         <name>AuthorizationBadge</name>
         <qualifiedname>frost::core::AuthorizationBadge::AuthorizationBadge</qualifiedname>
         <briefdescription>
+<para>Constructor that creates a class object passed in parameter. </para>
         </briefdescription>
         <detaileddescription>
+<para>\detail This constructor can be sent to the method that requires a badge of the class passed in parameter. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Internal/AuthorizationBadge.h" line="9" column="1" bodyfile="include/Core/Internal/AuthorizationBadge.h" bodystart="9" bodyend="9"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Internal/AuthorizationBadge.h" line="38" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Internal/AuthorizationBadge.h" bodystart="38" bodyend="38"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>This file contains the <ref refid="classfrost_1_1core_1_1_authorization_badge" kindref="compound">AuthorizationBadge</ref> class, which is used to grant access to private constructors. </para>
     </briefdescription>
     <detaileddescription>
+<para>You can add an authorization badge as a parameter to a method by specifying which class is the target of the badge, so that this method can only be called by the class specified in the badge template. </para>
     </detaileddescription>
-    <location file="include/Core/Internal/AuthorizationBadge.h" line="6" column="1" bodyfile="include/Core/Internal/AuthorizationBadge.h" bodystart="7" bodyend="10"/>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Internal/AuthorizationBadge.h" line="28" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Internal/AuthorizationBadge.h" bodystart="29" bodyend="39"/>
     <listofallmembers>
       <member refid="classfrost_1_1core_1_1_authorization_badge_1adf284dd2476ce8f6b4b01e4a2a625ac0" prot="private" virt="non-virtual"><scope>frost::core::AuthorizationBadge</scope><name>AuthorizationBadge</name></member>
       <member refid="classfrost_1_1core_1_1_authorization_badge_1a1f85751fe4ef9f1e73afed95c5a6e739" prot="private" virt="non-virtual"><scope>frost::core::AuthorizationBadge</scope><name>T</name></member>

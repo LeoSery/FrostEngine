@@ -15,14 +15,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Render/Buffer.cpp" line="12" column="8" bodyfile="src/Render/Buffer.cpp" bodystart="12" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Render/Buffer.cpp" line="12" column="8" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Render/Buffer.cpp" bodystart="12" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/Render/Buffer.cpp" line="10" column="1" bodyfile="src/Render/Buffer.cpp" bodystart="11" bodyend="13"/>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Render/Buffer.cpp" line="10" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Render/Buffer.cpp" bodystart="11" bodyend="13"/>
     <listofallmembers>
       <member refid="structfrost_1_1core_1_1_buffer_1_1_internal_1ab84a6d161efaece3ec064d0bfc27e7ba" prot="public" virt="non-virtual"><scope>frost::core::Buffer::Internal</scope><name>m_gl_ID</name></member>
     </listofallmembers>

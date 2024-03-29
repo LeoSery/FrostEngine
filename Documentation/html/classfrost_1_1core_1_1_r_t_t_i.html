@@ -83,6 +83,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Class to get the type name of a class at runtime.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_r_t_t_i_8h_source.html">RTTI.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for frost::core::RTTI:</div>
@@ -99,15 +102,18 @@ Inheritance diagram for frost::core::RTTI:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab67a37bae5aeb3024dbd568bd4c9a9ea" id="r_ab67a37bae5aeb3024dbd568bd4c9a9ea"><td class="memItemLeft" align="right" valign="top">virtual const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab67a37bae5aeb3024dbd568bd4c9a9ea">GetTypeName</a> () const =0</td></tr>
-<tr class="separator:ab67a37bae5aeb3024dbd568bd4c9a9ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7edd7107554d4c6e16c065033eaa6355" id="r_a7edd7107554d4c6e16c065033eaa6355"><td class="memItemLeft" align="right" valign="top">virtual const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7edd7107554d4c6e16c065033eaa6355">GetTypeName</a> () const =0</td></tr>
+<tr class="memdesc:a7edd7107554d4c6e16c065033eaa6355"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to get the type name of a class at runtime.  <br /></td></tr>
+<tr class="separator:a7edd7107554d4c6e16c065033eaa6355"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_r_t_t_i_8h_source.html#l00007">7</a> of file <a class="el" href="_r_t_t_i_8h_source.html">RTTI.h</a>.</p>
+<div class="textblock"><p>Class to get the type name of a class at runtime. </p>
+<p>This class return the name of a class pass as parameter using a specific macro. </p>
+
+<p class="definition">Definition at line <a class="el" href="_r_t_t_i_8h_source.html#l00025">25</a> of file <a class="el" href="_r_t_t_i_8h_source.html">RTTI.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab67a37bae5aeb3024dbd568bd4c9a9ea" name="ab67a37bae5aeb3024dbd568bd4c9a9ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab67a37bae5aeb3024dbd568bd4c9a9ea">&#9670;&#160;</a></span>GetTypeName()</h2>
+<a id="a7edd7107554d4c6e16c065033eaa6355" name="a7edd7107554d4c6e16c065033eaa6355"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7edd7107554d4c6e16c065033eaa6355">&#9670;&#160;</a></span>GetTypeName()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -116,7 +122,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const std::string frost::core::RTTI::GetTypeName </td>
+          <td class="memname">const std::string frost::core::RTTI::GetTypeName </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
@@ -129,10 +135,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Method to get the type name of a class at runtime. </p>
+<dl class="section return"><dt>Returns</dt><dd>The name of the class type as a string</dd></dl>
+<p>This virtual method is overridden by the 'FROST_DEFINE_RTTI' macro and returns the class name passed as a string parameter to this macro. </p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>include/Core/Internal/<a class="el" href="_r_t_t_i_8h_source.html">RTTI.h</a></li>
+<li>C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Internal/<a class="el" href="_r_t_t_i_8h_source.html">RTTI.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

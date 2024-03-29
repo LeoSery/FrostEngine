@@ -77,7 +77,7 @@
         </childnode>
       </node>
       <node id="1">
-        <label>src/Core/Scene.cpp</label>
+        <label>C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/Scene.cpp</label>
         <link refid="_scene_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -152,6 +152,6 @@
 <codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="46"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="src/Core/Scene.cpp"/>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/Scene.cpp"/>
   </compounddef>
 </doxygen>

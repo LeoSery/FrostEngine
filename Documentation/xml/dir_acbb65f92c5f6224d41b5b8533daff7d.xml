@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_acbb65f92c5f6224d41b5b8533daff7d" kind="dir">
+    <compoundname>C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src</compoundname>
+    <innerdir refid="dir_68418f2a8f288c8e8762eed65e82f889">C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core</innerdir>
+    <innerdir refid="dir_e4aed99fbff579090428e0791fca4833">C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS</innerdir>
+    <innerdir refid="dir_2aad363f85d59f5c5827d192660eca92">C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Editor</innerdir>
+    <innerdir refid="dir_01b1aa0c279c214786f9b4a7d6fc7938">C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Render</innerdir>
+    <innerdir refid="dir_90651601d3ba24e47a6c3c937f4dbb90">C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Utils</innerdir>
+    <innerfile refid="_frost_engine_8cpp">FrostEngine.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/"/>
+  </compounddef>
+</doxygen>

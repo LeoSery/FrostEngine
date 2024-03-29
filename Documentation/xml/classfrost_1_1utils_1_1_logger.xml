@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Utils/Logger.h" line="49" column="15" bodyfile="include/Utils/Logger.h" bodystart="49" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Utils/Logger.h" line="49" column="15" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Utils/Logger.h" bodystart="49" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Utils/Logger.h" line="50" column="13" bodyfile="include/Utils/Logger.h" bodystart="50" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Utils/Logger.h" line="50" column="13" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Utils/Logger.h" bodystart="50" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfrost_1_1utils_1_1_logger_1a0a8e660f359fd246c552db3664b30fbf" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Utils/Logger.h" line="51" column="6" bodyfile="include/Utils/Logger.h" bodystart="51" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Utils/Logger.h" line="51" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Utils/Logger.h" bodystart="51" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfrost_1_1utils_1_1_logger_1a78734d9fcbe965e9e0efb7df3650a2e6" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -64,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Utils/Logger.h" line="52" column="6" bodyfile="include/Utils/Logger.h" bodystart="52" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Utils/Logger.h" line="52" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Utils/Logger.h" bodystart="52" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfrost_1_1utils_1_1_logger_1a9e1ece8abbb7af9d1927bad7a3109679" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -79,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Utils/Logger.h" line="53" column="6" bodyfile="include/Utils/Logger.h" bodystart="53" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Utils/Logger.h" line="53" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Utils/Logger.h" bodystart="53" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -95,7 +95,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Utils/Logger.h" line="22" column="1" bodyfile="src/Utils/Logger.cpp" bodystart="9" bodyend="12"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Utils/Logger.h" line="22" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Utils/Logger.cpp" bodystart="9" bodyend="12"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1utils_1_1_logger_1a31bb560f520fb6811ea8ef5c3ac3ca3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -109,7 +109,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Utils/Logger.h" line="23" column="1" bodyfile="src/Utils/Logger.cpp" bodystart="14" bodyend="17"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Utils/Logger.h" line="23" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Utils/Logger.cpp" bodystart="14" bodyend="17"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1utils_1_1_logger_1a49af0a8da8bd5c5222e7f4474c1ecaf2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -131,7 +131,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Utils/Logger.h" line="26" column="6" bodyfile="src/Utils/Logger.cpp" bodystart="19" bodyend="22"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Utils/Logger.h" line="26" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Utils/Logger.cpp" bodystart="19" bodyend="22"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1utils_1_1_logger_1a9ebe619cce25c88017f6d968eb9376af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -145,7 +145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Utils/Logger.h" line="27" column="6" bodyfile="src/Utils/Logger.cpp" bodystart="24" bodyend="33"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Utils/Logger.h" line="27" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Utils/Logger.cpp" bodystart="24" bodyend="33"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -165,7 +165,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Utils/Logger.h" line="30" column="13" bodyfile="src/Utils/Logger.cpp" bodystart="35" bodyend="38"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Utils/Logger.h" line="30" column="13" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Utils/Logger.cpp" bodystart="35" bodyend="38"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1utils_1_1_logger_1aad1c2e3c78b39231d2019dc0843cca72" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -183,7 +183,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Utils/Logger.h" line="31" column="13" bodyfile="src/Utils/Logger.cpp" bodystart="40" bodyend="43"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Utils/Logger.h" line="31" column="13" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Utils/Logger.cpp" bodystart="40" bodyend="43"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1utils_1_1_logger_1af7995344e912027c72c20e6c7a8108be" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -201,7 +201,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Utils/Logger.h" line="32" column="13" bodyfile="src/Utils/Logger.cpp" bodystart="45" bodyend="48"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Utils/Logger.h" line="32" column="13" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Utils/Logger.cpp" bodystart="45" bodyend="48"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1utils_1_1_logger_1a2d6186fe376f325ca9fbc37c6672d6bf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classfrost_1_1utils_1_1_logger" kindref="compound">Logger</ref> *</type>
@@ -215,7 +215,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Utils/Logger.h" line="39" column="16" bodyfile="src/Utils/Logger.cpp" bodystart="50" bodyend="56"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Utils/Logger.h" line="39" column="16" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Utils/Logger.cpp" bodystart="50" bodyend="56"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1utils_1_1_logger_1a5d287cd826d0847f8216b9682e82c023" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -229,7 +229,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Utils/Logger.h" line="40" column="13" bodyfile="src/Utils/Logger.cpp" bodystart="58" bodyend="65"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Utils/Logger.h" line="40" column="13" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Utils/Logger.cpp" bodystart="58" bodyend="65"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -245,7 +245,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/Utils/Logger.h" line="17" column="1" bodyfile="include/Utils/Logger.h" bodystart="18" bodyend="54"/>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Utils/Logger.h" line="17" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Utils/Logger.h" bodystart="18" bodyend="54"/>
     <listofallmembers>
       <member refid="classfrost_1_1utils_1_1_logger_1a5d287cd826d0847f8216b9682e82c023" prot="public" virt="non-virtual"><scope>frost::utils::Logger</scope><name>DeleteInstance</name></member>
       <member refid="classfrost_1_1utils_1_1_logger_1a2d6186fe376f325ca9fbc37c6672d6bf" prot="public" virt="non-virtual"><scope>frost::utils::Logger</scope><name>GetInstance</name></member>

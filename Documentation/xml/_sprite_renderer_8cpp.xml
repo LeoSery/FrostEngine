@@ -152,7 +152,7 @@
         </childnode>
       </node>
       <node id="1">
-        <label>src/ECS/Component/Components/SpriteRenderer.cpp</label>
+        <label>C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/Component/Components/SpriteRenderer.cpp</label>
         <link refid="_sprite_renderer_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -320,6 +320,6 @@
 <codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="99"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="src/ECS/Component/Components/SpriteRenderer.cpp"/>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/Component/Components/SpriteRenderer.cpp"/>
   </compounddef>
 </doxygen>

@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Window.h" line="34" column="17" bodyfile="include/Core/Window.h" bodystart="34" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Window.h" line="53" column="17" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Window.h" bodystart="53" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -38,7 +38,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Window.h" line="22" column="10" bodyfile="src/Core/Window.cpp" bodystart="13" bodyend="54"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Window.h" line="42" column="10" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/Window.cpp" bodystart="13" bodyend="54"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_window_1af21904650564f98b54f6595d0f69fb3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -52,7 +52,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Window.h" line="23" column="1" bodyfile="src/Core/Window.cpp" bodystart="56" bodyend="60"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Window.h" line="43" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/Window.cpp" bodystart="56" bodyend="60"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_window_1a2777694941fb0597015c5d4062b3472d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -66,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Window.h" line="26" column="6" bodyfile="src/Core/Window.cpp" bodystart="62" bodyend="70"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Window.h" line="46" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/Window.cpp" bodystart="62" bodyend="70"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_window_1af2fea3da3ade9acb29899c8af45aab5d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -80,14 +80,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Window.h" line="29" column="6" bodyfile="src/Core/Window.cpp" bodystart="72" bodyend="75"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Window.h" line="49" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/Window.cpp" bodystart="72" bodyend="75"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>The class for the window of the application. </para>
     </briefdescription>
     <detaileddescription>
+<para>This class is responsible for controlling the engine window while the engine is running. It contains information related to this window and also handles events triggered in it. </para>
     </detaileddescription>
-    <location file="include/Core/Window.h" line="10" column="1" bodyfile="include/Core/Window.h" bodystart="11" bodyend="35"/>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Window.h" line="30" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Window.h" bodystart="31" bodyend="54"/>
     <listofallmembers>
       <member refid="classfrost_1_1core_1_1_window_1af2fea3da3ade9acb29899c8af45aab5d" prot="public" virt="non-virtual"><scope>frost::core::Window</scope><name>GetInternal</name></member>
       <member refid="classfrost_1_1core_1_1_window_1acde012bb6b8ff99d5fa552e45a6c0d17" prot="private" virt="non-virtual"><scope>frost::core::Window</scope><name>m_impl</name></member>

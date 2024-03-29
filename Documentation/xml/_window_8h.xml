@@ -5,18 +5,18 @@
     <includes refid="_export_8h" local="yes">Core/Export.h</includes>
     <includes local="no">glm/glm.hpp</includes>
     <includes local="no">memory</includes>
-    <includedby refid="_frost_engine_8h" local="yes">include/FrostEngine.h</includedby>
-    <includedby refid="_input_8cpp" local="yes">src/Core/Input/Input.cpp</includedby>
-    <includedby refid="_window_8cpp" local="yes">src/Core/Window.cpp</includedby>
-    <includedby refid="_editor_8cpp" local="yes">src/Editor/Editor.cpp</includedby>
-    <includedby refid="_render_device_8cpp" local="yes">src/Render/RenderDevice.cpp</includedby>
+    <includedby refid="_frost_engine_8h" local="yes">C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/FrostEngine.h</includedby>
+    <includedby refid="_input_8cpp" local="yes">C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/Input/Input.cpp</includedby>
+    <includedby refid="_window_8cpp" local="yes">C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/Window.cpp</includedby>
+    <includedby refid="_editor_8cpp" local="yes">C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Editor/Editor.cpp</includedby>
+    <includedby refid="_render_device_8cpp" local="yes">C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Render/RenderDevice.cpp</includedby>
     <incdepgraph>
       <node id="2">
         <label>Core/Export.h</label>
         <link refid="_export_8h"/>
       </node>
       <node id="1">
-        <label>include/Core/Window.h</label>
+        <label>C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Window.h</label>
         <link refid="_window_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -34,7 +34,7 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="1">
-        <label>include/Core/Window.h</label>
+        <label>C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Window.h</label>
         <link refid="_window_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -48,78 +48,78 @@
         </childnode>
       </node>
       <node id="2">
-        <label>include/FrostEngine.h</label>
+        <label>C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/FrostEngine.h</label>
         <link refid="_frost_engine_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="4">
-        <label>src/Core/Input/Input.cpp</label>
+        <label>C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/Input/Input.cpp</label>
         <link refid="_input_8cpp"/>
       </node>
       <node id="5">
-        <label>src/Core/Window.cpp</label>
+        <label>C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/Window.cpp</label>
         <link refid="_window_8cpp"/>
       </node>
       <node id="6">
-        <label>src/Editor/Editor.cpp</label>
+        <label>C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Editor/Editor.cpp</label>
         <link refid="_editor_8cpp"/>
       </node>
       <node id="3">
-        <label>src/FrostEngine.cpp</label>
+        <label>C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/FrostEngine.cpp</label>
         <link refid="_frost_engine_8cpp"/>
       </node>
       <node id="7">
-        <label>src/Render/RenderDevice.cpp</label>
+        <label>C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Render/RenderDevice.cpp</label>
         <link refid="_render_device_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classfrost_1_1core_1_1_window" prot="public">frost::core::Window</innerclass>
     <innerclass refid="structfrost_1_1core_1_1_window_1_1_s___window_properties" prot="public">frost::core::Window::S_WindowProperties</innerclass>
-    <innernamespace refid="namespacefrost">frost</innernamespace>
     <innernamespace refid="namespacefrost_1_1core">frost::core</innernamespace>
+    <innernamespace refid="namespacefrost">frost</innernamespace>
     <briefdescription>
+<para>Header file for the Export class. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_export_8h" kindref="compound">Core/Export.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;glm/glm.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacefrost_1_1core" kindref="compound">frost::core</ref></highlight></codeline>
-<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="10" refid="classfrost_1_1core_1_1_window" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="_export_8h_1a76e8ddc2fd5dcbd64bb60019fb4f0e30" kindref="member">FROST_ENGINE_API</ref><sp/><ref refid="classfrost_1_1core_1_1_window" kindref="compound">Window</ref></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_export_8h" kindref="compound">Core/Export.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;glm/glm.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14" refid="structfrost_1_1core_1_1_window_1_1_s___window_properties" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfrost_1_1core_1_1_window_1_1_s___window_properties" kindref="compound">S_WindowProperties</ref></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="16" refid="structfrost_1_1core_1_1_window_1_1_s___window_properties_1af1533149ed966a68cae0979911b01d7c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="structfrost_1_1core_1_1_window_1_1_s___window_properties_1af1533149ed966a68cae0979911b01d7c" kindref="member">title</ref>;</highlight></codeline>
-<codeline lineno="17" refid="structfrost_1_1core_1_1_window_1_1_s___window_properties_1a66b6547bde7505c30ad18900eae55872" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glm::ivec2<sp/><ref refid="structfrost_1_1core_1_1_window_1_1_s___window_properties_1a66b6547bde7505c30ad18900eae55872" kindref="member">size</ref>;</highlight></codeline>
-<codeline lineno="18" refid="structfrost_1_1core_1_1_window_1_1_s___window_properties_1aa447621433b6e335d60fb0535ad5cbe8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>fullScreen<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Constructor<sp/>and<sp/>Destructor</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_window" kindref="compound">Window</ref>(<ref refid="structfrost_1_1core_1_1_window_1_1_s___window_properties" kindref="compound">S_WindowProperties</ref><sp/>_Properties);</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_window" kindref="compound">~Window</ref>();</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Methods</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>PollEvents();<sp/></highlight><highlight class="comment">//this<sp/>Function<sp/>need<sp/>to<sp/>be<sp/>called<sp/>in<sp/>the<sp/>main<sp/>loop<sp/>of<sp/>the<sp/>application</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Getters</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>GetInternal()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//pimple<sp/>idiom<sp/>?</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfrost_1_1core_1_1_window_1_1_internal" kindref="compound">Internal</ref>;</highlight></codeline>
-<codeline lineno="34" refid="classfrost_1_1core_1_1_window_1acde012bb6b8ff99d5fa552e45a6c0d17" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::unique_ptr&lt;Internal&gt;<sp/><ref refid="classfrost_1_1core_1_1_window_1acde012bb6b8ff99d5fa552e45a6c0d17" kindref="member">m_impl</ref>;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacefrost_1_1core" kindref="compound">frost::core</ref></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30" refid="classfrost_1_1core_1_1_window" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="_export_8h_1a76e8ddc2fd5dcbd64bb60019fb4f0e30" kindref="member">FROST_ENGINE_API</ref><sp/><ref refid="classfrost_1_1core_1_1_window" kindref="compound">Window</ref></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="structfrost_1_1core_1_1_window_1_1_s___window_properties" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfrost_1_1core_1_1_window_1_1_s___window_properties" kindref="compound">S_WindowProperties</ref></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="36" refid="structfrost_1_1core_1_1_window_1_1_s___window_properties_1af1533149ed966a68cae0979911b01d7c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="structfrost_1_1core_1_1_window_1_1_s___window_properties_1af1533149ed966a68cae0979911b01d7c" kindref="member">title</ref>;</highlight></codeline>
+<codeline lineno="37" refid="structfrost_1_1core_1_1_window_1_1_s___window_properties_1a66b6547bde7505c30ad18900eae55872" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glm::ivec2<sp/><ref refid="structfrost_1_1core_1_1_window_1_1_s___window_properties_1a66b6547bde7505c30ad18900eae55872" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="38" refid="structfrost_1_1core_1_1_window_1_1_s___window_properties_1aa447621433b6e335d60fb0535ad5cbe8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>fullScreen<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Constructor<sp/>and<sp/>Destructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_window" kindref="compound">Window</ref>(<ref refid="structfrost_1_1core_1_1_window_1_1_s___window_properties" kindref="compound">S_WindowProperties</ref><sp/>_Properties);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_window" kindref="compound">~Window</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Methods</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>PollEvents();<sp/></highlight><highlight class="comment">//this<sp/>Function<sp/>need<sp/>to<sp/>be<sp/>called<sp/>in<sp/>the<sp/>main<sp/>loop<sp/>of<sp/>the<sp/>application</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Getters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>GetInternal()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfrost_1_1core_1_1_window_1_1_internal" kindref="compound">Internal</ref>;</highlight></codeline>
+<codeline lineno="53" refid="classfrost_1_1core_1_1_window_1acde012bb6b8ff99d5fa552e45a6c0d17" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::unique_ptr&lt;Internal&gt;<sp/><ref refid="classfrost_1_1core_1_1_window_1acde012bb6b8ff99d5fa552e45a6c0d17" kindref="member">m_impl</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="include/Core/Window.h"/>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Window.h"/>
   </compounddef>
 </doxygen>

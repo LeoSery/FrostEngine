@@ -1,12 +1,32 @@
 #pragma once
 
+/*!
+* \file Window.h
+* 
+* \brief Header file for the Export class.
+*/
+
 #include "Core/Export.h"
 
 #include <glm/glm.hpp>
 #include <memory>
 
+/*!
+* \namespace frost::core
+*
+* \brief The namespace for the FrostEngine core functionalities.
+*/
 namespace frost::core
 {
+	/*!
+	* \class Window
+	* 
+	* \brief The class for the window of the application.
+	* 
+	* \details This class is responsible for controlling the engine
+	* window while the engine is running. It contains information
+	* related to this window and also handles events triggered in it.
+	*/
 	class FROST_ENGINE_API Window
 	{
 	public:
@@ -29,7 +49,6 @@ namespace frost::core
 		void* GetInternal() const;
 
 	private:
-		//pimple idiom ?
 		struct Internal;
 		std::unique_ptr<Internal> m_impl;
 	};

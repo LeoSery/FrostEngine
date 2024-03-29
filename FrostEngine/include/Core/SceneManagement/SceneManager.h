@@ -1,9 +1,29 @@
 #pragma once
 
+/*!
+* \file SceneManager.h
+* 
+* \brief Header file for the SceneManager class.
+*/
+
 #include "Core/SceneManagement/Scene.h"
 
+/*!
+* \namespace frost::core
+*
+* \brief The namespace for the FrostEngine core functionalities.
+*/
 namespace frost::core
 {
+	/*!
+	* \class SceneManager
+	* 
+	* \brief The SceneManager class is responsible for managing the different scenes in the game.
+	* 
+	* \details The 'SceneManager' is a singleton that contains a list of scenes in the project,
+	* allowing you to define a scene as active and add or remove scenes from the project.
+	* It can also return the scene currently active in the engine. 
+	*/
 	class FROST_ENGINE_API SceneManager
 	{
     public:

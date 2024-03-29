@@ -16,14 +16,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Core/Window.cpp" line="10" column="12" bodyfile="src/Core/Window.cpp" bodystart="10" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/Window.cpp" line="10" column="12" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/Window.cpp" bodystart="10" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/Core/Window.cpp" line="8" column="1" bodyfile="src/Core/Window.cpp" bodystart="9" bodyend="11"/>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/Window.cpp" line="8" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/Window.cpp" bodystart="9" bodyend="11"/>
     <listofallmembers>
       <member refid="structfrost_1_1core_1_1_window_1_1_internal_1a8d7379254d57c9aa09806a16d2b990c1" prot="public" virt="non-virtual"><scope>frost::core::Window::Internal</scope><name>window</name></member>
     </listofallmembers>

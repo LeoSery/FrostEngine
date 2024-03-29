@@ -5,24 +5,30 @@
     <derivedcompoundref refid="classfrost_1_1_e_c_s_1_1_i_component" prot="public" virt="non-virtual">frost::ECS::IComponent</derivedcompoundref>
     <includes refid="_r_t_t_i_8h" local="no">RTTI.h</includes>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="classfrost_1_1core_1_1_r_t_t_i_1ab67a37bae5aeb3024dbd568bd4c9a9ea" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+      <memberdef kind="function" id="classfrost_1_1core_1_1_r_t_t_i_1a7edd7107554d4c6e16c065033eaa6355" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>const std::string</type>
-        <definition>virtual const std::string frost::core::RTTI::GetTypeName</definition>
+        <definition>const std::string frost::core::RTTI::GetTypeName</definition>
         <argsstring>() const =0</argsstring>
         <name>GetTypeName</name>
         <qualifiedname>frost::core::RTTI::GetTypeName</qualifiedname>
         <briefdescription>
+<para>Method to get the type name of a class at runtime. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>The name of the class type as a string</para>
+</simplesect>
+This virtual method is overridden by the &apos;FROST_DEFINE_RTTI&apos; macro and returns the class name passed as a string parameter to this macro. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Internal/RTTI.h" line="10" column="27"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Internal/RTTI.h" line="39" column="27"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Class to get the type name of a class at runtime. </para>
     </briefdescription>
     <detaileddescription>
+<para>This class return the name of a class pass as parameter using a specific macro. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="3">
@@ -54,9 +60,9 @@
         <link refid="classfrost_1_1core_1_1_r_t_t_i"/>
       </node>
     </inheritancegraph>
-    <location file="include/Core/Internal/RTTI.h" line="7" column="1" bodyfile="include/Core/Internal/RTTI.h" bodystart="8" bodyend="11"/>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Internal/RTTI.h" line="25" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Internal/RTTI.h" bodystart="26" bodyend="40"/>
     <listofallmembers>
-      <member refid="classfrost_1_1core_1_1_r_t_t_i_1ab67a37bae5aeb3024dbd568bd4c9a9ea" prot="public" virt="pure-virtual"><scope>frost::core::RTTI</scope><name>GetTypeName</name></member>
+      <member refid="classfrost_1_1core_1_1_r_t_t_i_1a7edd7107554d4c6e16c065033eaa6355" prot="public" virt="pure-virtual"><scope>frost::core::RTTI</scope><name>GetTypeName</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

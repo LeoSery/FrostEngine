@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_e28c5c2f647fceda48106c29e45adef8" kind="dir">
+    <compoundname>C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS</compoundname>
+    <innerdir refid="dir_e4a4e26af12076d8d41758ec4a4e8c53">C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component</innerdir>
+    <innerdir refid="dir_44233464d77863cbc4016ba46eec4ea3">C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity</innerdir>
+    <innerdir refid="dir_7eaefeb5ca4361dbf72c35638756408e">C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/System</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/"/>
+  </compounddef>
+</doxygen>

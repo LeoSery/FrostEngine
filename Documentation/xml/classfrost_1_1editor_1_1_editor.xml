@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Editor/Editor.h" line="49" column="6" bodyfile="include/Editor/Editor.h" bodystart="49" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Editor/Editor.h" line="49" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Editor/Editor.h" bodystart="49" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfrost_1_1editor_1_1_editor_1a1038c47049daccd90f3401ada84ac543" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Editor/Editor.h" line="51" column="6" bodyfile="include/Editor/Editor.h" bodystart="51" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Editor/Editor.h" line="51" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Editor/Editor.h" bodystart="51" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-static-attrib">
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Editor/Editor.h" line="55" column="15" bodyfile="include/Editor/Editor.h" bodystart="55" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Editor/Editor.h" line="55" column="15" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Editor/Editor.h" bodystart="55" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
@@ -66,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Editor/Editor.h" line="56" column="24" bodyfile="include/Editor/Editor.h" bodystart="56" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Editor/Editor.h" line="56" column="24" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Editor/Editor.h" bodystart="56" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -82,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Editor/Editor.h" line="31" column="1" bodyfile="src/Editor/Editor.cpp" bodystart="22" bodyend="25"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Editor/Editor.h" line="31" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Editor/Editor.cpp" bodystart="22" bodyend="25"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1editor_1_1_editor_1ae93faf9d9dce1d0953875c8941e1ae0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -96,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Editor/Editor.h" line="32" column="1" bodyfile="src/Editor/Editor.cpp" bodystart="27" bodyend="30"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Editor/Editor.h" line="32" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Editor/Editor.cpp" bodystart="27" bodyend="30"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1editor_1_1_editor_1a8eb1b251197b14dd0761c90696b9a8e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -110,7 +110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Editor/Editor.h" line="41" column="5" bodyfile="src/Editor/Editor.cpp" bodystart="42" bodyend="88"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Editor/Editor.h" line="41" column="5" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Editor/Editor.cpp" bodystart="42" bodyend="88"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1editor_1_1_editor_1a1b7acf390e927cf262f060cec117ec55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -128,7 +128,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Editor/Editor.h" line="42" column="5" bodyfile="src/Editor/Editor.cpp" bodystart="90" bodyend="108"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Editor/Editor.h" line="42" column="5" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Editor/Editor.cpp" bodystart="90" bodyend="108"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1editor_1_1_editor_1a6d1f00ae866f485fb7012a5e4c18fd75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -142,7 +142,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Editor/Editor.h" line="43" column="6" bodyfile="src/Editor/Editor.cpp" bodystart="110" bodyend="115"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Editor/Editor.h" line="43" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Editor/Editor.cpp" bodystart="110" bodyend="115"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1editor_1_1_editor_1a7c203be4883363290994e9c27f6aac3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -160,7 +160,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Editor/Editor.h" line="45" column="6" bodyfile="src/Editor/Editor.cpp" bodystart="117" bodyend="126"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Editor/Editor.h" line="45" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Editor/Editor.cpp" bodystart="117" bodyend="126"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1editor_1_1_editor_1aaf04ff0ab46df372d33cba2558848325" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -174,7 +174,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Editor/Editor.h" line="46" column="6" bodyfile="src/Editor/Editor.cpp" bodystart="128" bodyend="180"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Editor/Editor.h" line="46" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Editor/Editor.cpp" bodystart="128" bodyend="180"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -190,7 +190,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Editor/Editor.h" line="37" column="16" bodyfile="src/Editor/Editor.cpp" bodystart="32" bodyend="40"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Editor/Editor.h" line="37" column="16" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Editor/Editor.cpp" bodystart="32" bodyend="40"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1editor_1_1_editor_1abd82b116e70569ee9135cc865ab3228b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -204,7 +204,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Editor/Editor.h" line="38" column="13" bodyfile="src/Editor/Editor.cpp" bodystart="182" bodyend="189"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Editor/Editor.h" line="38" column="13" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Editor/Editor.cpp" bodystart="182" bodyend="189"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -236,7 +236,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/Editor/Editor.h" line="28" column="1" bodyfile="include/Editor/Editor.h" bodystart="29" bodyend="59"/>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Editor/Editor.h" line="28" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Editor/Editor.h" bodystart="29" bodyend="59"/>
     <listofallmembers>
       <member refid="classfrost_1_1editor_1_1_editor_1abd82b116e70569ee9135cc865ab3228b" prot="public" virt="non-virtual"><scope>frost::editor::Editor</scope><name>DeleteEditor</name></member>
       <member refid="classfrost_1_1editor_1_1_editor_1a8eb1b251197b14dd0761c90696b9a8e1" prot="public" virt="non-virtual"><scope>frost::editor::Editor</scope><name>DrawEditor</name></member>
