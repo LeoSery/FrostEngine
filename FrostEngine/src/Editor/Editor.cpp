@@ -20,6 +20,10 @@ namespace frost::editor
 {
     Editor* Editor::m_Instance = nullptr;
 
+    Editor::Editor()
+    {
+    }
+
     Editor::~Editor()
     {
 
@@ -68,28 +72,7 @@ namespace frost::editor
             ImGui::End();
         }
         
-        ImGui::SetNextWindowSize(ImVec2(900, 200));
-        if (ImGui::Begin("Explorer", NULL, ImGuiWindowFlags_NoCollapse))
-        {
-            if (ImGui::Button("Go Up"))
-            {
-                if (CurrentPath.has_parent_path())
-                {
-                    CurrentPath = CurrentPath.parent_path();
-                }
-            }
-            ImGui::SameLine();
-            ImGui::Text("Currenty directoy : %s", CurrentPath.string().c_str());
-            ImGui::Separator();
-            DrawExplorerContent();
-            ImGui::Separator();
-            DrawExplorerActions();
-            ImGui::Separator();
-            DrawExplorerFilter();
-
-
-            ImGui::End();
-        }
+        frost::utils::Explorer::GetInstance()->DrawExplorer();
 #endif
         ImGui::Render();
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
@@ -201,191 +184,6 @@ namespace frost::editor
 
     }
 
-    void Editor::DrawExplorerContent()
-    {
-        for (const auto &entry : fs::directory_iterator(CurrentPath))
-        {
-            const auto is_selected = entry.path() == selectedEntry;
-            const auto is_directory = entry.is_directory();
-            const auto is_file = entry.is_regular_file();
-            auto entry_name = entry.path().filename().string();
-
-            if (is_directory)         
-                entry_name = "[Directory]" + entry_name;
-            else if (is_file)
-                entry_name = "[File]" + entry_name;
-            
-            if (ImGui::Selectable(entry_name.c_str(), is_selected))
-            {
-                if (is_directory)
-                    CurrentPath /= entry.path().filename();
-
-                selectedEntry = entry.path();
-            }
-        }
-    }
-
-    void Editor::DrawExplorerFilter()
-    {
-        static char extension_filter[16] = { "\0" };
-
-        ImGui::Text("Filter by extension");
-        ImGui::SameLine();
-        ImGui::InputText("###inFilter", extension_filter, sizeof(extension_filter));
-
-        if (std::strlen(extension_filter) == 0)
-            return;
-
-        auto filtered_file_count = std::size_t{ 0 };
-        for (const auto& entry : fs::directory_iterator(CurrentPath))
-        {
-            if (!fs::is_regular_file(entry))
-                continue;
-
-            if (entry.path().extension().string() == extension_filter)
-                ++filtered_file_count;
-        }
-
-        ImGui::Text("Number of files: %u", filtered_file_count);
-    }
-
-    void Editor::DrawExplorerActions()
-    {
-        if (fs::is_directory(selectedEntry))
-        {
-            ImGui::Text("Selected dir: %s", selectedEntry.string().c_str());
-        }
-
-        else if (fs::is_regular_file(selectedEntry))
-        {
-            ImGui::Text("Selected file: %s", selectedEntry.string().c_str());
-        }
-
-        else
-        {
-            ImGui::Text("Nothing selected!");
-        }
-
-        if (fs::is_regular_file(selectedEntry) && ImGui::Button("Open"))
-        {
-            DrawExplorerOpenFile();
-        }
-        ImGui::SameLine();
-
-        if (ImGui::Button("Rename"))
-        {
-            RenameDialogOpened = true;
-            ImGui::OpenPopup("Rename File");
-        }
-        ImGui::SameLine();
-
-        if (ImGui::Button("Delete"))
-        {
-            DeleteDialogOpened = true;
-            ImGui::OpenPopup("Delete File");
-        }
-
-        DrawExplorerRenameFilePopUp();
-        DrawExplorerDeleteFilePopUp();
-    }
-
-    void Editor::DrawExplorerRenameFilePopUp()
-    {
-        if (ImGui::BeginPopupModal("Rename File", &RenameDialogOpened))
-        {
-            static char buffer_name[512] = { '\0' };
-
-            ImGui::Text("New name : ");
-            ImGui::InputText("###newName", buffer_name, sizeof(buffer_name));
-
-            if (ImGui::Button("Rename"))
-            {
-                auto new_path = selectedEntry.parent_path() / buffer_name;
-                if (ExplorerRenameFile(selectedEntry, new_path))
-                {
-                    RenameDialogOpened = false;
-                    selectedEntry = new_path;
-                    std::memset(buffer_name, 0, sizeof(buffer_name));
-                }
-            }
-            ImGui::SameLine();
-
-            if (ImGui::Button("Cancel"))
-            {
-                RenameDialogOpened = false;
-            }
-            ImGui::EndPopup();
-        }
-    }
-
-    void Editor::DrawExplorerDeleteFilePopUp()
-    {
-        if (ImGui::BeginPopupModal("Delete File", &DeleteDialogOpened))
-        {
-            ImGui::Text("Are you sure you want to delete %s ?", selectedEntry.filename().string().c_str());
-            
-            if (ImGui::Button("Yes"))
-            {
-                if (ExplorerDeleteFile(selectedEntry))
-                {
-                    selectedEntry.clear();
-                    DeleteDialogOpened = false;
-                }
-            }
-            ImGui::SameLine();
-            
-            if (ImGui::Button("No"))
-            {
-                DeleteDialogOpened = false;
-            }
-            ImGui::EndPopup();
-        }
-    }
-
-    void Editor::DrawExplorerOpenFile()
-    {
-#ifdef _WIN32
-        const auto command = "start \"\" \"" + selectedEntry.string() + "\"";
-
-#elif _APPLE_
-        const auto command = "open \"" + selectedEntry.string() + "\"";
-
-#else
-        const auto command = "xdg-open \"" + selectedEntry.string() + "\"";
-
-#endif    
-        std::system(command.c_str());
-    }
-
-    bool Editor::ExplorerRenameFile(const fs::path &old_path, const fs::path &new_path)
-    {
-        try
-        {
-            fs::rename(old_path, new_path);
-            return true;
-        }
-        catch (const std::exception &e)
-        {
-            std::cerr << e.what() << '\n';
-            return false;
-        }
-        
-    }
-
-    bool Editor::ExplorerDeleteFile(const fs::path &_path)
-    {
-        try
-        {
-            fs::remove(_path);
-            return true;
-        }
-        catch (const std::exception& e)
-        {
-            std::cerr << e.what() << '\n';
-            return false;
-        }
-    }
-  
     void Editor::DeleteEditor()
     {
         if (m_Instance)
