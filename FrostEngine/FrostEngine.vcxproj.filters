@@ -21,6 +21,7 @@
     <ClCompile Include="src\ECS\Component\Components\BoxCollider.cpp" />
     <ClCompile Include="src\Core\Input\Input.cpp" />
     <ClCompile Include="src\Editor\Editor.cpp" />
+    <ClCompile Include="src\Utils\Explorer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Core\Internal\AuthorizationBadge.h" />
@@ -53,6 +54,7 @@
     <ClInclude Include="include\ECS\Component\Components\BoxCollider.h" />
     <ClInclude Include="include\Core\Input\Input.h" />
     <ClInclude Include="include\Editor\Editor.h" />
+    <ClInclude Include="include\Utils\Explorer.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="src\Render\Shaders\DefaultVertexShader.glsl" />

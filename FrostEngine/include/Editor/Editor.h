@@ -10,10 +10,13 @@
 #include "Core/SceneManagement/Scene.h"
 #include "Core/Internal/Export.h"
 
-#pragma region Forward Declarations
+#include "cstdint"
+#include "string_view"
+#include "filesystem"
+#include "string"
 
-namespace frost::core
-{
+
+namespace frost::core {
 	class Window;
 	class Scene;
 	class SceneManager;	
@@ -27,8 +30,10 @@ namespace frost::ECS
 namespace frost::utils
 {
 	class Logger;
+	class Explorer;
 }
 #pragma endregion
+namespace fs = std::filesystem;
 
 /*!
 * \namespace frost::editor
@@ -51,7 +56,7 @@ namespace frost::editor
 	public:
 
 		// Constructor & Destructor
-		Editor();
+		Editor() : CurrentPath(fs::current_path()), selectedEntry(fs::path{}){};
 		~Editor();
 
 		// Singleton
@@ -66,13 +71,28 @@ namespace frost::editor
 		void DrawHierachyValue(frost::core::Scene* m_CurrentScene);
 		void DrawInsperctorValue();
 		
-		// Data
+		void DrawExplorerContent();
+		void DrawExplorerFilter();
+		void DrawExplorerActions();
+		void DrawExplorerRenameFilePopUp();
+		void DrawExplorerDeleteFilePopUp();
+		void DrawExplorerOpenFile();
+
+	
+		
+		//example collide
 		bool ISCollide = true;
 		bool ShowInspector = false;
-
+		bool ExplorerRenameFile(const fs::path& old_path, const fs::path& new_path);
+		bool ExplorerDeleteFile(const fs::path& path);
+		bool RenameDialogOpened = false;
+		bool DeleteDialogOpened = false;
 	private:
 
 		static Editor* m_Instance;
 		frost::ECS::GameObject* SelectEntity = nullptr;
+		
+		fs::path CurrentPath;
+		fs::path selectedEntry;
 	};
 }
