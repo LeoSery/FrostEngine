@@ -124,9 +124,15 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename ... Args&gt;<br />
 class frost::core::Signal&lt; Args &gt;</div><p>Class for creating signals. </p>
-<p>This class is used to create signals that can be connected to slots. </p>
+<p>This class is used to create signals that can be connected to slots.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Args</td><td>The types of the parameters that the signal will pass to the slots. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_signal_8h_source.html#l00028">28</a> of file <a class="el" href="_signal_8h_source.html">Signal.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_signal_8h_source.html#l00030">30</a> of file <a class="el" href="_signal_8h_source.html">Signal.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae9c78b879942622626fd02c4ffa7f9f7" name="ae9c78b879942622626fd02c4ffa7f9f7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae9c78b879942622626fd02c4ffa7f9f7">&#9670;&#160;</a></span>Signal() <span class="overload">[1/3]</span></h2>
@@ -263,13 +269,13 @@ template&lt;typename ... Args&gt; </div>
 </div><div class="memdoc">
 
 <p>Connects a slot to the signal. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">_Slot</td><td>The slot to connect to the signal.</td></tr>
+<p>This method connects a slot to the signal passed as a parameter.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">_Slot</td><td>The slot to connect to the signal. </td></tr>
   </table>
   </dd>
 </dl>
-<p>This method connects a slot to the signal passed as a parameter. </p>
 
 <p class="definition">Definition at line <a class="el" href="_signal_8hxx_source.html#l00023">23</a> of file <a class="el" href="_signal_8hxx_source.html">Signal.hxx</a>.</p>
 
@@ -362,13 +368,13 @@ template&lt;typename ... Args&gt; </div>
 </div><div class="memdoc">
 
 <p>Emits the signal. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">_Parameters</td><td>The parameters to pass to the connected slots.</td></tr>
+<p>This method emits the signal, passing the parameters to the connected slots.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">_Parameters</td><td>The parameters to pass to the connected slots. </td></tr>
   </table>
   </dd>
 </dl>
-<p>This method emits the signal, passing the parameters to the connected slots. </p>
 
 <p class="definition">Definition at line <a class="el" href="_signal_8hxx_source.html#l00071">71</a> of file <a class="el" href="_signal_8hxx_source.html">Signal.hxx</a>.</p>
 
@@ -400,13 +406,13 @@ template&lt;typename ... Args&gt; </div>
 </div><div class="memdoc">
 
 <p>Operator overload for emitting the signal. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">_Parameters</td><td>The parameters to pass to the connected slots.</td></tr>
+<p>This method overloads the '()' operator so that the slot can be called as a function.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">_Parameters</td><td>The parameters to pass to the connected slots. </td></tr>
   </table>
   </dd>
 </dl>
-<p>This method overloads the '()' operator so that the slot can be called as a function. </p>
 
 <p class="definition">Definition at line <a class="el" href="_signal_8hxx_source.html#l00087">87</a> of file <a class="el" href="_signal_8hxx_source.html">Signal.hxx</a>.</p>
 
@@ -462,7 +468,7 @@ template&lt;typename ... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_signal_8h_source.html#l00051">51</a> of file <a class="el" href="_signal_8h_source.html">Signal.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_signal_8h_source.html#l00053">53</a> of file <a class="el" href="_signal_8h_source.html">Signal.h</a>.</p>
 
 </div>
 </div>

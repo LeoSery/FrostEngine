@@ -23,6 +23,8 @@ namespace frost::core
     * \brief Class for creating signals.
     * 
     * \details This class is used to create signals that can be connected to slots.
+    * 
+    * \tparam Args The types of the parameters that the signal will pass to the slots.
     */
     template <typename ...Args>
     class Signal

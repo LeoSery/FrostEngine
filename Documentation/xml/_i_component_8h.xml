@@ -183,8 +183,8 @@
       </node>
     </invincdepgraph>
     <innerclass refid="classfrost_1_1_e_c_s_1_1_i_component" prot="public">frost::ECS::IComponent</innerclass>
-    <innernamespace refid="namespacefrost">frost</innernamespace>
     <innernamespace refid="namespacefrost_1_1_e_c_s">frost::ECS</innernamespace>
+    <innernamespace refid="namespacefrost">frost</innernamespace>
     <sectiondef kind="define">
       <memberdef kind="define" id="_i_component_8h_1af945b5de700ba8bed8687b77383ed4f2" prot="public" static="no">
         <name>UUID_SYSTEM_GENERATOR</name>
@@ -194,57 +194,63 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/IComponent.h" line="6" column="9" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/IComponent.h" bodystart="6" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/IComponent.h" line="12" column="9" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/IComponent.h" bodystart="12" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Header file for the IComponent class. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_r_t_t_i_8h" kindref="compound">Core/Internal/RTTI.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_export_8h" kindref="compound">Core/export.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight></codeline>
-<codeline lineno="6" refid="_i_component_8h_1af945b5de700ba8bed8687b77383ed4f2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UUID_SYSTEM_GENERATOR</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;stduuid/uuid.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacefrost_1_1_e_c_s" kindref="compound">frost::ECS</ref></highlight></codeline>
-<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">GameObject;</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13" refid="classfrost_1_1_e_c_s_1_1_i_component" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="_export_8h_1a76e8ddc2fd5dcbd64bb60019fb4f0e30" kindref="member">FROST_ENGINE_API</ref><sp/><ref refid="classfrost_1_1_e_c_s_1_1_i_component" kindref="compound">IComponent</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_r_t_t_i" kindref="compound">core::RTTI</ref></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="15" refid="classfrost_1_1_e_c_s_1_1_i_component_1a15ede560c92670c8f07329c3aba756f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1_e_c_s_1_1_i_component_1a15ede560c92670c8f07329c3aba756f7" kindref="member">FROST_DEFINE_RTTI</ref>(<ref refid="classfrost_1_1_e_c_s_1_1_i_component" kindref="compound">IComponent</ref>);</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Constructors<sp/>and<sp/>destructors</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="20" refid="classfrost_1_1_e_c_s_1_1_i_component_1ae8ccddcb37fe3aa6b23f072dc135b5c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1_e_c_s_1_1_i_component_1ae8ccddcb37fe3aa6b23f072dc135b5c6" kindref="member">IComponent</ref>()<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1_e_c_s_1_1_i_component" kindref="compound">IComponent</ref>(<ref refid="classfrost_1_1_e_c_s_1_1_game_object" kindref="compound">GameObject</ref>&amp;<sp/>_GameObject);</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1_e_c_s_1_1_i_component" kindref="compound">~IComponent</ref>();</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Frost<sp/>engine<sp/>life<sp/>cycle<sp/>methods</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26" refid="classfrost_1_1_e_c_s_1_1_i_component_1ac6fbd116991fc86765ca2e07db086a02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1_e_c_s_1_1_i_component_1ac6fbd116991fc86765ca2e07db086a02" kindref="member">Start</ref>()<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="27" refid="classfrost_1_1_e_c_s_1_1_i_component_1a45e8fc1c29ec737a38994109c69a0806" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1_e_c_s_1_1_i_component_1a45e8fc1c29ec737a38994109c69a0806" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>_DeltaTime)<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="28" refid="classfrost_1_1_e_c_s_1_1_i_component_1ab405ccdb0c52b3ce8209fc956f88226f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1_e_c_s_1_1_i_component_1ab405ccdb0c52b3ce8209fc956f88226f" kindref="member">Destroy</ref>()<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Getters<sp/>and<sp/>setters</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>IsActive()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SetActive(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>_IsActive);</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>uuids::uuid<sp/>GetUUID()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classfrost_1_1_e_c_s_1_1_game_object" kindref="compound">GameObject</ref>&amp;<sp/>GetParentObject()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="39" refid="classfrost_1_1_e_c_s_1_1_i_component_1a5d26cf57acad61ebfa5472ca1a8e03a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uuids::uuid<sp/><ref refid="classfrost_1_1_e_c_s_1_1_i_component_1a5d26cf57acad61ebfa5472ca1a8e03a9" kindref="member">m_uuid</ref>;</highlight></codeline>
-<codeline lineno="40" refid="classfrost_1_1_e_c_s_1_1_i_component_1a6104e07a728dc58f66cc0df421eefb5d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1_e_c_s_1_1_game_object" kindref="compound">GameObject</ref>&amp;<sp/><ref refid="classfrost_1_1_e_c_s_1_1_i_component_1a6104e07a728dc58f66cc0df421eefb5d" kindref="member">m_parentObject</ref>;</highlight></codeline>
-<codeline lineno="41" refid="classfrost_1_1_e_c_s_1_1_i_component_1ab5995c7763e343eae8148429a73f64f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_isActive<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_r_t_t_i_8h" kindref="compound">Core/Internal/RTTI.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_export_8h" kindref="compound">Core/export.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="_i_component_8h_1af945b5de700ba8bed8687b77383ed4f2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UUID_SYSTEM_GENERATOR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;stduuid/uuid.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacefrost_1_1_e_c_s" kindref="compound">frost::ECS</ref></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">GameObject;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="classfrost_1_1_e_c_s_1_1_i_component" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="_export_8h_1a76e8ddc2fd5dcbd64bb60019fb4f0e30" kindref="member">FROST_ENGINE_API</ref><sp/><ref refid="classfrost_1_1_e_c_s_1_1_i_component" kindref="compound">IComponent</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_r_t_t_i" kindref="compound">core::RTTI</ref></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>\brief<sp/>The<sp/>RTTI<sp/>definition<sp/>for<sp/>the<sp/>IComponent<sp/>class.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>\def<sp/>FROST_DEFINE_RTTI(IComponent)<sp/>This<sp/>macro<sp/>defines<sp/>the<sp/>RTTI<sp/>for<sp/>the<sp/>IComponent<sp/>class.</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="classfrost_1_1_e_c_s_1_1_i_component_1a15ede560c92670c8f07329c3aba756f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1_e_c_s_1_1_i_component_1a15ede560c92670c8f07329c3aba756f7" kindref="member">FROST_DEFINE_RTTI</ref>(<ref refid="classfrost_1_1_e_c_s_1_1_i_component" kindref="compound">IComponent</ref>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Constructors<sp/>and<sp/>destructors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="classfrost_1_1_e_c_s_1_1_i_component_1ae8ccddcb37fe3aa6b23f072dc135b5c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1_e_c_s_1_1_i_component_1ae8ccddcb37fe3aa6b23f072dc135b5c6" kindref="member">IComponent</ref>()<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1_e_c_s_1_1_i_component" kindref="compound">IComponent</ref>(<ref refid="classfrost_1_1_e_c_s_1_1_game_object" kindref="compound">GameObject</ref>&amp;<sp/>_GameObject);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1_e_c_s_1_1_i_component" kindref="compound">~IComponent</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Frost<sp/>engine<sp/>life<sp/>cycle<sp/>methods</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="classfrost_1_1_e_c_s_1_1_i_component_1ac6fbd116991fc86765ca2e07db086a02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1_e_c_s_1_1_i_component_1ac6fbd116991fc86765ca2e07db086a02" kindref="member">Start</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="50" refid="classfrost_1_1_e_c_s_1_1_i_component_1a45e8fc1c29ec737a38994109c69a0806" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1_e_c_s_1_1_i_component_1a45e8fc1c29ec737a38994109c69a0806" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>_DeltaTime)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="51" refid="classfrost_1_1_e_c_s_1_1_i_component_1ab405ccdb0c52b3ce8209fc956f88226f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1_e_c_s_1_1_i_component_1ab405ccdb0c52b3ce8209fc956f88226f" kindref="member">Destroy</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Getters<sp/>and<sp/>setters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>IsActive()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SetActive(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>_IsActive);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>uuids::uuid<sp/>GetUUID()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classfrost_1_1_e_c_s_1_1_game_object" kindref="compound">GameObject</ref>&amp;<sp/>GetParentObject()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="62" refid="classfrost_1_1_e_c_s_1_1_i_component_1a5d26cf57acad61ebfa5472ca1a8e03a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uuids::uuid<sp/><ref refid="classfrost_1_1_e_c_s_1_1_i_component_1a5d26cf57acad61ebfa5472ca1a8e03a9" kindref="member">m_uuid</ref>;</highlight></codeline>
+<codeline lineno="63" refid="classfrost_1_1_e_c_s_1_1_i_component_1a6104e07a728dc58f66cc0df421eefb5d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1_e_c_s_1_1_game_object" kindref="compound">GameObject</ref>&amp;<sp/><ref refid="classfrost_1_1_e_c_s_1_1_i_component_1a6104e07a728dc58f66cc0df421eefb5d" kindref="member">m_parentObject</ref>;</highlight></codeline>
+<codeline lineno="64" refid="classfrost_1_1_e_c_s_1_1_i_component_1ab5995c7763e343eae8148429a73f64f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_isActive<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/IComponent.h"/>
   </compounddef>

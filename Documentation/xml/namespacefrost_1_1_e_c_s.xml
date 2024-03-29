@@ -43,12 +43,13 @@
           </detaileddescription>
         </enumvalue>
         <briefdescription>
+<para>The enum for the different types of sprites. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/SpriteRenderer.h" line="17" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/SpriteRenderer.h" bodystart="18" bodyend="23"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/SpriteRenderer.h" line="34" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/SpriteRenderer.h" bodystart="35" bodyend="40"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="var">
@@ -90,6 +91,7 @@
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>The namespace for <ref refid="namespace_frost_engine" kindref="compound">FrostEngine</ref>&apos;s Entity Component System. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>

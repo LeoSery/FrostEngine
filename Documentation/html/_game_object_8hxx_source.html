@@ -84,71 +84,72 @@ $(function() { codefold.init(0); });
   <div class="headertitle"><div class="title">GameObject.hxx</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_game_object_8hxx.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="_game_object_8h.html">GameObject.h</a>&quot;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacefrost_1_1_e_c_s.html">frost::ECS</a></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Component&gt;</div>
-<div class="foldopen" id="foldopen00007" data-start="{" data-end="}">
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classfrost_1_1_e_c_s_1_1_game_object.html#a4525a8c8688a6b8c4bdeb0bdae94a7fb">    7</a></span>    <span class="keyword">inline</span> Component* <a class="code hl_function" href="classfrost_1_1_e_c_s_1_1_game_object.html#a4525a8c8688a6b8c4bdeb0bdae94a7fb">GameObject::GetComponent</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <span class="keyword">static_assert</span>(std::is_base_of&lt;IComponent, Component&gt;());</div>
+<a href="_game_object_8hxx.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_game_object_8h.html">GameObject.h</a>&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; component : <a class="code hl_variable" href="classfrost_1_1_e_c_s_1_1_game_object.html#aee5e27c87ef538d824f8d05c25af738d">m_components</a>)</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>            <span class="keywordflow">if</span> (component-&gt;GetTypeName() == Component::GetStaticTypeName())</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>                <span class="keywordflow">return</span> <span class="keyword">dynamic_cast&lt;</span>Component*<span class="keyword">&gt;</span>(component);</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            }</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        }</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    }</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacefrost_1_1_e_c_s.html">frost::ECS</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Component&gt;</div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classfrost_1_1_e_c_s_1_1_game_object.html#a4525a8c8688a6b8c4bdeb0bdae94a7fb">   25</a></span>    <span class="keyword">inline</span> Component* <a class="code hl_function" href="classfrost_1_1_e_c_s_1_1_game_object.html#a4525a8c8688a6b8c4bdeb0bdae94a7fb">GameObject::GetComponent</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keyword">static_assert</span>(std::is_base_of&lt;IComponent, Component&gt;());</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; component : <a class="code hl_variable" href="classfrost_1_1_e_c_s_1_1_game_object.html#aee5e27c87ef538d824f8d05c25af738d">m_components</a>)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <span class="keywordflow">if</span> (component-&gt;GetTypeName() == Component::GetStaticTypeName())</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                <span class="keywordflow">return</span> <span class="keyword">dynamic_cast&lt;</span>Component*<span class="keyword">&gt;</span>(component);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    }</div>
 </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Component&gt;</div>
-<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classfrost_1_1_e_c_s_1_1_game_object.html#a70063403c466783a0df41f9bbf80d561">   23</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classfrost_1_1_e_c_s_1_1_game_object.html#a70063403c466783a0df41f9bbf80d561">GameObject::RemoveComponent</a>()</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keyword">static_assert</span>(std::is_base_of&lt;IComponent, Component&gt;());</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keyword">static_assert</span>(!std::is_same_v&lt;frost::ECS::Transform, Component&gt;, <span class="stringliteral">&quot;&#39;Transform&#39; component cannot be removed from a GameObject&quot;</span>);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; component : <a class="code hl_variable" href="classfrost_1_1_e_c_s_1_1_game_object.html#aee5e27c87ef538d824f8d05c25af738d">m_components</a>)</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            <span class="keywordflow">if</span> (component-&gt;GetTypeName() == Component::GetStaticTypeName())</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                <a class="code hl_variable" href="classfrost_1_1_e_c_s_1_1_game_object.html#aee5e27c87ef538d824f8d05c25af738d">m_components</a>.erase(std::remove(<a class="code hl_variable" href="classfrost_1_1_e_c_s_1_1_game_object.html#aee5e27c87ef538d824f8d05c25af738d">m_components</a>.begin(), <a class="code hl_variable" href="classfrost_1_1_e_c_s_1_1_game_object.html#aee5e27c87ef538d824f8d05c25af738d">m_components</a>.end(), component), <a class="code hl_variable" href="classfrost_1_1_e_c_s_1_1_game_object.html#aee5e27c87ef538d824f8d05c25af738d">m_components</a>.end());</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                <span class="keyword">delete</span> component;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            }</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        }</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Component&gt;</div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classfrost_1_1_e_c_s_1_1_game_object.html#a70063403c466783a0df41f9bbf80d561">   50</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classfrost_1_1_e_c_s_1_1_game_object.html#a70063403c466783a0df41f9bbf80d561">GameObject::RemoveComponent</a>()</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keyword">static_assert</span>(std::is_base_of&lt;IComponent, Component&gt;());</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keyword">static_assert</span>(!std::is_same_v&lt;frost::ECS::Transform, Component&gt;, <span class="stringliteral">&quot;&#39;Transform&#39; component cannot be removed from a GameObject&quot;</span>);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; component : <a class="code hl_variable" href="classfrost_1_1_e_c_s_1_1_game_object.html#aee5e27c87ef538d824f8d05c25af738d">m_components</a>)</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keywordflow">if</span> (component-&gt;GetTypeName() == Component::GetStaticTypeName())</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                <a class="code hl_variable" href="classfrost_1_1_e_c_s_1_1_game_object.html#aee5e27c87ef538d824f8d05c25af738d">m_components</a>.erase(std::remove(<a class="code hl_variable" href="classfrost_1_1_e_c_s_1_1_game_object.html#aee5e27c87ef538d824f8d05c25af738d">m_components</a>.begin(), <a class="code hl_variable" href="classfrost_1_1_e_c_s_1_1_game_object.html#aee5e27c87ef538d824f8d05c25af738d">m_components</a>.end(), component), <a class="code hl_variable" href="classfrost_1_1_e_c_s_1_1_game_object.html#aee5e27c87ef538d824f8d05c25af738d">m_components</a>.end());</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                <span class="keyword">delete</span> component;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
 </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Component&gt;</div>
-<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classfrost_1_1_e_c_s_1_1_game_object.html#aacd32740cad705264179d84079c93d50">   40</a></span>    <span class="keyword">inline</span> Component* <a class="code hl_function" href="classfrost_1_1_e_c_s_1_1_game_object.html#aacd32740cad705264179d84079c93d50">GameObject::AddComponent</a>()</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keyword">static_assert</span>(std::is_base_of&lt;IComponent, Component&gt;());</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classfrost_1_1_e_c_s_1_1_game_object.html#a4525a8c8688a6b8c4bdeb0bdae94a7fb">GetComponent&lt;Component&gt;</a>())</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        }</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_function" href="classfrost_1_1_e_c_s_1_1_game_object.html#a4525a8c8688a6b8c4bdeb0bdae94a7fb">Component</a>* <a class="code hl_function" href="classfrost_1_1_e_c_s_1_1_game_object.html#a4525a8c8688a6b8c4bdeb0bdae94a7fb">component</a> = <span class="keyword">new</span> <a class="code hl_function" href="classfrost_1_1_e_c_s_1_1_game_object.html#a4525a8c8688a6b8c4bdeb0bdae94a7fb">Component</a>(*<span class="keyword">this</span>);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <a class="code hl_variable" href="classfrost_1_1_e_c_s_1_1_game_object.html#aee5e27c87ef538d824f8d05c25af738d">m_components</a>.push_back(<a class="code hl_function" href="classfrost_1_1_e_c_s_1_1_game_object.html#a4525a8c8688a6b8c4bdeb0bdae94a7fb">component</a>);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classfrost_1_1_e_c_s_1_1_game_object.html#a4525a8c8688a6b8c4bdeb0bdae94a7fb">component</a>;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Component&gt;</div>
+<div class="foldopen" id="foldopen00076" data-start="{" data-end="}">
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="classfrost_1_1_e_c_s_1_1_game_object.html#aacd32740cad705264179d84079c93d50">   76</a></span>    <span class="keyword">inline</span> Component* <a class="code hl_function" href="classfrost_1_1_e_c_s_1_1_game_object.html#aacd32740cad705264179d84079c93d50">GameObject::AddComponent</a>()</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keyword">static_assert</span>(std::is_base_of&lt;IComponent, Component&gt;());</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classfrost_1_1_e_c_s_1_1_game_object.html#a4525a8c8688a6b8c4bdeb0bdae94a7fb">GetComponent&lt;Component&gt;</a>())</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <a class="code hl_function" href="classfrost_1_1_e_c_s_1_1_game_object.html#a4525a8c8688a6b8c4bdeb0bdae94a7fb">Component</a>* <a class="code hl_function" href="classfrost_1_1_e_c_s_1_1_game_object.html#a4525a8c8688a6b8c4bdeb0bdae94a7fb">component</a> = <span class="keyword">new</span> <a class="code hl_function" href="classfrost_1_1_e_c_s_1_1_game_object.html#a4525a8c8688a6b8c4bdeb0bdae94a7fb">Component</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <a class="code hl_variable" href="classfrost_1_1_e_c_s_1_1_game_object.html#aee5e27c87ef538d824f8d05c25af738d">m_components</a>.push_back(<a class="code hl_function" href="classfrost_1_1_e_c_s_1_1_game_object.html#a4525a8c8688a6b8c4bdeb0bdae94a7fb">component</a>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classfrost_1_1_e_c_s_1_1_game_object.html#a4525a8c8688a6b8c4bdeb0bdae94a7fb">component</a>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
 </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
-<div class="ttc" id="a_game_object_8h_html"><div class="ttname"><a href="_game_object_8h.html">GameObject.h</a></div></div>
-<div class="ttc" id="aclassfrost_1_1_e_c_s_1_1_game_object_html_a4525a8c8688a6b8c4bdeb0bdae94a7fb"><div class="ttname"><a href="classfrost_1_1_e_c_s_1_1_game_object.html#a4525a8c8688a6b8c4bdeb0bdae94a7fb">frost::ECS::GameObject::GetComponent</a></div><div class="ttdeci">Component * GetComponent() const</div><div class="ttdef"><b>Definition</b> <a href="#l00007">GameObject.hxx:7</a></div></div>
-<div class="ttc" id="aclassfrost_1_1_e_c_s_1_1_game_object_html_a70063403c466783a0df41f9bbf80d561"><div class="ttname"><a href="classfrost_1_1_e_c_s_1_1_game_object.html#a70063403c466783a0df41f9bbf80d561">frost::ECS::GameObject::RemoveComponent</a></div><div class="ttdeci">void RemoveComponent()</div><div class="ttdef"><b>Definition</b> <a href="#l00023">GameObject.hxx:23</a></div></div>
-<div class="ttc" id="aclassfrost_1_1_e_c_s_1_1_game_object_html_aacd32740cad705264179d84079c93d50"><div class="ttname"><a href="classfrost_1_1_e_c_s_1_1_game_object.html#aacd32740cad705264179d84079c93d50">frost::ECS::GameObject::AddComponent</a></div><div class="ttdeci">Component * AddComponent()</div><div class="ttdef"><b>Definition</b> <a href="#l00040">GameObject.hxx:40</a></div></div>
-<div class="ttc" id="aclassfrost_1_1_e_c_s_1_1_game_object_html_aee5e27c87ef538d824f8d05c25af738d"><div class="ttname"><a href="classfrost_1_1_e_c_s_1_1_game_object.html#aee5e27c87ef538d824f8d05c25af738d">frost::ECS::GameObject::m_components</a></div><div class="ttdeci">std::vector&lt; IComponent * &gt; m_components</div><div class="ttdef"><b>Definition</b> <a href="_game_object_8h_source.html#l00072">GameObject.h:72</a></div></div>
-<div class="ttc" id="anamespacefrost_1_1_e_c_s_html"><div class="ttname"><a href="namespacefrost_1_1_e_c_s.html">frost::ECS</a></div><div class="ttdef"><b>Definition</b> <a href="_input_8h_source.html#l00021">Input.h:22</a></div></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>}</div>
+<div class="ttc" id="a_game_object_8h_html"><div class="ttname"><a href="_game_object_8h.html">GameObject.h</a></div><div class="ttdoc">Header file for the GameObject class.</div></div>
+<div class="ttc" id="aclassfrost_1_1_e_c_s_1_1_game_object_html_a4525a8c8688a6b8c4bdeb0bdae94a7fb"><div class="ttname"><a href="classfrost_1_1_e_c_s_1_1_game_object.html#a4525a8c8688a6b8c4bdeb0bdae94a7fb">frost::ECS::GameObject::GetComponent</a></div><div class="ttdeci">Component * GetComponent() const</div><div class="ttdoc">Get a component of the specified type from the GameObject.</div><div class="ttdef"><b>Definition</b> <a href="#l00025">GameObject.hxx:25</a></div></div>
+<div class="ttc" id="aclassfrost_1_1_e_c_s_1_1_game_object_html_a70063403c466783a0df41f9bbf80d561"><div class="ttname"><a href="classfrost_1_1_e_c_s_1_1_game_object.html#a70063403c466783a0df41f9bbf80d561">frost::ECS::GameObject::RemoveComponent</a></div><div class="ttdeci">void RemoveComponent()</div><div class="ttdoc">Remove a component of the specified type from the GameObject.</div><div class="ttdef"><b>Definition</b> <a href="#l00050">GameObject.hxx:50</a></div></div>
+<div class="ttc" id="aclassfrost_1_1_e_c_s_1_1_game_object_html_aacd32740cad705264179d84079c93d50"><div class="ttname"><a href="classfrost_1_1_e_c_s_1_1_game_object.html#aacd32740cad705264179d84079c93d50">frost::ECS::GameObject::AddComponent</a></div><div class="ttdeci">Component * AddComponent()</div><div class="ttdoc">Add a component of the specified type to the GameObject.</div><div class="ttdef"><b>Definition</b> <a href="#l00076">GameObject.hxx:76</a></div></div>
+<div class="ttc" id="aclassfrost_1_1_e_c_s_1_1_game_object_html_aee5e27c87ef538d824f8d05c25af738d"><div class="ttname"><a href="classfrost_1_1_e_c_s_1_1_game_object.html#aee5e27c87ef538d824f8d05c25af738d">frost::ECS::GameObject::m_components</a></div><div class="ttdeci">std::vector&lt; IComponent * &gt; m_components</div><div class="ttdef"><b>Definition</b> <a href="_game_object_8h_source.html#l00089">GameObject.h:89</a></div></div>
+<div class="ttc" id="anamespacefrost_1_1_e_c_s_html"><div class="ttname"><a href="namespacefrost_1_1_e_c_s.html">frost::ECS</a></div><div class="ttdoc">The namespace for FrostEngine's Entity Component System.</div><div class="ttdef"><b>Definition</b> <a href="_input_8h_source.html#l00021">Input.h:22</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
