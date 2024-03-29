@@ -111,11 +111,6 @@ namespace frost::render
 		m_clearColor = _color;
 	}
 
-	glm::vec4 RenderDevice::GetClearColor()
-	{
-		return m_clearColor;
-	}
-
 	void RenderDevice::AddVAO(VertexArrayObject _newVao)
 	{
 		m_internal->VaoToRender.push_back(_newVao);

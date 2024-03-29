@@ -77,13 +77,16 @@ namespace frost
 			// Render Update()
 			m_RenderDevice->Update();
 
-			// Logger Update()
-			frost::utils::Logger::GetInstance()->Show();
-
 #ifdef _DEBUG
 			// Editor Update()
 			m_Editor->DrawEditor();
+			 
+			// Logger Update()
+			frost::utils::Logger::GetInstance()->Show();
 #endif 
+
+
+
 		} while (m_Window->PollEvents());
 	}
 

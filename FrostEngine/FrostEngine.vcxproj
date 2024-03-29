@@ -15,6 +15,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\Utils\Explorer.h" />
     <ClInclude Include="include\ECS\Component\Components\BoxCollider.h" />
     <ClInclude Include="include\Core\Internal\AuthorizationBadge.h" />
     <ClInclude Include="include\Core\Internal\RTTI.h" />
@@ -47,6 +48,7 @@
     <ClInclude Include="include\Core\Input\Input.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Utils\Explorer.cpp" />
     <ClCompile Include="src\Core\Input\Input.cpp" />
     <ClCompile Include="src\ECS\Component\Components\BoxCollider.cpp" />
     <ClCompile Include="src\Core\Serial\XmlParser.cpp" />
