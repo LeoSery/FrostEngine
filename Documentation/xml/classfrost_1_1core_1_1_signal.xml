@@ -23,7 +23,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/SignalSlot/Signal.h" line="33" column="21" bodyfile="include/Core/SignalSlot/Signal.h" bodystart="33" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SignalSlot/Signal.h" line="51" column="21" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SignalSlot/Signal.h" bodystart="51" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -42,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/SignalSlot/Signal.h" line="15" column="9"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SignalSlot/Signal.h" line="33" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_signal_1a4b1168600225cc01f9149249d3c42ed2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/SignalSlot/Signal.h" line="16" column="9"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SignalSlot/Signal.h" line="34" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_signal_1a240eb7459df6a092c225187b2875a6a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classfrost_1_1core_1_1_signal" kindref="compound">Signal</ref> &amp;</type>
@@ -76,7 +76,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/SignalSlot/Signal.h" line="17" column="16"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SignalSlot/Signal.h" line="35" column="16"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_signal_1a9f55548d5fd77fcbf001d9f5313bc011" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -90,7 +90,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/SignalSlot/Signal.h" line="20" column="9"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SignalSlot/Signal.h" line="38" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_signal_1a566db0d19cb050a2ee098c3daf33849e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -104,7 +104,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/SignalSlot/Signal.h" line="21" column="9"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SignalSlot/Signal.h" line="39" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_signal_1ab7df8faaf22330578bd0037b363e22fe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -117,12 +117,23 @@
           <declname>_Slot</declname>
         </param>
         <briefdescription>
+<para>Connects a slot to the signal. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_Slot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The slot to connect to the signal.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This method connects a slot to the signal passed as a parameter. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/SignalSlot/Signal.h" line="24" column="14" bodyfile="include/Core/SignalSlot/Signal.hxx" bodystart="8" bodyend="11"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SignalSlot/Signal.h" line="42" column="14" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SignalSlot/Signal.hxx" bodystart="23" bodyend="26"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_signal_1ae889b5ec698ba0a325f165adb3e2393d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -140,7 +151,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/SignalSlot/Signal.h" line="25" column="14" bodyfile="include/Core/SignalSlot/Signal.hxx" bodystart="14" bodyend="22"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SignalSlot/Signal.h" line="43" column="14" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SignalSlot/Signal.hxx" bodystart="38" bodyend="46"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_signal_1a29ec325e767d863452dafdaee5003af2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -149,12 +160,14 @@
         <name>Disconnect</name>
         <qualifiedname>frost::core::Signal::Disconnect</qualifiedname>
         <briefdescription>
+<para>Disconnects all slots from the signal. </para>
         </briefdescription>
         <detaileddescription>
+<para>This method disconnects all slots from the signal. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/SignalSlot/Signal.h" line="26" column="14" bodyfile="include/Core/SignalSlot/Signal.hxx" bodystart="25" bodyend="28"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SignalSlot/Signal.h" line="44" column="14" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SignalSlot/Signal.hxx" bodystart="56" bodyend="59"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_signal_1a726de81a5f75b6ea5a5468a45f8d6221" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -167,12 +180,23 @@
           <declname>_Parameters</declname>
         </param>
         <briefdescription>
+<para>Emits the signal. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_Parameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameters to pass to the connected slots.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This method emits the signal, passing the parameters to the connected slots. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/SignalSlot/Signal.h" line="27" column="14" bodyfile="include/Core/SignalSlot/Signal.hxx" bodystart="31" bodyend="35"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SignalSlot/Signal.h" line="45" column="14" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SignalSlot/Signal.hxx" bodystart="71" bodyend="75"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_signal_1a95a904b20c5f52ef623edaaf14bce0d8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -185,19 +209,32 @@
           <declname>_Parameters</declname>
         </param>
         <briefdescription>
+<para>Operator overload for emitting the signal. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_Parameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameters to pass to the connected slots.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This method overloads the &apos;()&apos; operator so that the slot can be called as a function. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/SignalSlot/Signal.h" line="30" column="14" bodyfile="include/Core/SignalSlot/Signal.hxx" bodystart="38" bodyend="41"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SignalSlot/Signal.h" line="48" column="14" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SignalSlot/Signal.hxx" bodystart="87" bodyend="90"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Class for creating signals. </para>
     </briefdescription>
     <detaileddescription>
+<para>This class is used to create signals that can be connected to slots. </para>
     </detaileddescription>
-    <location file="include/Core/SignalSlot/Signal.h" line="10" column="5" bodyfile="include/Core/SignalSlot/Signal.h" bodystart="11" bodyend="34"/>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SignalSlot/Signal.h" line="28" column="5" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SignalSlot/Signal.h" bodystart="29" bodyend="52"/>
     <listofallmembers>
       <member refid="classfrost_1_1core_1_1_signal_1ab7df8faaf22330578bd0037b363e22fe" prot="public" virt="non-virtual"><scope>frost::core::Signal</scope><name>Connect</name></member>
       <member refid="classfrost_1_1core_1_1_signal_1ae889b5ec698ba0a325f165adb3e2393d" prot="public" virt="non-virtual"><scope>frost::core::Signal</scope><name>Disconnect</name></member>

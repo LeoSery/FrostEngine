@@ -42,7 +42,7 @@
         </childnode>
       </node>
       <node id="1">
-        <label>src/Render/Texture.cpp</label>
+        <label>C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Render/Texture.cpp</label>
         <link refid="_texture_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -206,6 +206,6 @@
 <codeline lineno="108"><highlight class="normal"></highlight></codeline>
 <codeline lineno="109"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="src/Render/Texture.cpp"/>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Render/Texture.cpp"/>
   </compounddef>
 </doxygen>

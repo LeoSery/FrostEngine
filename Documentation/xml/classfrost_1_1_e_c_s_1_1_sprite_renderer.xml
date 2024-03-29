@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/SpriteRenderer.h" line="50" column="13" bodyfile="include/ECS/Component/Components/SpriteRenderer.h" bodystart="50" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/SpriteRenderer.h" line="50" column="13" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/SpriteRenderer.h" bodystart="50" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfrost_1_1_e_c_s_1_1_sprite_renderer_1a23e12269d62bd051db0f5f311f9f4a85" prot="private" static="no" mutable="no">
         <type>glm::vec4</type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/SpriteRenderer.h" line="51" column="11" bodyfile="include/ECS/Component/Components/SpriteRenderer.h" bodystart="51" bodyend="51"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/SpriteRenderer.h" line="51" column="11" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/SpriteRenderer.h" bodystart="51" bodyend="51"/>
       </memberdef>
       <memberdef kind="variable" id="classfrost_1_1_e_c_s_1_1_sprite_renderer_1a8fbde5105c99d35b7c89243fcaf28aad" prot="private" static="no" mutable="no">
         <type><ref refid="classfrost_1_1core_1_1_texture" kindref="compound">frost::core::Texture</ref> *</type>
@@ -47,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/SpriteRenderer.h" line="52" column="22" bodyfile="include/ECS/Component/Components/SpriteRenderer.h" bodystart="52" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/SpriteRenderer.h" line="52" column="22" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/SpriteRenderer.h" bodystart="52" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfrost_1_1_e_c_s_1_1_sprite_renderer_1a225c73149da790456472a728cdacb325" prot="private" static="no" mutable="no">
         <type>float *</type>
@@ -61,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/SpriteRenderer.h" line="55" column="7" bodyfile="include/ECS/Component/Components/SpriteRenderer.h" bodystart="55" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/SpriteRenderer.h" line="55" column="7" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/SpriteRenderer.h" bodystart="55" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfrost_1_1_e_c_s_1_1_sprite_renderer_1af8feca8557e37814c6c373671717c7f9" prot="private" static="no" mutable="no">
         <type>unsigned int *</type>
@@ -75,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/SpriteRenderer.h" line="56" column="14" bodyfile="include/ECS/Component/Components/SpriteRenderer.h" bodystart="56" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/SpriteRenderer.h" line="56" column="14" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/SpriteRenderer.h" bodystart="56" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-attrib">
@@ -91,7 +91,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/SpriteRenderer.h" line="60" column="21" bodyfile="include/ECS/Component/Components/SpriteRenderer.h" bodystart="60" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/SpriteRenderer.h" line="60" column="21" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/SpriteRenderer.h" bodystart="60" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfrost_1_1_e_c_s_1_1_sprite_renderer_1a79e26cfbd528fa8d734cfb83903a3ce5" prot="public" static="no" mutable="no">
         <type><ref refid="classfrost_1_1core_1_1_buffer" kindref="compound">frost::core::Buffer</ref></type>
@@ -105,7 +105,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/SpriteRenderer.h" line="61" column="21" bodyfile="include/ECS/Component/Components/SpriteRenderer.h" bodystart="61" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/SpriteRenderer.h" line="61" column="21" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/SpriteRenderer.h" bodystart="61" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfrost_1_1_e_c_s_1_1_sprite_renderer_1a5765a47aeaa373af67ab39b3b73ec2de" prot="public" static="no" mutable="no">
         <type><ref refid="classfrost_1_1core_1_1_vertex_array_object" kindref="compound">frost::core::VertexArrayObject</ref></type>
@@ -119,7 +119,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/SpriteRenderer.h" line="62" column="32" bodyfile="include/ECS/Component/Components/SpriteRenderer.h" bodystart="62" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/SpriteRenderer.h" line="62" column="32" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/SpriteRenderer.h" bodystart="62" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -139,7 +139,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/SpriteRenderer.h" line="32" column="1" bodyfile="src/ECS/Component/Components/SpriteRenderer.cpp" bodystart="21" bodyend="39"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/SpriteRenderer.h" line="32" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/Component/Components/SpriteRenderer.cpp" bodystart="21" bodyend="39"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_sprite_renderer_1ac719222df5088945b90adcbd583e87fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -153,7 +153,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/SpriteRenderer.h" line="33" column="1" bodyfile="src/ECS/Component/Components/SpriteRenderer.cpp" bodystart="41" bodyend="46"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/SpriteRenderer.h" line="33" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/Component/Components/SpriteRenderer.cpp" bodystart="41" bodyend="46"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_sprite_renderer_1acdc9ab4287a5d1b3a9350dbd62ecfe28" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -168,7 +168,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/SpriteRenderer.h" line="36" column="14" bodyfile="src/ECS/Component/Components/SpriteRenderer.cpp" bodystart="48" bodyend="51"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/SpriteRenderer.h" line="36" column="14" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/Component/Components/SpriteRenderer.cpp" bodystart="48" bodyend="51"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_sprite_renderer_1a83383dc71f8d4b5efeb08ef5b961bec9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -187,7 +187,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/SpriteRenderer.h" line="37" column="14" bodyfile="src/ECS/Component/Components/SpriteRenderer.cpp" bodystart="53" bodyend="59"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/SpriteRenderer.h" line="37" column="14" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/Component/Components/SpriteRenderer.cpp" bodystart="53" bodyend="59"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_sprite_renderer_1aafdc497b51b6f58f97e89e5da9e79dcd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -202,7 +202,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/SpriteRenderer.h" line="38" column="14" bodyfile="src/ECS/Component/Components/SpriteRenderer.cpp" bodystart="61" bodyend="64"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/SpriteRenderer.h" line="38" column="14" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/Component/Components/SpriteRenderer.cpp" bodystart="61" bodyend="64"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_sprite_renderer_1acbad7757afdbdf22b7d9a2248855e2fd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -220,7 +220,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/SpriteRenderer.h" line="41" column="15" bodyfile="src/ECS/Component/Components/SpriteRenderer.cpp" bodystart="66" bodyend="77"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/SpriteRenderer.h" line="41" column="15" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/Component/Components/SpriteRenderer.cpp" bodystart="66" bodyend="77"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_sprite_renderer_1a6976f2408434b2b456de0d3c45795b60" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -234,7 +234,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/SpriteRenderer.h" line="43" column="14" bodyfile="src/ECS/Component/Components/SpriteRenderer.cpp" bodystart="79" bodyend="82"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/SpriteRenderer.h" line="43" column="14" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/Component/Components/SpriteRenderer.cpp" bodystart="79" bodyend="82"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_sprite_renderer_1acbfae3ba93c41c9ff6cfb944303821a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -252,7 +252,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/SpriteRenderer.h" line="44" column="7" bodyfile="src/ECS/Component/Components/SpriteRenderer.cpp" bodystart="84" bodyend="88"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/SpriteRenderer.h" line="44" column="7" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/Component/Components/SpriteRenderer.cpp" bodystart="84" bodyend="88"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_sprite_renderer_1a152f0459f0322244730898cde5e82c00" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>glm::vec4</type>
@@ -266,7 +266,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/SpriteRenderer.h" line="46" column="12" bodyfile="src/ECS/Component/Components/SpriteRenderer.cpp" bodystart="90" bodyend="93"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/SpriteRenderer.h" line="46" column="12" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/Component/Components/SpriteRenderer.cpp" bodystart="90" bodyend="93"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_sprite_renderer_1a9cc88f63d65115a541835c74263cb9e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -284,7 +284,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/SpriteRenderer.h" line="47" column="6" bodyfile="src/ECS/Component/Components/SpriteRenderer.cpp" bodystart="95" bodyend="98"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/SpriteRenderer.h" line="47" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/Component/Components/SpriteRenderer.cpp" bodystart="95" bodyend="98"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -368,7 +368,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/ECS/Component/Components/SpriteRenderer.h" line="25" column="1" bodyfile="include/ECS/Component/Components/SpriteRenderer.h" bodystart="26" bodyend="63"/>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/SpriteRenderer.h" line="25" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/SpriteRenderer.h" bodystart="26" bodyend="63"/>
     <listofallmembers>
       <member refid="classfrost_1_1_e_c_s_1_1_sprite_renderer_1aafdc497b51b6f58f97e89e5da9e79dcd" prot="public" virt="virtual"><scope>frost::ECS::SpriteRenderer</scope><name>Destroy</name></member>
       <member refid="classfrost_1_1_e_c_s_1_1_i_component_1a15ede560c92670c8f07329c3aba756f7" prot="private" virt="non-virtual"><scope>frost::ECS::SpriteRenderer</scope><name>FROST_DEFINE_RTTI</name></member>
@@ -376,7 +376,7 @@
       <member refid="classfrost_1_1_e_c_s_1_1_sprite_renderer_1acbad7757afdbdf22b7d9a2248855e2fd" prot="public" virt="virtual"><scope>frost::ECS::SpriteRenderer</scope><name>GetData</name></member>
       <member refid="classfrost_1_1_e_c_s_1_1_i_component_1a1df5779e3ba49dfcdee54914de867474" prot="public" virt="non-virtual"><scope>frost::ECS::SpriteRenderer</scope><name>GetParentObject</name></member>
       <member refid="classfrost_1_1_e_c_s_1_1_sprite_renderer_1a6976f2408434b2b456de0d3c45795b60" prot="public" virt="non-virtual"><scope>frost::ECS::SpriteRenderer</scope><name>GetTexture</name></member>
-      <member refid="classfrost_1_1core_1_1_r_t_t_i_1ab67a37bae5aeb3024dbd568bd4c9a9ea" prot="public" virt="pure-virtual"><scope>frost::ECS::SpriteRenderer</scope><name>GetTypeName</name></member>
+      <member refid="classfrost_1_1core_1_1_r_t_t_i_1a7edd7107554d4c6e16c065033eaa6355" prot="public" virt="pure-virtual"><scope>frost::ECS::SpriteRenderer</scope><name>GetTypeName</name></member>
       <member refid="classfrost_1_1_e_c_s_1_1_i_component_1adbb9c447e4a2a65e828cb0e2bd60d7a4" prot="public" virt="non-virtual"><scope>frost::ECS::SpriteRenderer</scope><name>GetUUID</name></member>
       <member refid="classfrost_1_1_e_c_s_1_1_sprite_renderer_1a79e26cfbd528fa8d734cfb83903a3ce5" prot="public" virt="non-virtual"><scope>frost::ECS::SpriteRenderer</scope><name>IBO</name></member>
       <member refid="classfrost_1_1_e_c_s_1_1_i_component_1ae8ccddcb37fe3aa6b23f072dc135b5c6" prot="public" virt="non-virtual"><scope>frost::ECS::SpriteRenderer</scope><name>IComponent</name></member>

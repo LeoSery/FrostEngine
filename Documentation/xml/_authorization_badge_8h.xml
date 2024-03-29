@@ -2,16 +2,16 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
   <compounddef id="_authorization_badge_8h" kind="file" language="C++">
     <compoundname>AuthorizationBadge.h</compoundname>
-    <includedby refid="_scene_8h" local="yes">include/Core/SceneManagement/Scene.h</includedby>
+    <includedby refid="_scene_8h" local="yes">C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SceneManagement/Scene.h</includedby>
     <invincdepgraph>
       <node id="1">
-        <label>include/Core/Internal/AuthorizationBadge.h</label>
+        <label>C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Internal/AuthorizationBadge.h</label>
         <link refid="_authorization_badge_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="2">
-        <label>include/Core/SceneManagement/Scene.h</label>
+        <label>C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SceneManagement/Scene.h</label>
         <link refid="_scene_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
@@ -21,7 +21,7 @@
         </childnode>
       </node>
       <node id="3">
-        <label>include/Core/SceneManagement/SceneManager.h</label>
+        <label>C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SceneManagement/SceneManager.h</label>
         <link refid="_scene_manager_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
@@ -35,7 +35,7 @@
         </childnode>
       </node>
       <node id="4">
-        <label>include/ECS/Component/Components/BoxCollider.h</label>
+        <label>C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h</label>
         <link refid="_box_collider_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
@@ -45,7 +45,7 @@
         </childnode>
       </node>
       <node id="9">
-        <label>include/Editor/Editor.h</label>
+        <label>C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Editor/Editor.h</label>
         <link refid="_editor_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
@@ -53,56 +53,58 @@
         </childnode>
       </node>
       <node id="5">
-        <label>include/FrostEngine.h</label>
+        <label>C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/FrostEngine.h</label>
         <link refid="_frost_engine_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
       </node>
       <node id="12">
-        <label>src/Core/Scene.cpp</label>
+        <label>C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/Scene.cpp</label>
         <link refid="_scene_8cpp"/>
       </node>
       <node id="10">
-        <label>src/Core/SceneManager.cpp</label>
+        <label>C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/SceneManager.cpp</label>
         <link refid="_scene_manager_8cpp"/>
       </node>
       <node id="7">
-        <label>src/ECS/Component/Components/BoxCollider.cpp</label>
+        <label>C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/Component/Components/BoxCollider.cpp</label>
         <link refid="_box_collider_8cpp"/>
       </node>
       <node id="11">
-        <label>src/ECS/GameObject.cpp</label>
+        <label>C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp</label>
         <link refid="_game_object_8cpp"/>
       </node>
       <node id="8">
-        <label>src/Editor/Editor.cpp</label>
+        <label>C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Editor/Editor.cpp</label>
         <link refid="_editor_8cpp"/>
       </node>
       <node id="6">
-        <label>src/FrostEngine.cpp</label>
+        <label>C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/FrostEngine.cpp</label>
         <link refid="_frost_engine_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classfrost_1_1core_1_1_authorization_badge" prot="public">frost::core::AuthorizationBadge</innerclass>
-    <innernamespace refid="namespacefrost">frost</innernamespace>
     <innernamespace refid="namespacefrost_1_1core">frost::core</innernamespace>
+    <innernamespace refid="namespacefrost">frost</innernamespace>
     <briefdescription>
+<para>Header file for the Authorization class. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacefrost_1_1core" kindref="compound">frost::core</ref></highlight></codeline>
-<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
-<codeline lineno="6" refid="classfrost_1_1core_1_1_authorization_badge" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classfrost_1_1core_1_1_authorization_badge" kindref="compound">AuthorizationBadge</ref></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="8" refid="classfrost_1_1core_1_1_authorization_badge_1a1f85751fe4ef9f1e73afed95c5a6e739" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_authorization_badge_1a1f85751fe4ef9f1e73afed95c5a6e739" kindref="member">T</ref>;</highlight></codeline>
-<codeline lineno="9" refid="classfrost_1_1core_1_1_authorization_badge_1adf284dd2476ce8f6b4b01e4a2a625ac0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_authorization_badge_1adf284dd2476ce8f6b4b01e4a2a625ac0" kindref="member">AuthorizationBadge</ref>()<sp/>{}</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacefrost_1_1core" kindref="compound">frost::core</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="28" refid="classfrost_1_1core_1_1_authorization_badge" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classfrost_1_1core_1_1_authorization_badge" kindref="compound">AuthorizationBadge</ref></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="30" refid="classfrost_1_1core_1_1_authorization_badge_1a1f85751fe4ef9f1e73afed95c5a6e739" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="classfrost_1_1core_1_1_authorization_badge_1a1f85751fe4ef9f1e73afed95c5a6e739" kindref="member">T</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="classfrost_1_1core_1_1_authorization_badge_1adf284dd2476ce8f6b4b01e4a2a625ac0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfrost_1_1core_1_1_authorization_badge_1adf284dd2476ce8f6b4b01e4a2a625ac0" kindref="member">AuthorizationBadge</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="include/Core/Internal/AuthorizationBadge.h"/>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Internal/AuthorizationBadge.h"/>
   </compounddef>
 </doxygen>

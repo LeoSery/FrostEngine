@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/SceneManagement/SceneManager.h" line="35" column="13" bodyfile="include/Core/SceneManagement/SceneManager.h" bodystart="35" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SceneManagement/SceneManager.h" line="55" column="13" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SceneManagement/SceneManager.h" bodystart="55" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfrost_1_1core_1_1_scene_manager_1a84d2fbbe14724c7f3e5a08ffc3840d3b" prot="private" static="no" mutable="no">
         <type><ref refid="classfrost_1_1core_1_1_scene" kindref="compound">Scene</ref> *</type>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/SceneManagement/SceneManager.h" line="36" column="7" bodyfile="include/Core/SceneManagement/SceneManager.h" bodystart="36" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SceneManagement/SceneManager.h" line="56" column="7" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SceneManagement/SceneManager.h" bodystart="56" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -47,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/SceneManagement/SceneManager.h" line="12" column="9"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SceneManagement/SceneManager.h" line="32" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_scene_manager_1a98b7f4b06af80385436cd4e5719483e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/SceneManagement/SceneManager.h" line="15" column="1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SceneManagement/SceneManager.h" line="35" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_scene_manager_1af39c972a64ec499d00ac8e95cfe248e5" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type></type>
@@ -83,7 +83,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/SceneManagement/SceneManager.h" line="16" column="1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SceneManagement/SceneManager.h" line="36" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_scene_manager_1abca017b803fe023cf12fc0607c6aea19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classfrost_1_1core_1_1_scene_manager" kindref="compound">SceneManager</ref> &amp;</type>
@@ -101,7 +101,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/SceneManagement/SceneManager.h" line="17" column="14"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SceneManagement/SceneManager.h" line="37" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_scene_manager_1afb4ba8d46301ee3374bb44d94840cadc" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type><ref refid="classfrost_1_1core_1_1_scene_manager" kindref="compound">SceneManager</ref> &amp;</type>
@@ -119,7 +119,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/SceneManagement/SceneManager.h" line="18" column="14"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SceneManagement/SceneManager.h" line="38" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_scene_manager_1a20388056002976929cbc0abeeac86f8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classfrost_1_1core_1_1_scene" kindref="compound">Scene</ref> &amp;</type>
@@ -137,7 +137,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/SceneManagement/SceneManager.h" line="24" column="7" bodyfile="src/Core/SceneManager.cpp" bodystart="13" bodyend="20"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SceneManagement/SceneManager.h" line="44" column="7" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/SceneManager.cpp" bodystart="13" bodyend="20"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_scene_manager_1abe66ddc6ab1efdd67a0f743097da5d1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -155,7 +155,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/SceneManagement/SceneManager.h" line="25" column="6" bodyfile="src/Core/SceneManager.cpp" bodystart="30" bodyend="38"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SceneManagement/SceneManager.h" line="45" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/SceneManager.cpp" bodystart="30" bodyend="38"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_scene_manager_1a53fb3404794a9d243be1049f7fb1192c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -173,7 +173,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/SceneManagement/SceneManager.h" line="26" column="6" bodyfile="src/Core/SceneManager.cpp" bodystart="40" bodyend="48"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SceneManagement/SceneManager.h" line="46" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/SceneManager.cpp" bodystart="40" bodyend="48"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_scene_manager_1a627cf41a8f9aab63d4c035cc01e28875" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classfrost_1_1core_1_1_scene" kindref="compound">Scene</ref> &amp;</type>
@@ -187,7 +187,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/SceneManagement/SceneManager.h" line="29" column="8" bodyfile="src/Core/SceneManager.cpp" bodystart="50" bodyend="56"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SceneManagement/SceneManager.h" line="49" column="8" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/SceneManager.cpp" bodystart="50" bodyend="56"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -203,7 +203,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/SceneManagement/SceneManager.h" line="21" column="22" bodyfile="src/Core/SceneManager.cpp" bodystart="7" bodyend="11"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SceneManagement/SceneManager.h" line="41" column="22" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/SceneManager.cpp" bodystart="7" bodyend="11"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -223,7 +223,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/SceneManagement/SceneManager.h" line="32" column="6" bodyfile="src/Core/SceneManager.cpp" bodystart="22" bodyend="28"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SceneManagement/SceneManager.h" line="52" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/SceneManager.cpp" bodystart="22" bodyend="28"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_scene_manager_1a25156021fdd47cbe55abb195724e3646" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -237,12 +237,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/SceneManagement/SceneManager.h" line="33" column="1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SceneManagement/SceneManager.h" line="53" column="1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>The <ref refid="classfrost_1_1core_1_1_scene_manager" kindref="compound">SceneManager</ref> class is responsible for managing the different scenes in the game. </para>
     </briefdescription>
     <detaileddescription>
+<para>The &apos;<ref refid="classfrost_1_1core_1_1_scene_manager" kindref="compound">SceneManager</ref>&apos; is a singleton that contains a list of scenes in the project, allowing you to define a scene as active and add or remove scenes from the project. It can also return the scene currently active in the engine. </para>
     </detaileddescription>
     <collaborationgraph>
       <node id="4">
@@ -273,7 +275,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/Core/SceneManagement/SceneManager.h" line="7" column="1" bodyfile="include/Core/SceneManagement/SceneManager.h" bodystart="8" bodyend="37"/>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SceneManagement/SceneManager.h" line="27" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SceneManagement/SceneManager.h" bodystart="28" bodyend="57"/>
     <listofallmembers>
       <member refid="classfrost_1_1core_1_1_scene_manager_1ae48a2f1c7946e5484939c737cea883fe" prot="private" virt="non-virtual"><scope>frost::core::SceneManager</scope><name>AddScene</name></member>
       <member refid="classfrost_1_1core_1_1_scene_manager_1a20388056002976929cbc0abeeac86f8b" prot="public" virt="non-virtual"><scope>frost::core::SceneManager</scope><name>CreateScene</name></member>

@@ -1,5 +1,11 @@
 #pragma once
 
+/*!
+* \file TextureManager.h
+* 
+* \brief Header file for the TextureManager class.
+*/
+
 #include "Core/Export.h"
 
 #include <rapidxml/rapidxml.hpp>
@@ -7,10 +13,22 @@
 #include <string>
 #include <map>
 
+/*!
+* \namespace frost::core
+*
+* \brief The namespace for the FrostEngine core functionalities.
+*/
 namespace frost::core
 {
 	struct S_TextureData;
 
+	/*!
+	* \class TextureManager
+	* 
+	* \brief This class is used to manage textures.
+	* 
+	* \details This class is used to load textures and store their metadata.
+	*/
 	class FROST_ENGINE_API TextureManager
 	{
 	public:
@@ -36,6 +54,11 @@ namespace frost::core
 		std::map<std::string, S_TextureData> m_textures;
 	};
 
+	/*
+	* \struct S_AnimationData
+	* 
+	* \brief This struct is used to store the metadata of an animation.
+	*/
 	struct S_AnimationData
 	{
 		// Struct fields
@@ -54,6 +77,11 @@ namespace frost::core
 		S_AnimationData();
 	};
 
+	/*
+	* \struct S_StaticTileData
+	* 
+	* \brief This struct is used to store the metadata of a static tile.
+	*/
 	struct S_StaticTileData
 	{
 		// Struct fields
@@ -70,13 +98,17 @@ namespace frost::core
 		#endif
 	};
 
+	/*
+	* \struct S_TextureData
+	* 
+	* \brief This struct is used to store the metadata of a texture.
+	*/
 	struct S_TextureData
 	{
 		// Struct Constructor and Destructor
 		S_TextureData();
 		~S_TextureData();
 
-		//To Do la variable texture à faire avec Mathieu OpenGl
 		std::map<std::string, S_AnimationData> animationsData;
 		std::map<std::string, S_StaticTileData> staticTilesData;
 	};

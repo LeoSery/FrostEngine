@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Render/Texture.h" line="33" column="14" bodyfile="include/Render/Texture.h" bodystart="33" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Render/Texture.h" line="33" column="14" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Render/Texture.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfrost_1_1core_1_1_texture_1ad73d1a11af0a02df16289739b98fa22a" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Render/Texture.h" line="34" column="13" bodyfile="include/Render/Texture.h" bodystart="34" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Render/Texture.h" line="34" column="13" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Render/Texture.h" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfrost_1_1core_1_1_texture_1a4d573cbe17c92bfd785f6c7f76eb7622" prot="private" static="no" mutable="no">
         <type>unsigned char *</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Render/Texture.h" line="35" column="15" bodyfile="include/Render/Texture.h" bodystart="35" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Render/Texture.h" line="35" column="15" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Render/Texture.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfrost_1_1core_1_1_texture_1a1e246b40e81774310fd3ab7813b1d077" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Render/Texture.h" line="36" column="5" bodyfile="include/Render/Texture.h" bodystart="36" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Render/Texture.h" line="36" column="5" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Render/Texture.h" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfrost_1_1core_1_1_texture_1aae89f608e3d7c320bfdc3526e697dc66" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Render/Texture.h" line="36" column="11" bodyfile="include/Render/Texture.h" bodystart="36" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Render/Texture.h" line="36" column="11" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Render/Texture.h" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfrost_1_1core_1_1_texture_1ad1ed6da91fcff8cbdb5e8bbf07262c90" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -86,7 +86,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Render/Texture.h" line="36" column="18" bodyfile="include/Render/Texture.h" bodystart="36" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Render/Texture.h" line="36" column="18" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Render/Texture.h" bodystart="36" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -106,7 +106,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Render/Texture.h" line="12" column="1" bodyfile="src/Render/Texture.cpp" bodystart="14" bodyend="21"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Render/Texture.h" line="12" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Render/Texture.cpp" bodystart="14" bodyend="21"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_texture_1a955ff95837cd98a6805a8af5cf1e0815" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -120,7 +120,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Render/Texture.h" line="13" column="1" bodyfile="src/Render/Texture.cpp" bodystart="23" bodyend="29"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Render/Texture.h" line="13" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Render/Texture.cpp" bodystart="23" bodyend="29"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_texture_1a98d14a3e2174106bf934def0e77e60c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -134,7 +134,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Render/Texture.h" line="14" column="1" bodyfile="src/Render/Texture.cpp" bodystart="31" bodyend="34"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Render/Texture.h" line="14" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Render/Texture.cpp" bodystart="31" bodyend="34"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_texture_1a982fdc1f871725510ca1eace1d7c10c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -152,7 +152,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Render/Texture.h" line="17" column="6" bodyfile="src/Render/Texture.cpp" bodystart="48" bodyend="69"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Render/Texture.h" line="17" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Render/Texture.cpp" bodystart="48" bodyend="69"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_texture_1ad77492083b34caa72c906c81f73fa6b3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -171,7 +171,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Render/Texture.h" line="20" column="6" bodyfile="src/Render/Texture.cpp" bodystart="71" bodyend="76"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Render/Texture.h" line="20" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Render/Texture.cpp" bodystart="71" bodyend="76"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_texture_1aebaa2a8b1741931a688fda39f5ff47a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -185,7 +185,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Render/Texture.h" line="21" column="6" bodyfile="src/Render/Texture.cpp" bodystart="78" bodyend="81"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Render/Texture.h" line="21" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Render/Texture.cpp" bodystart="78" bodyend="81"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_texture_1a86b85d78d189ba03c64fbb3ac7961987" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -199,7 +199,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Render/Texture.h" line="24" column="13" bodyfile="include/Render/Texture.h" bodystart="24" bodyend="24"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Render/Texture.h" line="24" column="13" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Render/Texture.h" bodystart="24" bodyend="24"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_texture_1af7e1e2344212d4c6c821325237d3687e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -213,7 +213,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Render/Texture.h" line="25" column="13" bodyfile="include/Render/Texture.h" bodystart="25" bodyend="25"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Render/Texture.h" line="25" column="13" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Render/Texture.h" bodystart="25" bodyend="25"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_texture_1a2cd74f3793202179cbd0dd5daa18c5b6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>unsigned int</type>
@@ -227,7 +227,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Render/Texture.h" line="26" column="22" bodyfile="include/Render/Texture.h" bodystart="26" bodyend="26"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Render/Texture.h" line="26" column="22" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Render/Texture.h" bodystart="26" bodyend="26"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -243,7 +243,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Render/Texture.h" line="30" column="6" bodyfile="src/Render/Texture.cpp" bodystart="36" bodyend="46"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Render/Texture.h" line="30" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Render/Texture.cpp" bodystart="36" bodyend="46"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_texture_1a222529fc62dd2afdc10942a458829fbd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -261,14 +261,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Render/Texture.h" line="31" column="6" bodyfile="src/Render/Texture.cpp" bodystart="83" bodyend="104"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Render/Texture.h" line="31" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Render/Texture.cpp" bodystart="83" bodyend="104"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/Render/Texture.h" line="7" column="1" bodyfile="include/Render/Texture.h" bodystart="8" bodyend="37"/>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Render/Texture.h" line="7" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Render/Texture.h" bodystart="8" bodyend="37"/>
     <listofallmembers>
       <member refid="classfrost_1_1core_1_1_texture_1ad77492083b34caa72c906c81f73fa6b3" prot="public" virt="non-virtual"><scope>frost::core::Texture</scope><name>Bind</name></member>
       <member refid="classfrost_1_1core_1_1_texture_1ad1ed6da91fcff8cbdb5e8bbf07262c90" prot="private" virt="non-virtual"><scope>frost::core::Texture</scope><name>BPP</name></member>

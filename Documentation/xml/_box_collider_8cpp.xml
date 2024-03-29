@@ -109,7 +109,7 @@
         </childnode>
       </node>
       <node id="1">
-        <label>src/ECS/Component/Components/BoxCollider.cpp</label>
+        <label>C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/Component/Components/BoxCollider.cpp</label>
         <link refid="_box_collider_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -280,6 +280,6 @@
 <codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="131"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="src/ECS/Component/Components/BoxCollider.cpp"/>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/Component/Components/BoxCollider.cpp"/>
   </compounddef>
 </doxygen>

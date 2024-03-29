@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/FrostEngine.h" line="47" column="21" bodyfile="include/FrostEngine.h" bodystart="47" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/FrostEngine.h" line="48" column="21" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/FrostEngine.h" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_frost_engine_1_1_application_1a95538bb88b485ce883340c7a3e455ea5" prot="protected" static="no" mutable="no">
         <type><ref refid="classfrost_1_1core_1_1_render_device" kindref="compound">frost::core::RenderDevice</ref> *</type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/FrostEngine.h" line="48" column="27" bodyfile="include/FrostEngine.h" bodystart="48" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/FrostEngine.h" line="49" column="27" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/FrostEngine.h" bodystart="49" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_frost_engine_1_1_application_1ac305fe60c219ff5df0401311ec31e4bc" prot="protected" static="no" mutable="no">
         <type><ref refid="classfrost_1_1core_1_1_scene_manager" kindref="compound">frost::core::SceneManager</ref> *</type>
@@ -48,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/FrostEngine.h" line="49" column="27" bodyfile="include/FrostEngine.h" bodystart="49" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/FrostEngine.h" line="50" column="27" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/FrostEngine.h" bodystart="50" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_frost_engine_1_1_application_1aaaf94c391abad09afffe9f3434e43b38" prot="protected" static="no" mutable="no">
         <type><ref refid="classfrost_1_1core_1_1_scene" kindref="compound">frost::core::Scene</ref> *</type>
@@ -63,7 +63,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/FrostEngine.h" line="51" column="20" bodyfile="include/FrostEngine.h" bodystart="51" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/FrostEngine.h" line="52" column="20" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/FrostEngine.h" bodystart="52" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_frost_engine_1_1_application_1a6aec55145c4edf867263ef6d12e771fa" prot="protected" static="no" mutable="no">
         <type><ref refid="classfrost_1_1editor_1_1_editor" kindref="compound">frost::editor::Editor</ref> *</type>
@@ -78,7 +78,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/FrostEngine.h" line="52" column="23" bodyfile="include/FrostEngine.h" bodystart="52" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/FrostEngine.h" line="53" column="23" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/FrostEngine.h" bodystart="53" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
@@ -94,7 +94,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/FrostEngine.h" line="72" column="13" bodyfile="include/FrostEngine.h" bodystart="72" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/FrostEngine.h" line="73" column="13" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/FrostEngine.h" bodystart="73" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -110,7 +110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/FrostEngine.h" line="62" column="14"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/FrostEngine.h" line="63" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_frost_engine_1_1_application_1a15ce33a8ceee30a1f5d64855340455b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -139,7 +139,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/FrostEngine.h" line="63" column="6" bodyfile="src/FrostEngine.cpp" bodystart="31" bodyend="44"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/FrostEngine.h" line="64" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/FrostEngine.cpp" bodystart="24" bodyend="37"/>
       </memberdef>
       <memberdef kind="function" id="class_frost_engine_1_1_application_1a274e45ecc7248cdd59d10da73bf6fd11" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -157,7 +157,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/FrostEngine.h" line="64" column="14"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/FrostEngine.h" line="65" column="14"/>
       </memberdef>
       <memberdef kind="function" id="class_frost_engine_1_1_application_1a795e0296ed239b425e516b3d5d40f044" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -173,7 +173,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/FrostEngine.h" line="65" column="14" bodyfile="src/FrostEngine.cpp" bodystart="104" bodyend="112"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/FrostEngine.h" line="66" column="14" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/FrostEngine.cpp" bodystart="97" bodyend="105"/>
       </memberdef>
       <memberdef kind="function" id="class_frost_engine_1_1_application_1aa11d0435410ccb65674dc7f15c0d77b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -189,7 +189,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/FrostEngine.h" line="66" column="6" bodyfile="src/FrostEngine.cpp" bodystart="55" bodyend="95"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/FrostEngine.h" line="67" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/FrostEngine.cpp" bodystart="48" bodyend="88"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -233,7 +233,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/FrostEngine.h" line="69" column="6" bodyfile="src/FrostEngine.cpp" bodystart="126" bodyend="141"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/FrostEngine.h" line="70" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/FrostEngine.cpp" bodystart="119" bodyend="134"/>
       </memberdef>
       <memberdef kind="function" id="class_frost_engine_1_1_application_1a3738a804b7424938a1a0dcf10456eeff" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -251,7 +251,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/FrostEngine.h" line="70" column="6" bodyfile="src/FrostEngine.cpp" bodystart="156" bodyend="228"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/FrostEngine.h" line="71" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/FrostEngine.cpp" bodystart="149" bodyend="221"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -334,7 +334,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/FrostEngine.h" line="44" column="1" bodyfile="include/FrostEngine.h" bodystart="45" bodyend="73"/>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/FrostEngine.h" line="45" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/FrostEngine.h" bodystart="46" bodyend="74"/>
     <listofallmembers>
       <member refid="class_frost_engine_1_1_application_1a4b1ae230471227800e412b7d49d463a2" prot="private" virt="non-virtual"><scope>FrostEngine::Application</scope><name>BrowseAllGameObjects</name></member>
       <member refid="class_frost_engine_1_1_application_1a72ebc1caea87c96a85fd37fa826970a9" prot="public" virt="pure-virtual"><scope>FrostEngine::Application</scope><name>Init</name></member>

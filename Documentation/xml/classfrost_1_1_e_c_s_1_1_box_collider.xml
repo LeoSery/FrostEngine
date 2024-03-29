@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/BoxCollider.h" line="52" column="13" bodyfile="include/ECS/Component/Components/BoxCollider.h" bodystart="52" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" line="52" column="13" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" bodystart="52" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/BoxCollider.h" line="59" column="6" bodyfile="include/ECS/Component/Components/BoxCollider.h" bodystart="59" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" line="59" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" bodystart="59" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfrost_1_1_e_c_s_1_1_box_collider_1ae852b5b9de84db8ac6e808657248369c" prot="private" static="no" mutable="no">
         <type>std::vector&lt; glm::vec2 &gt; *</type>
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/BoxCollider.h" line="62" column="13" bodyfile="include/ECS/Component/Components/BoxCollider.h" bodystart="62" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" line="62" column="13" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" bodystart="62" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfrost_1_1_e_c_s_1_1_box_collider_1acf17ea9dba62a14d4451c6f87deca84c" prot="private" static="no" mutable="no">
         <type><ref refid="classfrost_1_1_e_c_s_1_1_transform" kindref="compound">frost::ECS::Transform</ref> *</type>
@@ -64,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/BoxCollider.h" line="65" column="23" bodyfile="include/ECS/Component/Components/BoxCollider.h" bodystart="65" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" line="65" column="23" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" bodystart="65" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfrost_1_1_e_c_s_1_1_box_collider_1ad296a1e0fea570e8b864d56837413430" prot="private" static="no" mutable="no">
         <type><ref refid="classfrost_1_1core_1_1_scene" kindref="compound">frost::core::Scene</ref> *</type>
@@ -79,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/BoxCollider.h" line="66" column="20" bodyfile="include/ECS/Component/Components/BoxCollider.h" bodystart="66" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" line="66" column="20" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" bodystart="66" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/BoxCollider.h" line="33" column="1" bodyfile="src/ECS/Component/Components/BoxCollider.cpp" bodystart="11" bodyend="14"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" line="33" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/Component/Components/BoxCollider.cpp" bodystart="11" bodyend="14"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_box_collider_1a5fdef2ea09f30e9dd576ca73e7a503af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -113,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/BoxCollider.h" line="34" column="1" bodyfile="src/ECS/Component/Components/BoxCollider.cpp" bodystart="16" bodyend="19"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" line="34" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/Component/Components/BoxCollider.cpp" bodystart="16" bodyend="19"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_box_collider_1ab096f6c7a983a2384d650efb74bdbc4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -128,7 +128,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/BoxCollider.h" line="37" column="14" bodyfile="src/ECS/Component/Components/BoxCollider.cpp" bodystart="21" bodyend="32"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" line="37" column="14" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/Component/Components/BoxCollider.cpp" bodystart="21" bodyend="32"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_box_collider_1acd8bd4864af9b97b965f855dcc905a74" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -147,7 +147,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/BoxCollider.h" line="38" column="14" bodyfile="src/ECS/Component/Components/BoxCollider.cpp" bodystart="34" bodyend="45"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" line="38" column="14" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/Component/Components/BoxCollider.cpp" bodystart="34" bodyend="45"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_box_collider_1a4bad23db7e3fe21d2dc65d424abda4ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -162,7 +162,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/BoxCollider.h" line="39" column="14" bodyfile="src/ECS/Component/Components/BoxCollider.cpp" bodystart="47" bodyend="50"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" line="39" column="14" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/Component/Components/BoxCollider.cpp" bodystart="47" bodyend="50"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_box_collider_1a9618a909dd24002094ad9497eef8f732" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structfrost_1_1_e_c_s_1_1_collision_data" kindref="compound">CollisionData</ref></type>
@@ -180,7 +180,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/BoxCollider.h" line="42" column="15" bodyfile="src/ECS/Component/Components/BoxCollider.cpp" bodystart="52" bodyend="60"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" line="42" column="15" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/Component/Components/BoxCollider.cpp" bodystart="52" bodyend="60"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_box_collider_1a6fb9364578615f9a651bee5f022106fa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -194,7 +194,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/BoxCollider.h" line="45" column="7" bodyfile="src/ECS/Component/Components/BoxCollider.cpp" bodystart="97" bodyend="100"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" line="45" column="7" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/Component/Components/BoxCollider.cpp" bodystart="97" bodyend="100"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_box_collider_1af358c1fd0aef3dbfe226c130e5dbca96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -212,7 +212,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/BoxCollider.h" line="46" column="6" bodyfile="src/ECS/Component/Components/BoxCollider.cpp" bodystart="102" bodyend="105"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" line="46" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/Component/Components/BoxCollider.cpp" bodystart="102" bodyend="105"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_box_collider_1a1582760a5bb835ab5af1eb03414862d7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -230,7 +230,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/BoxCollider.h" line="47" column="6" bodyfile="src/ECS/Component/Components/BoxCollider.cpp" bodystart="107" bodyend="119"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" line="47" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/Component/Components/BoxCollider.cpp" bodystart="107" bodyend="119"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_box_collider_1a958f0c85a08f4f857b89171dd84fbd53" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>glm::mat2</type>
@@ -244,7 +244,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/BoxCollider.h" line="48" column="11" bodyfile="src/ECS/Component/Components/BoxCollider.cpp" bodystart="121" bodyend="125"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" line="48" column="11" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/Component/Components/BoxCollider.cpp" bodystart="121" bodyend="125"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_box_collider_1aeaced076499860417dda5600c89ab5d6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>std::vector&lt; glm::vec2 &gt; *</type>
@@ -258,7 +258,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/BoxCollider.h" line="49" column="13" bodyfile="src/ECS/Component/Components/BoxCollider.cpp" bodystart="127" bodyend="130"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" line="49" column="13" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/Component/Components/BoxCollider.cpp" bodystart="127" bodyend="130"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -278,7 +278,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/ECS/Component/Components/BoxCollider.h" line="56" column="15" bodyfile="src/ECS/Component/Components/BoxCollider.cpp" bodystart="62" bodyend="95"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" line="56" column="15" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/Component/Components/BoxCollider.cpp" bodystart="62" bodyend="95"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -356,7 +356,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/ECS/Component/Components/BoxCollider.h" line="26" column="1" bodyfile="include/ECS/Component/Components/BoxCollider.h" bodystart="27" bodyend="67"/>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" line="26" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" bodystart="27" bodyend="67"/>
     <listofallmembers>
       <member refid="classfrost_1_1_e_c_s_1_1_box_collider_1a6951359b707a4af71b81921714e84c43" prot="private" virt="non-virtual"><scope>frost::ECS::BoxCollider</scope><name>AABB</name></member>
       <member refid="classfrost_1_1_e_c_s_1_1_box_collider_1a856077ff45711d964b58267a356e80d0" prot="public" virt="non-virtual"><scope>frost::ECS::BoxCollider</scope><name>BoxCollider</name></member>
@@ -367,7 +367,7 @@
       <member refid="classfrost_1_1_e_c_s_1_1_box_collider_1a6fb9364578615f9a651bee5f022106fa" prot="public" virt="non-virtual"><scope>frost::ECS::BoxCollider</scope><name>GetIsStatic</name></member>
       <member refid="classfrost_1_1_e_c_s_1_1_i_component_1a1df5779e3ba49dfcdee54914de867474" prot="public" virt="non-virtual"><scope>frost::ECS::BoxCollider</scope><name>GetParentObject</name></member>
       <member refid="classfrost_1_1_e_c_s_1_1_box_collider_1a958f0c85a08f4f857b89171dd84fbd53" prot="public" virt="non-virtual"><scope>frost::ECS::BoxCollider</scope><name>GetRotationMatrix</name></member>
-      <member refid="classfrost_1_1core_1_1_r_t_t_i_1ab67a37bae5aeb3024dbd568bd4c9a9ea" prot="public" virt="pure-virtual"><scope>frost::ECS::BoxCollider</scope><name>GetTypeName</name></member>
+      <member refid="classfrost_1_1core_1_1_r_t_t_i_1a7edd7107554d4c6e16c065033eaa6355" prot="public" virt="pure-virtual"><scope>frost::ECS::BoxCollider</scope><name>GetTypeName</name></member>
       <member refid="classfrost_1_1_e_c_s_1_1_i_component_1adbb9c447e4a2a65e828cb0e2bd60d7a4" prot="public" virt="non-virtual"><scope>frost::ECS::BoxCollider</scope><name>GetUUID</name></member>
       <member refid="classfrost_1_1_e_c_s_1_1_box_collider_1aeaced076499860417dda5600c89ab5d6" prot="public" virt="non-virtual"><scope>frost::ECS::BoxCollider</scope><name>GetVertices</name></member>
       <member refid="classfrost_1_1_e_c_s_1_1_i_component_1ae8ccddcb37fe3aa6b23f072dc135b5c6" prot="public" virt="non-virtual"><scope>frost::ECS::BoxCollider</scope><name>IComponent</name></member>

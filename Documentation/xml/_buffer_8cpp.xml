@@ -20,7 +20,7 @@
         </childnode>
       </node>
       <node id="1">
-        <label>src/Render/Buffer.cpp</label>
+        <label>C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Render/Buffer.cpp</label>
         <link refid="_buffer_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -86,6 +86,6 @@
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="33"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="src/Render/Buffer.cpp"/>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Render/Buffer.cpp"/>
   </compounddef>
 </doxygen>

@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Serial/Save.h" line="11" column="14" bodyfile="include/Core/Serial/Save.h" bodystart="11" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/Save.h" line="29" column="14" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/Save.h" bodystart="29" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-attrib">
@@ -37,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Serial/Save.h" line="14" column="5" bodyfile="include/Core/Serial/Save.h" bodystart="14" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/Save.h" line="32" column="5" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/Save.h" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfrost_1_1core_1_1_save_1ab3ea457e4568a011e93ecdb5aebcc60a" prot="protected" static="no" mutable="no">
         <type>int</type>
@@ -52,7 +52,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Serial/Save.h" line="15" column="5" bodyfile="include/Core/Serial/Save.h" bodystart="15" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/Save.h" line="33" column="5" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/Save.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfrost_1_1core_1_1_save_1a557334849c91621675b52e2786638cee" prot="protected" static="no" mutable="no">
         <type>std::string</type>
@@ -67,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Serial/Save.h" line="16" column="13" bodyfile="include/Core/Serial/Save.h" bodystart="16" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/Save.h" line="34" column="13" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/Save.h" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfrost_1_1core_1_1_save_1ae2cb853aaa8673eed954cdf0f045fdaf" prot="protected" static="no" mutable="no">
         <type><ref refid="structfrost_1_1core_1_1_save_1_1_position" kindref="compound">Position</ref></type>
@@ -82,12 +82,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Serial/Save.h" line="22" column="10" bodyfile="include/Core/Serial/Save.h" bodystart="22" bodyend="22"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/Save.h" line="41" column="10" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/Save.h" bodystart="41" bodyend="41"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>The <ref refid="classfrost_1_1core_1_1_save" kindref="compound">Save</ref> class is responsible for saving the game state. </para>
     </briefdescription>
     <detaileddescription>
+<para>The &apos;<ref refid="classfrost_1_1core_1_1_save" kindref="compound">Save</ref>&apos; class is used to save the game state, such as the position of the player. </para>
     </detaileddescription>
     <collaborationgraph>
       <node id="1">
@@ -102,7 +104,7 @@
         <link refid="structfrost_1_1core_1_1_save_1_1_position"/>
       </node>
     </collaborationgraph>
-    <location file="include/Core/Serial/Save.h" line="9" column="1" bodyfile="include/Core/Serial/Save.h" bodystart="10" bodyend="23"/>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/Save.h" line="27" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/Save.h" bodystart="28" bodyend="42"/>
     <listofallmembers>
       <member refid="classfrost_1_1core_1_1_save_1a557334849c91621675b52e2786638cee" prot="protected" virt="non-virtual"><scope>frost::core::Save</scope><name>m_protected_imagePath</name></member>
       <member refid="classfrost_1_1core_1_1_save_1ab3ea457e4568a011e93ecdb5aebcc60a" prot="protected" virt="non-virtual"><scope>frost::core::Save</scope><name>m_protected_lifePoint</name></member>

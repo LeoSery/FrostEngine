@@ -1,9 +1,26 @@
 #pragma once
 
+/*!
+* \file Slot.h
+* 
+* \brief Header file for the Slot class.
+* 
+*/
+
 #include <functional>
 
+/*!
+* \namespace frost::core
+*
+* \brief The namespace for the FrostEngine core functionalities.
+*/
 namespace frost::core
 {	
+    /*!
+    * \class Slot
+    * 
+    * \brief Class for creating slots that can be connected to signals.
+    */
     template <typename ...Args>
     class Slot
     {

@@ -961,7 +961,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Input/Input.h" line="34" column="1" bodyfile="include/Core/Input/Input.h" bodystart="35" bodyend="155"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Input/Input.h" line="57" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Input/Input.h" bodystart="58" bodyend="178"/>
       </memberdef>
       <memberdef kind="enum" id="classfrost_1_1core_1_1_input_1abc09727085c77c80b054f408b6ffeba1" prot="public" static="no" strong="no">
         <type></type>
@@ -997,7 +997,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Input/Input.h" line="156" column="1" bodyfile="include/Core/Input/Input.h" bodystart="157" bodyend="161"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Input/Input.h" line="180" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Input/Input.h" bodystart="181" bodyend="185"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-static-attrib">
@@ -1014,7 +1014,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Input/Input.h" line="186" column="14" bodyfile="include/Core/Input/Input.h" bodystart="186" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Input/Input.h" line="210" column="14" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Input/Input.h" bodystart="210" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
@@ -1030,7 +1030,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Input/Input.h" line="191" column="17" bodyfile="include/Core/Input/Input.h" bodystart="191" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Input/Input.h" line="215" column="17" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Input/Input.h" bodystart="215" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfrost_1_1core_1_1_input_1a9f797fbaa12fe46e56e17c311779da00" prot="private" static="no" mutable="no">
         <type>std::map&lt; int, std::string &gt;</type>
@@ -1044,7 +1044,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Input/Input.h" line="193" column="10" bodyfile="include/Core/Input/Input.h" bodystart="193" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Input/Input.h" line="217" column="10" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Input/Input.h" bodystart="217" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfrost_1_1core_1_1_input_1a656348f044ef9121fdc03682fb2fa935" prot="private" static="no" mutable="no">
         <type>std::map&lt; std::string, <ref refid="structfrost_1_1core_1_1_input_1_1_functions" kindref="compound">Functions</ref> &gt;</type>
@@ -1058,7 +1058,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Input/Input.h" line="194" column="10" bodyfile="include/Core/Input/Input.h" bodystart="194" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Input/Input.h" line="218" column="10" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Input/Input.h" bodystart="218" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfrost_1_1core_1_1_input_1ae11bf3987331fc7b34254c42207911e0" prot="private" static="no" mutable="no">
         <type>std::map&lt; int, bool &gt;</type>
@@ -1072,7 +1072,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Input/Input.h" line="196" column="10" bodyfile="include/Core/Input/Input.h" bodystart="196" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Input/Input.h" line="219" column="10" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Input/Input.h" bodystart="219" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -1092,7 +1092,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Input/Input.h" line="26" column="1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Input/Input.h" line="49" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_input_1a6b6bf862e987b8f465d48e08d79aca8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1109,7 +1109,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Input/Input.h" line="27" column="6"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Input/Input.h" line="50" column="6"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_input_1adbd39585286cf38f4e77e744573ed5fb" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
         <type></type>
@@ -1123,7 +1123,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Input/Input.h" line="28" column="10" bodyfile="src/Core/Input/Input.cpp" bodystart="17" bodyend="20"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Input/Input.h" line="51" column="10" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/Input/Input.cpp" bodystart="17" bodyend="20"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_input_1aceb23c9fb1cfeb2551d086b7f80a50e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -1137,7 +1137,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Input/Input.h" line="29" column="1" bodyfile="src/Core/Input/Input.cpp" bodystart="22" bodyend="25"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Input/Input.h" line="52" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/Input/Input.cpp" bodystart="22" bodyend="25"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_input_1a25de7f6fca41aaecfab5528075077bc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classfrost_1_1core_1_1_input" kindref="compound">Input</ref> *</type>
@@ -1155,7 +1155,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Input/Input.h" line="176" column="7" bodyfile="src/Core/Input/Input.cpp" bodystart="35" bodyend="40"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Input/Input.h" line="201" column="7" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/Input/Input.cpp" bodystart="35" bodyend="40"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_input_1a4bd34deaa3a3b9bb1c4036176987874b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1173,7 +1173,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Input/Input.h" line="177" column="6" bodyfile="src/Core/Input/Input.cpp" bodystart="85" bodyend="94"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Input/Input.h" line="202" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/Input/Input.cpp" bodystart="85" bodyend="94"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_input_1a231db8ebc0336e1b22833da90e2358ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1195,7 +1195,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Input/Input.h" line="178" column="6" bodyfile="src/Core/Input/Input.cpp" bodystart="96" bodyend="115"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Input/Input.h" line="203" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/Input/Input.cpp" bodystart="96" bodyend="115"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_input_1ab36ba9e698b07dc0e5c26d55b86897a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1225,7 +1225,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Input/Input.h" line="179" column="6" bodyfile="src/Core/Input/Input.cpp" bodystart="117" bodyend="139"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Input/Input.h" line="204" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/Input/Input.cpp" bodystart="117" bodyend="139"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_input_1a14b8cdb2bdb019676442a2780c4e9fa7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1247,7 +1247,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Input/Input.h" line="181" column="6" bodyfile="src/Core/Input/Input.cpp" bodystart="141" bodyend="166"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Input/Input.h" line="205" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/Input/Input.cpp" bodystart="141" bodyend="166"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_input_1a4d8207962ea9b24b718c04a570822c32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1265,7 +1265,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Input/Input.h" line="183" column="6" bodyfile="src/Core/Input/Input.cpp" bodystart="168" bodyend="174"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Input/Input.h" line="206" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/Input/Input.cpp" bodystart="168" bodyend="174"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_input_1afb9731abb0df0f66b2d1489f7af416e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1279,7 +1279,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Input/Input.h" line="200" column="6" bodyfile="src/Core/Input/Input.cpp" bodystart="74" bodyend="83"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Input/Input.h" line="225" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/Input/Input.cpp" bodystart="74" bodyend="83"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -1295,7 +1295,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Input/Input.h" line="32" column="14" bodyfile="src/Core/Input/Input.cpp" bodystart="27" bodyend="33"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Input/Input.h" line="55" column="14" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/Input/Input.cpp" bodystart="27" bodyend="33"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-static-func">
@@ -1331,12 +1331,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Input/Input.h" line="198" column="13" bodyfile="src/Core/Input/Input.cpp" bodystart="42" bodyend="72"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Input/Input.h" line="221" column="13" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/Input/Input.cpp" bodystart="42" bodyend="72"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>This class lets you create actions, so you can bind inputs to actions. </para>
     </briefdescription>
     <detaileddescription>
+<para>This class can be used to create/delete custom actions, to bind and configure a button, and to associate methods with this custom action so that they are called when the action is triggered by pressing the associated button. </para>
     </detaileddescription>
     <collaborationgraph>
       <node id="1">
@@ -1347,7 +1349,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/Core/Input/Input.h" line="22" column="1" bodyfile="include/Core/Input/Input.h" bodystart="23" bodyend="202"/>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Input/Input.h" line="44" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Input/Input.h" bodystart="45" bodyend="226"/>
     <listofallmembers>
       <member refid="classfrost_1_1core_1_1_input_1af2a9d224625642369d5a0f8c4b1ac915a855cc0d8f53b25ed2b88caf32051c58d" prot="public" virt="non-virtual"><scope>frost::core::Input</scope><name>A</name></member>
       <member refid="classfrost_1_1core_1_1_input_1a656348f044ef9121fdc03682fb2fa935" prot="private" virt="non-virtual"><scope>frost::core::Input</scope><name>ActionBind</name></member>

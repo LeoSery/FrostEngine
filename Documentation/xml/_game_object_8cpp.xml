@@ -98,7 +98,7 @@
         </childnode>
       </node>
       <node id="1">
-        <label>src/ECS/GameObject.cpp</label>
+        <label>C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp</label>
         <link refid="_game_object_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -320,6 +320,6 @@
 <codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="180"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="src/ECS/GameObject.cpp"/>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp"/>
   </compounddef>
 </doxygen>

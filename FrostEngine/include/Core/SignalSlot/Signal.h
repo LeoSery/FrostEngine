@@ -1,11 +1,29 @@
 #pragma once
 
+/*!
+* \file Signal.h
+* 
+* \brief Header file for the Signal class.
+*/
+
 #include "Core/SignalSlot/Slot.h"
 
 #include <vector>
 
+/*!
+* \namespace frost::core
+*
+* \brief The namespace for the FrostEngine core functionalities.
+*/
 namespace frost::core
 {
+    /*!
+    * \class Signal
+    * 
+    * \brief Class for creating signals.
+    * 
+    * \details This class is used to create signals that can be connected to slots.
+    */
     template <typename ...Args>
     class Signal
     {

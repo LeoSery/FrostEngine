@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Serial/TextureManager.h" line="60" column="5" bodyfile="include/Core/Serial/TextureManager.h" bodystart="60" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/TextureManager.h" line="88" column="5" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/TextureManager.h" bodystart="88" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structfrost_1_1core_1_1_s___static_tile_data_1a921ba28530417d7d28edabc9200d74bd" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Serial/TextureManager.h" line="61" column="5" bodyfile="include/Core/Serial/TextureManager.h" bodystart="61" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/TextureManager.h" line="89" column="5" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/TextureManager.h" bodystart="89" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structfrost_1_1core_1_1_s___static_tile_data_1a19ff1c82dda59bfb254e84dd06e3504f" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -47,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Serial/TextureManager.h" line="62" column="5" bodyfile="include/Core/Serial/TextureManager.h" bodystart="62" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/TextureManager.h" line="90" column="5" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/TextureManager.h" bodystart="90" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structfrost_1_1core_1_1_s___static_tile_data_1af6a72b6226f770a7428b3470e97a3e84" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Serial/TextureManager.h" line="63" column="5" bodyfile="include/Core/Serial/TextureManager.h" bodystart="63" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/TextureManager.h" line="91" column="5" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/TextureManager.h" bodystart="91" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structfrost_1_1core_1_1_s___static_tile_data_1aee1836f6dc9b0bcee18eacd77e11fa5e" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -77,7 +77,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Serial/TextureManager.h" line="64" column="6" bodyfile="include/Core/Serial/TextureManager.h" bodystart="64" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/TextureManager.h" line="92" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/TextureManager.h" bodystart="92" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structfrost_1_1core_1_1_s___static_tile_data_1a285272b6a62a5d1051d875265edbea71" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -92,14 +92,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Serial/TextureManager.h" line="65" column="6" bodyfile="include/Core/Serial/TextureManager.h" bodystart="65" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/TextureManager.h" line="93" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/TextureManager.h" bodystart="93" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/Core/Serial/TextureManager.h" line="57" column="1" bodyfile="include/Core/Serial/TextureManager.h" bodystart="58" bodyend="71"/>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/TextureManager.h" line="85" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/TextureManager.h" bodystart="86" bodyend="99"/>
     <listofallmembers>
       <member refid="structfrost_1_1core_1_1_s___static_tile_data_1aee1836f6dc9b0bcee18eacd77e11fa5e" prot="public" virt="non-virtual"><scope>frost::core::S_StaticTileData</scope><name>bIsRevertedX</name></member>
       <member refid="structfrost_1_1core_1_1_s___static_tile_data_1a285272b6a62a5d1051d875265edbea71" prot="public" virt="non-virtual"><scope>frost::core::S_StaticTileData</scope><name>bIsRevertedY</name></member>

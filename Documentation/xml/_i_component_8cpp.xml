@@ -64,7 +64,7 @@
         </childnode>
       </node>
       <node id="1">
-        <label>src/ECS/Component/IComponent.cpp</label>
+        <label>C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/Component/IComponent.cpp</label>
         <link refid="_i_component_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -130,6 +130,6 @@
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="35"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="src/ECS/Component/IComponent.cpp"/>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/Component/IComponent.cpp"/>
   </compounddef>
 </doxygen>

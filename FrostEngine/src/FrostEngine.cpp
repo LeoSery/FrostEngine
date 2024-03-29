@@ -1,5 +1,6 @@
 /*!
 * \file FrostEngine.cpp
+* 
 * \brief Main file for the FrostEngine.
 * 
 * \details This file contains the main methods for the FrostEngine, such as the engine's initialization, main loop and shutdown.
@@ -11,14 +12,6 @@
 #include <Core/Input/Input.h>
 #include <functional>
 
-/*!
- * \namespace FrostEngine
- * 
- * \brief The main namespace for the FrostEngine.
- * 
- * \details FrostEngine is the engine's main namespace and contains the engine's
- * update loop for updating GameObjects, physics and OpenGL rendering.
- */
 namespace FrostEngine
 {
 	/*!

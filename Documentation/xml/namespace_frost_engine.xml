@@ -9,6 +9,6 @@
     <detaileddescription>
 <para><ref refid="namespace_frost_engine" kindref="compound">FrostEngine</ref> is the engine&apos;s main namespace and contains the engine&apos;s update loop for updating GameObjects, physics and OpenGL rendering. </para>
     </detaileddescription>
-    <location file="include/FrostEngine.h" line="29" column="1"/>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/FrostEngine.h" line="30" column="1"/>
   </compounddef>
 </doxygen>

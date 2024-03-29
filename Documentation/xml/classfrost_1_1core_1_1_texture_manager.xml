@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Serial/TextureManager.h" line="36" column="10" bodyfile="include/Core/Serial/TextureManager.h" bodystart="36" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/TextureManager.h" line="54" column="10" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/TextureManager.h" bodystart="54" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Serial/TextureManager.h" line="19" column="1" bodyfile="src/Render/TextureMgr.cpp" bodystart="7" bodyend="9"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/TextureManager.h" line="37" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Render/TextureMgr.cpp" bodystart="7" bodyend="9"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_texture_manager_1a2cc224e561478c71fbaea3dee1f04354" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Serial/TextureManager.h" line="20" column="1" bodyfile="src/Render/TextureMgr.cpp" bodystart="11" bodyend="14"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/TextureManager.h" line="38" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Render/TextureMgr.cpp" bodystart="11" bodyend="14"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_texture_manager_1af5f7963947361014eea4f4074e5166cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -64,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Serial/TextureManager.h" line="23" column="6" bodyfile="src/Render/TextureMgr.cpp" bodystart="16" bodyend="65"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/TextureManager.h" line="41" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Render/TextureMgr.cpp" bodystart="16" bodyend="65"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_texture_manager_1a8cdea3d4e51dc59826f3d9725f002203" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="structfrost_1_1core_1_1_s___texture_data" kindref="compound">S_TextureData</ref> &amp;</type>
@@ -82,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Serial/TextureManager.h" line="26" column="22"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/TextureManager.h" line="44" column="22"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -106,7 +106,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Serial/TextureManager.h" line="33" column="6" bodyfile="src/Render/TextureMgr.cpp" bodystart="67" bodyend="102"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/TextureManager.h" line="51" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Render/TextureMgr.cpp" bodystart="67" bodyend="102"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_texture_manager_1a3a7c033f8fd7e7d7e21a307c19332455" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -128,14 +128,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Serial/TextureManager.h" line="34" column="6" bodyfile="src/Render/TextureMgr.cpp" bodystart="104" bodyend="198"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/TextureManager.h" line="52" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Render/TextureMgr.cpp" bodystart="104" bodyend="198"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>This class is used to manage textures. </para>
     </briefdescription>
     <detaileddescription>
+<para>This class is used to load textures and store their metadata. </para>
     </detaileddescription>
-    <location file="include/Core/Serial/TextureManager.h" line="14" column="1" bodyfile="include/Core/Serial/TextureManager.h" bodystart="15" bodyend="37"/>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/TextureManager.h" line="32" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/TextureManager.h" bodystart="33" bodyend="55"/>
     <listofallmembers>
       <member refid="classfrost_1_1core_1_1_texture_manager_1a8cdea3d4e51dc59826f3d9725f002203" prot="public" virt="non-virtual"><scope>frost::core::TextureManager</scope><name>GetTextureData</name></member>
       <member refid="classfrost_1_1core_1_1_texture_manager_1a3a7c033f8fd7e7d7e21a307c19332455" prot="private" virt="non-virtual"><scope>frost::core::TextureManager</scope><name>LoadAnimationMetadata</name></member>

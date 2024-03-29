@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Serial/XmlParser.h" line="14" column="1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/XmlParser.h" line="32" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_xml_parser_1a1fe40916d0edd228fa00a986c11fdd9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Serial/XmlParser.h" line="17" column="6" bodyfile="src/Core/Serial/XmlParser.cpp" bodystart="27" bodyend="35"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/XmlParser.h" line="35" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/Serial/XmlParser.cpp" bodystart="27" bodyend="35"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_xml_parser_1a52ec7c7e45a92713149db3f5f9b84fdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -48,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Serial/XmlParser.h" line="20" column="6" bodyfile="src/Core/Serial/XmlParser.cpp" bodystart="11" bodyend="25"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/XmlParser.h" line="38" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/Serial/XmlParser.cpp" bodystart="11" bodyend="25"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Serial/XmlParser.h" line="23" column="6" bodyfile="src/Core/Serial/XmlParser.cpp" bodystart="47" bodyend="117"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/XmlParser.h" line="41" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/Serial/XmlParser.cpp" bodystart="47" bodyend="117"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1core_1_1_xml_parser_1acad79558568dbfb452295e5f272686a2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -86,14 +86,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/Core/Serial/XmlParser.h" line="24" column="6" bodyfile="src/Core/Serial/XmlParser.cpp" bodystart="37" bodyend="45"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/XmlParser.h" line="42" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Core/Serial/XmlParser.cpp" bodystart="37" bodyend="45"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Class for parsing XML files. </para>
     </briefdescription>
     <detaileddescription>
+<para>This class is used to parse XML files and extract data from them. </para>
     </detaileddescription>
-    <location file="include/Core/Serial/XmlParser.h" line="9" column="1" bodyfile="include/Core/Serial/XmlParser.h" bodystart="10" bodyend="25"/>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/XmlParser.h" line="27" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/Serial/XmlParser.h" bodystart="28" bodyend="43"/>
     <listofallmembers>
       <member refid="classfrost_1_1core_1_1_xml_parser_1a52ec7c7e45a92713149db3f5f9b84fdc" prot="public" virt="non-virtual"><scope>frost::core::XmlParser</scope><name>Parse</name></member>
       <member refid="classfrost_1_1core_1_1_xml_parser_1a228d6851ba1fb613fa2ddda2b2e923b1" prot="private" virt="non-virtual"><scope>frost::core::XmlParser</scope><name>ParsePlayerNode</name></member>

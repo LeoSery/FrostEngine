@@ -38,7 +38,7 @@
         </childnode>
       </node>
       <node id="1">
-        <label>src/Render/VertexArrayObject.cpp</label>
+        <label>C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Render/VertexArrayObject.cpp</label>
         <link refid="_vertex_array_object_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -198,6 +198,6 @@
 <codeline lineno="117"><highlight class="normal"></highlight></codeline>
 <codeline lineno="118"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="src/Render/VertexArrayObject.cpp"/>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/Render/VertexArrayObject.cpp"/>
   </compounddef>
 </doxygen>

@@ -2,6 +2,7 @@
 
 /*!
 * \file FrostEngine.cpp
+* 
 * \brief Main file for the FrostEngine.
 *
 * \details This file contains the main methods for the FrostEngine, such as the engine's initialization, main loop and shutdown.
@@ -18,12 +19,12 @@
 #include "Render/RenderDevice.h"
 #include "Render/RenderDevice.h"
 
-#include "Utils/Logger.h"
 #include "Editor/Editor.h"
+
+#include "Utils/Logger.h"
 
 #include <chrono>
 #include <thread>
-
 
 /*!
  * \namespace FrostEngine

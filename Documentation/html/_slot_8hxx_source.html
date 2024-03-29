@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Frost Engine: include/Core/SignalSlot/Slot.hxx Source File</title>
+<title>Frost Engine: C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/Core/SignalSlot/Slot.hxx Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -77,7 +77,7 @@ $(function() { codefold.init(0); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_8213943ce0b792be39d34390845932ae.html">Core</a></li><li class="navelem"><a class="el" href="dir_19dbf4aa5541de506a2fbae08af79e19.html">SignalSlot</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_1388d911ad4efdb82419dc5b36d52d4e.html">FrostEngine</a></li><li class="navelem"><a class="el" href="dir_7e092bb30d7df7f3fec401692e52f5d3.html">include</a></li><li class="navelem"><a class="el" href="dir_4c1435df3341a97824f14660cfa9078d.html">Core</a></li><li class="navelem"><a class="el" href="dir_bfeed6bfb914056beeeec23bed089d16.html">SignalSlot</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -86,58 +86,58 @@ $(function() { codefold.init(0); });
 <div class="contents">
 <a href="_slot_8hxx.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_slot_8h.html">Core/SignalSlot/Slot.h</a>&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacefrost_1_1core.html">frost::core</a></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ...Args&gt;</div>
-<div class="foldopen" id="foldopen00008" data-start="{" data-end="}">
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="classfrost_1_1core_1_1_slot.html#ae4d4471a14a828281a16683142aa2846">    8</a></span>    <span class="keyword">inline</span> <a class="code hl_function" href="classfrost_1_1core_1_1_slot.html#ae4d4471a14a828281a16683142aa2846">Slot&lt;Args...&gt;::Slot</a>() : m_init(false)</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_slot_8h.html">Core/SignalSlot/Slot.h</a>&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    }</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacefrost_1_1core.html">frost::core</a></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ...Args&gt;</div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classfrost_1_1core_1_1_slot.html#ae4d4471a14a828281a16683142aa2846">   24</a></span>    <span class="keyword">inline</span> <a class="code hl_function" href="classfrost_1_1core_1_1_slot.html#ae4d4471a14a828281a16683142aa2846">Slot&lt;Args...&gt;::Slot</a>() : m_init(false)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    }</div>
 </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ...Args&gt;</div>
-<div class="foldopen" id="foldopen00014" data-start="{" data-end="}">
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classfrost_1_1core_1_1_slot.html#a529281ee33d8e8204cb2a67f0d87e74d">   14</a></span>    <span class="keyword">inline</span> <a class="code hl_function" href="classfrost_1_1core_1_1_slot.html#ae4d4471a14a828281a16683142aa2846">Slot&lt;Args...&gt;::Slot</a>(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(Args...)&gt;&amp; _Callback) : m_init(true), m_callback(_Callback)</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ...Args&gt;</div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classfrost_1_1core_1_1_slot.html#a529281ee33d8e8204cb2a67f0d87e74d">   37</a></span>    <span class="keyword">inline</span> <a class="code hl_function" href="classfrost_1_1core_1_1_slot.html#ae4d4471a14a828281a16683142aa2846">Slot&lt;Args...&gt;::Slot</a>(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(Args...)&gt;&amp; _Callback) : m_init(true), m_callback(_Callback)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
 </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ...Args&gt;</div>
-<div class="foldopen" id="foldopen00020" data-start="{" data-end="}">
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classfrost_1_1core_1_1_slot.html#a9702a99b1d0d9fa4a59da08190c9b13b">   20</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classfrost_1_1core_1_1_slot.html#a9702a99b1d0d9fa4a59da08190c9b13b">Slot&lt;Args...&gt;::operator()</a>(Args&amp;&amp;... _Parameters)</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        this-&gt;call(std::forward&lt;Args&gt;(_Parameters)...);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ...Args&gt;</div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classfrost_1_1core_1_1_slot.html#a9702a99b1d0d9fa4a59da08190c9b13b">   52</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classfrost_1_1core_1_1_slot.html#a9702a99b1d0d9fa4a59da08190c9b13b">Slot&lt;Args...&gt;::operator()</a>(Args&amp;&amp;... _Parameters)</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        this-&gt;call(std::forward&lt;Args&gt;(_Parameters)...);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
 </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ...Args&gt;</div>
-<div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classfrost_1_1core_1_1_slot.html#a8c1ee571dfdde225d4a175033a97cd34">   26</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classfrost_1_1core_1_1_slot.html#a8c1ee571dfdde225d4a175033a97cd34">Slot&lt;Args...&gt;::call</a>(Args&amp;&amp;... _Parameters)</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordflow">if</span> (m_init)</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            m_callback(std::forward&lt;Args&gt;(_Parameters)...);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ...Args&gt;</div>
+<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classfrost_1_1core_1_1_slot.html#a8c1ee571dfdde225d4a175033a97cd34">   65</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classfrost_1_1core_1_1_slot.html#a8c1ee571dfdde225d4a175033a97cd34">Slot&lt;Args...&gt;::call</a>(Args&amp;&amp;... _Parameters)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">if</span> (m_init)</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            m_callback(std::forward&lt;Args&gt;(_Parameters)...);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
 </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ...Args&gt;</div>
-<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classfrost_1_1core_1_1_slot.html#a0dff0269bd7fa4f3c7ac61ed94f94504">   33</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classfrost_1_1core_1_1_slot.html#a0dff0269bd7fa4f3c7ac61ed94f94504">Slot&lt;Args...&gt;::setSlotFunction</a>(std::function&lt;<span class="keywordtype">void</span>(Args...)&gt; _Callback)</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        m_init = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        m_callback = _Callback;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ...Args&gt;</div>
+<div class="foldopen" id="foldopen00079" data-start="{" data-end="}">
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="classfrost_1_1core_1_1_slot.html#a0dff0269bd7fa4f3c7ac61ed94f94504">   79</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classfrost_1_1core_1_1_slot.html#a0dff0269bd7fa4f3c7ac61ed94f94504">Slot&lt;Args...&gt;::setSlotFunction</a>(std::function&lt;<span class="keywordtype">void</span>(Args...)&gt; _Callback)</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        m_init = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        m_callback = _Callback;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    }</div>
 </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>}</div>
-<div class="ttc" id="a_slot_8h_html"><div class="ttname"><a href="_slot_8h.html">Slot.h</a></div></div>
-<div class="ttc" id="aclassfrost_1_1core_1_1_slot_html_a0dff0269bd7fa4f3c7ac61ed94f94504"><div class="ttname"><a href="classfrost_1_1core_1_1_slot.html#a0dff0269bd7fa4f3c7ac61ed94f94504">frost::core::Slot::setSlotFunction</a></div><div class="ttdeci">void setSlotFunction(std::function&lt; void(Args...)&gt; _Callback)</div><div class="ttdef"><b>Definition</b> <a href="#l00033">Slot.hxx:33</a></div></div>
-<div class="ttc" id="aclassfrost_1_1core_1_1_slot_html_a8c1ee571dfdde225d4a175033a97cd34"><div class="ttname"><a href="classfrost_1_1core_1_1_slot.html#a8c1ee571dfdde225d4a175033a97cd34">frost::core::Slot::call</a></div><div class="ttdeci">void call(Args &amp;&amp;... _Parameters)</div><div class="ttdef"><b>Definition</b> <a href="#l00026">Slot.hxx:26</a></div></div>
-<div class="ttc" id="aclassfrost_1_1core_1_1_slot_html_a9702a99b1d0d9fa4a59da08190c9b13b"><div class="ttname"><a href="classfrost_1_1core_1_1_slot.html#a9702a99b1d0d9fa4a59da08190c9b13b">frost::core::Slot::operator()</a></div><div class="ttdeci">void operator()(Args &amp;&amp;... _Parameters)</div><div class="ttdef"><b>Definition</b> <a href="#l00020">Slot.hxx:20</a></div></div>
-<div class="ttc" id="aclassfrost_1_1core_1_1_slot_html_ae4d4471a14a828281a16683142aa2846"><div class="ttname"><a href="classfrost_1_1core_1_1_slot.html#ae4d4471a14a828281a16683142aa2846">frost::core::Slot::Slot</a></div><div class="ttdeci">Slot()</div><div class="ttdef"><b>Definition</b> <a href="#l00008">Slot.hxx:8</a></div></div>
-<div class="ttc" id="anamespacefrost_1_1core_html"><div class="ttname"><a href="namespacefrost_1_1core.html">frost::core</a></div><div class="ttdef"><b>Definition</b> <a href="_input_8h_source.html#l00018">Input.h:19</a></div></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>}</div>
+<div class="ttc" id="a_slot_8h_html"><div class="ttname"><a href="_slot_8h.html">Slot.h</a></div><div class="ttdoc">Header file for the Slot class.</div></div>
+<div class="ttc" id="aclassfrost_1_1core_1_1_slot_html_a0dff0269bd7fa4f3c7ac61ed94f94504"><div class="ttname"><a href="classfrost_1_1core_1_1_slot.html#a0dff0269bd7fa4f3c7ac61ed94f94504">frost::core::Slot::setSlotFunction</a></div><div class="ttdeci">void setSlotFunction(std::function&lt; void(Args...)&gt; _Callback)</div><div class="ttdoc">Sets the slot function.</div><div class="ttdef"><b>Definition</b> <a href="#l00079">Slot.hxx:79</a></div></div>
+<div class="ttc" id="aclassfrost_1_1core_1_1_slot_html_a8c1ee571dfdde225d4a175033a97cd34"><div class="ttname"><a href="classfrost_1_1core_1_1_slot.html#a8c1ee571dfdde225d4a175033a97cd34">frost::core::Slot::call</a></div><div class="ttdeci">void call(Args &amp;&amp;... _Parameters)</div><div class="ttdoc">Calls the slot function.</div><div class="ttdef"><b>Definition</b> <a href="#l00065">Slot.hxx:65</a></div></div>
+<div class="ttc" id="aclassfrost_1_1core_1_1_slot_html_a9702a99b1d0d9fa4a59da08190c9b13b"><div class="ttname"><a href="classfrost_1_1core_1_1_slot.html#a9702a99b1d0d9fa4a59da08190c9b13b">frost::core::Slot::operator()</a></div><div class="ttdeci">void operator()(Args &amp;&amp;... _Parameters)</div><div class="ttdoc">Operator overload for the '()' operator.</div><div class="ttdef"><b>Definition</b> <a href="#l00052">Slot.hxx:52</a></div></div>
+<div class="ttc" id="aclassfrost_1_1core_1_1_slot_html_ae4d4471a14a828281a16683142aa2846"><div class="ttname"><a href="classfrost_1_1core_1_1_slot.html#ae4d4471a14a828281a16683142aa2846">frost::core::Slot::Slot</a></div><div class="ttdeci">Slot()</div><div class="ttdoc">Default constructor for the 'Slot' class.</div><div class="ttdef"><b>Definition</b> <a href="#l00024">Slot.hxx:24</a></div></div>
+<div class="ttc" id="anamespacefrost_1_1core_html"><div class="ttname"><a href="namespacefrost_1_1core.html">frost::core</a></div><div class="ttdoc">The namespace for the FrostEngine core functionalities.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
