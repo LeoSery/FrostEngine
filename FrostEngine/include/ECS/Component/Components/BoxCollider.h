@@ -1,5 +1,11 @@
 #pragma once
 
+/*!
+* \file BoxCollider.h
+* 
+* \brief Header file for the BoxCollider class.
+*/
+
 #include "Core/SceneManagement/SceneManager.h"
 #include "Core/Export.h"
 
@@ -7,12 +13,24 @@
 
 #include "glm/mat2x2.hpp"
 
+/*!
+* \namespace frost::ECS
+*
+* \brief The namespace for FrostEngine's Entity Component System.
+*/
 namespace frost::ECS
 {
 	class GameObject;
 	class BoxCollider;
 
-	// Structs
+	/*!
+	* \struct CollisionData
+	* 
+	* \brief A struct that holds data about a collision.
+	* 
+	* \details This structure contains collision data generated when
+	* a 'Hit' is created as a result of a collision between two GameObjects.
+	*/
 	struct CollisionData
 	{
 		bool isColliding = false;
@@ -23,8 +41,25 @@ namespace frost::ECS
 		float right = 0.0f;
 	};
 
+	/*!
+	* \class BoxCollider
+	* 
+	* \brief This class contains all the methods that make up the 'BoxCollider' component.
+	* The 'BoxCollider' component allows a GameObject to simulate collisions with other GameObjects
+	* in the scene.
+	* 
+	* \details The 'BoxCollider' component is responsible for calculating the collisions
+	* of the GameObject on which it is present. It has methods for calculating the bounds
+	* of the object on which it is present, and it has methods for finding out whether the
+	* object on which it is present collides with another GameObject that also has a 'BoxCollider'.
+	*/
 	class FROST_ENGINE_API BoxCollider : public IComponent
 	{
+		/*
+		* \brief The RTTI definition for the BoxCollider class.
+		*
+		* \def FROST_DEFINE_RTTI(BoxCollider) This macro defines the RTTI for the BoxCollider class.
+		*/
 		FROST_DEFINE_RTTI(BoxCollider)
 
 	public:

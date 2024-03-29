@@ -164,16 +164,17 @@
 <para>Operator overload for the &apos;()&apos; operator. </para>
         </briefdescription>
         <detaileddescription>
+<para>This method overloads the &apos;()&apos; operator so that the slot can be called as a function.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>_Parameters</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The parameters to be passed to the slot function.</para>
+<para>The parameters to be passed to the slot function. </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-This method overloads the &apos;()&apos; operator so that the slot can be called as a function. </para>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>

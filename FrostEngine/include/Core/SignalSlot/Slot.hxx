@@ -29,9 +29,9 @@ namespace frost::core
     /*!
     * \brief Constructor for the 'Slot' class.
     * 
-    * \param _Callback The function to be called when the slot is triggered.
-    * 
     * \fn Slot::Slot(const std::function<void(Args...)>& _Callback)
+    * 
+    * \param _Callback The function to be called when the slot is triggered.
     */
     template<typename ...Args>
     inline Slot<Args...>::Slot(const std::function<void(Args...)>& _Callback) : m_init(true), m_callback(_Callback)
@@ -42,11 +42,11 @@ namespace frost::core
     /*!
     * \brief Operator overload for the '()' operator.
     *
-    * \param _Parameters The parameters to be passed to the slot function.
-    *
-    * \fn void Slot::operator()(Args&&... _Parameters)
-    *
     * \details This method overloads the '()' operator so that the slot can be called as a function.
+    * 
+    * \fn void Slot::operator()(Args&&... _Parameters)
+    * 
+    * \param _Parameters The parameters to be passed to the slot function.
     */
     template<typename ...Args>
     inline void Slot<Args...>::operator()(Args&&... _Parameters)
@@ -57,9 +57,9 @@ namespace frost::core
     /*!
     * \brief Calls the slot function.
     * 
-    * \param _Parameters The parameters to be passed to the slot function.
-    * 
     * \fn void Slot::call(Args&&... _Parameters)
+    * 
+    * \param _Parameters The parameters to be passed to the slot function.
     */
     template<typename ...Args>
     inline void Slot<Args...>::call(Args&&... _Parameters)
@@ -71,9 +71,9 @@ namespace frost::core
     /*!
     * \brief Sets the slot function.
     * 
-    * \param _Callback The function to be called when the slot is triggered.
-    * 
     * \fn void Slot::setSlotFunction(std::function<void(Args...)> _Callback)
+    * 
+    * \param _Callback The function to be called when the slot is triggered.
     */
     template<typename ...Args>
     inline void Slot<Args...>::setSlotFunction(std::function<void(Args...)> _Callback)

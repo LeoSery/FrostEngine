@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="70" column="13" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" bodystart="70" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="87" column="13" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" bodystart="87" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfrost_1_1_e_c_s_1_1_game_object_1a32c97ff45f583e680613504f2e56c94e" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="71" column="13" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" bodystart="71" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="88" column="13" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" bodystart="88" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfrost_1_1_e_c_s_1_1_game_object_1aee5e27c87ef538d824f8d05c25af738d" prot="private" static="no" mutable="no">
         <type>std::vector&lt; <ref refid="classfrost_1_1_e_c_s_1_1_i_component" kindref="compound">IComponent</ref> * &gt;</type>
@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="72" column="13" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" bodystart="72" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="89" column="13" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" bodystart="89" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfrost_1_1_e_c_s_1_1_game_object_1a09b0ecc64d0cb94a61c702120e1826cc" prot="private" static="no" mutable="no">
         <type>std::unordered_set&lt; std::string &gt;</type>
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="73" column="20" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" bodystart="73" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="90" column="20" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" bodystart="90" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classfrost_1_1_e_c_s_1_1_game_object_1accb6fae231bf07539dd6fbabffe8e004" prot="private" static="no" mutable="no">
         <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">bool</ref></type>
@@ -74,7 +74,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="74" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" bodystart="74" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="91" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" bodystart="91" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="22" column="10" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="11" bodyend="16"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="39" column="10" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="11" bodyend="16"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1aef0c47865ebc108f16082f6761e0fc3b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">void</ref></type>
@@ -113,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="23" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="18" bodyend="23"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="40" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="18" bodyend="23"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -137,7 +137,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="26" column="19" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="25" bodyend="30"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="43" column="19" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="25" bodyend="30"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -153,7 +153,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="28" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="32" bodyend="40"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="45" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="32" bodyend="40"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1aee962f32a90c6a024b4aec9af6890bc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">void</ref></type>
@@ -167,7 +167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="31" column="14" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="42" bodyend="48"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="48" column="14" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="42" bodyend="48"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1ae255ddb881cf99fe2ff8804b0ce1ebcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">void</ref></type>
@@ -185,7 +185,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="32" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="50" bodyend="57"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="49" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="50" bodyend="57"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1ac8565285ac1dff0ab7763fd89fbe9a07" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">void</ref></type>
@@ -199,7 +199,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="33" column="14" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="59" bodyend="65"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="50" column="14" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="59" bodyend="65"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1a89e305bd72073af2e287a9ec36347885" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">const</ref> std::string &amp;</type>
@@ -213,7 +213,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="36" column="20" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="67" bodyend="70"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="53" column="20" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="67" bodyend="70"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1a589b872f5286cbefec883f91f3f8a43c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">void</ref></type>
@@ -231,7 +231,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="37" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="72" bodyend="75"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="54" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="72" bodyend="75"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1a64e1296bcb6dfe126f61d40f03f9d850" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classfrost_1_1_e_c_s_1_1_transform" kindref="compound">Transform</ref> &amp;</type>
@@ -245,7 +245,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="39" column="12" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="77" bodyend="80"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="56" column="12" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="77" bodyend="80"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1a90021a88c8a0cfd61f2ba34838fab505" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">const</ref> <ref refid="classfrost_1_1_e_c_s_1_1_transform" kindref="compound">Transform</ref> &amp;</type>
@@ -259,7 +259,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="40" column="18" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="82" bodyend="85"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="57" column="18" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="82" bodyend="85"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1aa06c00e8f2a0423adfcf7746214a2c63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">void</ref></type>
@@ -277,7 +277,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="41" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="87" bodyend="94"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="58" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="87" bodyend="94"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1a0bc93ac28b5d6d3f0d6482b27d51fc04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">void</ref></type>
@@ -295,7 +295,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="43" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="96" bodyend="99"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="60" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="96" bodyend="99"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1af040548223ffbe0d7bc01236a28db093" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">bool</ref></type>
@@ -313,7 +313,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="44" column="7" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="101" bodyend="104"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="61" column="7" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="101" bodyend="104"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1a6877af1b8578f3e34965a50fbea39b9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">void</ref></type>
@@ -331,7 +331,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="45" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="106" bodyend="109"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="62" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="106" bodyend="109"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1a3f6388c14983bf6a82a6713fa8f319fd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">bool</ref></type>
@@ -345,7 +345,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="47" column="7" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="111" bodyend="114"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="64" column="7" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="111" bodyend="114"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1a524d545d997f2423772983de55ff0e7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">void</ref></type>
@@ -363,7 +363,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="48" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="116" bodyend="119"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="65" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="116" bodyend="119"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1afcf916c94153da406d3b6b02c268cc12" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>uuids::uuid</type>
@@ -377,7 +377,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="50" column="14" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="121" bodyend="124"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="67" column="14" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="121" bodyend="124"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1acbc23df5043a175e19b741f3f0012493" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">void</ref></type>
@@ -395,7 +395,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="51" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="126" bodyend="164"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="68" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="126" bodyend="164"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1ace060681033ac1b8ee5b8474adef6278" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>std::vector&lt; <ref refid="classfrost_1_1_e_c_s_1_1_i_component" kindref="compound">IComponent</ref> * &gt;</type>
@@ -409,7 +409,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="53" column="14" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="166" bodyend="169"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="70" column="14" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="166" bodyend="169"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1aacd32740cad705264179d84079c93d50" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -423,12 +423,24 @@
         <name>AddComponent</name>
         <qualifiedname>frost::ECS::GameObject::AddComponent</qualifiedname>
         <briefdescription>
+<para>Add a component of the specified type to the <ref refid="classfrost_1_1_e_c_s_1_1_game_object" kindref="compound">GameObject</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para>\detail This function will add a new component of the specified type to the <ref refid="classfrost_1_1_e_c_s_1_1_game_object" kindref="compound">GameObject</ref>&apos;s component list.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Component</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type &lt;T&gt; of the component to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="57" column="11" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.hxx" bodystart="40" bodyend="52"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="74" column="11" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.hxx" bodystart="76" bodyend="88"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -442,12 +454,26 @@
         <name>GetComponent</name>
         <qualifiedname>frost::ECS::GameObject::GetComponent</qualifiedname>
         <briefdescription>
+<para>Get a component of the specified type from the <ref refid="classfrost_1_1_e_c_s_1_1_game_object" kindref="compound">GameObject</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para>\detail This function will find the specified component in the <ref refid="classfrost_1_1_e_c_s_1_1_game_object" kindref="compound">GameObject</ref>&apos;s component list and return it.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Component</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type &lt;T&gt; of the component to get.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The type &lt;T&gt; component of the specified type if it exists, otherwise nullptr. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="60" column="12" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.hxx" bodystart="7" bodyend="20"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="77" column="12" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.hxx" bodystart="25" bodyend="38"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1a70063403c466783a0df41f9bbf80d561" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -461,12 +487,24 @@
         <name>RemoveComponent</name>
         <qualifiedname>frost::ECS::GameObject::RemoveComponent</qualifiedname>
         <briefdescription>
+<para>Remove a component of the specified type from the <ref refid="classfrost_1_1_e_c_s_1_1_game_object" kindref="compound">GameObject</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para>\detail This function will find the specified component in the <ref refid="classfrost_1_1_e_c_s_1_1_game_object" kindref="compound">GameObject</ref>&apos;s component list and remove it.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Component</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type &lt;T&gt; of the component to remove. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="63" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.hxx" bodystart="23" bodyend="37"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="80" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.hxx" bodystart="50" bodyend="64"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1a7c4e491726fc8e6e38d44bad57767949" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">void</ref></type>
@@ -484,7 +522,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="66" column="14" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="171" bodyend="174"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="83" column="14" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="171" bodyend="174"/>
       </memberdef>
       <memberdef kind="function" id="classfrost_1_1_e_c_s_1_1_game_object_1a7cef60d07aedb9e5df69c9244ca3c3fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classfrost_1_1_e_c_s_1_1_game_object_1a4525a8c8688a6b8c4bdeb0bdae94a7fb" kindref="member">void</ref></type>
@@ -502,10 +540,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="67" column="14" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="176" bodyend="179"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="84" column="14" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/src/ECS/GameObject.cpp" bodystart="176" bodyend="179"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>The &apos;<ref refid="classfrost_1_1_e_c_s_1_1_game_object" kindref="compound">GameObject</ref>&apos; class is the basic class for any object present in the scenes that constitute a game. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
@@ -536,7 +575,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="18" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" bodystart="19" bodyend="75"/>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" line="35" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Entity/GameObject.h" bodystart="36" bodyend="92"/>
     <listofallmembers>
       <member refid="classfrost_1_1_e_c_s_1_1_tree_1a06a7965afc419f69a05f27036e66778d" prot="public" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>AddChild</name></member>
       <member refid="classfrost_1_1_e_c_s_1_1_game_object_1aacd32740cad705264179d84079c93d50" prot="public" virt="non-virtual"><scope>frost::ECS::GameObject</scope><name>AddComponent</name></member>

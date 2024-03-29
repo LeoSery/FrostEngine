@@ -1,5 +1,11 @@
 #pragma once
 
+/*!
+* \file GameObject.h
+* 
+* \brief Header file for the GameObject class.
+*/
+
 #include "ECS/Component/Components/Transform.h"
 #include "ECS/System/Tree.h"
 #include "Core/Export.h"
@@ -10,11 +16,22 @@
 #include <unordered_set>
 #include <string>
 
+/*!
+* \namespace frost::ECS
+*
+* \brief The namespace for FrostEngine's Entity Component System.
+*/
 namespace frost::ECS
 {
 	class IComponent;
 	struct CollisionData;
 
+	/*!
+	* \class GameObject
+	* 
+	* \brief The 'GameObject' class is the basic class for any object present
+	* in the scenes that constitute a game.
+	*/
 	class FROST_ENGINE_API GameObject : public Tree<GameObject>
 	{
 	protected:

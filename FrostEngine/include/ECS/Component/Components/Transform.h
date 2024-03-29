@@ -1,14 +1,41 @@
 #pragma once
 
+/*!
+* \file Transform.h
+* 
+* \brief Header file for the Transform class.
+*/
+
 #include "ECS/Component/IComponent.h"
 #include "glm/vec2.hpp"
 
+/*!
+* \namespace frost::ECS
+*
+* \brief The namespace for FrostEngine's Entity Component System.
+*/
 namespace frost::ECS
 {
 	class GameObject;
 
+	/*!
+	* \class Transform
+	* 
+	* \brief The 'Transform' component is mandatory for every GameObject
+	* in the scene, and defines the position, rotation and scale of the GameObject.
+	* 
+	* \details The 'Transform' is a component that is added by default when a GameObject
+	* or any class inheriting it is created, and cannot be removed. It defines the
+	* position, rotation and scale of the object to which it is attached.
+	* It also has methods for translating, rotating or scaling the parent GameObject.
+	*/
 	class FROST_ENGINE_API Transform : public IComponent
 	{
+		/*
+		* \brief The RTTI definition for the Transform class.
+		*
+		* \def FROST_DEFINE_RTTI(Transform) This macro defines the RTTI for the Transform class.
+		*/
 		FROST_DEFINE_RTTI(Transform)
 
 	public:

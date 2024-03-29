@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" line="18" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" bodystart="18" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" line="36" column="6" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structfrost_1_1_e_c_s_1_1_collision_data_1a7ea72d967a23a4849bf10128ea927396" prot="public" static="no" mutable="no">
         <type><ref refid="classfrost_1_1_e_c_s_1_1_box_collider" kindref="compound">BoxCollider</ref> *</type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" line="19" column="13" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" bodystart="19" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" line="37" column="13" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" bodystart="37" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structfrost_1_1_e_c_s_1_1_collision_data_1a557fc938d26fbfad98c5132fde9c33ea" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -47,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" line="20" column="7" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" bodystart="20" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" line="38" column="7" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structfrost_1_1_e_c_s_1_1_collision_data_1aa024811b77025eb1a23581c12c5ef060" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" line="21" column="7" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" bodystart="21" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" line="39" column="7" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" bodystart="39" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structfrost_1_1_e_c_s_1_1_collision_data_1abd0b8d9ee14795e566ff565bce43db02" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -77,7 +77,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" line="22" column="7" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" bodystart="22" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" line="40" column="7" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" bodystart="40" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structfrost_1_1_e_c_s_1_1_collision_data_1a6afc67995eeb24d4a3a73923911f8657" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -92,12 +92,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" line="23" column="7" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" bodystart="23" bodyend="-1"/>
+        <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" line="41" column="7" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" bodystart="41" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>A struct that holds data about a collision. </para>
     </briefdescription>
     <detaileddescription>
+<para>This structure contains collision data generated when a &apos;Hit&apos; is created as a result of a collision between two GameObjects. </para>
     </detaileddescription>
     <collaborationgraph>
       <node id="6">
@@ -159,7 +161,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" line="16" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" bodystart="17" bodyend="24"/>
+    <location file="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" line="34" column="1" bodyfile="C:/Users/seryl/Desktop/Fichiers/Ynov/cours/M1/EngineCPP/FrostEngine/FrostEngine/include/ECS/Component/Components/BoxCollider.h" bodystart="35" bodyend="42"/>
     <listofallmembers>
       <member refid="structfrost_1_1_e_c_s_1_1_collision_data_1aa024811b77025eb1a23581c12c5ef060" prot="public" virt="non-virtual"><scope>frost::ECS::CollisionData</scope><name>bottom</name></member>
       <member refid="structfrost_1_1_e_c_s_1_1_collision_data_1a8b6dd02c3619a57f734e40eda5ba2b9b" prot="public" virt="non-virtual"><scope>frost::ECS::CollisionData</scope><name>isColliding</name></member>
