@@ -1,12 +1,3 @@
-/*!
-* \file FrostEngine.cpp
-* 
-* \brief Main file for the FrostEngine.
-* 
-* \details This file contains the main methods for the FrostEngine, such as the engine's initialization, main loop and shutdown.
-* It also contains the methods for updating GameObjects, physics and rendering.
-*/
-
 #include "FrostEngine.h"
 
 #include <Core/Input/Input.h>
@@ -14,13 +5,6 @@
 
 namespace frost
 {
-	/*!
-	 * \brief Method for initializing the engine and its different modules.
-	 * 
-	 * \fn void Application::Init(const InitData& _data)
-	 * 
-	 * \param _data Initialization data containing window title and size.
-	 */
 	void Application::Init(const S_InitData& _data)
 	{
 		m_Window = new frost::core::Window({ _data.title.c_str(), _data.size });
@@ -36,32 +20,23 @@ namespace frost
 #endif	
 	}
 
-	/*!
-	* \brief Engine main loop method.
-	* 
-	* \fn void Application::Run()
-	* 
-	 * \details Infinite engine loop that runs as long as the engine is open,
-	 * updating the engine state at each frame. It renders in the following order:
-	 * Update user > Update GameObjects > Update Components > Update physics > Update inputs > Update render > Update logger.
-	 */
 	void Application::Run()
 	{
 		std::chrono::steady_clock::time_point lastUpdateTime = std::chrono::steady_clock::now();
 
 		do
 		{
-			// Calculate delta time
+			/*Calculate delta time*/
 			auto  now = std::chrono::steady_clock::now();
 			float deltaTime = std::chrono::duration<float, std::chrono::seconds::period>(now - lastUpdateTime).count();
 			lastUpdateTime = now;
 
 			ObjectsToUpdate.clear();
 
-			// User Update()
+			/*User Update()*/
 			Update(deltaTime);
 
-			// GameObjects Update()
+			/*GameObjects Update()*/
 			if (m_CurrentScene != nullptr)
 			{
 				for (auto* child : m_CurrentScene->GetRoot()->GetChildren())
@@ -70,33 +45,25 @@ namespace frost
 				}
 			}
 
-			//Physics Update()
+			/*Physics Update()*/
 			PhysUpdate();
 
+			/*Input Update()*/
 			frost::core::Input::GetInstance()->Update();
-			// Render Update()
+
+			/*Render Update()*/
 			m_RenderDevice->Update();
 
 #ifdef _DEBUG
-			// Editor Update()
+			/*Editor Update()*/
 			m_Editor->DrawEditor();
 			 
-			// Logger Update()
+			/*Logger Update()*/
 			frost::utils::Logger::GetInstance()->Show();
 #endif 
-
-
-
 		} while (m_Window->PollEvents());
 	}
 
-	/*!
-	* \brief Engine shutdown method.
-	* 
-	* \fn void Application::Shutdown()
-	* 
-	* \details Shutdown is called when the engine is closed, deletes all processes opened by the engine.
-	*/
 	void Application::Shutdown()
 	{
 #ifdef _DEBUG	
@@ -107,18 +74,6 @@ namespace frost
 		delete m_Window;
 	}
 
-	/*!
-	* \brief Browse all GameObjects in the current scene.
-	* 
-	* \fn void Application::BrowseAllGameObjects(frost::ECS::GameObject* _GameObject, float _DeltaTime)
-	* 
-	* \details Go through the Tree of GameObjects of the currently active scene,
-	* add each object to the rendering queue, call its 'Update()' method and recursively
-	* do the same with each of its children.
-	* 
-	* \param _GameObject The game object to update.
-	* \param _DeltaTime The time between the last frame and the current frame.
-	*/
 	void Application::BrowseAllGameObjects(frost::ECS::GameObject* _GameObject, float _DeltaTime)
 	{
 		if (!_GameObject)
@@ -136,23 +91,16 @@ namespace frost
 		}
 	}
 
-	/*!
-	* \brief Computes and applies collisions for each GameObject in the rendering list.
-	* 
-	* \fn void Application::PhysUpdate()
-	* 
-	* \details Performs the physical rendering of the engine. For each GameObject in the renderer,
-	* retrieves its BoxCollider component, and checks whether it collides with all other objects in the scene.
-	* 
-	* If it does, this object is added to the 'Hits' map, with a 'CollisionData' vector for each object with which it collides.
-	* Then, for each Hit of each GameObject, we call its 'OnCollisionEnter()' method, passing it 'CollisionData' as a parameter.
-	* 
-	* Finally, we move the object with the corresponding collision data.
-	*/
 	void Application::PhysUpdate()
 	{
 		std::map < frost::ECS::BoxCollider*, std::vector < frost::ECS::S_CollisionData >> Hits;
 
+		/*
+		* For each object in the scene, check if it has a BoxCollider component.
+		* If it does, check if it collides with all other objects in the scene.
+		* If it does, add it to the 'Hits' map, with a 'CollisionData' vector
+		* for each object with which it collides.
+		*/
 		for (auto* object : ObjectsToUpdate)
 		{
 			auto* boxCollider = object->GetComponent<frost::ECS::BoxCollider>();
@@ -175,7 +123,10 @@ namespace frost
 			}
 		}
 
-		// foreach element on Hits map, iterate on the vector find the largets value on each field of CollisionData
+		/*
+		Foreach element on Hits map, iterate on the vector
+		find the largets value on each field of CollisionData
+		*/
 		for (auto& [boxCollider, collisions] : Hits)
 		{
 			auto* transform = boxCollider->GetParentObject().GetComponent<frost::ECS::Transform>();
@@ -210,7 +161,10 @@ namespace frost
 				float absLeft = abs(largestCollision.left);
 				float absRight = abs(largestCollision.right);
 
-				// find the smallest offset
+				/*
+				Find the smallest overlap with the other object and move the target object
+				by this offset so that it no longer collides.
+				*/
 				if (absTop < absBottom && absTop < absLeft && absTop < absRight && absTop != 0)
 					transform->position.y -= abs(largestCollision.top);
 				else if (absBottom < absTop && absBottom < absLeft && absBottom < absRight && absBottom != 0)
