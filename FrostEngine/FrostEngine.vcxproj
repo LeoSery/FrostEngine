@@ -46,6 +46,7 @@
     <ClInclude Include="include\Utils\stb_image.h" />
     <ClInclude Include="include\Render\Texture.h" />
     <ClInclude Include="include\Core\Input\Input.h" />
+    <ClInclude Include="include\Utils\TextEditor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Utils\Explorer.cpp" />
@@ -69,6 +70,7 @@
     <ClCompile Include="src\Render\VertexArrayObject.cpp" />
     <ClCompile Include="src\Render\Texture.cpp" />
     <ClCompile Include="src\Utils\Logger.cpp" />
+    <ClCompile Include="src\Utils\TextEditor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="src\Render\Shaders\DefaultVertexShader.glsl" />
