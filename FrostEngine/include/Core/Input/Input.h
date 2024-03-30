@@ -43,6 +43,8 @@ namespace frost::core
 	*/
 	class FROST_ENGINE_API Input
 	{
+		friend class Application;
+
 	public:
 
 		// Constructor and Destructors
@@ -54,6 +56,13 @@ namespace frost::core
 		// Instance
 		static Input* GetInstance();
 
+		/*!
+		* \enum E_Key
+		* 
+		* \brief Enum for the key codes.
+		* 
+		* \details This enum contains all the key codes that can be used to bind an action to a key.
+		*/
 		enum E_Key
 		{
 			SPACE = 32,
@@ -177,8 +186,14 @@ namespace frost::core
 			RIGHT_SUPER = 347
 		};
 
-		/*
+		/*!
+		* \enum E_ActionType
 		* 
+		* \brief Enum for the action types.
+		* 
+		* \details This enum contains all the action types that can be used to bind a function to an action.
+		* 
+		* \note Release = 0, Press = 1, OnGoing = 2
 		*/
 		enum E_ActionType
 		{
@@ -187,12 +202,26 @@ namespace frost::core
 			OnGoing = 2
 		};
 
+		/*!
+		* \struct S_ObjectFunction
+		* 
+		* \brief Structure for the binding of a function to an object.
+		* 
+		* \details This structure contains the object and the function to call when the action is triggered.
+		*/
 		struct S_ObjectFunction
 		{
 			frost::ECS::GameObject* Object;
 			std::function<void()> Function;
 		};
 
+		/*!
+		* \struct S_Functions
+		* 
+		* \brief Structure for the binding of functions to an action.
+		* 
+		* \details This structure contains the functions to call when the action is triggered.
+		*/
 		struct S_Functions
 		{
 			std::vector<S_ObjectFunction> FunctionPressed;
@@ -200,31 +229,98 @@ namespace frost::core
 			std::vector<S_ObjectFunction> FunctionOnGoing;
 		};
 
+		//
 		// Methods
+		//
+
+		/*
+		* \brief Initialize the Input class.
+		* 
+		* \details Define the window to initialize the input class. 
+		* bind the key_callback function to the window.
+		* 
+		* \fn Input* Input::init(Window* _window)
+		* 
+		* \param _window The window to initialize the input class.
+		* 
+		* \return The initialized input class.
+		*/
 		Input* init(Window* _window);
+
+		/*
+		* \brief Creates an action in the game.
+		* 
+		* \details This function creates an action in the game that can be binded to a keys.
+		* 
+		* \fn void Input::AddAction(std::string _actionName)
+		*/
 		void AddAction(std::string _actionName);
-		bool AddActionToKey(E_Key _key, std::string _actionName);//return true if succesfully added
+
+		/*
+		* \brief Binds an action to a key.
+		* 
+		* \details This function binds an action to a key.
+		* 
+		* \fn bool Input::AddActionToKey(E_Key _key, std::string _actionName)
+		* 
+		* \param _key The key to bind the action to.
+		* \param _actionName The action to bind to the key.
+		* 
+		* \return True if the action was successfully binded to the key, false otherwise.
+		*/
+		bool AddActionToKey(E_Key _key, std::string _actionName);
+
+		/*!
+		* \brief Binds a function to an action.
+		* 
+		* \details This function binds a function to an action.
+		* 
+		* \fn void Input::BindFunctionToAction(std::string _actionName, frost::ECS::GameObject* Object, std::function<void()> _functionToCall, E_ActionType _onWhat)
+		* 
+		* \param _actionName The action to bind the function to.
+		* \param Object The object to bind the function to.
+		* \param _functionToCall The function to call when the action is triggered.
+		* \param _onWhat The type of action to bind the function to.
+		*/
 		void BindFunctionToAction(std::string _actionName, frost::ECS::GameObject* Object, std::function<void()> _functionToCall, E_ActionType _onWhat);
+
+		/*!
+		* \brief Calls the action.
+		* 
+		* \details call a specific action, an trigger the function binded to it.
+		* 
+		* \fn void Input::CallAction(std::string _actionToCall, int _action)
+		* 
+		* \param _actionToCall The action to call.
+		* \param _action The action type.
+		*/
 		void CallAction(std::string _actionToCall, int _action);
+
+		/*!
+		* \brief Removes an action.
+		* 
+		* \details This function removes an action from the game.
+		* 
+		* \fn void Input::RemoveAction(std::string _actionName).
+		* 
+		* \param _actionName The action to remove.
+		*/
 		void RemoveAction(std::string _actionName);
 
 	protected:
 
 		static Input* m_instance;
+		void Update();
 
 	private:
 
 		struct Internal;
 		std::unique_ptr<Internal> m_internal;
 
-		std::map<int, std::string> KeyBind; //key = Action
-		std::map<std::string, S_Functions> ActionBind; //Action = Function to callcall
+		std::map<int, std::string> KeyBind;
+		std::map<std::string, S_Functions> ActionBind;
 		std::map<int, bool> KeyPressed;
 
 		static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
-
-	public:
-
-		void Update();
 	};
 }
