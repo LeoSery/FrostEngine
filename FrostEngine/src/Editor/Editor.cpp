@@ -11,6 +11,7 @@
 #include "ECS/Component/Components/Transform.h"
 #include "ECS/Component/Components/SpriteRenderer.h"
 #include "ECS/Component/Components/BoxCollider.h"
+#include "ECS/Entity/GameObject.h"
 #include "Render/RenderDevice.h"
 #include "GLFW/glfw3.h"
 
@@ -107,10 +108,13 @@ namespace frost::editor
     {
         for(auto* child : m_CurrentScene->GetRoot()->GetChildren())
         {
+            ImGui::PushStyleColor(ImGuiCol_Button, IM_COL32(35, 68, 108, 1));
             if (ImGui::Button(child->GetName().c_str()))
             {
                 SelectEntity = child;
-            }        
+            }  
+            ImGui::PopStyleColor();
+
         }
     }
 
@@ -132,23 +136,40 @@ namespace frost::editor
                 frost::ECS::SpriteRenderer* sr = SelectEntity->GetComponent<frost::ECS::SpriteRenderer>();              
                 frost::ECS::BoxCollider* bc = SelectEntity->GetComponent<frost::ECS::BoxCollider>();
 
+
+
+                // Get Name //
+                ImGui::Text("Name : %s", SelectEntity->GetName().c_str());
+
+                // Get Parent Name // 
+                ImGui::Text("Parent Object : %s", SelectEntity->GetParent()->GetName().c_str());
+
                 // Get Transform //
-                ImGui::Text("Transform :");
+                //ImGui::Text("Transform X/Y :");
+                //ImGui::SameLine();
                 if (ImGui::InputFloat2("Transform[X/Y]", &tr->position.x))
                 {
                     
                 }
                 
                 // Get Rotation //
-                if (ImGui::InputFloat2("Rotation", &tr->rotation))
+                //ImGui::Text("Rotation :");
+                //ImGui::SameLine();
+                if (ImGui::InputFloat("Rotation", &tr->rotation))
                 {
 
                 }
                 // Get Scale //
+                // 
+                //ImGui::Text("Scale X/Y :");
+                //ImGui::SameLine();
                 if (ImGui::InputFloat2("Scale[X / Y]", &tr->scale.x))
                 {
 
                 }
+
+                // Get ImagePath //
+                ImGui::Text("Path Image : %sr", sr->GetTexture().c_str());
 
                 // Get Collider //
                 if (ImGui::Checkbox("IsMovingEntity", &tr->isMovingEntity))
@@ -161,7 +182,6 @@ namespace frost::editor
                 }
 
                 // Get Static //
-                ImGui::Text("Path Image : %sr" , sr->GetTexture().c_str());
                 bool a = bc->GetIsStatic();
                 if (ImGui::Checkbox("IsStatic", &a))
                 {
@@ -171,7 +191,12 @@ namespace frost::editor
                         a = true;
                     }
                 }
+
+
+
                 ImGui::End();
+
+
             }
         }
 
