@@ -13,7 +13,7 @@ using Transform = frost::ECS::Transform;
 using Logger = frost::utils::Logger;
 #pragma endregion
 
-class MyGameApp : public FrostEngine::Application
+class MyGameApp : public frost::Application
 {
 public:
 	GameObject* PlayerEntity = nullptr;

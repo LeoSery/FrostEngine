@@ -12,7 +12,7 @@
 #include <Core/Input/Input.h>
 #include <functional>
 
-namespace FrostEngine
+namespace frost
 {
 	/*!
 	 * \brief Method for initializing the engine and its different modules.

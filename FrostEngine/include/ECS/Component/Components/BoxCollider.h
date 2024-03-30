@@ -24,7 +24,7 @@ namespace frost::ECS
 	class BoxCollider;
 
 	/*!
-	* \struct CollisionData
+	* \struct S_CollisionData
 	* 
 	* \brief A struct that holds data about a collision.
 	* 
@@ -55,7 +55,7 @@ namespace frost::ECS
 	*/
 	class FROST_ENGINE_API BoxCollider : public IComponent
 	{
-		/*
+		/*!
 		* \brief The RTTI definition for the BoxCollider class.
 		*
 		* \def FROST_DEFINE_RTTI(BoxCollider) This macro defines the RTTI for the BoxCollider class.

@@ -50,7 +50,7 @@ namespace frost::ECS
 	*/
 	class FROST_ENGINE_API SpriteRenderer : public IComponent
 	{
-		/*
+		/*!
 		* \brief The RTTI definition for the SpriteRenderer class.
 		*
 		* \def FROST_DEFINE_RTTI(SpriteRenderer) This macro defines the RTTI for the SpriteRenderer class.

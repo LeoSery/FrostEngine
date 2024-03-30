@@ -14,7 +14,7 @@
 /*!
 * \namespace frost::utils
 *
-* The namespace for FrostEngine's utils.
+* \brief The namespace for FrostEngine's utils.
 */
 namespace frost::utils
 {
