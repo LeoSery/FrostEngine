@@ -58,10 +58,14 @@ namespace frost::ECS
 
 	void GameObject::Destroy()
 	{
-		for (IComponent* component : m_components)
+		std::vector<IComponent*> components = m_components;
+		m_components.clear();
+		for (IComponent* component : components)
 		{
-			component->Destroy();
+			delete component;
 		}
+		delete this;
+		
 	}
 
 	const std::string& GameObject::GetName() const

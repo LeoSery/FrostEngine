@@ -28,10 +28,12 @@ namespace frost::ECS
 
         for (auto& component : m_components)
         {
+
             if (component->GetTypeName() == Component::GetStaticTypeName())
             {
                 return dynamic_cast<Component*>(component);
             }
+                   
         }
 
         return nullptr;

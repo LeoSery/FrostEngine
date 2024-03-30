@@ -11,7 +11,7 @@ MovementScript::MovementScript(frost::ECS::GameObject& _GameObject) : frost::ECS
 
 MovementScript::~MovementScript()
 {
-	Destroy();
+	
 }
 
 void MovementScript::Start()
@@ -45,11 +45,6 @@ void MovementScript::Update(float _DeltaTime)
 	}
 
 	m_OwningObject->GetTransform().position += m_CurrentVelocity * _DeltaTime;
-}
-
-void MovementScript::Destroy()
-{
-
 }
 
 void MovementScript::AddAcceleration(glm::vec2 _Acceleration)

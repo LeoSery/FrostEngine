@@ -137,6 +137,8 @@
     <None Include="ressources\Shaders\default.vert" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Spawner.cpp" />
+    <ClCompile Include="src\Ennemi.cpp" />
     <ClCompile Include="src\Projectile.cpp" />
     <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\MovementScript.cpp" />
@@ -149,9 +151,11 @@
     <Image Include="ressources\Textures\T_PlaceHolder.png" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\Ennemi.h" />
     <ClInclude Include="include\MovementScript.h" />
     <ClInclude Include="include\Projectile.h" />
-    <ClInclude Include="src\Player.h" />
+    <ClInclude Include="include\Player.h" />
+    <ClInclude Include="include\Spawner.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

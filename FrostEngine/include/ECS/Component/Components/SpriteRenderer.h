@@ -66,7 +66,6 @@ namespace frost::ECS
 		// Frost engine life cycle methods
 		virtual void Start() override;
 		virtual void Update(float _DeltaTime) override;
-		virtual void Destroy() override;
 
 		// Getters and Setters
 		[[nodiscard]] virtual void GetData(bool _ForceLoggerDraw) const;

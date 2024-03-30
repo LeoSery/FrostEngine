@@ -11,11 +11,14 @@ namespace frost::ECS
 	BoxCollider::BoxCollider(GameObject& _GameObject) : IComponent(_GameObject)
 	{
 		Start();
+		m_collisionChannel = Default;
+		
 	}
 
 	BoxCollider::~BoxCollider()
 	{
 		delete m_vertices;
+		frost::utils::Logger::GetInstance()->LogInfo("BoxCollision destroyed.");
 	}
 
 	void BoxCollider::Start()
@@ -44,10 +47,6 @@ namespace frost::ECS
 		}
 	}
 
-	void BoxCollider::Destroy()
-	{
-
-	}
 
 	S_CollisionData BoxCollider::IsColliding(BoxCollider& _Other)
 	{
@@ -55,8 +54,15 @@ namespace frost::ECS
 
 		if (_Other.GetIsStatic() || !_Other.IsActive())
 			return Data;
-
-		return AABB(_Other);
+		if (m_collisionSettings.contains(_Other.m_collisionChannel) && m_collisionSettings.at(_Other.m_collisionChannel) != CollisionResponse::Ignore)
+		{
+			return AABB(_Other);
+		}
+		else
+		{
+			return Data;
+		}
+		
 	}
 
 	S_CollisionData BoxCollider::AABB(BoxCollider& _Other) const
