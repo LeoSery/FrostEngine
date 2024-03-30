@@ -10,19 +10,27 @@
 #include "Ennemi.h"
 #include "Projectile.h"
 #include "MovementScript.h"
+
 #include <iostream>
 
-
-Player::Player(std::string _name, GameObject* _Parent) : GameObject(_name, _Parent)
-{
-
-}
+Player::Player(std::string _name, GameObject* _Parent) : GameObject(_name, _Parent) {}
 
 Player* Player::New(std::string _name, GameObject* _parent)
 {
 	Player* result = new Player(_name, _parent);
 	result->Init();
 	result->GetTransform().isMovingEntity = true;
+
+	result->m_MovementScript = result->AddComponent<MovementScript>();
+	
+	result->m_SpriteRenderer = result->AddComponent<frost::ECS::SpriteRenderer>();
+	result->m_SpriteRenderer->SetTexture("PlayerShip/PlayerShip_FullHealh.png");
+	
+	result->m_BoxCollider = result->AddComponent<frost::ECS::BoxCollider>();
+	result->m_BoxCollider->m_collisionChannel = frost::ECS::E_CollisionChannel::Player;
+	result->m_BoxCollider->m_collisionSettings.emplace(std::pair<frost::ECS::E_CollisionChannel, frost::ECS::E_CollisionResponse>(frost::ECS::Projectile, frost::ECS::Ignore));
+	result->m_BoxCollider->m_collisionSettings.emplace(std::pair<frost::ECS::E_CollisionChannel, frost::ECS::E_CollisionResponse>(frost::ECS::Ennemy, frost::ECS::Block));
+	
 	return result;
 }
 
@@ -31,14 +39,7 @@ void Player::Start()
 	// Start the GameObject
 	GameObject::Start();
 
-	m_MovementScript = AddComponent<MovementScript>();
-	m_SpriteRenderer = this->AddComponent<frost::ECS::SpriteRenderer>();
-	m_SpriteRenderer->SetTexture("PlayerShip/PlayerShip_FullHealh.png");
-
-	m_BoxCollider = this->AddComponent<frost::ECS::BoxCollider>();
-	m_BoxCollider->m_collisionChannel = frost::ECS::E_CollisionChannel::Player;
-	m_BoxCollider->m_collisionSettings.emplace(std::pair<frost::ECS::E_CollisionChannel, frost::ECS::E_CollisionResponse>(frost::ECS::Projectile ,frost::ECS::Ignore));
-	m_BoxCollider->m_collisionSettings.emplace(std::pair<frost::ECS::E_CollisionChannel, frost::ECS::E_CollisionResponse>(frost::ECS::Ennemy ,frost::ECS::Block));
+	
 
 #pragma region "Input"
 	// Forward

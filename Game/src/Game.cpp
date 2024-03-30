@@ -4,6 +4,7 @@
 // Game includes
 #include "Player.h"
 #include "Ennemi.h"
+#include <Spawner.h>
 
 #pragma region "Alias"
 using SceneManager = frost::core::SceneManager;
@@ -18,6 +19,7 @@ public:
 	GameObject* PlayerEntity = nullptr;
 	GameObject* Enemy = nullptr;
 	GameObject* Enemy2 = nullptr;
+	Spawner* Spawner = nullptr;
 
 	void Init() override
 	{
@@ -35,6 +37,9 @@ public:
 
 		// Enemy
 		Enemy = Ennemi::New("Enemy", m_CurrentScene->GetRoot());
+
+		// Spawner
+		Spawner = Spawner::New("Spawner", m_CurrentScene->GetRoot());
 
 	}
 
