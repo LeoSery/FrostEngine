@@ -21,11 +21,11 @@ namespace FrostEngine
 	 * 
 	 * \param _data Initialization data containing window title and size.
 	 */
-	void Application::Init(const InitData& _data)
+	void Application::Init(const S_InitData& _data)
 	{
 		m_Window = new frost::core::Window({ _data.title.c_str(), _data.size });
 		frost::core::Input::GetInstance()->init(m_Window);
-		m_RenderDevice = frost::core::RenderDevice::GetInstance();
+		m_RenderDevice = frost::render::RenderDevice::GetInstance();
 		m_RenderDevice->Init(m_Window);
 		m_SceneManager = &frost::core::SceneManager::GetInstance();
 		m_CurrentScene = &m_SceneManager->GetActiveScene();
@@ -148,7 +148,7 @@ namespace FrostEngine
 	*/
 	void Application::PhysUpdate()
 	{
-		std::map < frost::ECS::BoxCollider*, std::vector < frost::ECS::CollisionData >> Hits;
+		std::map < frost::ECS::BoxCollider*, std::vector < frost::ECS::S_CollisionData >> Hits;
 
 		for (auto* object : ObjectsToUpdate)
 		{
@@ -180,7 +180,7 @@ namespace FrostEngine
 			if (transform && !transform->isMovingEntity)
 				continue;
 
-			frost::ECS::CollisionData largestCollision = { false, 0, 0, 0, 0 };
+			frost::ECS::S_CollisionData largestCollision = { false, 0, 0, 0, 0 };
 
 			for (auto& collision : collisions)
 			{

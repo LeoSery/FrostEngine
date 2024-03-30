@@ -7,7 +7,7 @@
 */
 
 #include "Core/Internal/RTTI.h"
-#include "Core/export.h"
+#include "Core/Internal/export.h"
 
 #define UUID_SYSTEM_GENERATOR
 #include "stduuid/uuid.h"

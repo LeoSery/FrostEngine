@@ -1,6 +1,7 @@
+#include "Core/Internal/Window.h"
 #include "Core/Input/Input.h"
+
 #include "Utils/Logger.h"
-#include "Core/Window.h"
 
 #include <GLFW/glfw3.h>
 #include <iostream>
@@ -77,7 +78,7 @@ namespace frost::core
 		{
 			if (KeyBind.contains(elem.first) && elem.second)
 			{
-				CallAction(KeyBind.at(elem.first), ActionType::OnGoing);
+				CallAction(KeyBind.at(elem.first), E_ActionType::OnGoing);
 			}
 		}
 	}
@@ -86,14 +87,14 @@ namespace frost::core
 	{
 		if (!m_instance->ActionBind.contains(_actionName))
 		{
-			std::pair<std::string, std::vector<ObjectFunction>> toadd(_actionName, std::vector<ObjectFunction>());
+			std::pair<std::string, std::vector<S_ObjectFunction>> toadd(_actionName, std::vector<S_ObjectFunction>());
 			m_instance->ActionBind.insert(toadd);
 		}
 		else
 			frost::utils::Logger::LogWarning("Can't add " + _actionName + " already exists");
 	}
 
-	bool Input::AddActionToKey(Key _key, std::string _actionName)
+	bool Input::AddActionToKey(E_Key _key, std::string _actionName)
 	{
 		if (m_instance->ActionBind.contains(_actionName))
 		{
@@ -114,7 +115,7 @@ namespace frost::core
 		return false;
 	}
 
-	void Input::BindFunctionToAction(std::string _actionName, frost::ECS::GameObject* _object, std::function<void()> _functionToCall, ActionType _onWhat)
+	void Input::BindFunctionToAction(std::string _actionName, frost::ECS::GameObject* _object, std::function<void()> _functionToCall, E_ActionType _onWhat)
 	{
 		if (m_instance->ActionBind.contains(_actionName))
 		{
@@ -140,7 +141,7 @@ namespace frost::core
 
 	void Input::CallAction(std::string _actionToCall, int _action)
 	{
-		std::vector<ObjectFunction>* ObjectsFunc;
+		std::vector<S_ObjectFunction>* ObjectsFunc;
 		switch (_action)
 		{
 		case 0:

@@ -12,7 +12,7 @@
 /*!
 * \namespace frost::core
 *
-* \brief The namespace for the FrostEngine core functionalities.
+* \brief The namespace for FrostEngine's core functionalities.
 */
 namespace frost::core
 {	

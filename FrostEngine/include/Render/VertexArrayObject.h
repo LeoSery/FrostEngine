@@ -1,17 +1,40 @@
 #pragma once
 
-#include "Core/Export.h"
+/*!
+* \file VertexArrayObject.h
+* 
+* \brief Header file for the VertexArrayObject class.
+*/
+
+#include "Core/Internal/Export.h"
 #include <glm/vec2.hpp>
 
-namespace frost::core
+/*!
+* \namespace frost::render
+*
+* The namespace for FrostEngine's rendering functionalities.
+*/
+namespace frost::render
 {
 	class Buffer;
 	class Texture;
 
+	/*!
+	* \class VertexArrayObject
+	* 
+	* \brief The class that manages the VertexArrayObject of the FrostEngine.
+	* 
+	* details create, bind, unbind and set texture in a VertexArrayObject for the RenderDevice.
+	*/
 	class FROST_ENGINE_API VertexArrayObject
 	{
 	public:
 
+		/*!
+		* \enum E_TypeBuffer
+		* 
+		* \brief The enum that manages the type of buffer in the VertexArrayObject.
+		*/
 		enum E_TypeBuffer
 		{
 			VBO,

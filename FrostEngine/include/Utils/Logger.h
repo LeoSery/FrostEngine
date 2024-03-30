@@ -1,12 +1,30 @@
 #pragma once
 
-#include "Core/Export.h"
+/*
+* \file Logger.h
+* 
+* \brief Header file for the Logger class.
+*/
+
+#include "Core/Internal/Export.h"
 
 #include <vector>
 #include <string>
 
+/*!
+* \namespace frost::utils
+*
+* The namespace for FrostEngine's utils.
+*/
 namespace frost::utils
 {
+	/*!
+	* \enum E_LogType
+	* 
+	* \brief The enum that manages the type of log.
+	* 
+	* \details types: Info, Warning, Error.
+	*/
 	enum class E_LogType
 	{
 		Info,
@@ -14,6 +32,13 @@ namespace frost::utils
 		Error
 	};
 
+	/*!
+	* \class Logger
+	* 
+	* \brief The class that manages the Logger of the FrostEngine.
+	* 
+	* \details Log the Info, Warning and Error of the FrostEngine.
+	*/
 	class FROST_ENGINE_API Logger
 	{
 	public:
@@ -40,6 +65,14 @@ namespace frost::utils
 		static void DeleteInstance();
 
 	private:
+
+		/*
+		* \struct S_LogData
+		* 
+		* \brief The struct that manages the log data.
+		* 
+		* \details S_LogData contains the log type and the log content.
+		*/
 		struct S_LogData
 		{
 			E_LogType logType;

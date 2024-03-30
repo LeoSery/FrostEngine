@@ -11,7 +11,7 @@
 #include "Render/VertexArrayObject.h"
 #include "Render/Buffer.h"
 
-#include "Core/Export.h"
+#include "Core/Internal/Export.h"
 
 #include "glm/vec4.hpp"
 
@@ -81,7 +81,7 @@ namespace frost::ECS
 
 		std::string m_spriteTexturePath = "";
 		glm::vec4 m_color = { 1, 1, 1, 1 };
-		frost::core::Texture* m_spriteTexture;
+		frost::render::Texture* m_spriteTexture;
 
 		float* vertices;
 		unsigned int* indices;
@@ -89,8 +89,8 @@ namespace frost::ECS
 	public:
 
 		// Render data
-		frost::core::Buffer VBO;
-		frost::core::Buffer IBO;
-		frost::core::VertexArrayObject VAO;
+		frost::render::Buffer VBO;
+		frost::render::Buffer IBO;
+		frost::render::VertexArrayObject VAO;
 	};
 }

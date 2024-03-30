@@ -3,7 +3,12 @@
 
 #include <filesystem>
 
-namespace frost::core
+/*!
+* \namespace frost::render
+*
+* \brief The namespace for FrostEngine's rendering functionalities.
+*/
+namespace frost::render
 {
 	Shader::Shader()
 	{

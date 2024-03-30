@@ -6,7 +6,7 @@
 * \brief Header file for the TextureManager class.
 */
 
-#include "Core/Export.h"
+#include "Core/Internal/Export.h"
 
 #include <rapidxml/rapidxml.hpp>
 #include <filesystem>
@@ -16,7 +16,7 @@
 /*!
 * \namespace frost::core
 *
-* \brief The namespace for the FrostEngine core functionalities.
+* \brief The namespace for FrostEngine's core functionalities.
 */
 namespace frost::core
 {

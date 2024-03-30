@@ -6,7 +6,7 @@
 * \brief Header file for the Export class.
 */
 
-#include "Core/Export.h"
+#include "Export.h"
 
 #include <glm/glm.hpp>
 #include <memory>
@@ -14,7 +14,7 @@
 /*!
 * \namespace frost::core
 *
-* \brief The namespace for the FrostEngine core functionalities.
+* \brief The namespace for FrostEngine's core functionalities.
 */
 namespace frost::core
 {

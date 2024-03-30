@@ -1,9 +1,29 @@
 #pragma once
-#include "Core/Export.h"
+
+/*!
+* \file Texture.h
+* 
+* \brief Header file for the Texture class.
+*/
+
+#include "Core/Internal/Export.h"
+
 #include <string>
 
-namespace frost::core
+/*!
+* \namespace frost::render
+*
+* The namespace for FrostEngine's rendering functionalities.
+*/
+namespace frost::render
 {
+	/*!
+	* \class Texture
+	* 
+	* \brief The class that manages the Texture of the FrostEngine.
+	* 
+	* details create, bind, undbing Textres and Images on the GPU.
+	*/
 	class FROST_ENGINE_API Texture
 	{
 	public:
@@ -27,7 +47,7 @@ namespace frost::core
 
 
 	private:
-		void initialize(); //just didn't liked duplicated code
+		void initialize();
 		bool LoadImage(const std::string _name);
 
 		unsigned int ID;

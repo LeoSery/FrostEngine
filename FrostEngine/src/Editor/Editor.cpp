@@ -1,18 +1,20 @@
 #include "Editor/Editor.h"
 
-
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
 #include "imgui.h"
 
-#include "Core/Window.h"
+#include "Core/Internal/Window.h"
+
 #include "Utils/Logger.h"
-#include "ECS/Component/Components/Transform.h"
+
 #include "ECS/Component/Components/SpriteRenderer.h"
 #include "ECS/Component/Components/BoxCollider.h"
-#include "GLFW/glfw3.h"
-#include <iostream>
+#include "ECS/Component/Components/Transform.h"
 
+#include "GLFW/glfw3.h"
+
+#include <iostream>
 
 namespace frost::editor 
 {

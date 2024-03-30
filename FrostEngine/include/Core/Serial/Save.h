@@ -6,14 +6,14 @@
 * \brief Header file for the Save class.
 */
 
-#include "Core/Export.h"
+#include "Core/Internal/Export.h"
 
 #include <string>
 
 /*!
 * \namespace frost::core
 *
-* \brief The namespace for the FrostEngine core functionalities.
+* \brief The namespace for FrostEngine's core functionalities.
 */
 namespace frost::core
 {

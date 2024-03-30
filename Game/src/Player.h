@@ -6,7 +6,7 @@ class MovementScript;
 
 namespace frost::ECS
 {
-	struct CollisionData;
+	struct S_CollisionData;
 }
 
 class Player : public frost::ECS::GameObject
@@ -17,7 +17,7 @@ public:
 	virtual void Start();
 
 	virtual void Tick(float _DeltaTime) override;
-	virtual void OnCollisionEnter(const frost::ECS::CollisionData* _CollisionData) override;
+	virtual void OnCollisionEnter(const frost::ECS::S_CollisionData* _CollisionData) override;
 
 private:
 	void MoveForward();
