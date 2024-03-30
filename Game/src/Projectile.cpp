@@ -24,8 +24,8 @@ void Projectile::Start()
 	this->AddComponent<frost::ECS::SpriteRenderer>()->SetTexture("PlayerShip/PlayerShip_FullHealh.png");
 	m_MovementScript = this->AddComponent<MovementScript>();
 	m_BoxCollider = this->AddComponent<frost::ECS::BoxCollider>();
-	m_BoxCollider->m_collisionChannel = frost::ECS::CollisionChannel::Projectile;
-	m_BoxCollider->m_collisionSettings.emplace(std::pair<frost::ECS::CollisionChannel, frost::ECS::CollisionResponse>(frost::ECS::Ennemy, frost::ECS::Block));
+	m_BoxCollider->m_collisionChannel = frost::ECS::E_CollisionChannel::Projectile;
+	m_BoxCollider->m_collisionSettings.emplace(std::pair<frost::ECS::E_CollisionChannel, frost::ECS::E_CollisionResponse>(frost::ECS::Ennemy, frost::ECS::Block));
 }
 
 void Projectile::Tick(float _DeltaTime)

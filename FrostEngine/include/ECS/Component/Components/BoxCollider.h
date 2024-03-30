@@ -42,13 +42,13 @@ namespace frost::ECS
 		float right = 0.0f;
 	};
 
-	enum CollisionResponse
+	enum E_CollisionResponse
 	{
 		Block,
 		Ignore
 	};
-
-	enum CollisionChannel
+	
+	enum E_CollisionChannel
 	{
 		Default = 0,
 		Player = 1,
@@ -97,8 +97,8 @@ namespace frost::ECS
 		glm::mat2 GetRotationMatrix() const;
 		std::vector<glm::vec2>* GetVertices() const;
 
-		CollisionChannel m_collisionChannel;
-		std::map<CollisionChannel, CollisionResponse> m_collisionSettings;
+		E_CollisionChannel m_collisionChannel;
+		std::map<E_CollisionChannel, E_CollisionResponse> m_collisionSettings;
 		
 		// Fields
 		std::vector<frost::ECS::GameObject*> CollidingObjects;
