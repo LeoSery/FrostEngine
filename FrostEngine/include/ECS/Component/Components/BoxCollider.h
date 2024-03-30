@@ -12,6 +12,7 @@
 #include "ECS/Component/IComponent.h"
 
 #include "glm/mat2x2.hpp"
+#include <map>
 
 /*!
 * \namespace frost::ECS
@@ -39,6 +40,20 @@ namespace frost::ECS
 		float bottom = 0.0f;
 		float left = 0.0f;
 		float right = 0.0f;
+	};
+
+	enum CollisionResponse
+	{
+		Block,
+		Ignore
+	};
+
+	enum CollisionChannel
+	{
+		Default = 0,
+		Player = 1,
+		Ennemy = 2,
+		Projectile = 3,
 	};
 
 	/*!
@@ -71,7 +86,6 @@ namespace frost::ECS
 		// Frost engine life cycle methods
 		virtual void Start() override;
 		virtual void Update(float _DeltaTime) override;
-		virtual void Destroy() override;
 
 		// Methods
 		S_CollisionData IsColliding(BoxCollider& _Other);
@@ -83,8 +97,12 @@ namespace frost::ECS
 		glm::mat2 GetRotationMatrix() const;
 		std::vector<glm::vec2>* GetVertices() const;
 
+		CollisionChannel m_collisionChannel;
+		std::map<CollisionChannel, CollisionResponse> m_collisionSettings;
+		
 		// Fields
 		std::vector<frost::ECS::GameObject*> CollidingObjects;
+
 
 	private:
 		// Methods

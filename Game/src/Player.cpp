@@ -7,6 +7,7 @@
 
 // Game includes
 #include "Player.h"
+#include "Ennemi.h"
 #include "Projectile.h"
 #include "MovementScript.h"
 #include <iostream>
@@ -14,14 +15,14 @@
 
 Player::Player(std::string _name, GameObject* _Parent) : GameObject(_name, _Parent)
 {
-	m_MovementScript = AddComponent<MovementScript>();
-	this->AddComponent<frost::ECS::SpriteRenderer>()->SetTexture("PlayerShip/PlayerShip_FullHealh.png");
+
 }
 
 Player* Player::New(std::string _name, GameObject* _parent)
 {
 	Player* result = new Player(_name, _parent);
 	result->Init();
+	result->GetTransform().isMovingEntity = true;
 	return result;
 }
 
@@ -30,7 +31,14 @@ void Player::Start()
 	// Start the GameObject
 	GameObject::Start();
 
-	GetTransform().isMovingEntity = true;
+	m_MovementScript = AddComponent<MovementScript>();
+	m_SpriteRenderer = this->AddComponent<frost::ECS::SpriteRenderer>();
+	m_SpriteRenderer->SetTexture("PlayerShip/PlayerShip_FullHealh.png");
+
+	m_BoxCollider = this->AddComponent<frost::ECS::BoxCollider>();
+	m_BoxCollider->m_collisionChannel = frost::ECS::CollisionChannel::Player;
+	m_BoxCollider->m_collisionSettings.emplace(std::pair<frost::ECS::CollisionChannel, frost::ECS::CollisionResponse>(frost::ECS::Projectile ,frost::ECS::Ignore));
+	m_BoxCollider->m_collisionSettings.emplace(std::pair<frost::ECS::CollisionChannel, frost::ECS::CollisionResponse>(frost::ECS::Ennemy ,frost::ECS::Block));
 
 #pragma region "Input"
 	// Forward
@@ -105,7 +113,7 @@ void Player::MoveRight()
 void Player::Fire()
 {
 	//frost::utils::Logger::LogInfo("Fire");
-	GameObject* projectile = Projectile::New("Projectile", this);
+	GameObject* projectile = Projectile::New("Projectile", this->GetParent());
 	projectile->GetTransform().position = GetTransform().position;
 	projectile->GetTransform().rotation = GetTransform().rotation;
 }

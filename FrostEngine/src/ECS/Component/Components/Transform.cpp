@@ -31,11 +31,6 @@ namespace frost::ECS
 		}
 	}
 
-	void Transform::Destroy()
-	{
-		
-	}
-
 	void Transform::GetData(bool _ForceLoggerDraw) const
 	{
 		frost::utils::Logger* Logger = frost::utils::Logger::GetInstance();

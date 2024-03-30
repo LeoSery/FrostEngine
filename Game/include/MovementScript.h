@@ -19,7 +19,6 @@ public:
 	// Frost engine life cycle methods
 	void Start() override;
 	void Update(float _DeltaTime) override;
-	void Destroy() override;
 
 	void AddAcceleration(glm::vec2 _Acceleration);
 	void AddRotationAcceleration(float _Acceleration);

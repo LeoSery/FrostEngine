@@ -13,6 +13,7 @@ namespace frost::ECS
 
 	}
 
+
 	bool IComponent::IsActive() const
 	{
 		return m_isActive;

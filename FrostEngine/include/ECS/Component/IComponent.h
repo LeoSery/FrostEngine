@@ -48,7 +48,6 @@ namespace frost::ECS
 		// Frost engine life cycle methods
 		virtual void Start() = 0;
 		virtual void Update(float _DeltaTime) = 0;
-		virtual void Destroy() = 0;
 
 		// Getters and setters
 		[[nodiscard]] bool IsActive() const;

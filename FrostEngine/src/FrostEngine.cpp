@@ -45,7 +45,7 @@ namespace frost
 				}
 			}
 
-			/*Physics Update()*/
+			//Physics Update()
 			PhysUpdate();
 
 			/*Input Update()*/

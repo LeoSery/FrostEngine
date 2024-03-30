@@ -43,6 +43,7 @@ namespace frost::ECS
 		delete[] vertices;
 		delete[] indices;
 		delete m_spriteTexture;
+		frost::utils::Logger::GetInstance()->LogInfo("SpriteRenderer destroyed.");
 	}
 
 	void SpriteRenderer::Start()
@@ -56,11 +57,6 @@ namespace frost::ECS
 		VAO.SetScale({ this->GetParentObject().GetComponent<Transform>()->scale });
 		VAO.SetRotation({ this->GetParentObject().GetComponent<Transform>()->rotation });
 		frost::render::RenderDevice::GetInstance()->AddVAO(VAO);
-	}
-
-	void SpriteRenderer::Destroy()
-	{
-
 	}
 
 	void SpriteRenderer::GetData(bool _ForceLoggerDraw) const
