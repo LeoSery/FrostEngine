@@ -49,9 +49,9 @@ namespace frost::ECS
 
 	}
 
-	CollisionData BoxCollider::IsColliding(BoxCollider& _Other)
+	S_CollisionData BoxCollider::IsColliding(BoxCollider& _Other)
 	{
-		CollisionData Data = CollisionData();
+		S_CollisionData Data = S_CollisionData();
 
 		if (_Other.GetIsStatic() || !_Other.IsActive())
 			return Data;
@@ -59,10 +59,10 @@ namespace frost::ECS
 		return AABB(_Other);
 	}
 
-	CollisionData BoxCollider::AABB(BoxCollider& _Other) const
+	S_CollisionData BoxCollider::AABB(BoxCollider& _Other) const
 	{
 		std::vector<glm::vec2>* otherVertices = _Other.GetVertices();
-		CollisionData Data = CollisionData();
+		S_CollisionData Data = S_CollisionData();
 
 		float MinX = m_vertices->at(0).x;
 		float MaxX = m_vertices->at(2).x;

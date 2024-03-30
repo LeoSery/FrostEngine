@@ -1,5 +1,11 @@
 #pragma once
 
+/*!
+* \file Shader.h
+* 
+* \brief Header file for the Shader class.
+*/
+
 #include "GL/glew.h"
 #include "GLFW/glfw3.h"
 
@@ -9,8 +15,20 @@
 #include <cerrno>
 #include <string>
 
-namespace frost::core
+/*!
+* \namespace frost::render
+*
+* The namespace for FrostEngine's rendering functionalities.
+*/
+namespace frost::render
 {
+	/*!
+	* \class Shader
+	* 
+	* \brief The class that manages the Shader of the FrostEngine.
+	* 
+	* \details read, create and manage the Shader of the FrostEngine.
+	*/
 	class Shader
 	{
 	public:

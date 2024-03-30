@@ -1,17 +1,41 @@
 #pragma once
 
+/*!
+* \file RenderDevice.h
+*
+* \brief Header file for the RenderDevice class.
+*/
+
 #include "Render/VertexArrayObject.h"
 #include "Render/Texture.h"
 #include "Render/Shader.h"
-#include "Core/Export.h"
+
+#include "Core/Internal/Export.h"
+
 #include "glm/glm.hpp"
+
 #include <memory>
 #include <vector>
 
 namespace frost::core
 {
 	class Window;
+}
 
+/*!
+* \namespace frost::render
+*
+* The namespace for FrostEngine's rendering functionalities.
+*/
+namespace frost::render
+{
+	/*!
+	* \class RenderDevice
+	* 
+	* \brief The class that manages the rendering of the FrostEngine.
+	* 
+	* \details Create VAO, VBO, Shader and render them.
+	*/
 	class FROST_ENGINE_API RenderDevice
 	{
 	public:
@@ -21,22 +45,22 @@ namespace frost::core
 		explicit RenderDevice();
 		~RenderDevice();
 
-		RenderDevice* Init(const Window* _window);
+		// Methods
+		RenderDevice* Init(const frost::core::Window* _window);
 
+		// Singleton
 		static RenderDevice* GetInstance();
-
 		static RenderDevice* m_instance;
 
-
 		// Methods
-		void	AddVAO(VertexArrayObject _NewVAO);
-		void	SetZoom(float _zoom);
-		float	GetZoom();
+		void AddVAO(VertexArrayObject _NewVAO);
+		void SetZoom(float _zoom);
+		float GetZoom();
 
-		void	SetClearColor(glm::vec4 _color);
+		void SetClearColor(glm::vec4 _color);
 
 		// Frost engine life cycle methods
-		void	Update();
+		void Update();
 
 	private:
 
@@ -59,7 +83,6 @@ namespace frost::core
 
 		// Methods
 		void ClearVaosToRender();
-
 
 		//forward Declaraction for pimple idiom
 	private:

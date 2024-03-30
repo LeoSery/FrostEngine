@@ -7,7 +7,7 @@
 */
 
 #include "Core/SceneManagement/SceneManager.h"
-#include "Core/Export.h"
+#include "Core/Internal/Export.h"
 
 #include "ECS/Component/IComponent.h"
 
@@ -31,7 +31,7 @@ namespace frost::ECS
 	* \details This structure contains collision data generated when
 	* a 'Hit' is created as a result of a collision between two GameObjects.
 	*/
-	struct CollisionData
+	struct S_CollisionData
 	{
 		bool isColliding = false;
 		BoxCollider* otherCollider = nullptr;
@@ -74,7 +74,7 @@ namespace frost::ECS
 		virtual void Destroy() override;
 
 		// Methods
-		CollisionData IsColliding(BoxCollider& _Other);
+		S_CollisionData IsColliding(BoxCollider& _Other);
 
 		// Getters and Setters
 		[[nodiscard]] bool GetIsStatic() const;
@@ -88,7 +88,7 @@ namespace frost::ECS
 
 	private:
 		// Methods
-		CollisionData AABB(BoxCollider& _Other) const;
+		S_CollisionData AABB(BoxCollider& _Other) const;
 
 		// Settings
 		bool m_isStatic = false;

@@ -6,7 +6,7 @@
 * \brief Header file for the Input class.
 */
 
-#include "Core/Export.h"
+#include "Core/Internal/Export.h"
 
 #include <functional>
 #include <string>
@@ -26,7 +26,7 @@ namespace frost::ECS
 /*!
 * \namespace frost::core
 * 
-* \brief The namespace for the FrostEngine core functionalities.
+* \brief The namespace for FrostEngine's core functionalities.
 */
 namespace frost::core
 {
@@ -54,7 +54,7 @@ namespace frost::core
 		// Instance
 		static Input* GetInstance();
 
-		enum Key
+		enum E_Key
 		{
 			SPACE = 32,
 			APOSTROPHE = 39,/* ' */
@@ -177,31 +177,34 @@ namespace frost::core
 			RIGHT_SUPER = 347
 		};
 
-		enum ActionType
+		/*
+		* 
+		*/
+		enum E_ActionType
 		{
 			Release = 0,
 			Press = 1,
 			OnGoing = 2
 		};
 
-		struct ObjectFunction
+		struct S_ObjectFunction
 		{
 			frost::ECS::GameObject* Object;
 			std::function<void()> Function;
 		};
 
-		struct Functions
+		struct S_Functions
 		{
-			std::vector<ObjectFunction>	FunctionPressed;
-			std::vector<ObjectFunction>	FunctionReleased;
-			std::vector<ObjectFunction>	FunctionOnGoing;
+			std::vector<S_ObjectFunction> FunctionPressed;
+			std::vector<S_ObjectFunction> FunctionReleased;
+			std::vector<S_ObjectFunction> FunctionOnGoing;
 		};
 
 		// Methods
 		Input* init(Window* _window);
 		void AddAction(std::string _actionName);
-		bool AddActionToKey(Key _key, std::string _actionName);//return true if succesfully added
-		void BindFunctionToAction(std::string _actionName, frost::ECS::GameObject* Object, std::function<void()> _functionToCall, ActionType _onWhat);
+		bool AddActionToKey(E_Key _key, std::string _actionName);//return true if succesfully added
+		void BindFunctionToAction(std::string _actionName, frost::ECS::GameObject* Object, std::function<void()> _functionToCall, E_ActionType _onWhat);
 		void CallAction(std::string _actionToCall, int _action);
 		void RemoveAction(std::string _actionName);
 
@@ -215,7 +218,7 @@ namespace frost::core
 		std::unique_ptr<Internal> m_internal;
 
 		std::map<int, std::string> KeyBind; //key = Action
-		std::map<std::string, Functions> ActionBind; //Action = Function to callcall
+		std::map<std::string, S_Functions> ActionBind; //Action = Function to callcall
 		std::map<int, bool> KeyPressed;
 
 		static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);

@@ -28,8 +28,8 @@
     <ClInclude Include="include\ECS\Component\Components\SpriteRenderer.h" />
     <ClInclude Include="include\ECS\Component\IComponent.h" />
     <ClInclude Include="include\ECS\Entity\GameObject.h" />
-    <ClInclude Include="include\Core\Export.h" />
-    <ClInclude Include="include\Core\Window.h" />
+    <ClInclude Include="include\Core\Internal\Export.h" />
+    <ClInclude Include="include\Core\Internal\Window.h" />
     <ClInclude Include="include\Core\SceneManagement\Scene.h" />
     <ClInclude Include="include\ECS\Entity\GameObject.hxx" />
     <ClInclude Include="include\ECS\System\Tree.h" />
@@ -54,12 +54,12 @@
     <ClCompile Include="src\Editor\Editor.cpp" />
     <ClCompile Include="src\FrostEngine.cpp" />
     <ClCompile Include="src\Render\Buffer.cpp" />
-    <ClCompile Include="src\Render\TextureMgr.cpp" />
+    <ClCompile Include="src\Core\Serial\TextureManager.cpp" />
     <ClCompile Include="src\Utils\stb_image\stb_image.cpp" />
-    <ClCompile Include="src\Core\SceneManager.cpp" />
+    <ClCompile Include="src\Core\SceneManagement\SceneManager.cpp" />
     <ClCompile Include="src\ECS\Component\IComponent.cpp" />
     <ClCompile Include="src\ECS\GameObject.cpp" />
-    <ClCompile Include="src\Core\Scene.cpp" />
+    <ClCompile Include="src\Core\SceneManagement\Scene.cpp" />
     <ClCompile Include="src\Core\Window.cpp" />
     <ClCompile Include="src\ECS\Component\Components\Transform.cpp" />
     <ClCompile Include="src\Render\RenderDevice.cpp" />

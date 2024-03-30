@@ -1,11 +1,18 @@
 #include "Render/VertexArrayObject.h"
 #include "Render/Texture.h"
 #include "Render/Buffer.h"
+
 #include "GL/glew.h"
 #include "GLFW/glfw3.h"
+
 #include <iostream>
 
-namespace frost::core
+/*!
+* \namespace frost::render
+*
+* \brief The namespace for FrostEngine's rendering functionalities.
+*/
+namespace frost::render
 {
 
 	VertexArrayObject::VertexArrayObject()
@@ -57,12 +64,12 @@ namespace frost::core
 	{
 		switch (_bufferType)
 		{
-		case frost::core::VertexArrayObject::VBO:
+		case frost::render::VertexArrayObject::VBO:
 			//la on bind ? 
 			glVertexArrayVertexBuffer(m_gl_ID, 0, _buffer.GetBufferID(), 0 /*Offset par rapport au debut du buffer*/, 4 * sizeof(float) /*Data par vertice*/);
 
 			break;
-		case frost::core::VertexArrayObject::IBO:
+		case frost::render::VertexArrayObject::IBO:
 			//la on bind aussi ?
 			glVertexArrayElementBuffer(m_gl_ID, _buffer.GetBufferID());// This is to link vertices buffer[1] is the buffer that have order to draw triangle
 
@@ -73,7 +80,7 @@ namespace frost::core
 
 	}
 
-	void VertexArrayObject::SetTexture(frost::core::Texture* _texture)
+	void VertexArrayObject::SetTexture(frost::render::Texture* _texture)
 	{
 		Texture = _texture;
 	}
@@ -113,6 +120,4 @@ namespace frost::core
 	{
 		return m_rotationLocation;
 	}
-
-
 }

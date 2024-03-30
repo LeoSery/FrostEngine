@@ -8,9 +8,10 @@
 
 #include "Core/SceneManagement/SceneManager.h"
 #include "Core/SceneManagement/Scene.h"
-#include "Core/Export.h"
+#include "Core/Internal/Export.h"
 
 #pragma region Forward Declarations
+
 namespace frost::core
 {
 	class Window;

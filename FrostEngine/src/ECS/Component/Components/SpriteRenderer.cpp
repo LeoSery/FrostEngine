@@ -30,10 +30,10 @@ namespace frost::ECS
 
 		IBO.CreateData(indices, sizeof(unsigned int) * 6);
 
-		VAO.BindBuffer(frost::core::VertexArrayObject::E_TypeBuffer::VBO, VBO);
-		VAO.BindBuffer(frost::core::VertexArrayObject::E_TypeBuffer::IBO, IBO);
+		VAO.BindBuffer(frost::render::VertexArrayObject::E_TypeBuffer::VBO, VBO);
+		VAO.BindBuffer(frost::render::VertexArrayObject::E_TypeBuffer::IBO, IBO);
 
-		m_spriteTexture = new frost::core::Texture();
+		m_spriteTexture = new frost::render::Texture();
 
 		VAO.SetTexture(m_spriteTexture);
 	}
@@ -47,7 +47,7 @@ namespace frost::ECS
 
 	void SpriteRenderer::Start()
 	{
-		frost::core::RenderDevice::GetInstance()->AddVAO(VAO);
+		frost::render::RenderDevice::GetInstance()->AddVAO(VAO);
 	}
 
 	void SpriteRenderer::Update(float /*_DeltaTime*/)
@@ -55,7 +55,7 @@ namespace frost::ECS
 		VAO.SetLocation({ this->GetParentObject().GetComponent<Transform>()->position });
 		VAO.SetScale({ this->GetParentObject().GetComponent<Transform>()->scale });
 		VAO.SetRotation({ this->GetParentObject().GetComponent<Transform>()->rotation });
-		frost::core::RenderDevice::GetInstance()->AddVAO(VAO);
+		frost::render::RenderDevice::GetInstance()->AddVAO(VAO);
 	}
 
 	void SpriteRenderer::Destroy()

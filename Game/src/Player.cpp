@@ -35,28 +35,28 @@ void Player::Start()
 #pragma region "Input"
 	// Forward
 	frost::core::Input::GetInstance()->AddAction("MovingForward");
-	frost::core::Input::GetInstance()->AddActionToKey(frost::core::Input::Key::W, "MovingForward");
-	frost::core::Input::GetInstance()->BindFunctionToAction("MovingForward", this, [this]() { MoveForward(); }, frost::core::Input::ActionType::OnGoing);
+	frost::core::Input::GetInstance()->AddActionToKey(frost::core::Input::E_Key::W, "MovingForward");
+	frost::core::Input::GetInstance()->BindFunctionToAction("MovingForward", this, [this]() { MoveForward(); }, frost::core::Input::E_ActionType::OnGoing);
 
 	// Backward
 	frost::core::Input::GetInstance()->AddAction("MovingBackward");
-	frost::core::Input::GetInstance()->AddActionToKey(frost::core::Input::Key::S, "MovingBackward");
-	frost::core::Input::GetInstance()->BindFunctionToAction("MovingBackward", this, [this]() { MoveBackward(); }, frost::core::Input::ActionType::OnGoing);
+	frost::core::Input::GetInstance()->AddActionToKey(frost::core::Input::E_Key::S, "MovingBackward");
+	frost::core::Input::GetInstance()->BindFunctionToAction("MovingBackward", this, [this]() { MoveBackward(); }, frost::core::Input::E_ActionType::OnGoing);
 
 	// Left
 	frost::core::Input::GetInstance()->AddAction("MovingLeft");
-	frost::core::Input::GetInstance()->AddActionToKey(frost::core::Input::Key::A, "MovingLeft");
-	frost::core::Input::GetInstance()->BindFunctionToAction("MovingLeft", this, [this]() { MoveLeft(); }, frost::core::Input::ActionType::OnGoing);
+	frost::core::Input::GetInstance()->AddActionToKey(frost::core::Input::E_Key::A, "MovingLeft");
+	frost::core::Input::GetInstance()->BindFunctionToAction("MovingLeft", this, [this]() { MoveLeft(); }, frost::core::Input::E_ActionType::OnGoing);
 
 	// Forward
 	frost::core::Input::GetInstance()->AddAction("MovingRight");
-	frost::core::Input::GetInstance()->AddActionToKey(frost::core::Input::Key::D, "MovingRight");
-	frost::core::Input::GetInstance()->BindFunctionToAction("MovingRight", this, [this]() { MoveRight(); }, frost::core::Input::ActionType::OnGoing);
+	frost::core::Input::GetInstance()->AddActionToKey(frost::core::Input::E_Key::D, "MovingRight");
+	frost::core::Input::GetInstance()->BindFunctionToAction("MovingRight", this, [this]() { MoveRight(); }, frost::core::Input::E_ActionType::OnGoing);
 
 	// Fire
 	frost::core::Input::GetInstance()->AddAction("Fire");
-	frost::core::Input::GetInstance()->AddActionToKey(frost::core::Input::Key::SPACE, "Fire");
-	frost::core::Input::GetInstance()->BindFunctionToAction("Fire", this, [this]() { Fire(); }, frost::core::Input::ActionType::Press);
+	frost::core::Input::GetInstance()->AddActionToKey(frost::core::Input::E_Key::SPACE, "Fire");
+	frost::core::Input::GetInstance()->BindFunctionToAction("Fire", this, [this]() { Fire(); }, frost::core::Input::E_ActionType::Press);
 }
 
 void Player::Tick(float _DeltaTime)
@@ -65,7 +65,7 @@ void Player::Tick(float _DeltaTime)
 	//std::cout << "Player Update" << std::endl;
 }
 
-void Player::OnCollisionEnter(const frost::ECS::CollisionData* _CollisionData)
+void Player::OnCollisionEnter(const frost::ECS::S_CollisionData* _CollisionData)
 {
 	std::string ColName = _CollisionData->otherCollider->GetParentObject().GetName();
 	frost::utils::Logger::LogInfo("Collision with " + ColName);
@@ -76,21 +76,17 @@ void Player::MoveForward()
 	//frost::utils::Logger::LogInfo("Moving forward");
 	//GetTransform().position.y += 0.01f;
 	m_MovementScript->AddAcceleration(GetTransform().GetForwardVector());
-
 }
 
 void Player::MoveBackward()
 {
-
 	//frost::utils::Logger::LogInfo("Moving backward");
 	//GetTransform().position.y -= 0.01f;
-
 	m_MovementScript->AddAcceleration(GetTransform().GetForwardVector() * -1.0f);
 }
 
 void Player::MoveLeft()
 {
-
 	//frost::utils::Logger::LogInfo("Moving Left");
 	//GetTransform().position.x -= 0.01f;
 
@@ -100,7 +96,6 @@ void Player::MoveLeft()
 
 void Player::MoveRight()
 {
-
 	//frost::utils::Logger::LogInfo("Moving Right");
 	//GetTransform().position.x += 0.01f;
 

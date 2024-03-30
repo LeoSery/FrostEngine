@@ -1,12 +1,18 @@
 #include "Render/RenderDevice.h"
-#include "Core/Window.h"
+
 #include "GL/glew.h"
 #include "GLFW/glfw3.h"
 
 #include "Core/SignalSlot/Signal.h"
 #include "Core/SignalSlot/Slot.h"
+#include "Core/Internal/Window.h"
 
-namespace frost::core
+/*!
+* \namespace frost::render
+*
+* \brief The namespace for FrostEngine's rendering functionalities.
+*/
+namespace frost::render
 {
 	RenderDevice* RenderDevice::m_instance = nullptr;
 
@@ -16,19 +22,18 @@ namespace frost::core
 		std::vector<VertexArrayObject> VaoToRender;
 	};
 
-	RenderDevice::RenderDevice()
-		:m_internal(new Internal)
-	{}
-
-	RenderDevice::~RenderDevice()
+	RenderDevice::RenderDevice() :m_internal(new Internal)
 	{
-
-		glDeleteVertexArrays(1, &m_vao);
-		glfwTerminate();
 
 	}
 
-	RenderDevice* RenderDevice::Init(const Window* _window)
+	RenderDevice::~RenderDevice()
+	{
+		glDeleteVertexArrays(1, &m_vao);
+		glfwTerminate();
+	}
+
+	RenderDevice* RenderDevice::Init(const frost::core::Window* _window)
 	{
 		m_internal->window = reinterpret_cast<GLFWwindow*>(_window->GetInternal());
 		glewInit();

@@ -13,8 +13,9 @@
 #include "ECS/Component/Components/BoxCollider.h"
 
 #include "Core/SceneManagement/SceneManager.h"
-#include "Core/Window.h"
-#include "Core/Export.h"
+
+#include "Core/Internal//Window.h"
+#include "Core/Internal/Export.h"
 
 #include "Render/RenderDevice.h"
 #include "Render/RenderDevice.h"
@@ -46,14 +47,22 @@ namespace FrostEngine
 	{
 	protected:
 		frost::core::Window* m_Window = nullptr;
-		frost::core::RenderDevice* m_RenderDevice = nullptr;
+		frost::render::RenderDevice* m_RenderDevice = nullptr;
 		frost::core::SceneManager* m_SceneManager = nullptr;
 
 		frost::core::Scene* m_CurrentScene = nullptr;
 		frost::editor::Editor* m_Editor = nullptr;
 
 	public:
-		struct InitData
+
+		/*!
+		* \struct S_InitData
+		* 
+		* \brief A struct that holds data for initializing the window.
+		* 
+		* \details This structure contains the title and size of the window to be created.
+		*/
+		struct S_InitData
 		{
 			std::string title;
 			glm::ivec2  size;
@@ -61,7 +70,7 @@ namespace FrostEngine
 
 		// Methods
 		virtual void Init() = 0;
-		void Init(const InitData& _data);
+		void Init(const S_InitData& _data);
 		virtual void Update(float deltaTime) = 0;
 		virtual void Shutdown();
 		void Run();

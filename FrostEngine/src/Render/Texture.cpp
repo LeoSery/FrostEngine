@@ -9,26 +9,26 @@
 #include <iostream>
 #include <fstream>
 
-namespace frost::core
+/*!
+* \namespace frost::render
+*
+* \brief The namespace for FrostEngine's rendering functionalities.
+*/
+namespace frost::render
 {
-	Texture::Texture(const std::string& _name)
-		: ID(0), FilePath(_name), LocalBuffer(NULL), Width(0), Height(0), BPP(0)
+	Texture::Texture(const std::string& _name) : ID(0), FilePath(_name), LocalBuffer(NULL), Width(0), Height(0), BPP(0)
 	{
 		initialize();
 		SetTexture(_name);
-
-
 	}
 
 	Texture::Texture()
 	{
-
 		initialize();
 		SetTexture("T_Debug.png");
-
 	}
 
-	frost::core::Texture::~Texture()
+	Texture::~Texture()
 	{
 
 	}
@@ -57,7 +57,6 @@ namespace frost::core
 		else
 		{
 			//utils::Logger::GetInstance()->LogInfo("Loaded Texture : " + _name);
-			//this is probably not the correct way to do it but i need it done
 			glBindTexture(GL_TEXTURE_2D, ID);
 			glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, Width, Height, 0, GL_RGBA, GL_UNSIGNED_BYTE, LocalBuffer);
 			if (LocalBuffer)
@@ -68,21 +67,19 @@ namespace frost::core
 		}
 	}
 
-	void frost::core::Texture::Bind(unsigned int slot) const
+	void Texture::Bind(unsigned int slot) const
 	{
 		glActiveTexture(GL_TEXTURE0 + slot);
 		glBindTexture(GL_TEXTURE_2D, ID);
-
 	}
 
-	void frost::core::Texture::Unbind()
+	void Texture::Unbind()
 	{
 		glBindTexture(GL_TEXTURE_2D, 0);
 	}
 
-	bool frost::core::Texture::LoadImage(const std::string _name)
+	bool Texture::LoadImage(const std::string _name)
 	{
-
 		std::filesystem::path file_path = _name;
 		std::ifstream f(_name);
 		if (!f.good())
@@ -93,17 +90,11 @@ namespace frost::core
 			f.open(file_path);
 			if (!f.good())
 			{
-				//FROST_ERROR
+				frost::utils::Logger::LogError("Failed to load texture : " + _name);
 				return false;
 			}
-
 		}
-
 		LocalBuffer = stbi_load(file_path.string().c_str(), &Width, &Height, &BPP, 4);
 		return true;
 	}
-
-
-
-
 }

@@ -8,7 +8,8 @@
 
 #include "ECS/Component/Components/Transform.h"
 #include "ECS/System/Tree.h"
-#include "Core/Export.h"
+
+#include "Core/Internal/Export.h"
 
 #define UUID_SYSTEM_GENERATOR
 #include "stduuid/uuid.h"
@@ -24,7 +25,7 @@
 namespace frost::ECS
 {
 	class IComponent;
-	struct CollisionData;
+	struct S_CollisionData;
 
 	/*!
 	* \class GameObject
@@ -81,7 +82,7 @@ namespace frost::ECS
 
 		// Methods
 		virtual void Tick(float _DeltaTime);
-		virtual void OnCollisionEnter(const CollisionData* _CollisionData);
+		virtual void OnCollisionEnter(const S_CollisionData* _CollisionData);
 
 	private:
 		uuids::uuid m_uuid;
