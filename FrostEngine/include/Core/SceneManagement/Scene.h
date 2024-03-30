@@ -56,5 +56,7 @@ namespace frost::core
 		uuids::uuid m_uuid;
 		std::string m_name;
 		ECS::GameObject* m_root;
+
+		
 	};
 }

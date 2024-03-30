@@ -27,6 +27,26 @@ namespace frost::core
 		m_scenes.push_back(std::move(_TargetScene));
 	}
 
+	void SceneManager::internalDestroyGameObject(ECS::GameObject* _GameObject)
+	{
+		m_dirtyGameObjects[_GameObject->GetUUID()] = _GameObject;
+	}
+
+	void SceneManager::DestroyGameObjectQueue()
+	{
+
+		for (auto it = m_dirtyGameObjects.cbegin(); it != m_dirtyGameObjects.cend() /* not hoisted */; /* no increment */)
+		{
+			it->second->Delete({});
+			m_dirtyGameObjects.erase(it++);    // or "it = m.erase(it)" since C++11
+		}
+	}
+
+	bool SceneManager::IsGameObjectDirty(const uuids::uuid& _UUID) const
+	{
+		return m_dirtyGameObjects.contains(_UUID);
+	}
+
 	void SceneManager::RemoveScene(const std::string& _SceneName)
 	{
 		const auto it = std::ranges::find_if(m_scenes, [&](const Scene& _scene) { return _scene.GetName() == _SceneName; });

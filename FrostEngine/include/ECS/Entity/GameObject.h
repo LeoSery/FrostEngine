@@ -7,6 +7,7 @@
 */
 
 #include "ECS/Component/Components/Transform.h"
+#include "Core/Internal/AuthorizationBadge.h"
 #include "ECS/System/Tree.h"
 
 #include "Core/Internal/Export.h"
@@ -17,6 +18,10 @@
 #include <unordered_set>
 #include <string>
 
+namespace frost::core
+{
+	class SceneManager;
+}
 /*!
 * \namespace frost::ECS
 *
@@ -45,6 +50,7 @@ namespace frost::ECS
 
 		~GameObject();
 
+		
 		// Frost engine life cycle methods
 		virtual void Start();
 		void Update(float _DeltaTime);
@@ -83,6 +89,7 @@ namespace frost::ECS
 		// Methods
 		virtual void Tick(float _DeltaTime);
 		virtual void OnCollisionEnter(const S_CollisionData* _CollisionData);
+		void Delete(const frost::core::AuthorizationBadge<frost::core::SceneManager>&);
 
 	private:
 		uuids::uuid m_uuid;
@@ -90,6 +97,7 @@ namespace frost::ECS
 		std::vector<IComponent*> m_components;
 		std::unordered_set<std::string> m_tags;
 		bool m_isActive = true;
+
 	};
 }
 

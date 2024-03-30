@@ -7,6 +7,7 @@
 */
 
 #include "Core/SceneManagement/Scene.h"
+#include <map>
 
 /*!
 * \namespace frost::core
@@ -47,12 +48,24 @@ namespace frost::core
 
 		// Getters
 		[[nodiscard]] Scene& GetActiveScene();
-
+		
+		void internalDestroyGameObject(ECS::GameObject* _GameObject);
+		void DestroyGameObjectQueue();
+		
+		bool IsGameObjectDirty(const uuids::uuid& _UUID) const;
+		
 	private:
 		void AddScene(Scene&& _TargetScene);
 		SceneManager() = default;
 
 		std::vector<Scene> m_scenes;
 		Scene* m_activeScene = nullptr;
+
+		std::map<uuids::uuid, ECS::GameObject*> m_dirtyGameObjects;
+
+
+	protected:
+
+		friend class ECS::GameObject;
 	};
 }
