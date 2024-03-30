@@ -81,6 +81,7 @@ namespace frost::utils
 
 		static Logger* m_instance;
 		std::vector<S_LogData> m_logStack;
+		std::vector<S_LogData>m_consoleStack;
 		bool m_showLogError = true;
 		bool m_showLogWarning = true;
 		bool m_showLogInfo = true;
