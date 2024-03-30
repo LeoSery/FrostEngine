@@ -8,8 +8,6 @@ class Spawner : public frost::ECS::GameObject
 	Spawner(std::string _name, GameObject* _parent);
 	virtual void Start();
 	virtual void Tick(float _DeltaTime);
-	
-
 
 	private:
 		float m_SpawnTimer;
