@@ -36,9 +36,9 @@ void Player::Start()
 	m_SpriteRenderer->SetTexture("PlayerShip/PlayerShip_FullHealh.png");
 
 	m_BoxCollider = this->AddComponent<frost::ECS::BoxCollider>();
-	m_BoxCollider->m_collisionChannel = frost::ECS::CollisionChannel::Player;
-	m_BoxCollider->m_collisionSettings.emplace(std::pair<frost::ECS::CollisionChannel, frost::ECS::CollisionResponse>(frost::ECS::Projectile ,frost::ECS::Ignore));
-	m_BoxCollider->m_collisionSettings.emplace(std::pair<frost::ECS::CollisionChannel, frost::ECS::CollisionResponse>(frost::ECS::Ennemy ,frost::ECS::Block));
+	m_BoxCollider->m_collisionChannel = frost::ECS::E_CollisionChannel::Player;
+	m_BoxCollider->m_collisionSettings.emplace(std::pair<frost::ECS::E_CollisionChannel, frost::ECS::E_CollisionResponse>(frost::ECS::Projectile ,frost::ECS::Ignore));
+	m_BoxCollider->m_collisionSettings.emplace(std::pair<frost::ECS::E_CollisionChannel, frost::ECS::E_CollisionResponse>(frost::ECS::Ennemy ,frost::ECS::Block));
 
 #pragma region "Input"
 	// Forward

@@ -54,7 +54,8 @@ namespace frost::ECS
 
 		if (_Other.GetIsStatic() || !_Other.IsActive())
 			return Data;
-		if (m_collisionSettings.contains(_Other.m_collisionChannel) && m_collisionSettings.at(_Other.m_collisionChannel) != CollisionResponse::Ignore)
+
+		if (m_collisionSettings.contains(_Other.m_collisionChannel) && m_collisionSettings.at(_Other.m_collisionChannel) != E_CollisionResponse::Ignore)
 		{
 			return AABB(_Other);
 		}
