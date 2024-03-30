@@ -43,41 +43,25 @@ namespace frost::editor
 	{
         frost::core::Scene* m_CurrentScene;
         frost::core::SceneManager* m_SceneManager;
-        //frost::utils::Explorer* m_Explorer{};
+
         m_SceneManager = &frost::core::SceneManager::GetInstance();
         m_CurrentScene = &m_SceneManager->GetActiveScene();
+
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
 
-        ImGui::SetNextWindowSize(ImVec2(300, 700));
-        if (ImGui::Begin("Hierarchy", NULL, ImGuiWindowFlags_NoCollapse))
-
-        {
-            DrawHierachyValue(m_CurrentScene);
-            DrawInsperctorValue();
-            ImGui::End();
-        }
-
-        ImGui::SetNextWindowSize(ImVec2(300, 705));
-        ImGui::Begin("Inspector", NULL, ImGuiWindowFlags_NoCollapse);
-        ImGui::End();
-            
-
+        DrawHierarchy(m_CurrentScene);
+        DrawInspector();
 #ifdef _DEBUG
-        ImGui::SetNextWindowSize(ImVec2(700, 200));
-        if (ImGui::Begin("Console", NULL, ImGuiWindowFlags_NoCollapse))
-        {
-             frost::utils::Logger::GetInstance()->DrawLogger();
-            ImGui::End();
-        }
-        
-        frost::utils::Explorer::GetInstance()->DrawExplorer();
+        DrawConsole();
 #endif
+        frost::utils::Explorer::GetInstance()->DrawExplorer();
+
+
         ImGui::Render();
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
         return 0;
-
 	}
 
     int Editor::Init(const frost::core::Window* _Window)
@@ -107,6 +91,18 @@ namespace frost::editor
         ImGui::DestroyContext();
     }
 
+    void Editor::DrawHierarchy(frost::core::Scene* m_CurrentScene)
+    {
+        ImGui::SetNextWindowSize(ImVec2(300, 700));
+        if (ImGui::Begin("Hierarchy", NULL, ImGuiWindowFlags_NoCollapse))
+
+        {
+            DrawHierachyValue(m_CurrentScene);
+            DrawInsperctorValue();
+            ImGui::End();
+        }
+    }
+
     void Editor::DrawHierachyValue(frost::core::Scene* m_CurrentScene)
     {
         for(auto* child : m_CurrentScene->GetRoot()->GetChildren())
@@ -118,32 +114,37 @@ namespace frost::editor
         }
     }
 
+    void Editor::DrawInspector()
+    {
+        ImGui::SetNextWindowSize(ImVec2(300, 705));
+        ImGui::Begin("Inspector", NULL, ImGuiWindowFlags_NoCollapse);
+        ImGui::End();
+
+    }
+
     void Editor::DrawInsperctorValue()
     {
         if (SelectEntity != nullptr)
         {
             if (ImGui::Begin("Inspector", NULL, ImGuiWindowFlags_NoCollapse))
             {
-                //ImGui::GetMainViewport();
                 frost::ECS::Transform* tr = SelectEntity->GetComponent<frost::ECS::Transform>();
-                frost::ECS::SpriteRenderer* sr = SelectEntity->GetComponent<frost::ECS::SpriteRenderer>();
-                //frost::core::RenderDevice* rd = frost::core::RenderDevice::GetInstance();
+                frost::ECS::SpriteRenderer* sr = SelectEntity->GetComponent<frost::ECS::SpriteRenderer>();              
                 frost::ECS::BoxCollider* bc = SelectEntity->GetComponent<frost::ECS::BoxCollider>();
 
                 // Get Transform //
-                //ImGui::InputFloat2("Transform[X/Y]", &tr->position.x);
+                ImGui::Text("Transform :");
                 if (ImGui::InputFloat2("Transform[X/Y]", &tr->position.x))
                 {
-                    //ISOnInspector = false;
+                    
                 }
+                
                 // Get Rotation //
-                //ImGui::InputFloat("Rotation", &tr->rotation);
                 if (ImGui::InputFloat2("Rotation", &tr->rotation))
                 {
 
                 }
                 // Get Scale //
-                //ImGui::InputFloat2("Scale[X/Y]", &tr->scale.x);
                 if (ImGui::InputFloat2("Scale[X / Y]", &tr->scale.x))
                 {
 
@@ -159,29 +160,31 @@ namespace frost::editor
                     }
                 }
 
+                // Get Static //
                 ImGui::Text("Path Image : %sr" , sr->GetTexture().c_str());
                 bool a = bc->GetIsStatic();
                 if (ImGui::Checkbox("IsStatic", &a))
                 {
-                    /*tr->isMovingEntity = true;
-                    if (!tr->isMovingEntity)
+                    a = false;
+                    if (!a)
                     {
-                        tr->isMovingEntity = false;
-                    }*/
-
+                        a = true;
+                    }
                 }
-                //ImGui::Checkbox("Box Collider", &bc->);
-
-                //ImGui::Button(sr->GetColor().c_str());
-                //auto aa = sr->GetColor().x;
-                //float ColorA[] = { rd->GetClearColor().x,rd->GetClearColor().y,rd->GetClearColor().z,rd->GetClearColor().w };
-                //ImGui::ColorEdit4("Color Edit ",ColorA);
-
-                //SpriteRenderer* sr = m_child->GetComponent<SpriteRenderer>();
                 ImGui::End();
             }
         }
 
+    }
+#ifdef _DEBUG
+    void Editor::DrawConsole()
+    {
+        ImGui::SetNextWindowSize(ImVec2(700, 200));
+        if (ImGui::Begin("Console", NULL, ImGuiWindowFlags_NoCollapse))
+        {
+            frost::utils::Logger::GetInstance()->DrawLogger();
+            ImGui::End();
+        }
     }
 
     void Editor::DeleteEditor()
@@ -191,5 +194,6 @@ namespace frost::editor
             delete m_Instance;
             m_Instance = nullptr;
         }
-    }   
+    }  
+#endif
 }

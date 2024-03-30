@@ -19,7 +19,7 @@ namespace frost::utils
 	{
 	public:
 
-		//Constructors and Destructors
+		// Constructors and Destructors
 		Explorer() : CurrentPath(fs::current_path()), selectedEntry(fs::path{}) {};
 		~Explorer();
 
@@ -27,7 +27,7 @@ namespace frost::utils
 		[[nodiscard]] static Explorer* GetInstance();
 		static void DeleteExplorer();
 
-		//Methods
+		// Methods Draw
 		void DrawExplorer();
 		void DrawExplorerContent();
 		void DrawExplorerFilter();
@@ -36,23 +36,24 @@ namespace frost::utils
 		void DrawExplorerDeleteFilePopUp();
 		void DrawExplorerOpenFile();
 
-
-
-
+		// Methods Open/Close Windows
 		bool ExplorerRenameFile(const fs::path& old_path, const fs::path& new_path);
 		bool ExplorerDeleteFile(const fs::path& _path);
-		bool RenameDialogOpened = false;
-		bool DeleteDialogOpened = false;
+
 
 	private:
+
+		// Instance
 		static Explorer* m_Instance;
 		frost::ECS::GameObject* SelectEntity = nullptr;
 
+		// File Path
 		fs::path CurrentPath;
 		fs::path selectedEntry;
 
-
-
+		// Boolean
+		bool RenameDialogOpened = false;
+		bool DeleteDialogOpened = false;
 
 	};
 

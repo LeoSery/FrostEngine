@@ -15,7 +15,7 @@
 namespace frost::core {
 	class Window;
 	class Scene;
-	class SceneManager;	
+	class SceneManager;
 }
 
 namespace frost::ECS
@@ -50,29 +50,35 @@ namespace frost::editor
 	class FROST_ENGINE_API Editor
 	{
 	public:
-		// Constructor & Destructor
+
+		// Constructor Destructor 
 		Editor();
 		~Editor();
 
-		// Singleton
+		// Singleton 
 		[[nodiscard]] static Editor* GetInstance();
 		static void DeleteEditor();
 
-		// Methods
+		//Methods 
 		int DrawEditor();
 		int Init(const frost::core::Window* _Window);
 		void Shutdown();
 
+		// Draw windows 
+		void DrawHierarchy(frost::core::Scene* m_CurrentScene);
 		void DrawHierachyValue(frost::core::Scene* m_CurrentScene);
+		void DrawInspector();
 		void DrawInsperctorValue();
-			
-		
-		//example collide
+#ifdef _DEBUG
+		void DrawConsole();
+#endif	
+		// Example collide 
 		bool ISCollide = true;
 		bool ShowInspector = false;
 		
 	private:
 
+		// Instance
 		static Editor* m_Instance;
 		frost::ECS::GameObject* SelectEntity = nullptr;
 		
