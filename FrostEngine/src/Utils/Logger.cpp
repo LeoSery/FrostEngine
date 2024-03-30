@@ -68,6 +68,12 @@ namespace frost::utils
 	void Logger::DrawLogger()
 	{
 
+		for (const S_LogData& log : m_logStack)
+		{
+			m_consoleStack.push_back(log);
+			
+		}
+		
 		if (ImGui::Checkbox("Info##Filter", &m_showLogInfo))
 		{
 
@@ -88,7 +94,7 @@ namespace frost::utils
 
 		if (ImGui::Button("Clear"))
 		{
-			m_logStack.clear();
+			m_consoleStack.clear();
 		}
 
 		if (ImGui::BeginTable("Logs##Logger", 2, ImGuiTableFlags_Resizable | ImGuiTableFlags_NoSavedSettings | ImGuiTableFlags_Borders))
@@ -98,7 +104,7 @@ namespace frost::utils
 			ImGui::TableHeadersRow();
 			ImGui::TableNextRow();
 
-			for (const S_LogData& info : m_logStack)
+			for (const S_LogData& info : m_consoleStack)
 			{
 				ImVec4 color = ImVec4(1, 1, 1, 1);
 				const char* text = nullptr;
