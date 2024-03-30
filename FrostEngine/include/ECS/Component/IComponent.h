@@ -30,7 +30,7 @@ namespace frost::ECS
 	*/
 	class FROST_ENGINE_API IComponent : public core::RTTI
 	{
-		/*
+		/*!
 		* \brief The RTTI definition for the IComponent class.
 		* 
 		* \def FROST_DEFINE_RTTI(IComponent) This macro defines the RTTI for the IComponent class.

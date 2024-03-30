@@ -28,16 +28,16 @@
 #include <thread>
 
 /*!
- * \namespace FrostEngine
+ * \namespace frost
  *
  * \brief The main namespace for the FrostEngine.
  *
- * \details FrostEngine is the engine's main namespace and contains the engine's
+ * \details frost is the engine's main namespace and contains the engine's
  * update loop for updating GameObjects, physics and OpenGL rendering.
  */
-namespace FrostEngine
+namespace frost
 {
-	/*
+	/*!
 	* \class Application
 	* \brief Main engine class that initializes/shuts down the different engine modules,
 	* runs the main loop for updating physics, GameObjects and rendering,
@@ -56,7 +56,7 @@ namespace FrostEngine
 	public:
 
 		/*!
-		* \struct S_InitData
+		* \struct InitData
 		* 
 		* \brief A struct that holds data for initializing the window.
 		* 
@@ -82,7 +82,7 @@ namespace FrostEngine
 		std::vector<frost::ECS::GameObject*> ObjectsToUpdate;
 	};
 
-	/*
+	/*!
 	* \brief Macro for creating an application class.
 	* \fn int main(int argc, char** argv) FROST_APPLICATION(ApplicationClass)
 	* 

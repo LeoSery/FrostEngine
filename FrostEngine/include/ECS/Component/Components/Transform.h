@@ -31,7 +31,7 @@ namespace frost::ECS
 	*/
 	class FROST_ENGINE_API Transform : public IComponent
 	{
-		/*
+		/*!
 		* \brief The RTTI definition for the Transform class.
 		*
 		* \def FROST_DEFINE_RTTI(Transform) This macro defines the RTTI for the Transform class.
