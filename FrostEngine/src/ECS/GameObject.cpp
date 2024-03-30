@@ -1,5 +1,6 @@
 #include "ECS/Component/Components/Transform.h"
 #include "Core/SceneManagement/SceneManager.h"
+
 #include "ECS/Component/IComponent.h"
 #include "ECS/Entity/GameObject.h"
 #include "Utils/Logger.h"
@@ -31,12 +32,18 @@ namespace frost::ECS
 
 	GameObject::~GameObject()
 	{
-		for (const IComponent* component : m_components)
+		std::vector<IComponent*> components = m_components;
+		m_components.clear();
+		for (IComponent* component : components)
 		{
 			delete component;
 		}
+	}
 
-		m_components.clear();
+	void GameObject::Delete(const frost::core::AuthorizationBadge<frost::core::SceneManager>&)
+	{
+		frost::utils::Logger::GetInstance()->LogInfo("Deleting GameObject: " + m_name);
+		delete this;
 	}
 
 	void GameObject::Start()
@@ -58,14 +65,7 @@ namespace frost::ECS
 
 	void GameObject::Destroy()
 	{
-		std::vector<IComponent*> components = m_components;
-		m_components.clear();
-		for (IComponent* component : components)
-		{
-			delete component;
-		}
-		delete this;
-		
+		frost::core::SceneManager::GetInstance().internalDestroyGameObject(this);
 	}
 
 	const std::string& GameObject::GetName() const

@@ -31,6 +31,8 @@ namespace frost
 			float deltaTime = std::chrono::duration<float, std::chrono::seconds::period>(now - lastUpdateTime).count();
 			lastUpdateTime = now;
 
+			m_SceneManager->DestroyGameObjectQueue();
+
 			ObjectsToUpdate.clear();
 
 			/*User Update()*/
@@ -79,10 +81,13 @@ namespace frost
 		if (!_GameObject)
 			return;
 
-		ObjectsToUpdate.push_back(_GameObject);
 
-		if (_GameObject->IsActive())
+		if (_GameObject->IsActive()) 
+		{
 			_GameObject->Update(_DeltaTime);
+			ObjectsToUpdate.push_back(_GameObject);
+		}
+		
 
 		for (auto* child : _GameObject->GetChildren())
 		{
