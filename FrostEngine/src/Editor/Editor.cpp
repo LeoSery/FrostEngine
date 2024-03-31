@@ -148,40 +148,69 @@ namespace frost::editor
                 frost::ECS::SpriteRenderer* sr = SelectEntity->GetComponent<frost::ECS::SpriteRenderer>();              
                 frost::ECS::BoxCollider* bc = SelectEntity->GetComponent<frost::ECS::BoxCollider>();
 
-
-
                 // Get Name //
-                ImGui::Text("Name : %s", SelectEntity->GetName().c_str());
+                std::string name = SelectEntity->GetName().c_str();              
+                float font_size = ImGui::GetFontSize() * name.size() / 2;
+                ImGui::SameLine(ImGui::GetWindowSize().x / 2 - font_size + (font_size / 2));
+                ImGui::Text(name.c_str());
 
+                ImGui::NewLine();
+                ImGui::Separator();
+                ImGui::NewLine();
+               
                 // Get Parent Name // 
                 ImGui::Text("Parent Object : %s", SelectEntity->GetParent()->GetName().c_str());
 
+                ImGui::NewLine();
+                ImGui::Separator();
+                ImGui::NewLine();
+
                 // Get Transform //
-                //ImGui::Text("Transform X/Y :");
-                //ImGui::SameLine();
-                if (ImGui::InputFloat2("Transform[X/Y]", &tr->position.x))
+                std::string transform = "Transform";
+                float font_size1 = ImGui::GetFontSize() * transform.size() / 2;
+                ImGui::NewLine();
+                ImGui::SameLine(ImGui::GetWindowSize().x / 2 - font_size1 + (font_size1 / 2));
+                ImGui::Text(transform.c_str());
+                ImGui::NewLine();
+
+                if (ImGui::InputFloat("x ", &tr->position.x))
                 {
                     
                 }
+
+                if (ImGui::InputFloat("y", &tr->position.y))
+                {
+
+                }
                 
+
+
                 // Get Rotation //
-                //ImGui::Text("Rotation :");
-                //ImGui::SameLine();
-                if (ImGui::InputFloat("Rotation", &tr->rotation))
+                ImGui::Text("Rotation :");
+                ImGui::SameLine();
+                if (ImGui::InputFloat(" ", &tr->rotation))
                 {
 
                 }
                 // Get Scale //
                 // 
-                //ImGui::Text("Scale X/Y :");
-                //ImGui::SameLine();
-                if (ImGui::InputFloat2("Scale[X / Y]", &tr->scale.x))
+                ImGui::Text("Scale X/Y :");
+                ImGui::SameLine();
+                if (ImGui::InputFloat2(" ", &tr->scale.x))
                 {
 
                 }
 
+                ImGui::NewLine();
+                ImGui::Separator();
+                ImGui::NewLine();
+
                 // Get ImagePath //
                 ImGui::Text("Path Image : %sr", sr->GetTexture().c_str());
+
+                ImGui::NewLine();
+                ImGui::Separator();
+                ImGui::NewLine();
 
                 // Get Collider //
                 if (ImGui::Checkbox("IsMovingEntity", &tr->isMovingEntity))
@@ -203,12 +232,7 @@ namespace frost::editor
                         a = true;
                     }
                 }
-
-
-
                 ImGui::End();
-
-
             }
         }
 
