@@ -2,6 +2,7 @@
 #include "ECS/Component/Components/SpriteRenderer.h"
 #include <Ennemi.h>
 #include <random>
+#include <Utils/Logger.h>
 
 Spawner::Spawner(std::string _name, GameObject* _parent) : GameObject(_name, _parent){}
 
@@ -22,9 +23,9 @@ void Spawner::Start()
 {
 	// Start the GameObject
 	m_spawnTimer	=	0.0f;
-	m_spawnRate		=	0.01f;
+	m_spawnRate		=	0.8f;
 	m_spawnCount	=	0;
-	m_spawnLimit	=	10;
+	m_spawnLimit	=	4;
 	m_KillCount		=	0;
 	m_KillLimit		=	15;
 
@@ -45,17 +46,21 @@ void Spawner::Tick(float _DeltaTime)
 			Spawn(spawnLocation);
 		}
 	}
-
-
 }
 
 void Spawner::OnEnnemyDeath(frost::ECS::GameObject* Killed)
 {
 
 	// Remove the ennemy from the list
-	int index = m_mapEnnemiesIndex[Killed->GetUUID()];
-	m_SpawnedObjects.erase(m_SpawnedObjects.begin() + index);
-	m_mapEnnemiesIndex.erase(Killed->GetUUID());
+	auto it = std::find_if(m_SpawnedObjects.begin(), m_SpawnedObjects.end(), [Killed](frost::ECS::GameObject* obj) { return obj->GetUUID() == Killed->GetUUID(); });
+	if (it == m_SpawnedObjects.end())
+	{
+		// The ennemy is not in the list
+		frost::utils::Logger::GetInstance()->LogError("Ennemy not found in the list");
+		return;
+	}
+	m_SpawnedObjects.erase(it);
+
 
 	// Update the count
 	m_spawnCount--;
@@ -76,13 +81,8 @@ void Spawner::OnEnnemyDeath(frost::ECS::GameObject* Killed)
 void Spawner::Spawn(glm::vec2 _spawnLocation)
 {
 	_spawnLocation;
-
-	Ennemi* ennemi = Ennemi::New("Ennemi", _spawnLocation, this, m_player, this);
 	m_spawnCount++;
-
-	m_SpawnedObjects.push_back(ennemi);
-	m_mapEnnemiesIndex[ennemi->GetUUID()] = int(m_SpawnedObjects.size() - 1);
-
+	m_SpawnedObjects.push_back(Ennemi::New("Ennemi" + std::to_string(m_SpawnedObjects.size()), _spawnLocation, this->GetParent(), m_player, this));
 }
 
 float Spawner::GetRandomInRange(float min, float max)

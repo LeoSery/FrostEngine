@@ -24,7 +24,6 @@ private:
 		glm::vec2	m_size = glm::vec2( 20 , 7 );
 
 		std::vector<frost::ECS::GameObject*> m_SpawnedObjects;
-		std::unordered_map<uuids::uuid , int> m_mapEnnemiesIndex;
 
 		float lastSpawnTime;
 		float spawnRate;

@@ -46,17 +46,10 @@ namespace frost::ECS
 		m_components.clear();
 		for (IComponent* component : components)
 		{
-			frost::utils::Logger::GetInstance()->LogInfo("Deleting Component: " + component->GetTypeName());
 			delete component;
 		}
-
 		this->SetParent(nullptr);
-	}
-
-	void GameObject::Delete(const frost::core::AuthorizationBadge<frost::core::SceneManager>&)
-	{
 		frost::utils::Logger::GetInstance()->LogInfo("Deleting GameObject: " + m_name);
-		delete this;
 	}
 
 	void GameObject::Start()
@@ -78,8 +71,13 @@ namespace frost::ECS
 
 	void GameObject::Destroy()
 	{
+		OnDestroy();
 		m_IsDirty = true;
 		frost::core::SceneManager::GetInstance().internalDestroyGameObject(this);
+	}
+
+	void GameObject::OnDestroy()
+	{
 	}
 
 	const std::string& GameObject::GetName() const

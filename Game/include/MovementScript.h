@@ -32,6 +32,7 @@ public : //Movement Variables
 	glm::vec2 m_CurrentVelocity = { 0.0f  , 0.0f };
 	glm::vec2 m_InputAcceleration = { 0.0f  , 0.0f };
 
+	bool alwaysApplyFriction = false;
 
 #pragma endregion
 

@@ -38,7 +38,7 @@ namespace frost::core
 
 		for (auto it = m_dirtyGameObjects.cbegin(); it != m_dirtyGameObjects.cend() /* not hoisted */; /* no increment */)
 		{
-			it->second->Delete({});
+			delete it->second;
 			m_dirtyGameObjects.erase(it++);    // or "it = m.erase(it)" since C++11
 		}
 	}

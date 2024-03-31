@@ -17,8 +17,6 @@ class MyGameApp : public frost::Application
 {
 public:
 	GameObject* PlayerEntity = nullptr;
-	GameObject* Enemy = nullptr;
-	GameObject* Enemy2 = nullptr;
 	Spawner* Spawner = nullptr;
 
 	void Init() override

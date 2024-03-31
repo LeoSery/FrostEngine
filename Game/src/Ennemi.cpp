@@ -19,6 +19,7 @@ Ennemi* Ennemi::New(std::string _name, glm::vec2 _location, GameObject* _parent 
 	result->GetTransform().isMovingEntity = true;
 	result->m_objectToFocus = _objectToFocus;
 	result->m_spawner = _spawner;
+	result->AddTag("Ennemi");
 	return result;
 }
 
@@ -30,8 +31,11 @@ Ennemi::Ennemi(std::string _name, GameObject* _parent)
 }
 
 Ennemi::~Ennemi()
-{
+{}
 
+void Ennemi::OnDestroy()
+{
+	m_spawner->OnEnnemyDeath(this);
 }
 
 void Ennemi::Start()
@@ -78,10 +82,4 @@ void Ennemi::OnCollisionEnter(const frost::ECS::S_CollisionData* _CollisionData)
 		_CollisionData->otherCollider->GetParentObject().TakeDamage(10);
 		this->Destroy();
 	};
-}
-
-void Ennemi::Destroy()
-{
-	m_spawner->OnEnnemyDeath(this);
-	GameObject::Destroy();
 }
