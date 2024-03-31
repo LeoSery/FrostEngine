@@ -72,11 +72,15 @@ namespace frost::editor
 		int Init(const frost::core::Window* _Window);
 		void Shutdown();
 
+		frost::ECS::GameObject* GetSelectEntity();
+		void SetSelectEntity(frost::ECS::GameObject* _Entity);
+
 		// Draw windows 
 		void DrawHierarchy(frost::core::Scene* m_CurrentScene);
 		void DrawHierachyValue(frost::core::Scene* m_CurrentScene);
 		void DrawInspector();
 		void DrawInsperctorValue();
+
 #ifdef _DEBUG
 		void DrawConsole();
 #endif	
@@ -89,7 +93,5 @@ namespace frost::editor
 		// Instance
 		static Editor* m_Instance;
 		frost::ECS::GameObject* SelectEntity = nullptr;
-		
-
 	};
 }

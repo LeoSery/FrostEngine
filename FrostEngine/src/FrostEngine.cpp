@@ -17,8 +17,6 @@ namespace frost
 #ifdef _DEBUG 
 		m_Editor = frost::editor::Editor::GetInstance();
 		m_Editor->Init(m_Window);
-
-
 #endif	
 	}
 

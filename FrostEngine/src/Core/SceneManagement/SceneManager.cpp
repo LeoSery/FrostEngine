@@ -1,5 +1,7 @@
 #include "Core/SceneManagement/SceneManager.h"
 
+#include "Editor/Editor.h"
+
 #include <vector>
 
 namespace frost::core
@@ -35,9 +37,11 @@ namespace frost::core
 
 	void SceneManager::DestroyGameObjectQueue()
 	{
-
 		for (auto it = m_dirtyGameObjects.cbegin(); it != m_dirtyGameObjects.cend() /* not hoisted */; /* no increment */)
 		{
+			if (frost::editor::Editor::GetInstance()->GetSelectEntity() == it->second)
+				frost::editor::Editor::GetInstance()->SetSelectEntity(nullptr);
+
 			delete it->second;
 			m_dirtyGameObjects.erase(it++);    // or "it = m.erase(it)" since C++11
 		}
