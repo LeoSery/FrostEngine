@@ -81,12 +81,17 @@ namespace frost::editor
 		void DrawInspector();
 		void DrawInsperctorValue();
 
+		void DrawFps();
 #ifdef _DEBUG
 		void DrawConsole();
 #endif	
 		// Example collide 
 		bool ISCollide = true;
 		bool ShowInspector = false;
+
+		float fps = 0.0;
+		float m_secondCounter = 0.0;
+		float m_tempFps = 0.0;
 		
 	private:
 
