@@ -4,7 +4,7 @@ Frost Engine is a game engine written in C++. It is based on the Entity Componen
 
 This project was carried out as part of a school project for my Master 1 year.
 
-![FrostEngine_GameDemo](https://hackmd.io/_uploads/SyDqXBDyC.png)
+![FrostEngine_GameDemo](https://raw.githubusercontent.com/LeoSery/FrostEngine--OpenGL-2024/main/docs/Ressources/FrostEngine_GameDemo.png)
 
 project members :
 
@@ -20,7 +20,7 @@ project members :
 
 ## Engine architecture :
 
-![EngineArchitecture](https://hackmd.io/_uploads/H1RirNvyA.png)
+![EngineArchitecture](https://raw.githubusercontent.com/LeoSery/FrostEngine--OpenGL-2024/main/docs/Ressources/EngineArchitecture_Final.png)
 
 ## Documentation :
 
