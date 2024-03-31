@@ -21,6 +21,8 @@ public:
 	virtual void Start();
 	virtual void Tick(float _DeltaTime) override;
 	virtual void OnCollisionEnter(const frost::ECS::S_CollisionData* _CollisionData) override;
+	virtual void TakeDamage(unsigned int _Damage) override;
+
 
 private: //Methods
 	void MoveForward();
@@ -28,6 +30,8 @@ private: //Methods
 	void MoveLeft();
 	void MoveRight();
 	void Fire();
+
+
 
 private: //Attributes
 	unsigned int m_Health = 100;

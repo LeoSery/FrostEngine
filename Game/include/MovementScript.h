@@ -23,25 +23,27 @@ public:
 	void AddAcceleration(glm::vec2 _Acceleration);
 	void AddRotationAcceleration(float _Acceleration);
 
+
 #pragma region Movement
 
-private: //Movement Variables
+public : //Movement Variables
+	float m_friction = 2.0f;
+	float m_MaxSpeed = 20.0f;
 	glm::vec2 m_CurrentVelocity = { 0.0f  , 0.0f };
 	glm::vec2 m_InputAcceleration = { 0.0f  , 0.0f };
 
-	float m_friction = 5.0f;
-	float m_MaxSpeed = 20.0f;
-
-	frost::ECS::GameObject* m_OwningObject;
 
 #pragma endregion
 
 #pragma region Rotation
-private:
+public:
 	float m_Rotationfriction = 5.0f;
-	float m_MaxRotationSpeed = 10.f;
+	float m_MaxRotationSpeed = 20.f;
 	float m_CurrentRotationVelocity = 0.0f;
 	float m_InputRotationAcceleration = 0.0f;
 #pragma endregion
+
+private: 
+	frost::ECS::GameObject* m_OwningObject;
 };
 

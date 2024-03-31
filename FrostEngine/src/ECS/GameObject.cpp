@@ -23,6 +23,16 @@ namespace frost::ECS
 		Start();
 	}
 
+	void GameObject::Init(glm::vec2 _position, float _rotation, glm::vec2 _scale)
+	{
+		AddComponent<Transform>();
+		SetActive(true);
+		GetTransform().position = _position;
+		GetTransform().rotation = _rotation;
+		GetTransform().scale = _scale;
+		Start();
+	}
+
 	GameObject* GameObject::New(std::string _Name, GameObject* _Parent)
 	{
 		GameObject* result = new GameObject(_Name, _Parent);
@@ -38,6 +48,8 @@ namespace frost::ECS
 		{
 			delete component;
 		}
+
+		this->SetParent(nullptr);
 	}
 
 	void GameObject::Delete(const frost::core::AuthorizationBadge<frost::core::SceneManager>&)
@@ -66,6 +78,7 @@ namespace frost::ECS
 	void GameObject::Destroy()
 	{
 		frost::core::SceneManager::GetInstance().internalDestroyGameObject(this);
+		m_IsDirty = true;
 	}
 
 	const std::string& GameObject::GetName() const
@@ -172,6 +185,11 @@ namespace frost::ECS
 		return m_components;
 	}
 
+	bool GameObject::IsDirty()
+	{
+		return m_IsDirty;
+	}
+
 	void GameObject::Tick(float _DeltaTime)
 	{
 		_DeltaTime;
@@ -180,5 +198,10 @@ namespace frost::ECS
 	void GameObject::OnCollisionEnter(const S_CollisionData* _CollisionData)
 	{
 		_CollisionData;
+	}
+
+	void GameObject::TakeDamage(unsigned int _Damage)
+	{
+		_Damage;
 	}
 }

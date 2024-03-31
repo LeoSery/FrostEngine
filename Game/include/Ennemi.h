@@ -15,6 +15,7 @@ class Ennemi : public frost::ECS::GameObject
 {
 public:
 	static Ennemi* New(std::string _name, GameObject* _parent);
+	static Ennemi* New(std::string _name, glm::vec2 _location ,GameObject* _parent , GameObject* _objectToFocus);
 	Ennemi(std::string _name, GameObject* _parent);
 	~Ennemi();
 
@@ -23,9 +24,10 @@ public:
 	virtual void OnCollisionEnter(const frost::ECS::S_CollisionData* _CollisionData) override;
 
 private:
-	frost::ECS::SpriteRenderer* m_SpriteRenderer;
-	frost::ECS::BoxCollider* m_BoxCollider;
+	frost::ECS::SpriteRenderer* m_spriteRenderer;
+	frost::ECS::BoxCollider*	m_boxCollider;
 
-	MovementScript* m_MovementScript;
+	MovementScript* m_movementScript;
+	GameObject* m_objectToFocus;
 };
 

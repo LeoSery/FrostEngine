@@ -1,6 +1,6 @@
 #include "Core/Internal/Window.h"
 #include "Core/Input/Input.h"
-
+#include "ECS/Entity/GameObject.h"
 #include "Utils/Logger.h"
 
 #include <GLFW/glfw3.h>
@@ -159,7 +159,7 @@ namespace frost::core
 
 		for (size_t i = 0; i < ObjectsFunc->size(); i++)
 		{
-			if (ObjectsFunc->at(i).Object != nullptr)
+			if (!ObjectsFunc->at(i).Object->IsDirty())
 				ObjectsFunc->at(i).Function();
 			else
 				ObjectsFunc->erase(ObjectsFunc->begin() + i);

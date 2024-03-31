@@ -45,6 +45,8 @@ namespace frost::ECS
 		explicit GameObject(std::string _Name, GameObject* _Parent = nullptr);
 		void Init();
 
+		void Init(glm::vec2 _position , float _rotation ,glm::vec2 _scale);
+
 	public:
 
 		/*!
@@ -243,6 +245,8 @@ namespace frost::ECS
 		* \return std::vector<IComponent*> A vector with all the components of the GameObject.
 		*/
 		[[nodiscard]] std::vector<IComponent*> GetAllComponents() const;
+		//return true if object is destroyed next frame
+		[[nodiscard]]bool IsDirty();
 
 		// ECS methods
 
@@ -328,6 +332,7 @@ namespace frost::ECS
 		*/
 		void Delete(const frost::core::AuthorizationBadge<frost::core::SceneManager>&);
 
+		virtual void TakeDamage(unsigned int _Damage);
 	private:
 
 		uuids::uuid m_uuid;
@@ -335,7 +340,7 @@ namespace frost::ECS
 		std::vector<IComponent*> m_components;
 		std::unordered_set<std::string> m_tags;
 		bool m_isActive = true;
-
+		bool m_IsDirty = false;
 	};
 }
 

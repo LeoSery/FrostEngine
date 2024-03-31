@@ -80,6 +80,16 @@ void Player::OnCollisionEnter(const frost::ECS::S_CollisionData* _CollisionData)
 	frost::utils::Logger::LogInfo("Collision with " + ColName);
 }
 
+void Player::TakeDamage(unsigned int _Damage)
+{
+		m_Health -= _Damage;
+		if (m_Health <= 0)
+		{
+			m_Health = 0;
+			Destroy();
+		}
+}
+
 void Player::MoveForward()
 {
 	//frost::utils::Logger::LogInfo("Moving forward");
