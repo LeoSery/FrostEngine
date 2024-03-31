@@ -1,8 +1,12 @@
-#include "Spawner.h"
+// Engine includes
 #include "ECS/Component/Components/SpriteRenderer.h"
+
+// Game includes
+#include "Spawner.h"
+
+#include <Utils/Logger.h>
 #include <Ennemi.h>
 #include <random>
-#include <Utils/Logger.h>
 
 Spawner::Spawner(std::string _name, GameObject* _parent) : GameObject(_name, _parent){}
 
@@ -11,24 +15,24 @@ Spawner* Spawner::New(std::string _name , glm::vec2 _position , GameObject* _par
 	Spawner* result = new Spawner(_name, _parent);
 	result->Init(_position, 0, result->m_size);
 	result->m_player = _player;
+
 #ifndef Release
 	//result->AddComponent<frost::ECS::SpriteRenderer>();
 #endif // DEBUG
-
 
 	return nullptr;
 }
 
 void Spawner::Start()
 {
-	// Start the GameObject
 	m_spawnTimer	=	0.0f;
 	m_spawnRate		=	0.8f;
 	m_spawnCount	=	0;
 	m_spawnLimit	=	4;
 	m_KillCount		=	0;
-	m_KillLimit		=	15;
+	m_KillLimit		=	45;
 
+	// Start the GameObject
 	GameObject::Start();
 }
 

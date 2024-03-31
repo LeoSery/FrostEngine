@@ -26,7 +26,7 @@ public:
 		std::string MainSceneName = "GameScene";
 		SceneManager::GetInstance().CreateScene(MainSceneName);
 		SceneManager::GetInstance().LoadScene(MainSceneName);
-		Application::Init({ "Mon super jeu", glm::ivec2(1600, 900) });
+		Application::Init({ "FrostEngine demonstration game", glm::ivec2(1600, 900) });
 
 		// Player
 		PlayerEntity = Player::New("Player", m_CurrentScene->GetRoot());
@@ -35,7 +35,6 @@ public:
 
 		// Spawner
 		Spawner = Spawner::New("Spawner", {0,3} , m_CurrentScene->GetRoot() ,PlayerEntity);
-		
 	}
 
 	void Update(float deltaTime) override
