@@ -46,15 +46,66 @@ namespace frost::ECS
 		virtual ~IComponent();
 
 		// Frost engine life cycle methods
+
+		/*!
+		* \brief This is the method that will be executed when the component is created.
+		* 
+		* \note This method is purely virtual and must be implemented in every comoponent.
+		* 
+		* \fn virutal void Start() = 0;
+		*/
 		virtual void Start() = 0;
+
+		/*
+		* \brief This is the method that will be executed every frame.
+		* 
+		* \note This method is purely virtual and must be implemented in every comoponent.
+		* 
+		* \fn virtual void Update(float _DeltaTime) = 0;
+		*/
 		virtual void Update(float _DeltaTime) = 0;
 
 		// Getters and setters
+
+		/*!
+		* \brief Check if the Component is active.
+		*
+		* \note An inactive Compoent will not be updated.
+		*
+		* \fn bool IsActive() const;
+		*
+		* \return bool True if the Component is active, false otherwise.
+		*/
 		[[nodiscard]] bool IsActive() const;
+
+		/*!
+		* \brief Set the Component to active or inactive.
+		*
+		* \fn void SetActive(bool _IsActive);
+		*
+		* \param _IsActive True to set the Component to active, false to set it to inactive.
+		*/
 		void SetActive(bool _IsActive);
 
+		/*!
+		* \brief Get the UUID of the Component.
+		*
+		* \details Each Component has a UUID that identifies it.
+		* It is generated at creation and can be retrieved with the 'Component::GetUUID()' method.
+		*
+		* \fn uuids::uuid GetUUID() const;
+		*
+		* \return uuids::uuid The UUID of the Component.
+		*/
 		[[nodiscard]] uuids::uuid GetUUID() const;
 
+		/*!
+		* \brief Get the GameObject that the Component is attached to.
+		* 
+		* \fn GameObject& GetParentObject() const;
+		* 
+		* \return GameObject& The GameObject that the Component is attached to.
+		*/
 		[[nodiscard]] GameObject& GetParentObject() const;
 
 	protected:

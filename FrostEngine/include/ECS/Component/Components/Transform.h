@@ -45,17 +45,82 @@ namespace frost::ECS
 		~Transform();
 
 		// Frost engine life cycle methods
+
+		/*!
+		* \brief This method is called when the Transform is started.
+		*
+		* \details This method is inherited from the 'IComponent' class.
+		* It is redefined in each component and allows you to apply a
+		* different Start logic to each component.
+		*
+		* \fn vrirtual void Start() override
+		*/
 		virtual void Start() override;
+
+		/*!
+		* \brief This method is called by the engine at each cycle, and is used to update the component.
+		*
+		* \details This method is inherited from the 'IComponent' class.
+		* It is redefined in each component and allows you to apply a
+		* different Start logic to each component.
+		*
+		* \fn virtual void Update(float _DeltaTime) override
+		*
+		* \param _DeltaTime The time between the last frame and the current frame.
+		*/
 		virtual void Update(float _DeltaTime) override;
 
 		// Getters and Setters
+
+		/*
+		* \brief This method logs the data linked to this component.
+		*
+		* \details Displays in the position, rotation and scale of the GameObject
+		*
+		* \fn GetData(bool _ForceLoggerDraw) const
+		*
+		* \param _ForceLoggerDraw indicates whether the info should be put
+		* in the stack to be displayed at the next engine cycle,
+		* or whether it should be displayed now.
+		*/
 		void GetData(bool _ForceLoggerDraw) const;
 
 		// Component methods
+
+		/*
+		* \brief This method translates the GameObject by a given vector.
+		* 
+		* \fn Translate(const glm::vec2& _Translation)
+		* 
+		* \param _Translation the vector by which the GameObject should be translated.
+		*/
 		void Translate(const glm::vec2& _Translation);
+
+		/*!
+		* \brief This method rotates the GameObject by a given angle.
+		* 
+		* \fn Rotate(float _Rotation)
+		* 
+		* \param _Rotation the angle by which the GameObject should be rotated.
+		*/
 		void Rotate(float _Rotation);
+
+		/*!
+		* \brief This method scales the GameObject by a given vector.
+		* 
+		* \fn Scale(const glm::vec2& _Scale)
+		* 
+		* \param _Scale the vector by which the GameObject should be scaled.
+		*/
 		void Scale(const glm::vec2& _Scale);
 
+		/*!
+		* \brief This method returns the forward vector of the GameObject.
+		* 
+		* \fn GetForwardVector() const
+		* 
+		* \return the forward vector of the GameObject.
+		*/
 		glm::vec2 GetForwardVector() const;
 
 		// Fields
