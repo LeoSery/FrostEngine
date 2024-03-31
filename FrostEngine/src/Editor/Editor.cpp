@@ -146,7 +146,7 @@ namespace frost::editor
             {
                 frost::ECS::Transform* tr = SelectEntity->GetComponent<frost::ECS::Transform>();
                 frost::ECS::SpriteRenderer* sr = SelectEntity->GetComponent<frost::ECS::SpriteRenderer>();              
-                frost::ECS::BoxCollider* bc = SelectEntity->GetComponent<frost::ECS::BoxCollider>();
+                //frost::ECS::BoxCollider* bc = SelectEntity->GetComponent<frost::ECS::BoxCollider>();
 
                 // Get Name //
                 std::string name = SelectEntity->GetName().c_str();              
@@ -206,13 +206,19 @@ namespace frost::editor
                 // Get Collider //
                 ImGui::SeparatorText("Box Collider");
                 ImGui::NewLine();
-                if (ImGui::Checkbox("IsMovingEntity", &tr->isMovingEntity))
+                if (&tr->isMovingEntity)
                 {
-                    tr->isMovingEntity =true;
+                    ImGui::Text("IsMovingEntity : true");
+                }
+                else
+                { 
+                    ImGui::Text("IsMovingEntity : false"); 
                 }
 
+
+
                 // Get Static //
-                bool a = bc->GetIsStatic();
+                /*bool a = bc->GetIsStatic();
                 if (a)
                 {
                     ImGui::Text("IsStatic");
@@ -220,7 +226,7 @@ namespace frost::editor
                 if (ImGui::Checkbox("IsStatic", &a))
                 {
                     a = true;
-                }
+                }*/
                 ImGui::End();
             }
         }
