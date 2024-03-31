@@ -36,11 +36,11 @@ public:
 		PlayerTransform->position = glm::vec2(-6, 0);
 
 		// Enemy
-		Enemy = Ennemi::New("Enemy", m_CurrentScene->GetRoot());
+		Enemy = Ennemi::New("Enemy", glm::vec2(6, 0) ,m_CurrentScene->GetRoot(), PlayerEntity);
 
 		// Spawner
-		Spawner = Spawner::New("Spawner", m_CurrentScene->GetRoot());
-
+		Spawner = Spawner::New("Spawner", {0,3} , m_CurrentScene->GetRoot() ,PlayerEntity);
+		
 	}
 
 	void Update(float deltaTime) override

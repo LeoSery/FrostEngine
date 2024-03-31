@@ -156,5 +156,6 @@ namespace frost::core
 		Scene* m_activeScene = nullptr;
 
 		std::map<uuids::uuid, ECS::GameObject*> m_dirtyGameObjects;
+
 	};
 }
