@@ -22,7 +22,9 @@ void MovementScript::Start()
 void MovementScript::Update(float _DeltaTime)
 {
 	//Update Rotation
-	float RotationDelta =(m_InputRotationAcceleration * m_MaxRotationSpeed) - ((m_Rotationfriction * ((glm::abs(m_InputRotationAcceleration) * -1) + 1)) * m_CurrentRotationVelocity);
+	float Rotfriction = alwaysApplyFriction ? m_Rotationfriction : (m_Rotationfriction * ((glm::abs(m_InputRotationAcceleration) * -1) + 1));
+
+	float RotationDelta =(m_InputRotationAcceleration * m_MaxRotationSpeed) - (m_CurrentRotationVelocity * Rotfriction);
 	m_InputRotationAcceleration = 0.0f; //Consume the acceleration
 
 	m_CurrentRotationVelocity += RotationDelta * _DeltaTime;
@@ -32,8 +34,11 @@ void MovementScript::Update(float _DeltaTime)
 	}
 	m_OwningObject->GetTransform().rotation += m_CurrentRotationVelocity * _DeltaTime;
 
+
+
 	//Update the position
-	glm::vec2 Delta = (m_InputAcceleration * m_MaxSpeed) - ((m_friction * ((glm::length(m_InputAcceleration)* -1) + 1)) * m_CurrentVelocity);
+	float Velfriction = alwaysApplyFriction ? m_friction : (m_friction * ((glm::length(m_InputAcceleration) * -1) + 1));
+	glm::vec2 Delta = (m_InputAcceleration * m_MaxSpeed) - (Velfriction * m_CurrentVelocity);
 	m_InputAcceleration = { 0.0f, 0.0f }; //Consume the acceleration
 
 	m_CurrentVelocity += Delta * _DeltaTime ;

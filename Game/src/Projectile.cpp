@@ -5,10 +5,15 @@
 #include "Projectile.h"
 #include "MovementScript.h"
 
-Projectile* Projectile::New(std::string _name, GameObject* _parent)
+Projectile* Projectile::New(std::string _name, GameObject* _parent , glm::vec2 _baseVelocity)
 {
 	Projectile* result = new Projectile(_name, _parent);
 	result->Init();
+	result->GetTransform().Scale(glm::vec2(0.8f, 0.8f));
+	result->m_MovementScript->m_MaxSpeed = 80;
+	result->m_MovementScript->m_friction = 1.0f;
+	result->m_MovementScript->m_CurrentVelocity = _baseVelocity * 0.8f;
+	result->m_MovementScript->alwaysApplyFriction = true;
 	return result;
 }
 
@@ -32,15 +37,20 @@ void Projectile::Tick(float _DeltaTime)
 {
 	_DeltaTime;
 	m_MovementScript->AddAcceleration(GetTransform().GetForwardVector());
+
+	LifeTime -= _DeltaTime;
+	if (LifeTime <= 0)
+	{
+		Destroy();
+	}
 }
 
 void Projectile::OnCollisionEnter(const frost::ECS::S_CollisionData* _CollisionData)
 {
 	_CollisionData;
-	if (dynamic_cast<Ennemi*>(&_CollisionData->otherCollider->GetParentObject()) != nullptr)
+	if (_CollisionData->otherCollider->GetParentObject().HasTag("Ennemi"))
 	{
-		Ennemi* ColName = &dynamic_cast<Ennemi&>(_CollisionData->otherCollider->GetParentObject());
-		ColName->Destroy();
+		_CollisionData->otherCollider->GetParentObject().Destroy();
 		Destroy();
 	}
 }

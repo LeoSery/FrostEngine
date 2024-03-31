@@ -23,7 +23,10 @@ public:
 	virtual void Start();
 	virtual void Tick(float _DeltaTime) override;
 	virtual void OnCollisionEnter(const frost::ECS::S_CollisionData* _CollisionData) override;
-	virtual void Destroy();
+
+private:
+	void OnDestroy() override;
+
 private:
 	frost::ECS::SpriteRenderer* m_spriteRenderer;
 	frost::ECS::BoxCollider*	m_boxCollider;

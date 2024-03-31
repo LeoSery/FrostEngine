@@ -54,7 +54,7 @@ namespace frost::render
 		m_texture			  = glGetUniformLocation(m_shaderProgram.m_gl_ID, "uTexture");
 		m_zoom 				  = glGetUniformLocation(m_shaderProgram.m_gl_ID, "uZoom");
 
-		SetZoom(0.1f);
+		SetZoom(0.05f);
 		SetClearColor(glm::vec4(0.0f,0.0f, 0.0f, 1.0f));
 
 		return m_instance;

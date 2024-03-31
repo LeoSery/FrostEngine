@@ -101,9 +101,9 @@ namespace frost::ECS
 		* \details For a GameObject to be destroyed, it must be placed
 		* in the destruction queue to be deleted at the next engine cycle.
 		* 
-		* fn virtual void Destroy();
+		* \fn void Destroy();
 		*/
-		virtual void Destroy();
+		void Destroy();
 
 		// Getters and Setters
 
@@ -321,18 +321,8 @@ namespace frost::ECS
 		*/
 		virtual void OnCollisionEnter(const S_CollisionData* _CollisionData);
 
-		/*!
-		* \brief This method is called for destroying the GameObject.
-		* 
-		* \fn void Destroy(const frost::core::AuthorizationBadge<frost::core::SceneManager>&);
-		* 
-		* \param frost::core::AuthorizationBadge<frost::core::SceneManager>& The badge that authorizes the destruction of the GameObject.
-		* 
-		* \note This method is called by the SceneManager to destroy the GameObject.
-		*/
-		void Delete(const frost::core::AuthorizationBadge<frost::core::SceneManager>&);
-
 		virtual void TakeDamage(unsigned int _Damage);
+
 	private:
 
 		uuids::uuid m_uuid;
@@ -340,6 +330,9 @@ namespace frost::ECS
 		std::vector<IComponent*> m_components;
 		std::unordered_set<std::string> m_tags;
 		bool m_isActive = true;
+	
+	protected:
+		virtual void OnDestroy();
 		bool m_IsDirty = false;
 	};
 }

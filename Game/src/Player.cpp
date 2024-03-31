@@ -124,7 +124,7 @@ void Player::MoveRight()
 void Player::Fire()
 {
 	//frost::utils::Logger::LogInfo("Fire");
-	GameObject* projectile = Projectile::New("Projectile", this->GetParent());
+	GameObject* projectile = Projectile::New("Projectile", this->GetParent() , m_MovementScript->m_CurrentVelocity);
 	projectile->GetTransform().position = GetTransform().position;
 	projectile->GetTransform().rotation = GetTransform().rotation;
 }
