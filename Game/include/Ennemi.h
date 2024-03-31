@@ -15,7 +15,9 @@ class Spawner;
 class Ennemi : public frost::ECS::GameObject
 {
 public:
+	//Create ennemi
 	static Ennemi* New(std::string _name, GameObject* _parent);
+	//Create ennemi with a location and a spawner 
 	static Ennemi* New(std::string _name, glm::vec2 _location ,GameObject* _parent , GameObject* _objectToFocus , Spawner* _spawner);
 	Ennemi(std::string _name, GameObject* _parent);
 	~Ennemi();
@@ -25,6 +27,7 @@ public:
 	virtual void OnCollisionEnter(const frost::ECS::S_CollisionData* _CollisionData) override;
 
 private:
+	//call spawner to tell it we are dead
 	void OnDestroy() override;
 
 private:

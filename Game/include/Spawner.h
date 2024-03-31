@@ -29,7 +29,6 @@ private:
 		float spawnRate;
 
 		void Spawn(glm::vec2 _spawnLocation);
-		void KillEnnemies();
 		float GetRandomInRange(float min, float max);
 		
 };

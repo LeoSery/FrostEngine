@@ -48,7 +48,7 @@ void Projectile::Tick(float _DeltaTime)
 void Projectile::OnCollisionEnter(const frost::ECS::S_CollisionData* _CollisionData)
 {
 	_CollisionData;
-	if (_CollisionData->otherCollider->GetParentObject().HasTag("Ennemi"))
+	if (_CollisionData->otherCollider->GetParentObject().HasTag("Ennemi") && !_CollisionData->otherCollider->GetParentObject().IsDirty())
 	{
 		_CollisionData->otherCollider->GetParentObject().Destroy();
 		Destroy();

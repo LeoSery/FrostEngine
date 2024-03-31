@@ -20,8 +20,9 @@ public:
 	void Start() override;
 	void Update(float _DeltaTime) override;
 
-	void AddAcceleration(glm::vec2 _Acceleration);
-	void AddRotationAcceleration(float _Acceleration);
+	// Movement Methods
+	void AddAcceleration(glm::vec2 _Acceleration); // Add acceleration is the direction to move towards
+	void AddRotationAcceleration(float _Acceleration); // Add accelerationRotation is the rotation to turn towards
 
 
 #pragma region Movement
@@ -45,6 +46,6 @@ public:
 #pragma endregion
 
 private: 
-	frost::ECS::GameObject* m_OwningObject;
+	frost::ECS::GameObject* m_OwningObject; //parent object
 };
 
