@@ -34,7 +34,7 @@ namespace frost::utils
 		ImGui::SetNextWindowSize(ImVec2(900, 200));
 		if (ImGui::Begin("Explorer", NULL, ImGuiWindowFlags_NoCollapse))
 		{
-			if (ImGui::Button("Go Up"))
+			if (ImGui::Button("Back"))
 			{
 				if (CurrentPath.has_parent_path())
 				{

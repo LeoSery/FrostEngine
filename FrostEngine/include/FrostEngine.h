@@ -61,9 +61,9 @@ namespace frost
 
 		/*!
 		* \struct InitData
-		* 
+		*
 		* \brief A struct that holds data for initializing the window.
-		* 
+		*
 		* \details This structure contains the title and size of the window to be created.
 		*/
 		struct S_InitData
@@ -128,6 +128,7 @@ namespace frost
 		* \fn void Application::Run()
 		*/
 		void Run();
+		float GetFps() const;
 
 	private:
 
@@ -161,6 +162,11 @@ namespace frost
 		void PhysUpdate();
 
 		std::vector<frost::ECS::GameObject*> ObjectsToUpdate;
+
+		// Calculate Fps time
+		float m_secondCounter = 0.0;
+		float m_tempFps = 0.0;
+		float fps = 0.0;
 	};
 
 	/*!

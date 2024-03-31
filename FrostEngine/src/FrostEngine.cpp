@@ -17,6 +17,8 @@ namespace frost
 #ifdef _DEBUG 
 		m_Editor = frost::editor::Editor::GetInstance();
 		m_Editor->Init(m_Window);
+
+
 #endif	
 	}
 
@@ -66,6 +68,14 @@ namespace frost
 		} while (m_Window->PollEvents());
 	}
 
+
+	/*!
+	* \brief Engine shutdown method.
+	* 
+	* \fn void Application::Shutdown()
+	* 
+	* \details Shutdown is called when the engine is closed, deletes all processes opened by the engine.
+	*/
 	void Application::Shutdown()
 	{
 #ifdef _DEBUG	
