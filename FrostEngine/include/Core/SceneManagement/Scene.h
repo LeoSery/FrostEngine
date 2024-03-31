@@ -38,25 +38,49 @@ namespace frost::core
 	{
 	public:
 
+		//
 		// Constructors and Destructors
+		//
 		explicit Scene(const AuthorizationBadge<SceneManager>&, std::string _Name);
 		~Scene();
 
+		//
 		// Copy and Move Constructors
+		//
 		Scene(const Scene&) = delete;
 		Scene& operator=(const Scene&) = delete;
 		Scene(Scene&& _Other) noexcept;
 		Scene& operator=(Scene&& _Other) noexcept;
 
+		//
 		// Getters
+		//
+
+		/*!
+		* \brief Get the name of the scene.
+		* 
+		* \details a string containing the name of the scene.
+		* 
+		* \fn Scene::GetName() const
+		* 
+		* \return const std::string&
+		*/
 		[[nodiscard]] const std::string& GetName() const;
+
+		/*!
+		* brief Get the root GameObject of the scene.
+		* 
+		* \details The root GameObject is the highest parent in the scene.
+		* 
+		* \fn Scene::GetRoot() const
+		* 
+		* \return ECS::GameObject*
+		*/
 		[[nodiscard]] ECS::GameObject* GetRoot() const;
 
 	private:
 		uuids::uuid m_uuid;
 		std::string m_name;
 		ECS::GameObject* m_root;
-
-		
 	};
 }

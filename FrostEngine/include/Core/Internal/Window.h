@@ -11,6 +11,28 @@
 #include <glm/glm.hpp>
 #include <memory>
 
+#pragma region Forward Declarations
+namespace frost
+{
+	class Application;
+}
+
+namespace frost::render
+{
+	class RenderDevice;
+}
+
+namespace frost::editor
+{
+	class Editor;
+}
+
+namespace frost::core
+{
+	class Input;
+}
+#pragma endregion
+
 /*!
 * \namespace frost::core
 *
@@ -29,8 +51,22 @@ namespace frost::core
 	*/
 	class FROST_ENGINE_API Window
 	{
-	public:
+		friend class Editor;
+		friend class RenderDevice;
+		friend class Application;
+		friend class Input;
 
+	protected:
+
+		// Structs
+
+		/*!
+		* \struct S_WindowProperties
+		*
+		* \brief This struct holds the properties of the window.
+		*
+		* \details This struct holds the title, size, and full screen
+		*/
 		struct S_WindowProperties
 		{
 			const char* title;
@@ -43,9 +79,17 @@ namespace frost::core
 		~Window();
 
 		// Methods
-		bool PollEvents(); //this Function need to be called in the main loop of the application
+		bool PollEvents();
 
-		// Getters
+	public:
+
+		/*!
+		* \brief Get current window.
+		* 
+		* \fn Window::GetInternal() const;
+		* 
+		* \return The pointer to the window.
+		*/
 		void* GetInternal() const;
 
 	private:

@@ -229,11 +229,9 @@ namespace frost::core
 			std::vector<S_ObjectFunction> FunctionOnGoing;
 		};
 
-		//
 		// Methods
-		//
 
-		/*
+		/*!
 		* \brief Initialize the Input class.
 		* 
 		* \details Define the window to initialize the input class. 
@@ -247,7 +245,7 @@ namespace frost::core
 		*/
 		Input* init(Window* _window);
 
-		/*
+		/*!
 		* \brief Creates an action in the game.
 		* 
 		* \details This function creates an action in the game that can be binded to a keys.
@@ -256,7 +254,7 @@ namespace frost::core
 		*/
 		void AddAction(std::string _actionName);
 
-		/*
+		/*!
 		* \brief Binds an action to a key.
 		* 
 		* \details This function binds an action to a key.
