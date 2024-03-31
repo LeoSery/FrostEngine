@@ -2,6 +2,7 @@
 #include "ECS/Component/Components/BoxCollider.h"
 #include "ECS/Component/Components/SpriteRenderer.h"
 #include "MovementScript.h"
+#include "Spawner.h"
 #include <iostream>
 
 Ennemi* Ennemi::New(std::string _name, GameObject* _parent)
@@ -11,13 +12,13 @@ Ennemi* Ennemi::New(std::string _name, GameObject* _parent)
 	return result;
 }
 
-Ennemi* Ennemi::New(std::string _name, glm::vec2 _location, GameObject* _parent , GameObject* _objectToFocus)
+Ennemi* Ennemi::New(std::string _name, glm::vec2 _location, GameObject* _parent , GameObject* _objectToFocus, Spawner* _spawner)
 {
 	Ennemi* result = new Ennemi(_name, _parent);
 	result->Init(_location, 0.0f, {1.0f,1.0f});
 	result->GetTransform().isMovingEntity = true;
 	result->m_objectToFocus = _objectToFocus;
-
+	result->m_spawner = _spawner;
 	return result;
 }
 
@@ -38,7 +39,7 @@ void Ennemi::Start()
 	m_movementScript = AddComponent<MovementScript>();
 	m_boxCollider = AddComponent<frost::ECS::BoxCollider>();
 	m_spriteRenderer = AddComponent<frost::ECS::SpriteRenderer>();
-	m_spriteRenderer->SetTexture("PlayerShip/PlayerShip_FullHealh.png");
+	m_spriteRenderer->SetTexture("PlayerShip/EnnemiShip_Verydamaged.png");
 	m_boxCollider->m_collisionChannel = frost::ECS::E_CollisionChannel::Ennemy;
 	m_boxCollider->m_collisionSettings.emplace(std::pair<frost::ECS::E_CollisionChannel, frost::ECS::E_CollisionResponse>(frost::ECS::Projectile,frost::ECS::Block));
 	m_boxCollider->m_collisionSettings.emplace(std::pair<frost::ECS::E_CollisionChannel, frost::ECS::E_CollisionResponse>(frost::ECS::Player	,frost::ECS::Block));
@@ -77,4 +78,10 @@ void Ennemi::OnCollisionEnter(const frost::ECS::S_CollisionData* _CollisionData)
 		_CollisionData->otherCollider->GetParentObject().TakeDamage(10);
 		this->Destroy();
 	};
+}
+
+void Ennemi::Destroy()
+{
+	m_spawner->OnEnnemyDeath(this);
+	GameObject::Destroy();
 }

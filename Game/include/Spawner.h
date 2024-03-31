@@ -9,20 +9,28 @@ public:
 	virtual void Start();
 	virtual void Tick(float _DeltaTime);
 
+	void OnEnnemyDeath(frost::ECS::GameObject* Killed);
+
 private:
-		float		m_spawnTimer;
-		float		m_spawnRate;
-		int			m_spawnCount;
-		int			m_spawnLimit;
+		float	m_spawnTimer;
+		float	m_spawnRate	;
+		int		m_spawnCount;
+		int		m_spawnLimit;
+
+		int		m_KillCount	;
+		int		m_KillLimit	;
+
 		GameObject* m_player;
 		glm::vec2	m_size = glm::vec2( 20 , 7 );
 
 		std::vector<frost::ECS::GameObject*> m_SpawnedObjects;
+		std::unordered_map<uuids::uuid , int> m_mapEnnemiesIndex;
+
 		float lastSpawnTime;
 		float spawnRate;
 
 		void Spawn(glm::vec2 _spawnLocation);
-
+		void KillEnnemies();
 		float GetRandomInRange(float min, float max);
 		
 };

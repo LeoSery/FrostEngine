@@ -145,6 +145,9 @@
     <ClCompile Include="src\Player.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="..\..\..\..\..\Downloads\Foozle_2DS0011_Void_MainShip\Foozle_2DS0011_Void_MainShip\Main ship weapons\PNGs\Main ship weapon - Projectile - Big Space Gun.png" />
+    <Image Include="ressources\Textures\PlayerShip\EnnemiShip_Verydamaged.png" />
+    <Image Include="ressources\Textures\PlayerShip\Projectile.png" />
     <Image Include="ressources\Textures\PlayerShip\PlayerShip_FullHealh.png" />
     <Image Include="ressources\Textures\T_Debug.png" />
     <Image Include="ressources\Textures\T_Debug_Quad.png" />

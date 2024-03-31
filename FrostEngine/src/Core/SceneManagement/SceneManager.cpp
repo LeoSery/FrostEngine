@@ -30,6 +30,7 @@ namespace frost::core
 	void SceneManager::internalDestroyGameObject(ECS::GameObject* _GameObject)
 	{
 		m_dirtyGameObjects[_GameObject->GetUUID()] = _GameObject;
+		_GameObject->SetActive(false);
 	}
 
 	void SceneManager::DestroyGameObjectQueue()

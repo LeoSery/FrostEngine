@@ -21,7 +21,7 @@ void Projectile::Start()
 {
 	GameObject::Start();
 	GetTransform().isMovingEntity = true;
-	this->AddComponent<frost::ECS::SpriteRenderer>()->SetTexture("PlayerShip/PlayerShip_FullHealh.png");
+	this->AddComponent<frost::ECS::SpriteRenderer>()->SetTexture("PlayerShip/Projectile.png");
 	m_MovementScript = this->AddComponent<MovementScript>();
 	m_BoxCollider = this->AddComponent<frost::ECS::BoxCollider>();
 	m_BoxCollider->m_collisionChannel = frost::ECS::E_CollisionChannel::Projectile;
