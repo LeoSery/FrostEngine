@@ -160,77 +160,66 @@ namespace frost::editor
                
                 // Get Parent Name // 
                 ImGui::Text("Parent Object : %s", SelectEntity->GetParent()->GetName().c_str());
-
                 ImGui::NewLine();
                 ImGui::Separator();
                 ImGui::NewLine();
 
-                // Get Transform //
-                std::string transform = "Transform";
-                float font_size1 = ImGui::GetFontSize() * transform.size() / 2;
+
+                // Text Components //
+                std::string components = "Components";
+                float font_size1 = ImGui::GetFontSize() * components.size() / 2;
                 ImGui::NewLine();
                 ImGui::SameLine(ImGui::GetWindowSize().x / 2 - font_size1 + (font_size1 / 2));
-                ImGui::Text(transform.c_str());
+                ImGui::Text(components.c_str());
                 ImGui::NewLine();
-
-                if (ImGui::InputFloat("x ", &tr->position.x))
+                
+                // Get Transform //               
+                ImGui::SeparatorText("Transform");
+                ImGui::NewLine();
+                ImGui::Text("Position (X/Y)");
+                if (ImGui::InputFloat2("  ", &tr->position.x))
                 {
                     
                 }
 
-                if (ImGui::InputFloat("y", &tr->position.y))
-                {
-
-                }
-                
-
-
                 // Get Rotation //
-                ImGui::Text("Rotation :");
-                ImGui::SameLine();
+                ImGui::Text("Rotation");
                 if (ImGui::InputFloat(" ", &tr->rotation))
                 {
 
                 }
-                // Get Scale //
-                // 
-                ImGui::Text("Scale X/Y :");
-                ImGui::SameLine();
+                // Get Scale //                
+                ImGui::Text("Scale (X/Y)");
                 if (ImGui::InputFloat2(" ", &tr->scale.x))
                 {
 
                 }
-
-                ImGui::NewLine();
-                ImGui::Separator();
                 ImGui::NewLine();
 
                 // Get ImagePath //
-                ImGui::Text("Path Image : %sr", sr->GetTexture().c_str());
-
+                ImGui::SeparatorText("Sprite Renderer");
                 ImGui::NewLine();
-                ImGui::Separator();
+                ImGui::Text("Path Image :");
+                ImGui::Text("%sr", sr->GetTexture().c_str());
                 ImGui::NewLine();
 
                 // Get Collider //
+                ImGui::SeparatorText("Box Collider");
+                ImGui::NewLine();
                 if (ImGui::Checkbox("IsMovingEntity", &tr->isMovingEntity))
                 {
-                    tr->isMovingEntity = true;
-                    if (!tr->isMovingEntity)
-                    {
-                        tr->isMovingEntity = false;
-                    }
+                    tr->isMovingEntity =true;
                 }
 
                 // Get Static //
                 bool a = bc->GetIsStatic();
+                if (a)
+                {
+                    ImGui::Text("IsStatic");
+                }
                 if (ImGui::Checkbox("IsStatic", &a))
                 {
-                    a = false;
-                    if (!a)
-                    {
-                        a = true;
-                    }
+                    a = true;
                 }
                 ImGui::End();
             }
