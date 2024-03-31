@@ -14,7 +14,7 @@ namespace frost
 		m_SceneManager = &frost::core::SceneManager::GetInstance();
 		m_CurrentScene = &m_SceneManager->GetActiveScene();
 
-#ifdef _DEBUG 
+#if defined _DEBUG || _QA
 		m_Editor = frost::editor::Editor::GetInstance();
 		m_Editor->Init(m_Window);
 #endif	
@@ -37,7 +37,7 @@ namespace frost
 
 			/*User Update()*/
 			Update(deltaTime);
-#ifdef _DEBUG
+#if defined _DEBUG || _QA
 			UpdateDebugData(&deltaTime);
 #endif 
 			/*GameObjects Update()*/
@@ -58,7 +58,7 @@ namespace frost
 			/*Render Update()*/
 			m_RenderDevice->Update();
 
-#ifdef _DEBUG
+#if defined _DEBUG ||_QA
 			/*Editor Update()*/
 			m_Editor->DrawEditor();
 			 
@@ -94,7 +94,7 @@ namespace frost
 	*/
 	void Application::Shutdown()
 	{
-#ifdef _DEBUG	
+#if defined _DEBUG || _QA	
 		m_Editor->Shutdown();
 		delete m_Editor;
 #endif

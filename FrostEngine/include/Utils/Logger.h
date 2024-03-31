@@ -56,7 +56,7 @@ namespace frost::utils
 		static void LogWarning(const std::string& _Content);
 		static void LogError(const std::string& _Content);
 
-#ifdef _DEBUG
+#if defined _DEBUG || _QA
 		void DrawLogger();
 #endif
 

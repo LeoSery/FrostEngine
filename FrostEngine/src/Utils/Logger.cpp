@@ -64,7 +64,7 @@ namespace frost::utils
 		}
 	}
 
-#ifdef _DEBUG
+#if defined _DEBUG || _QA
 	void Logger::DrawLogger()
 	{
 
