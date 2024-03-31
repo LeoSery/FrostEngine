@@ -128,7 +128,8 @@ namespace frost
 		* \fn void Application::Run()
 		*/
 		void Run();
-		float GetFps() const;
+
+		void UpdateDebugData(float* _DeltaTime);
 
 	private:
 
@@ -163,10 +164,7 @@ namespace frost
 
 		std::vector<frost::ECS::GameObject*> ObjectsToUpdate;
 
-		// Calculate Fps time
-		float m_secondCounter = 0.0;
-		float m_tempFps = 0.0;
-		float fps = 0.0;
+
 	};
 
 	/*!

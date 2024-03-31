@@ -58,7 +58,7 @@ namespace frost::editor
       
         DrawHierarchy(m_CurrentScene);
         DrawInspector();
-
+        DrawFps();
 
 #ifdef _DEBUG
         DrawConsole();
@@ -66,7 +66,7 @@ namespace frost::editor
 
 
         frost::utils::Explorer::GetInstance()->DrawExplorer();
-        frost::utils::TextEditor::GetInstance()->DrawTextEditor();
+        //frost::utils::TextEditor::GetInstance()->DrawTextEditor();
         
 
 
@@ -273,4 +273,18 @@ namespace frost::editor
         }
     }  
 #endif
+
+    void Editor::DrawFps()
+    {
+        ImGui::SetNextWindowSize(ImVec2(125, 70));
+
+        if (ImGui::Begin("FPS", NULL, ImGuiWindowFlags_NoCollapse))
+
+        {
+            std::string FpsString = std::format(" {:.0f}", fps);
+            ImGui::Text(" %s", FpsString.c_str());
+
+        }
+        ImGui::End();
+    }
 }

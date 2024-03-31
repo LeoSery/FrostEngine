@@ -37,7 +37,9 @@ namespace frost
 
 			/*User Update()*/
 			Update(deltaTime);
-
+#ifdef _DEBUG
+			UpdateDebugData(&deltaTime);
+#endif 
 			/*GameObjects Update()*/
 			if (m_CurrentScene != nullptr)
 			{
@@ -64,6 +66,22 @@ namespace frost
 			frost::utils::Logger::GetInstance()->Show();
 #endif 
 		} while (m_Window->PollEvents());
+	}
+
+	void Application::UpdateDebugData(float* _DeltaTime)
+	{
+
+		if (m_Editor->m_secondCounter <= 1) {
+			m_Editor->m_secondCounter += *_DeltaTime;
+			m_Editor->m_tempFps++;
+		}
+		else
+		{
+			//"fps" are the actual fps
+			m_Editor->fps = m_Editor->m_tempFps;
+			m_Editor->m_secondCounter = 0;
+			m_Editor->m_tempFps = 0;
+		}
 	}
 
 
