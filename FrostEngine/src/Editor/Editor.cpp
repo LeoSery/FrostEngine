@@ -102,10 +102,18 @@ namespace frost::editor
         ImGui::DestroyContext();
     }
 
+    frost::ECS::GameObject* Editor::GetSelectEntity()
+    {
+        return SelectEntity;
+    }
+
+    void Editor::SetSelectEntity(frost::ECS::GameObject* _Entity)
+    {
+       SelectEntity = _Entity;
+    }
+
     void Editor::DrawHierarchy(frost::core::Scene* m_CurrentScene)
     {
-  
-        
         ImGui::SetNextWindowSize(ImVec2(300, 700));
         if (ImGui::Begin("Hierarchy", NULL, ImGuiWindowFlags_NoCollapse))
 
@@ -120,13 +128,15 @@ namespace frost::editor
     {
         for(auto* child : m_CurrentScene->GetRoot()->GetChildren())
         {
-            ImGui::PushStyleColor(ImGuiCol_Button, IM_COL32(35, 68, 108, 1));
-            if (ImGui::Button(child->GetName().c_str()))
+            if (child != nullptr)
             {
-                SelectEntity = child;
-            }  
-            ImGui::PopStyleColor();
-
+                ImGui::PushStyleColor(ImGuiCol_Button, IM_COL32(35, 68, 108, 1));
+                if (ImGui::Button(child->GetName().c_str()))
+                {
+                    SelectEntity = child;
+                }  
+                ImGui::PopStyleColor();
+            }
         }
     }
 
@@ -135,7 +145,6 @@ namespace frost::editor
         ImGui::SetNextWindowSize(ImVec2(300, 705));
         ImGui::Begin("Inspector", NULL, ImGuiWindowFlags_NoCollapse);
         ImGui::End();
-
     }
 
     void Editor::DrawInsperctorValue()
@@ -146,7 +155,14 @@ namespace frost::editor
             {
                 frost::ECS::Transform* tr = SelectEntity->GetComponent<frost::ECS::Transform>();
                 frost::ECS::SpriteRenderer* sr = SelectEntity->GetComponent<frost::ECS::SpriteRenderer>();              
-                //frost::ECS::BoxCollider* bc = SelectEntity->GetComponent<frost::ECS::BoxCollider>();
+                frost::ECS::BoxCollider* bc = SelectEntity->GetComponent<frost::ECS::BoxCollider>();
+                
+                if (SelectEntity == nullptr)
+                {
+					ImGui::Text("No Object Selected");
+					ImGui::End();
+					return;
+				}
 
                 // Get Name //
                 std::string name = SelectEntity->GetName().c_str();              
@@ -197,36 +213,41 @@ namespace frost::editor
                 ImGui::NewLine();
 
                 // Get ImagePath //
-                ImGui::SeparatorText("Sprite Renderer");
-                ImGui::NewLine();
-                ImGui::Text("Path Image :");
-                ImGui::Text("%sr", sr->GetTexture().c_str());
-                ImGui::NewLine();
+
+                if (sr != nullptr)
+                {
+                    ImGui::SeparatorText("Sprite Renderer");
+                    ImGui::NewLine();
+                    ImGui::Text("Path Image :");
+                    ImGui::Text("%sr", sr->GetTexture().c_str());
+                    ImGui::NewLine();
+                }
 
                 // Get Collider //
-                ImGui::SeparatorText("Box Collider");
-                ImGui::NewLine();
-                if (&tr->isMovingEntity)
+                if (bc != nullptr)
                 {
-                    ImGui::Text("IsMovingEntity : true");
-                }
-                else
-                { 
-                    ImGui::Text("IsMovingEntity : false"); 
-                }
+                    ImGui::SeparatorText("Box Collider");
+                    ImGui::NewLine();
+                    if (&tr->isMovingEntity)
+                    {
+                        ImGui::Text("IsMovingEntity : true");
+                    }
+                    else
+                    { 
+                        ImGui::Text("IsMovingEntity : false"); 
+                    }
 
-
-
-                // Get Static //
-                /*bool a = bc->GetIsStatic();
-                if (a)
-                {
-                    ImGui::Text("IsStatic");
+                    // Get Static //
+                    bool a = bc->GetIsStatic();
+                    if (a)
+                    {
+                        ImGui::Text("IsStatic");
+                    }
+                    if (ImGui::Checkbox("IsStatic", &a))
+                    {
+                        a = true;
+                    }
                 }
-                if (ImGui::Checkbox("IsStatic", &a))
-                {
-                    a = true;
-                }*/
                 ImGui::End();
             }
         }
