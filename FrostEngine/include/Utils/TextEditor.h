@@ -4,7 +4,19 @@
 #include "Editor/Editor.h"
 
 #include "cstdint"
+#include "cstring"
+
 #include "string_view"
+#include "string"
+
+#include "imgui.h"
+#include "filesystem"
+
+#include "fstream"
+#include "iostream"
+#include "sstream"
+
+namespace fs = std::filesystem;
 
 namespace frost::utils
 {
@@ -14,26 +26,46 @@ namespace frost::utils
 
 		// Constructors and Destructors
 		TextEditor() : CurrentFilename({}) { std::memset(TextBuffer, 0, BufferSize); }
+		~TextEditor();
 
-		// Methods Darw
+		// Singleton
+		[[nodiscard]] static TextEditor* GetInstance();
+		static void DeleteTextEditor();
+
+		// Methods Draw
 		void DrawTextEditor();
 		void DrawTextEditorMenu();
 		void DrawTextEditorContent();
 		void DrawTextEditorInfo();
 
-		// Variable Text
+		// Methods Draw PopUp
+		void DrawTextEditorSavePopup();
+		void DrawTextEditorLoadPopup();
+
+		// Text Variable
 		static constexpr auto BufferSize = std::size_t{ 1024 };
+
+
+		// PopUp Variable
+		static constexpr auto popUpFlags = ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoScrollbar;
+		static constexpr auto popUpSize = ImVec2(300.0f, 100.0f);
+		static constexpr auto popUpButtonSize = ImVec2(120.0f, 0.0f);
 
 	private:
 
-		// Methods act on files
-		// void SaveToFile(std::string_view _Filename);
-		// void LoadFromFile(std::string_view _Filename);
-		// std::string GetFileExtension(std::string_view _Filename);
+		// Methods Act On Files
+		void SaveToFile(std::string_view _Filename);
+		void LoadFromFile(std::string_view _Filename);
+		std::string GetFileExtension(std::string_view _Filename);
 
 		// Variable Text
 		char TextBuffer[BufferSize];
 		std::string CurrentFilename;
+
+		// Instance
+		static TextEditor* m_Instance;
+
+
 	};
 }
 

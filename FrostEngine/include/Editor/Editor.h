@@ -8,6 +8,7 @@
 
 #include "Core/SceneManagement/SceneManager.h"
 #include "Core/SceneManagement/Scene.h"
+
 #include "Core/Internal/Export.h"
 
 
@@ -27,7 +28,14 @@ namespace frost::utils
 {
 	class Logger;
 	class Explorer;
+	class TextEditor;
 }
+
+namespace frost
+{
+	class Application;
+}
+
 #pragma endregion
 
 

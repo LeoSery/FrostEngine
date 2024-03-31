@@ -8,11 +8,13 @@
 
 #include "Utils/Logger.h"
 #include "Utils/Explorer.h"
+#include "Utils/TextEditor.h"
 #include "ECS/Component/Components/Transform.h"
 #include "ECS/Component/Components/SpriteRenderer.h"
 #include "ECS/Component/Components/BoxCollider.h"
 #include "ECS/Entity/GameObject.h"
 #include "Render/RenderDevice.h"
+#include "FrostEngine.h"
 #include "GLFW/glfw3.h"
 
 #include <iostream>
@@ -44,20 +46,28 @@ namespace frost::editor
 	{
         frost::core::Scene* m_CurrentScene;
         frost::core::SceneManager* m_SceneManager;
+     
 
         m_SceneManager = &frost::core::SceneManager::GetInstance();
         m_CurrentScene = &m_SceneManager->GetActiveScene();
+        
 
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
-
+      
         DrawHierarchy(m_CurrentScene);
         DrawInspector();
+
+
 #ifdef _DEBUG
         DrawConsole();
 #endif
+
+
         frost::utils::Explorer::GetInstance()->DrawExplorer();
+        frost::utils::TextEditor::GetInstance()->DrawTextEditor();
+        
 
 
         ImGui::Render();
@@ -78,7 +88,7 @@ namespace frost::editor
         io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
         io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
 
-
+        ImGui::GetIO().Framerate;
         ImGui_ImplGlfw_InitForOpenGL(static_cast<GLFWwindow*>(_Window->GetInternal()), true);
         ImGui_ImplOpenGL3_Init();
         ImGui::StyleColorsDark();
@@ -94,6 +104,8 @@ namespace frost::editor
 
     void Editor::DrawHierarchy(frost::core::Scene* m_CurrentScene)
     {
+  
+        
         ImGui::SetNextWindowSize(ImVec2(300, 700));
         if (ImGui::Begin("Hierarchy", NULL, ImGuiWindowFlags_NoCollapse))
 

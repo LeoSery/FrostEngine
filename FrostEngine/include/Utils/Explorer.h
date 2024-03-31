@@ -14,7 +14,6 @@ namespace fs = std::filesystem;
 namespace frost::utils
 {
 	
-	
 	class FROST_ENGINE_API Explorer : public editor::Editor
 	{
 	public:
