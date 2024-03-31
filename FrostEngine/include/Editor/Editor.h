@@ -82,7 +82,7 @@ namespace frost::editor
 		void DrawInsperctorValue();
 
 		void DrawFps();
-#ifdef _DEBUG
+#if defined _DEBUG || _QA
 		void DrawConsole();
 #endif	
 		// Example collide 

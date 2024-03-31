@@ -47,28 +47,24 @@ namespace frost::editor
         frost::core::Scene* m_CurrentScene;
         frost::core::SceneManager* m_SceneManager;
      
-
         m_SceneManager = &frost::core::SceneManager::GetInstance();
         m_CurrentScene = &m_SceneManager->GetActiveScene();
         
-
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
-      
+
+#ifdef _DEBUG     
         DrawHierarchy(m_CurrentScene);
         DrawInspector();
-        DrawFps();
-
-#ifdef _DEBUG
-        DrawConsole();
-#endif
-
-
         frost::utils::Explorer::GetInstance()->DrawExplorer();
         //frost::utils::TextEditor::GetInstance()->DrawTextEditor();
-        
+#endif      
 
+#if defined _DEBUG || _QA
+        DrawConsole();
+        DrawFps();
+#endif
 
         ImGui::Render();
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
@@ -253,7 +249,7 @@ namespace frost::editor
         }
 
     }
-#ifdef _DEBUG
+#if defined _DEBUG || _QA
     void Editor::DrawConsole()
     {
         ImGui::SetNextWindowSize(ImVec2(700, 200));
