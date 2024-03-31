@@ -35,9 +35,6 @@ public:
 		Transform* PlayerTransform = PlayerEntity->GetComponent<Transform>();
 		PlayerTransform->position = glm::vec2(-6, 0);
 
-		// Enemy
-		Enemy = Ennemi::New("Enemy", glm::vec2(6, 0) ,m_CurrentScene->GetRoot(), PlayerEntity);
-
 		// Spawner
 		Spawner = Spawner::New("Spawner", {0,3} , m_CurrentScene->GetRoot() ,PlayerEntity);
 		

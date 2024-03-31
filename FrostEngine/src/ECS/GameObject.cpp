@@ -46,6 +46,7 @@ namespace frost::ECS
 		m_components.clear();
 		for (IComponent* component : components)
 		{
+			frost::utils::Logger::GetInstance()->LogInfo("Deleting Component: " + component->GetTypeName());
 			delete component;
 		}
 
@@ -77,8 +78,8 @@ namespace frost::ECS
 
 	void GameObject::Destroy()
 	{
-		frost::core::SceneManager::GetInstance().internalDestroyGameObject(this);
 		m_IsDirty = true;
+		frost::core::SceneManager::GetInstance().internalDestroyGameObject(this);
 	}
 
 	const std::string& GameObject::GetName() const

@@ -52,6 +52,15 @@
     <Image Include="ressources\Textures\PlayerShip\PlayerShip_FullHealh.png">
       <Filter>Fichiers de ressources</Filter>
     </Image>
+    <Image Include="..\..\..\..\..\Downloads\Foozle_2DS0011_Void_MainShip\Foozle_2DS0011_Void_MainShip\Main ship weapons\PNGs\Main ship weapon - Projectile - Big Space Gun.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="ressources\Textures\PlayerShip\Projectile.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="ressources\Textures\PlayerShip\EnnemiShip_Verydamaged.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Player.h">

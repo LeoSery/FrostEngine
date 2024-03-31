@@ -21,10 +21,12 @@ Spawner* Spawner::New(std::string _name , glm::vec2 _position , GameObject* _par
 void Spawner::Start()
 {
 	// Start the GameObject
-	m_spawnTimer = 0.0f;
-	m_spawnRate = 0.01f;
-	m_spawnCount = 0;
-	m_spawnLimit = 10;
+	m_spawnTimer	=	0.0f;
+	m_spawnRate		=	0.01f;
+	m_spawnCount	=	0;
+	m_spawnLimit	=	10;
+	m_KillCount		=	0;
+	m_KillLimit		=	15;
 
 	GameObject::Start();
 }
@@ -32,6 +34,7 @@ void Spawner::Start()
 void Spawner::Tick(float _DeltaTime)
 {
 	_DeltaTime;
+
 	if (m_spawnCount < m_spawnLimit)
 	{
 		m_spawnTimer += _DeltaTime;
@@ -42,13 +45,44 @@ void Spawner::Tick(float _DeltaTime)
 			Spawn(spawnLocation);
 		}
 	}
+
+
+}
+
+void Spawner::OnEnnemyDeath(frost::ECS::GameObject* Killed)
+{
+
+	// Remove the ennemy from the list
+	int index = m_mapEnnemiesIndex[Killed->GetUUID()];
+	m_SpawnedObjects.erase(m_SpawnedObjects.begin() + index);
+	m_mapEnnemiesIndex.erase(Killed->GetUUID());
+
+	// Update the count
+	m_spawnCount--;
+	if (m_spawnCount < 0)
+		m_spawnCount = 0;
+
+	// Check if we need to spawn more ennemies or stop the game
+	m_KillCount++;
+
+	if (m_KillCount >= m_KillLimit)
+	{
+		m_KillCount = 0;
+		m_spawnLimit = 0;
+	}
+
 }
 
 void Spawner::Spawn(glm::vec2 _spawnLocation)
 {
 	_spawnLocation;
-	Ennemi::New("Ennemi", _spawnLocation ,this->GetParent() , m_player);
+
+	Ennemi* ennemi = Ennemi::New("Ennemi", _spawnLocation, this, m_player, this);
 	m_spawnCount++;
+
+	m_SpawnedObjects.push_back(ennemi);
+	m_mapEnnemiesIndex[ennemi->GetUUID()] = int(m_SpawnedObjects.size() - 1);
+
 }
 
 float Spawner::GetRandomInRange(float min, float max)
