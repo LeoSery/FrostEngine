@@ -36,6 +36,10 @@ namespace frost::ECS
 		m_spriteTexture = new frost::render::Texture();
 
 		VAO.SetTexture(m_spriteTexture);
+
+		VAO.SetLocation({ this->GetParentObject().GetComponent<Transform>()->position });
+		VAO.SetScale({ this->GetParentObject().GetComponent<Transform>()->scale });
+		VAO.SetRotation({ this->GetParentObject().GetComponent<Transform>()->rotation });
 	}
 
 	SpriteRenderer::~SpriteRenderer()
