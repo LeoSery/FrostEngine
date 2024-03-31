@@ -245,6 +245,14 @@ namespace frost::ECS
 		* \return std::vector<IComponent*> A vector with all the components of the GameObject.
 		*/
 		[[nodiscard]] std::vector<IComponent*> GetAllComponents() const;
+
+		/*!
+		* \brief IsDiry return true if object is destroyed next frame
+		* 
+		* \fn bool IsDirty();
+		* \return bool
+		*/
+
 		//return true if object is destroyed next frame
 		[[nodiscard]]bool IsDirty();
 
@@ -321,6 +329,14 @@ namespace frost::ECS
 		*/
 		virtual void OnCollisionEnter(const S_CollisionData* _CollisionData);
 
+		/*!
+		* \brief This method is here to apply damage easily.
+		* 
+		* \details This method is virtual, so it can be redefined in any class that inherits from GameObject,
+		* in order to have a different behavior in each class.
+		* 
+		* \fn virtual void TakeDamage(unsigned int _Damage);
+		*/
 		virtual void TakeDamage(unsigned int _Damage);
 
 	private:
