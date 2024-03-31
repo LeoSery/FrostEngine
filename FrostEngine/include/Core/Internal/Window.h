@@ -78,7 +78,10 @@ namespace frost::core
 		explicit Window(S_WindowProperties _Properties);
 		~Window();
 
-		// Methods
+		/*!
+		* \brief PollEvents is called in the main loop.
+		* \details this function swap the buffers and poll the events.
+		*/
 		bool PollEvents();
 
 	public:

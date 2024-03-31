@@ -22,22 +22,33 @@ namespace frost::render
 	* 
 	* \brief allow to create a buffer.
 	* 
-	* \brief this class is used to create a buffer in the GPU.
+	* \details this class is used to create a buffer in OpenGL context.
+	* \n it store data in the GPU memory and save an adress to access it.
 	*/
 	class FROST_ENGINE_API Buffer
 	{
 
 	public:
 
-		// Constructor and Destructor
+		// Constructor / Destructor
 		explicit Buffer();
 		~Buffer();
 
 		// Methods
+
+		/*!
+		* \brief Create a buffer.
+		* \fn Create.
+		* \_param data the data to store in the buffer.
+		* \_param size the size of the data.
+		* \return the id of the buffer.
+		*/
 		unsigned int CreateData(void* data, unsigned int size);
 
-		// Getters
-		[[nodiscard]] unsigned int GetBufferID();
+		/*!
+		* \brief Get The Buffer ID.
+		*/
+		unsigned int GetBufferID();
 
 	private:
 

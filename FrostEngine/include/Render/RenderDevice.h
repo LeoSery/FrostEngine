@@ -45,21 +45,54 @@ namespace frost::render
 		explicit RenderDevice();
 		~RenderDevice();
 
-		// Methods
+		/*!
+		* \brief Init() will be executed when Application::Init() is called.
+		* \details this method call glewInit(), set the shader used and get uniform locations later used in the rendering update.
+		* \fn Init(const frost::core::Window* _window)
+		* \param _window The window to render to.
+		*/
 		RenderDevice* Init(const frost::core::Window* _window);
 
-		// Singleton
+		/*! 
+		* \brief RenderDevice::GetInstance() return the instance of the RenderDevice.
+		* \fn GetInstance()
+		* \return RenderDevice* The instance of the RenderDevice.
+		*/
 		static RenderDevice* GetInstance();
 		static RenderDevice* m_instance;
 
-		// Methods
+		/*!
+		* \brief AddVAO() is called in all objects that want to send geometry to render.
+		* \fn AddVAO(VertexArrayObject _NewVAO)
+		* \param _NewVAO The VAO to render.
+		*/
 		void AddVAO(VertexArrayObject _NewVAO);
+		
+		/*!
+		* \brief SetZoom() set the uniform zoom in the shader used to render.
+		* \fn SetZoom(float _zoom)
+		* \param _zoom The zoom to set.
+		*/
 		void SetZoom(float _zoom);
+		
+		/*!
+		* \brief GetZoom() get the uniform zoom in the shader used to render.
+		* \fn GetZoom()
+		* \return zoom float.
+		*/
 		float GetZoom();
 
+		/*!
+		* \brief SetClearColor() set the clear color of the window.
+		* \fn SetClearColor(glm::vec4 _color)
+		* \param _color The color to set.
+		*/
 		void SetClearColor(glm::vec4 _color);
 
-		// Frost engine life cycle methods
+		/*!
+		* \brief Update() is called in the main loop of the application.
+		* it's the method that render all the VAOs.
+		*/
 		void Update();
 
 	private:

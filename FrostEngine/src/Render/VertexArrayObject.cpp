@@ -22,17 +22,18 @@ namespace frost::render
 		m_rotationLocation = 0.f;
 		m_scaleLocation = { 1,1 };
 
-		glCreateVertexArrays(1, &m_gl_ID);
+		glCreateVertexArrays(1, &m_gl_ID); //Create VAO
 
-		//On active l'attribut 0 du VAO
-		glEnableVertexArrayAttrib(m_gl_ID, 0);
+		
+		glEnableVertexArrayAttrib(m_gl_ID, 0); //Ennable attrib 0 of the VAO <-- uPosition in vertex shader
 		glVertexArrayAttribBinding(m_gl_ID, 0, 0);
-		glVertexArrayAttribFormat(m_gl_ID, 0, 2 /*L'attribut a une taille de 2 GL_FLOAT*/, GL_FLOAT, GL_FALSE, 0);
+		glVertexArrayAttribFormat(m_gl_ID, 0, 2 /*attrib must have a size of two GL_Float*/, GL_FLOAT, GL_FALSE, 0);
 
-		//On active l'attribut 1 du VAO <-- TexCoord
-		glEnableVertexArrayAttrib(m_gl_ID, 1);
-		glVertexArrayAttribBinding(m_gl_ID, 1, 0); //On Bind l'attribut 1 qui est la couleur des vertices
-		glVertexArrayAttribFormat(m_gl_ID, 1, 2 /*L'attribut a une taille de 3 GL_FLOAT*/, GL_FLOAT, GL_FALSE, 2 * sizeof(float)); // et un offset de 2 * la taille d'un float
+		
+		glEnableVertexArrayAttrib(m_gl_ID, 1);//Ennable attrib 1 of the VAO <-- uUV in vertex shader
+		glVertexArrayAttribBinding(m_gl_ID, 1, 0); 
+		glVertexArrayAttribFormat(m_gl_ID, 1, 2		/* attrib 1 have a size of 2 GL_FLOAT									*/
+		, GL_FLOAT, GL_FALSE, 2 * sizeof(float));	/* and an offset of 2 * sizeof(float) from the beginning of the buffer	*/
 
 	}
 
@@ -65,12 +66,12 @@ namespace frost::render
 		switch (_bufferType)
 		{
 		case frost::render::VertexArrayObject::VBO:
-			//la on bind ? 
+
 			glVertexArrayVertexBuffer(m_gl_ID, 0, _buffer.GetBufferID(), 0 /*Offset par rapport au debut du buffer*/, 4 * sizeof(float) /*Data par vertice*/);
 
 			break;
 		case frost::render::VertexArrayObject::IBO:
-			//la on bind aussi ?
+
 			glVertexArrayElementBuffer(m_gl_ID, _buffer.GetBufferID());// This is to link vertices buffer[1] is the buffer that have order to draw triangle
 
 			break;

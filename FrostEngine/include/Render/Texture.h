@@ -20,29 +20,50 @@ namespace frost::render
 	/*!
 	* \class Texture
 	* 
-	* \brief The class that manages the Texture of the FrostEngine.
+	* \brief A class that represents a Texture.
+	* \details Texture can load images and bind them.
+	* \n when a VAO is bind it bind the Texture automatically to render the geometry.
 	* 
-	* details create, bind, undbing Textres and Images on the GPU.
+	* \details this class is used in SpriteRenderer.
 	*/
 	class FROST_ENGINE_API Texture
 	{
 	public:
 
-		// Constructor and Destructor
+		/*!
+		* \brief Constructor for the Texture class.
+		* 
+		*\param _Name the path of the texture. 
+		
+		*/
 		Texture(const std::string& _Name);
 		Texture();
 		~Texture();
 
-		// Fields
+		/*!
+		* \brief Set the texture to the given path.
+		*/
 		bool SetTexture(const std::string _name);
 
-		// Methods
+		/*!
+		* \brief Bind the texture in openGL.
+		*/
 		void Bind(unsigned int _Slot = 0) const;
+
+		/*!
+		* \brief Unbind the texture in openGL.
+		*/
 		void Unbind();
 
-		// Getters
+		/*! 
+		*\brief Get the width of the texture.*/
 		[[nodiscard]] inline int GetWidth() const { return Width; }
+		/*!
+		* \brief Get the height of the texture.*/
 		[[nodiscard]] inline int GetHeight() const { return Height; }
+		/*!
+		* \brief Get the ID of the texture.*/
+		[[nodiscard]] inline int GetBPP() const { return BPP; }
 		[[nodiscard]] inline unsigned int GetID() const { return ID; }
 
 
