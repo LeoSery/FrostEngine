@@ -21,7 +21,7 @@
 
 namespace frost::editor 
 {
-    Editor* Editor::m_Instance = nullptr;
+    Editor* Editor::m_instance = nullptr;
 
     Editor::Editor()
     {
@@ -29,17 +29,17 @@ namespace frost::editor
 
     Editor::~Editor()
     {
-
+        //DeleteEditor();
     }
 
     Editor* Editor::GetInstance()
     {
-        if (!m_Instance)
+        if (!m_instance)
         {
-            m_Instance = new Editor();
+            m_instance = new Editor();
         }
 
-        return m_Instance;
+        return m_instance;
     }
 
     int Editor::DrawEditor()
@@ -100,36 +100,36 @@ namespace frost::editor
 
     frost::ECS::GameObject* Editor::GetSelectEntity()
     {
-        return SelectEntity;
+        return m_selectEntity;
     }
 
     void Editor::SetSelectEntity(frost::ECS::GameObject* _Entity)
     {
-       SelectEntity = _Entity;
+       m_selectEntity = _Entity;
     }
 
-    void Editor::DrawHierarchy(frost::core::Scene* m_CurrentScene)
+    void Editor::DrawHierarchy(frost::core::Scene* _CurrentScene)
     {
         ImGui::SetNextWindowSize(ImVec2(300, 700));
         if (ImGui::Begin("Hierarchy", NULL, ImGuiWindowFlags_NoCollapse))
 
         {
-            DrawHierachyValue(m_CurrentScene);
+            DrawHierachyValue(_CurrentScene);
             DrawInsperctorValue();
             ImGui::End();
         }
     }
 
-    void Editor::DrawHierachyValue(frost::core::Scene* m_CurrentScene)
+    void Editor::DrawHierachyValue(frost::core::Scene* _CurrentScene)
     {
-        for(auto* child : m_CurrentScene->GetRoot()->GetChildren())
+        for(auto* child : _CurrentScene->GetRoot()->GetChildren())
         {
             if (child != nullptr)
             {
                 ImGui::PushStyleColor(ImGuiCol_Button, IM_COL32(35, 68, 108, 1));
                 if (ImGui::Button(child->GetName().c_str()))
                 {
-                    SelectEntity = child;
+                    m_selectEntity = child;
                 }  
                 ImGui::PopStyleColor();
             }
@@ -145,15 +145,15 @@ namespace frost::editor
 
     void Editor::DrawInsperctorValue()
     {
-        if (SelectEntity != nullptr)
+        if (m_selectEntity != nullptr)
         {
             if (ImGui::Begin("Inspector", NULL, ImGuiWindowFlags_NoCollapse))
             {
-                frost::ECS::Transform* tr = SelectEntity->GetComponent<frost::ECS::Transform>();
-                frost::ECS::SpriteRenderer* sr = SelectEntity->GetComponent<frost::ECS::SpriteRenderer>();              
-                frost::ECS::BoxCollider* bc = SelectEntity->GetComponent<frost::ECS::BoxCollider>();
+                frost::ECS::Transform* tr = m_selectEntity->GetComponent<frost::ECS::Transform>();
+                frost::ECS::SpriteRenderer* sr = m_selectEntity->GetComponent<frost::ECS::SpriteRenderer>();              
+                frost::ECS::BoxCollider* bc = m_selectEntity->GetComponent<frost::ECS::BoxCollider>();
                 
-                if (SelectEntity == nullptr)
+                if (m_selectEntity == nullptr)
                 {
 					ImGui::Text("No Object Selected");
 					ImGui::End();
@@ -161,7 +161,7 @@ namespace frost::editor
 				}
 
                 // Get Name //
-                std::string name = SelectEntity->GetName().c_str();              
+                std::string name = m_selectEntity->GetName().c_str();              
                 float font_size = ImGui::GetFontSize() * name.size() / 2;
                 ImGui::SameLine(ImGui::GetWindowSize().x / 2 - font_size + (font_size / 2));
                 ImGui::Text(name.c_str());
@@ -171,7 +171,7 @@ namespace frost::editor
                 ImGui::NewLine();
                
                 // Get Parent Name // 
-                ImGui::Text("Parent Object : %s", SelectEntity->GetParent()->GetName().c_str());
+                ImGui::Text("Parent Object : %s", m_selectEntity->GetParent()->GetName().c_str());
                 ImGui::NewLine();
                 ImGui::Separator();
                 ImGui::NewLine();
@@ -262,10 +262,10 @@ namespace frost::editor
 
     void Editor::DeleteEditor()
     {
-        if (m_Instance)
+        if (m_instance)
         {
-            delete m_Instance;
-            m_Instance = nullptr;
+            delete m_instance;
+            m_instance = nullptr;
         }
     }  
 #endif
@@ -277,7 +277,7 @@ namespace frost::editor
         if (ImGui::Begin("FPS", NULL, ImGuiWindowFlags_NoCollapse))
 
         {
-            std::string FpsString = std::format(" {:.0f}", fps);
+            std::string FpsString = std::format(" {:.0f}", m_fps);
             ImGui::Text(" %s", FpsString.c_str());
 
         }

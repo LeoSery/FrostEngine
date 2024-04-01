@@ -4,7 +4,7 @@
 
 namespace frost::utils
 {
-	Explorer* Explorer::m_Instance = nullptr;
+	Explorer* Explorer::m_instance = nullptr;
 
 	Explorer::~Explorer()
 	{
@@ -12,20 +12,20 @@ namespace frost::utils
 
 	Explorer* Explorer::GetInstance()
 	{
-		if (!m_Instance)
+		if (!m_instance)
 		{
-			m_Instance = new Explorer();
+			m_instance = new Explorer();
 		}
 
-		return m_Instance;
+		return m_instance;
 	}
 
 	void Explorer::DeleteExplorer()
 	{
-		if (m_Instance)
+		if (m_instance)
 		{
-			delete m_Instance;
-			m_Instance = nullptr;
+			delete m_instance;
+			m_instance = nullptr;
 		}
 	}
 
@@ -36,13 +36,13 @@ namespace frost::utils
 		{
 			if (ImGui::Button("Back"))
 			{
-				if (CurrentPath.has_parent_path())
+				if (m_currentPath.has_parent_path())
 				{
-					CurrentPath = CurrentPath.parent_path();
+					m_currentPath = m_currentPath.parent_path();
 				}
 			}
 			ImGui::SameLine();
-			ImGui::Text("Currenty directoy : %s", CurrentPath.string().c_str());
+			ImGui::Text("Currenty directoy : %s", m_currentPath.string().c_str());
 			ImGui::Separator();
 			DrawExplorerContent();
 			ImGui::Separator();
@@ -57,9 +57,9 @@ namespace frost::utils
 
 	void Explorer::DrawExplorerContent()
 	{
-		for (const auto& entry : fs::directory_iterator(CurrentPath))
+		for (const auto& entry : fs::directory_iterator(m_currentPath))
 		{
-			const auto is_selected = entry.path() == selectedEntry;
+			const auto is_selected = entry.path() == m_selectedEntry;
 			const auto is_directory = entry.is_directory();
 			const auto is_file = entry.is_regular_file();
 			auto entry_name = entry.path().filename().string();
@@ -72,9 +72,9 @@ namespace frost::utils
 			if (ImGui::Selectable(entry_name.c_str(), is_selected))
 			{
 				if (is_directory)
-					CurrentPath /= entry.path().filename();
+					m_currentPath /= entry.path().filename();
 
-				selectedEntry = entry.path();
+				m_selectedEntry = entry.path();
 			}
 		}
 	}
@@ -91,7 +91,7 @@ namespace frost::utils
 			return;
 
 		auto filtered_file_count = std::size_t{ 0 };
-		for (const auto& entry : fs::directory_iterator(CurrentPath))
+		for (const auto& entry : fs::directory_iterator(m_currentPath))
 		{
 			if (!fs::is_regular_file(entry))
 				continue;
@@ -105,14 +105,14 @@ namespace frost::utils
 
 	void Explorer::DrawExplorerActions()
 	{
-		if (fs::is_directory(selectedEntry))
+		if (fs::is_directory(m_selectedEntry))
 		{
-			ImGui::Text("Selected dir: %s", selectedEntry.string().c_str());
+			ImGui::Text("Selected dir: %s", m_selectedEntry.string().c_str());
 		}
 
-		else if (fs::is_regular_file(selectedEntry))
+		else if (fs::is_regular_file(m_selectedEntry))
 		{
-			ImGui::Text("Selected file: %s", selectedEntry.string().c_str());
+			ImGui::Text("Selected file: %s", m_selectedEntry.string().c_str());
 		}
 
 		else
@@ -120,7 +120,7 @@ namespace frost::utils
 			ImGui::Text("Nothing selected!");
 		}
 
-		if (fs::is_regular_file(selectedEntry) && ImGui::Button("Open"))
+		if (fs::is_regular_file(m_selectedEntry) && ImGui::Button("Open"))
 		{
 			DrawExplorerOpenFile();
 		}
@@ -128,14 +128,14 @@ namespace frost::utils
 
 		if (ImGui::Button("Rename"))
 		{
-			RenameDialogOpened = true;
+			m_renameDialogOpened = true;
 			ImGui::OpenPopup("Rename File");
 		}
 		ImGui::SameLine();
 
 		if (ImGui::Button("Delete"))
 		{
-			DeleteDialogOpened = true;
+			m_deleteDialogOpened = true;
 			ImGui::OpenPopup("Delete File");
 		}
 
@@ -145,7 +145,7 @@ namespace frost::utils
 
 	void Explorer::DrawExplorerRenameFilePopUp()
 	{
-		if (ImGui::BeginPopupModal("Rename File", &RenameDialogOpened))
+		if (ImGui::BeginPopupModal("Rename File", &m_renameDialogOpened))
 		{
 			static char buffer_name[512] = { '\0' };
 
@@ -154,11 +154,11 @@ namespace frost::utils
 
 			if (ImGui::Button("Rename"))
 			{
-				auto new_path = selectedEntry.parent_path() / buffer_name;
-				if (ExplorerRenameFile(selectedEntry, new_path))
+				auto new_path = m_selectedEntry.parent_path() / buffer_name;
+				if (ExplorerRenameFile(m_selectedEntry, new_path))
 				{
-					RenameDialogOpened = false;
-					selectedEntry = new_path;
+					m_renameDialogOpened = false;
+					m_selectedEntry = new_path;
 					std::memset(buffer_name, 0, sizeof(buffer_name));
 				}
 			}
@@ -166,7 +166,7 @@ namespace frost::utils
 
 			if (ImGui::Button("Cancel"))
 			{
-				RenameDialogOpened = false;
+				m_renameDialogOpened = false;
 			}
 			ImGui::EndPopup();
 		}
@@ -174,23 +174,23 @@ namespace frost::utils
 
 	void Explorer::DrawExplorerDeleteFilePopUp()
 	{
-		if (ImGui::BeginPopupModal("Delete File", &DeleteDialogOpened))
+		if (ImGui::BeginPopupModal("Delete File", &m_deleteDialogOpened))
 		{
-			ImGui::Text("Are you sure you want to delete %s ?", selectedEntry.filename().string().c_str());
+			ImGui::Text("Are you sure you want to delete %s ?", m_selectedEntry.filename().string().c_str());
 
 			if (ImGui::Button("Yes"))
 			{
-				if (ExplorerDeleteFile(selectedEntry))
+				if (ExplorerDeleteFile(m_selectedEntry))
 				{
-					selectedEntry.clear();
-					DeleteDialogOpened = false;
+					m_selectedEntry.clear();
+					m_deleteDialogOpened = false;
 				}
 			}
 			ImGui::SameLine();
 
 			if (ImGui::Button("No"))
 			{
-				DeleteDialogOpened = false;
+				m_deleteDialogOpened = false;
 			}
 			ImGui::EndPopup();
 		}
@@ -199,7 +199,7 @@ namespace frost::utils
 	void Explorer::DrawExplorerOpenFile()
 	{
 #ifdef _WIN32
-		const auto command = "start \"\" \"" + selectedEntry.string() + "\"";
+		const auto command = "start \"\" \"" + m_selectedEntry.string() + "\"";
 
 #elif _APPLE_
 		const auto command = "open \"" + selectedEntry.string() + "\"";
@@ -211,11 +211,11 @@ namespace frost::utils
 		std::system(command.c_str());
 	}
 
-	bool Explorer::ExplorerRenameFile(const fs::path& old_path, const fs::path& new_path)
+	bool Explorer::ExplorerRenameFile(const fs::path& _OldPath, const fs::path& _NewPath)
 	{
 		try
 		{
-			fs::rename(old_path, new_path);
+			fs::rename(_OldPath, _NewPath);
 			return true;
 		}
 		catch (const std::exception& e)
@@ -225,11 +225,11 @@ namespace frost::utils
 		}
 	}
 
-	bool Explorer::ExplorerDeleteFile(const fs::path& _path)
+	bool Explorer::ExplorerDeleteFile(const fs::path& _Path)
 	{
 		try
 		{
-			fs::remove(_path);
+			fs::remove(_Path);
 			return true;
 		}
 		catch (const std::exception& e)

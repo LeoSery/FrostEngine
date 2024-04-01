@@ -3,28 +3,30 @@
 
 namespace frost::utils
 {
-	TextEditor* TextEditor::m_Instance = nullptr;
+	TextEditor* TextEditor::m_instance = nullptr;
 
 	TextEditor::~TextEditor()
 	{
+		//DeleteTextEditor();
 	}
 
 	TextEditor* TextEditor::GetInstance()
 	{
-		if (!m_Instance)
+		if (!m_instance)
 		{
-			m_Instance = new TextEditor();
+			m_instance = new TextEditor();
 		}
 
-		return m_Instance;
+		return m_instance;
 	}
 
 	void TextEditor::DeleteTextEditor()
 	{
-		if (m_Instance)
+		if (m_instance)
 		{
-			delete m_Instance;
-			m_Instance = nullptr;
+			delete m_instance;
+			m_instance = nullptr;*
+
 		}
 	}
 
@@ -57,7 +59,7 @@ namespace frost::utils
 
 		if (ImGui::Button("Clear"))
 		{
-			std::memset(TextBuffer, 0, BufferSize);
+			std::memset(m_textBuffer, 0, m_bufferSize);
 		}
 
 		DrawTextEditorSavePopup();
@@ -71,7 +73,7 @@ namespace frost::utils
 		static constexpr auto inputTextFlags = ImGuiInputTextFlags_AllowTabInput | ImGuiInputTextFlags_NoHorizontalScroll;
 
 		ImGui::BeginChild("LineNumbers", lineNumberSize);
-		const auto line_count = std::count(TextBuffer, TextBuffer + BufferSize, '\n') + 1;
+		const auto line_count = std::count(m_textBuffer, m_textBuffer + m_bufferSize, '\n') + 1;
 		for (auto i = 1; i <= line_count; ++i)
 		{
 			ImGui::Text("%d", i);
@@ -79,19 +81,19 @@ namespace frost::utils
 		ImGui::EndChild();
 		ImGui::SameLine();
 
-		ImGui::InputTextMultiline("###inputField", TextBuffer, BufferSize, inputTextSize, inputTextFlags);
+		ImGui::InputTextMultiline("###inputField", m_textBuffer, m_bufferSize, inputTextSize, inputTextFlags);
 	}
 
 	void TextEditor::DrawTextEditorInfo()
 	{
-		if (CurrentFilename.size() == 0)
+		if (m_currentFilename.size() == 0)
 		{
 			ImGui::Text("No File Opened!");
 			return;
 		}
 
-		const auto file_extension = GetFileExtension(CurrentFilename);
-		ImGui::Text("Opened file %s | File extension %s", CurrentFilename.data(), file_extension.data());
+		const auto file_extension = GetFileExtension(m_currentFilename);
+		ImGui::Text("Opened file %s | File extension %s", m_currentFilename.data(), file_extension.data());
 	}
 
 	void TextEditor::DrawTextEditorSavePopup()
@@ -99,21 +101,21 @@ namespace frost::utils
 		static char saveFilenameBuffer[256] = "text.txt";
 		const auto esc_pressed = ImGui::IsKeyPressed(ImGui::GetKeyIndex(ImGuiKey_Escape));
 		
-		ImGui::SetNextWindowSize(popUpSize);
-		ImGui::SetNextWindowPos(ImVec2(ImGui::GetIO().DisplaySize.x / 2.0f - popUpSize.x / 2.0f, ImGui::GetIO().DisplaySize.x / 20.f - popUpSize.y / 2.0f));
+		ImGui::SetNextWindowSize(m_popUpSize);
+		ImGui::SetNextWindowPos(ImVec2(ImGui::GetIO().DisplaySize.x / 2.0f - m_popUpSize.x / 2.0f, ImGui::GetIO().DisplaySize.x / 20.f - m_popUpSize.y / 2.0f));
 
-		if (ImGui::BeginPopupModal("Save File", nullptr, popUpFlags))
+		if (ImGui::BeginPopupModal("Save File", nullptr, m_popUpFlags))
 		{
 			ImGui::InputText("Filename", saveFilenameBuffer, sizeof(saveFilenameBuffer));
-			if (ImGui::Button("Save", popUpButtonSize))
+			if (ImGui::Button("Save", m_popUpButtonSize))
 			{
 				SaveToFile(saveFilenameBuffer);
-				CurrentFilename = saveFilenameBuffer;
+				m_currentFilename = saveFilenameBuffer;
 				ImGui::CloseCurrentPopup();
 			}
 			ImGui::SameLine();
 
-			if (ImGui::Button("Cancel", popUpButtonSize) || esc_pressed)
+			if (ImGui::Button("Cancel", m_popUpButtonSize) || esc_pressed)
 			{
 				ImGui::CloseCurrentPopup();
 			}
@@ -126,16 +128,16 @@ namespace frost::utils
 		static char loadFilenameBuffer[256] = "text.txt";
 		const auto esc_pressed = ImGui::IsKeyPressed(ImGui::GetKeyIndex(ImGuiKey_Escape));
 
-		ImGui::SetNextWindowSize(popUpSize);
-		ImGui::SetNextWindowPos(ImVec2(ImGui::GetIO().DisplaySize.x / 2.0f - popUpSize.x / 2.0f, ImGui::GetIO().DisplaySize.x / 20.f - popUpSize.y / 2.0f));
+		ImGui::SetNextWindowSize(m_popUpSize);
+		ImGui::SetNextWindowPos(ImVec2(ImGui::GetIO().DisplaySize.x / 2.0f - m_popUpSize.x / 2.0f, ImGui::GetIO().DisplaySize.x / 20.f - m_popUpSize.y / 2.0f));
 
 		if (ImGui::BeginPopupModal("Load File"))
 		{
 			ImGui::InputText("Filename", loadFilenameBuffer, sizeof(loadFilenameBuffer));
-			if (ImGui::Button("Load", popUpButtonSize))
+			if (ImGui::Button("Load", m_popUpButtonSize))
 			{
 				LoadFromFile(loadFilenameBuffer);
-				CurrentFilename = loadFilenameBuffer;
+				m_currentFilename = loadFilenameBuffer;
 				ImGui::CloseCurrentPopup();
 			}
 			ImGui::SameLine();
@@ -154,7 +156,7 @@ namespace frost::utils
 
 		if (out.is_open())
 		{
-			out << TextBuffer;
+			out << m_textBuffer;
 			out.close();
 		}
 	}
@@ -167,7 +169,7 @@ namespace frost::utils
 		{
 			auto buffer = std::stringstream{};
 			buffer << in.rdbuf();
-			std::memcpy(TextBuffer, buffer.str().data(), BufferSize);
+			std::memcpy(m_textBuffer, buffer.str().data(), m_bufferSize);
 			in.close();
 		}
 	}
