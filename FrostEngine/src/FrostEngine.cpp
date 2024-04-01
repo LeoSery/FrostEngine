@@ -78,7 +78,7 @@ namespace frost
 		else
 		{
 			//"fps" are the actual fps
-			m_Editor->fps = m_Editor->m_tempFps;
+			m_Editor->m_fps = m_Editor->m_tempFps;
 			m_Editor->m_secondCounter = 0;
 			m_Editor->m_tempFps = 0;
 		}
