@@ -7,7 +7,7 @@ namespace frost::utils
 
 	TextEditor::~TextEditor()
 	{
-		//DeleteTextEditor();
+		DeleteTextEditor();
 	}
 
 	TextEditor* TextEditor::GetInstance()
@@ -25,7 +25,7 @@ namespace frost::utils
 		if (m_instance)
 		{
 			delete m_instance;
-			m_instance = nullptr;*
+			m_instance = nullptr;
 
 		}
 	}
