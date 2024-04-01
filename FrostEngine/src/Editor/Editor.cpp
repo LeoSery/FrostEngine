@@ -58,7 +58,6 @@ namespace frost::editor
         DrawHierarchy(m_CurrentScene);
         DrawInspector();
         frost::utils::Explorer::GetInstance()->DrawExplorer();
-        //frost::utils::TextEditor::GetInstance()->DrawTextEditor();
 #endif      
 
 #if defined _DEBUG || _QA
@@ -72,8 +71,7 @@ namespace frost::editor
 	}
 
     int Editor::Init(const frost::core::Window* _Window)
-    {
-  
+    { 
         if (!glfwInit()) {
             return -1;
         }
@@ -112,7 +110,6 @@ namespace frost::editor
     {
         ImGui::SetNextWindowSize(ImVec2(300, 700));
         if (ImGui::Begin("Hierarchy", NULL, ImGuiWindowFlags_NoCollapse))
-
         {
             DrawHierachyValue(_CurrentScene);
             DrawInsperctorValue();
@@ -279,7 +276,6 @@ namespace frost::editor
         {
             std::string FpsString = std::format(" {:.0f}", m_fps);
             ImGui::Text(" %s", FpsString.c_str());
-
         }
         ImGui::End();
     }

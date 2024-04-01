@@ -8,6 +8,7 @@ namespace frost::utils
 
 	Explorer::~Explorer()
 	{
+		DeleteExplorer();
 	}
 
 	Explorer* Explorer::GetInstance()
